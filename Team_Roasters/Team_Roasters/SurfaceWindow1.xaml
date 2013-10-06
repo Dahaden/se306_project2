@@ -1,10 +1,27 @@
-﻿<s:SurfaceWindow x:Class="Team_Roasters.SurfaceWindow1"
+﻿<s:SurfaceWindow x:Class="Team_Roasters.Home_Page"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
-    Title="Team_Roasters"
-    >
-  <Grid>
-
-  </Grid>
+    Title="Team_Roasters" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="1080" d:DesignWidth="1935" SizeToContent="WidthAndHeight">
+    <Grid Background="White" Width="1920" Height="1080">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="217*" />
+            <RowDefinition Height="863"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="700"/>
+            <ColumnDefinition Width="580*" />
+        </Grid.ColumnDefinitions>
+        <Grid Height="220" Margin="0,0,0,0" Grid.ColumnSpan="3">
+            <s:SurfaceButton Name="ccf_hidden_text" Visibility="Collapsed" Content="Image" Background="White" FontSize="20" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ccf_hidden_text_Click" />
+            <Grid Name="ccf_grid" Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110*" />
+                    <RowDefinition Height="110*" />
+                </Grid.RowDefinitions>
+                <Image Stretch="Uniform" Source="Resources/Fitout-S-child-cancer.jpg" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.RowSpan="2" />
+            </Grid>
+        </Grid>
+    </Grid>    
 </s:SurfaceWindow>

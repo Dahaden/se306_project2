@@ -21,12 +21,12 @@ namespace Team_Roasters
     /// <summary>
     /// Interaction logic for SurfaceWindow1.xaml
     /// </summary>
-    public partial class SurfaceWindow1 : SurfaceWindow
+    public partial class Home_Page : SurfaceWindow
     {
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public SurfaceWindow1()
+        public Home_Page()
         {
             InitializeComponent();
 
@@ -98,6 +98,16 @@ namespace Team_Roasters
         private void OnWindowUnavailable(object sender, EventArgs e)
         {
             //TODO: disable audio, animations here
+        }
+
+        private void ccf_hidden_text_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ccf_close_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
