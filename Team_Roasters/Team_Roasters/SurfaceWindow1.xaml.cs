@@ -32,6 +32,7 @@ namespace Team_Roasters
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
+            
         }
 
         /// <summary>
@@ -114,5 +115,7 @@ namespace Team_Roasters
         {
 
         }
+
+  
     }
 }
