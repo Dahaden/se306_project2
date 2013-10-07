@@ -8,21 +8,48 @@
             <RowDefinition Height="217*" />
             <RowDefinition Height="863"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="640"/>
-            <ColumnDefinition Width="700"/>
-            <ColumnDefinition Width="580*" />
-        </Grid.ColumnDefinitions>
-        <Grid Height="220" Margin="0,0,0,0" Grid.ColumnSpan="3">
-            <s:SurfaceButton Name="ccf_hidden_text" Visibility="Collapsed" Content="Image" Background="White" FontSize="20" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ccf_hidden_text_Click" />
+        <!-- Top Menu / Title bar goes here -->
+        <Grid Height="220" Margin="0,0,0,0">
             <Grid Name="ccf_grid" Margin="0,0,0,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="110*" />
-                    <RowDefinition Height="110*" />
-                </Grid.RowDefinitions>
-                <Image Stretch="Uniform" Source="Resources/Fitout-S-child-cancer.jpg" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.RowSpan="2" />
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Stretch="Uniform" Source="Resources/Fitout-S-child-cancer.jpg" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0" />
             </Grid>
         </Grid>
         
+        <!-- Main Content goes here -->
+        <s:SurfaceScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Visible">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="900" />
+                    <ColumnDefinition Width="900" />
+                    <ColumnDefinition Width="900" />
+                </Grid.ColumnDefinitions>
+                <!-- Buttons go here - what we do etc-->
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="400" />
+                        <ColumnDefinition Width="400" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="400" />
+                        <RowDefinition Height="400" />
+                    </Grid.RowDefinitions>
+                    <Image Stretch="Uniform" Source="Resources/Fitout-S-child-cancer.jpg" HorizontalAlignment="Center" Width="331" Grid.Column="0" Grid.Row="0" />
+                </Grid>
+                
+                <!-- Video and information go here -->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="400" />
+                        <RowDefinition Height="400" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                
+                <!-- News, Upcoming events, twitter etc go here -->
+                <Image Stretch="Uniform" Source="Resources/Fitout-S-child-cancer.jpg" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="2" />
+            </Grid>
+        </s:SurfaceScrollViewer>
     </Grid>    
 </s:SurfaceWindow>
