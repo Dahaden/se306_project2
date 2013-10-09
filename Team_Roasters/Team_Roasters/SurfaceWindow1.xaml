@@ -120,7 +120,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Image Stretch="Uniform" Source="Resources/Fitout-S-child-cancer.jpg" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0" />
+                <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0" />
             </Grid>
         </Grid>
         
@@ -180,7 +180,7 @@
                 </Grid>
                 
                 <!-- News, Upcoming events, twitter etc go here -->
-                <Image Stretch="Uniform" Source="Resources/Fitout-S-child-cancer.jpg" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="2" />
+                <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="2" />
             </Grid>
         </s:SurfaceScrollViewer>
     </Grid>    
