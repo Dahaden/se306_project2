@@ -351,80 +351,79 @@
             </Grid>
         </s:SurfaceScrollViewer>
     </Grid>
-
-    <Grid Name="Family_Support" Width="1920" Height="1080" Background="#FFFFFCF0" Visibility="Collapsed">
+    <Grid x:Name="Family_Support" Width="1920" Height="1080" Background="#FFFFFCF0" Visibility="Collapsed">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.8*"/>
+        	<RowDefinition Height="0.2*"/>
+        	<RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*"/>
-            <ColumnDefinition Width="0.8*"/>
+        	<ColumnDefinition Width="0.2*"/>
+        	<ColumnDefinition Width="0.8*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="0" Grid.Column="0">
-        	<ed:BlockArrow x:Name="ButtonBody1" Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FFC14801"/>
-            <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="White"/>
-        </Grid>
+    	<Grid Grid.Row="0" Grid.Column="0">
+    		<ed:BlockArrow x:Name="ButtonBody1" Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FFC14801"/>
+    		<s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="White" FontSize="42.667" FontWeight="Bold" Margin="0,1,1,1"/>
+    	</Grid>
 
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-            <Label Foreground="Black" Content="Family Support" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64"/>
-            <Image Stretch="Uniform" Source="Resources/ccfappeal.jpg" VerticalAlignment="Center" Width="435" Height="92" HorizontalAlignment="Right"/>
-        </StackPanel>
+    	<StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+    		<Label Foreground="Black" Content="Family Support" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64"/>
+    		<Image Stretch="Uniform" Source="Resources/ccfappeal.jpg" VerticalAlignment="Center" Width="435" Height="92" HorizontalAlignment="Right"/>
+    	</StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-            <s:SurfaceButton Content="Parent Resources" Click="SurfaceButton_ParentResources" Style="{DynamicResource InfoButton}" Foreground="White"/>
-            <s:SurfaceButton Content="Holiday Homes" Click="SurfaceButton_HolidayHomes" Style="{DynamicResource InfoButton}" Foreground="White"/>
-            <s:SurfaceButton Content="Support Services" Click="SurfaceButton_SupportServices" Style="{DynamicResource InfoButton}" Foreground="White"/>
-            <s:SurfaceButton Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource InfoButton}" Foreground="White"/>
-        </StackPanel>
+    	<StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
+    		<s:SurfaceButton Content="Parent Resources" Click="SurfaceButton_ParentResources" Style="{DynamicResource InfoButton}" Foreground="White" Height="104.338" FontSize="32"/>
+    		<s:SurfaceButton Content="Holiday Homes" Click="SurfaceButton_HolidayHomes" Style="{DynamicResource InfoButton}" Foreground="White" Height="104.336" FontSize="32"/>
+    		<s:SurfaceButton Content="Support Services" Click="SurfaceButton_SupportServices" Style="{DynamicResource InfoButton}" Foreground="White" Height="104.338" FontSize="32"/>
+    		<s:SurfaceButton Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource InfoButton}" Foreground="White" Height="104.335" FontSize="32"/>
+    	</StackPanel>
 
-        <Grid Grid.Row="1" Grid.Column="1" Margin="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.597*"/>
-                <RowDefinition Height="0.403*"/>
-            </Grid.RowDefinitions>
+    	<Grid Grid.Row="1" Grid.Column="1" Margin="20">
+    		<Grid.RowDefinitions>
+    			<RowDefinition Height="0.597*"/>
+    			<RowDefinition Height="0.403*"/>
+    		</Grid.RowDefinitions>
 
-            <Grid Name="Parent_Resources" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
-                    <TextBlock Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify" />
-                </Border>
-            </Grid>
+    		<Grid x:Name="Parent_Resources" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+    			<Grid.RowDefinitions>
+    				<RowDefinition Height="0.721*"/>
+    				<RowDefinition Height="0.279*"/>
+    			</Grid.RowDefinitions>
+    			<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
+    				<Border.Effect>
+    					<DropShadowEffect/>
+    				</Border.Effect>
+    				<TextBlock Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify" />
+    			</Border>
+    		</Grid>
 
-            <Grid Name="Holiday_Homes" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
-                    <TextBlock Text="Families can also access our Family Places – day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
-                </Border>
-            </Grid>
+    		<Grid x:Name="Holiday_Homes" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+    			<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+    				<Border.Effect>
+    					<DropShadowEffect/>
+    				</Border.Effect>
+    				<TextBlock Text="Families can also access our Family Places – day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
+    			</Border>
+    		</Grid>
 
-            <Grid Name="Support_Services" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
-                    <TextBlock Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy. 
-They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation. 
-These provide a story of a child's journey recognising their strength and courage. 
-Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment). 
-The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
-                </Border>
-            </Grid>
+    		<Grid x:Name="Support_Services" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+    			<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+    				<Border.Effect>
+    					<DropShadowEffect/>
+    				</Border.Effect>
+    				<TextBlock Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy.  They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation.  These provide a story of a child's journey recognising their strength and courage.  Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment).  The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
+    			</Border>
+    		</Grid>
 
-            <Grid Name="Scholarships" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
-                    <TextBlock Text="We offer a Scholarship Programme to assist children with cancer, their siblings, and parents to reach their potential and not be disadvantaged by their cancer journey." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
-                </Border>
-            </Grid>
-        </Grid>
+    		<Grid x:Name="Scholarships" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+    			<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+    				<Border.Effect>
+    					<DropShadowEffect/>
+    				</Border.Effect>
+    				<TextBlock Text="We offer a Scholarship Programme to assist children with cancer, their siblings, and parents to reach their potential and not be disadvantaged by their cancer journey." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
+    			</Border>
+    		</Grid>
+    	</Grid>
     </Grid>
     </Grid>
 </s:SurfaceWindow>
