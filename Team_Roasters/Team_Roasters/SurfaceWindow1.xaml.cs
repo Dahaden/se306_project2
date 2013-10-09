@@ -116,6 +116,11 @@ namespace Team_Roasters
 
         }
 
+        private void what_we_do_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
   
     }
 }
