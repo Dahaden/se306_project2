@@ -121,6 +121,11 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0" />
+                <Image Margin="435,52,375,52" Source="Resources/tagline2.png" Stretch="Fill"/>
+                <s:SurfaceButton 
+                	x:Name="donate" 
+                	Content="Donate" 
+                	Background="#FF007294" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="what_we_do_Click" Margin="0,52,68.333,0" Height="116" VerticalAlignment="Top" HorizontalAlignment="Right" Width="255.667" FontFamily="Berlin Sans FB" />
             </Grid>
         </Grid>
         
