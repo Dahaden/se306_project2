@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +15,6 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
-
-using System.Collections.ObjectModel;
 
 namespace Team_Roasters
 {
@@ -120,86 +118,9 @@ namespace Team_Roasters
 
         private void FamilyButton_Click(object sender, RoutedEventArgs e)
         {
-			Home.Visibility = System.Windows.Visibility.Collapsed;
-            Family_Support.Visibility = System.Windows.Visibility.Visible;
+            
         }
 
-		protected override void OnInitialized(EventArgs e)
-        {
-            base.OnInitialized(e);
-            DataContext = this;
-            pages.Add(Parent_Resources);
-            pages.Add(Holiday_Homes);
-            pages.Add(Support_Services);
-            pages.Add(Scholarships);
-        }
-		
-        private ObservableCollection<Grid> pages = new ObservableCollection<Grid>();
-		
-		private void SurfaceButton_ParentResources(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Parent_Resources))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
-
-        private void SurfaceButton_HolidayHomes(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Holiday_Homes))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
-
-        private void SurfaceButton_SupportServices(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Support_Services))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
-
-        private void SurfaceButton_Scholarships(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Scholarships))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
   
-		private void SurfaceButton_Back(object sender, RoutedEventArgs e)
-        {
-            Family_Support.Visibility = System.Windows.Visibility.Collapsed;
-			Home.Visibility = System.Windows.Visibility.Visible;
-        }
     }
 }
