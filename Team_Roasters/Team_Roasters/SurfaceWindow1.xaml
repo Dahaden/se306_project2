@@ -130,7 +130,7 @@
         </Grid>
         
         <!-- Main Content goes here -->
-        <s:SurfaceScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Visible">
+        <s:SurfaceScrollViewer Grid.Row="3" HorizontalScrollBarVisibility="Visible">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1200" />
@@ -175,17 +175,44 @@
                          Content="Volunteers and &#xd;&#xa;corporate sponsors"
                          Background="#FF007294"  FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="31.667,105,-369.667,72" />
                 </Grid>
-                
                 <!-- Video and information go here -->
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="400" />
                         <RowDefinition Height="400" />
                     </Grid.RowDefinitions>
+                	<GridSplitter HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="5"/>
                 </Grid>
-                
+
                 <!-- News, Upcoming events, twitter etc go here -->
-                <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="2" />
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="400" />
+                        <RowDefinition Height="400" />
+                    </Grid.RowDefinitions>
+                	<ListView HorizontalAlignment="Right" Width="440" Margin="0,0,0,-17" Grid.RowSpan="2" Background="#FFFCFCDA">
+                		<ListView.View>
+                			<GridView>
+                				<GridViewColumn/>
+                			</GridView>
+                		</ListView.View>
+                		<TextBox TextWrapping="Wrap" Text="Assurity Consulting Group has been generously supporting CCF through fundraising initiatives during the year, and they came on board once again as part of our One Day for Child Cancer campaign in July."/>
+                		<TextBox TextWrapping="Wrap" Text="Executive Travel have embarked on a year long fundraising programme for CCF."/>
+                		<TextBox TextWrapping="Wrap" Text="The Governor-General Dinner held in Hamilton last week was a fantastic event and a great night was had by all. Sir Jerry pictured right with CCF CEO, Sarah."/>
+                	</ListView>
+                	<ListView x:Name="Twitter" HorizontalAlignment="Left" Width="440" Margin="0,0,0,-17" Grid.RowSpan="2" Background="#FFFCFCDA">
+                		<ListView.View>
+                			<GridView>
+                				<GridViewColumn/>
+                			</GridView>
+                		</ListView.View>
+                		<TextBox TextWrapping="Wrap" Text="Thanks 4 spreading some joy by sending Hayley a hamper when she was unexpectedly hospitalized yesterday! "/>
+                		<TextBox TextWrapping="Wrap" Text="Here's Quinn with her newest Bead of Courage for her bone marrow transplants. Gift a bead at http://childcancer.org.nz/How-you-can-help/Stars-of-Courage.aspx … pic.twitter.com/MR3BVahvmo"/>
+                		<TextBox TextWrapping="Wrap" Text="A huge thank you to Fiona and Anthony for their awe-inspiring fundraising efforts! Check out the full story here: http://www.sunlive.co.nz/news/54388-triple-mount-challenge-cancer.html …"/>
+                	</ListView>
+                </Grid>
+
+               <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="3" />
             </Grid>
         </s:SurfaceScrollViewer>
     </Grid>    
