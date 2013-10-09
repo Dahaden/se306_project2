@@ -2,11 +2,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
-<<<<<<< HEAD
-    Title="Team_Roasters" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" d:DesignHeight="1080" d:DesignWidth="5000" SizeToContent="WidthAndHeight" Background="#FFFCFCDA">
-=======
-    Title="Team_Roasters" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="1080" d:DesignWidth="1920" SizeToContent="Manual" Background="#FFFCFCDA" ResizeMode="NoResize" Topmost="True" WindowStyle="None">
->>>>>>> Reworking homepage grid layout
+    Title="Team_Roasters" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" d:DesignHeight="1080" d:DesignWidth="1920" SizeToContent="Manual" Background="#FFFCFCDA" ResizeMode="NoResize" Topmost="True" WindowStyle="None">
+	
 	<s:SurfaceWindow.Resources>
 <!-- Base Grid style for 55 dpi -->
 		<Style TargetType="{x:Type Control}" x:Key="ControlBaseStyle">
@@ -326,11 +323,7 @@
                          Grid.ColumnSpan="1" 
                          Name="family_and_support" 
                          Content="Family and Support"
-<<<<<<< HEAD
-                         Background="#FF007294" Margin="99.717,368.422,112.5,224.87" FontSize="48" Style="{DynamicResource HomeContentButton}" Click="FamilyButton_Click"/>
-=======
-                         Background="#FF007294" FontSize="48" Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="0" Margin="19.667,105,26.333,72" />
->>>>>>> Reworking homepage grid layout
+                         Background="#FF007294" FontSize="48" Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="0" Margin="19.667,105,26.333,72" Click="FamilyButton_Click"/>
 
                     <s:SurfaceButton 
                          Grid.RowSpan="1"
