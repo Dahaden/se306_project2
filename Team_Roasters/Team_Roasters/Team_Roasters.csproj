@@ -110,10 +110,12 @@
     <Resource Include="Resources\ccfappeal.jpg" />
     <Resource Include="Resources\Fitout-S-child-cancer.jpg" />
     <Resource Include="Resources\CCF-Logo-Transparent.png" />
+    <Resource Include="Resources\heart.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\photographing-babies-1e.jpg" />
+    <Resource Include="Resources\tagline2.png" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

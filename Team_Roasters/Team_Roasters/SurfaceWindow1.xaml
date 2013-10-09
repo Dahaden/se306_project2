@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     Title="Team_Roasters" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" d:DesignHeight="1080" d:DesignWidth="1920" SizeToContent="Manual" Background="#FFFCFCDA" ResizeMode="NoResize" Topmost="True" WindowStyle="None">
-	
 	<s:SurfaceWindow.Resources>
 <!-- Base Grid style for 55 dpi -->
 		<Style TargetType="{x:Type Control}" x:Key="ControlBaseStyle">
@@ -282,7 +281,12 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0" />
+                <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0"/>
+                <Image Margin="435,52,375,52" Source="Resources/tagline2.png" Stretch="Fill"/>
+                <s:SurfaceButton 
+                	x:Name="donate" 
+                	Content="Donate" 
+                	Background="#FF007294" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="what_we_do_Click" Margin="0,52,68.333,0" Height="116" VerticalAlignment="Top" HorizontalAlignment="Right" Width="255.667" FontFamily="Berlin Sans FB" />
             </Grid>
         </Grid>
         
@@ -321,6 +325,7 @@
                     <s:SurfaceButton 
                          Grid.RowSpan="1" 
                          Grid.ColumnSpan="1" 
+
                          Name="family_and_support" 
                          Content="Family and Support"
                          Background="#FF007294" FontSize="48" Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="0" Margin="19.667,105,26.333,72" Click="FamilyButton_Click"/>
