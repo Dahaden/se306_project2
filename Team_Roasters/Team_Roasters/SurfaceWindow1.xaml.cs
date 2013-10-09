@@ -118,6 +118,7 @@ namespace Team_Roasters
 
         }
 
+<<<<<<< HEAD
         private void FamilyButton_Click(object sender, RoutedEventArgs e)
         {
 			Home.Visibility = System.Windows.Visibility.Collapsed;
@@ -195,6 +196,13 @@ namespace Team_Roasters
                 }
             }
         }
+=======
+        private void what_we_do_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+>>>>>>> Reworking homepage grid layout
   
 		private void SurfaceButton_Back(object sender, RoutedEventArgs e)
         {
