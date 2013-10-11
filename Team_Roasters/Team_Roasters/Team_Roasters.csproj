@@ -116,7 +116,6 @@
   <ItemGroup>
     <Resource Include="Resources\ccfappeal.jpg" />
     <Resource Include="Resources\Fitout-S-child-cancer.jpg" />
-
     <Resource Include="Resources\CCF-Logo-Transparent.png" />
     <Resource Include="Resources\heart.png" />
     <Resource Include="Controls\Resources\video_frame.png" />
@@ -130,12 +129,16 @@
     </Content>
     <Resource Include="Resources\photographing-babies-1e.jpg" />
     <Resource Include="Resources\tagline2.png" />
-    <Content Include="Resources\intro-video.mp4" />
+    <None Include="Resources\intro-video.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

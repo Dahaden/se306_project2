@@ -343,7 +343,7 @@
                         <RowDefinition Height="400" />
                         <RowDefinition Height="400" />
                     </Grid.RowDefinitions>
-                    <my:VideoPlayer Margin="50" Source="C:\programming\se306_project2\Team_Roasters\Team_Roasters\Resources\intro-video.mp4" />
+                    <my:VideoPlayer Margin="50" Source="Resources/intro-video.mp4" />
 
                 </Grid>
 
