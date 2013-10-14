@@ -20,6 +20,7 @@ using System.IO;
 using HtmlAgilityPack;
 using System.Xml.Linq;
 using System.Xml;
+using System.Windows.Markup;
 
 using System.Collections.ObjectModel;
 
@@ -241,6 +242,8 @@ namespace Team_Roasters
                 file.Close();
                  */
 
+                //Events.Items.Clear();
+
                 //client.DownloadFileAsync(new Uri("http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx"), filepath);
                 //client.DownloadFile(new Uri("http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx"), filepath);
                 try
@@ -268,10 +271,14 @@ namespace Team_Roasters
                     XmlTextWriter writer = new XmlTextWriter("../../Resources/events/events.xaml", utf8);
                     writer.Formatting = Formatting.Indented;
 
+                    //writer.WriteStartElement("Items");
+
+                    //writer.WriteStartElement("ResourceDictionary");
                     writer.WriteStartElement("FlowDocument");
                     writer.WriteAttributeString("xmlns", "http://schemas.microsoft.com/winfx/2006/xaml/presentation");
                     writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
                     writer.WriteAttributeString("xmlns:s" , "http://schemas.microsoft.com/surface/2008");
+                    //writer.WriteAttributeString("x:Key", "EventsDoc");
 
                     //writer.WriteEndElement();
                     //writer.Close();
@@ -303,10 +310,22 @@ namespace Team_Roasters
                         imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
 
                         filepath = "../../Resources/events/" + filename + ".jpeg";
-                        string test = baseURI + imgsrc;
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        //string test = baseURI + imgsrc;
+                        string test = System.IO.Path.GetFullPath("Charity-Home-for-CCF.jpeg");
+                        string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                        string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
+                        test=  (commonPath + @"Resources\events\") + filename + ".jpeg";
+                        
+                        //client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        
+                        //writer.WriteStartElement("img");
+                        
+                        //writer.WriteAttributeString("src",filepath);
+                        //writer.WriteAttributeString("src", test);
+
                         writer.WriteStartElement("Image");
-                        writer.WriteAttributeString("Source",filepath);
+                        //writer.WriteAttributeString("Source", filepath);
+                        writer.WriteAttributeString("Source", test);
                         //writer.WriteString("The image should be here");
                         writer.WriteEndElement();
                         writer.WriteEndElement();
@@ -323,7 +342,19 @@ namespace Team_Roasters
                     }
 
                     writer.WriteEndElement();
+                    //writer.WriteEndElement(); // Resource Dictionary
                     writer.Close();
+
+                    /*FileStream xamlfile = File.OpenRead("../../Resources/events/events.xaml");
+                    FlowDocument fd;
+                    fd = XamlReader.Load(xamlfile) as FlowDocument;
+                    //EventsDocReader.Document = fd;
+                    infoViewer.Document = fd;*/
+
+                    FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/events/events.xaml"));
+
+                    infoViewer.Document = flowDocument;
+
 
                     //XDocument responseXml = XDocument.Parse(result);
 
@@ -341,19 +372,22 @@ namespace Team_Roasters
                 }
                 catch (Exception e)
                 {
-                    while (e != null)
-                    {
+                    //while (e != null)
+                    //{
                         //excep += e.Message;
                         excep = e.ToString();
                         //Console.WriteLine(e.Message);
                         //e = e.InnerException;
-                    }
+                    //}
                 }
                 // Event image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
             }
             else
             {
                 // Implement reading from stored file
+                FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/events/events.xaml"));
+
+                infoViewer.Document = flowDocument;
             }
             
         }

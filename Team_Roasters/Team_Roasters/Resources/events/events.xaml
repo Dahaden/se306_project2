@@ -4,7 +4,7 @@
     <Paragraph>When: Saturday 12 October to Saturday 30 November 2013
 Where: Lawn in front of PlaceMakers Hutt City</Paragraph>
     <BlockUIContainer>
-      <Image Source="../../Resources/events/Charity-Home-for-CCF.jpeg" />
+      <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Charity-Home-for-CCF.jpeg" />
     </BlockUIContainer>
     <Paragraph>Proud sponsor Professionals Hutt City, in partnership with PlaceMakers Hutt City and Certified Builders, are building a house in October in support of CCF.</Paragraph>
   </Section>
@@ -13,16 +13,25 @@ Where: Lawn in front of PlaceMakers Hutt City</Paragraph>
     <Paragraph>When: Saturday 19th October 2013
 Where: 11am at Crafty Knitwits, 101 Kitchener Road, Milford</Paragraph>
     <BlockUIContainer>
-      <Image Source="../../Resources/events/Crafty-Knitwits-Knitathon-Grand-Auction.jpeg" />
+      <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Crafty-Knitwits-Knitathon-Grand-Auction.jpeg" />
     </BlockUIContainer>
     <Paragraph>The Knitathon was run for the first time in 2011 and has grown exponentially since then, with all items auctioned off for CCF.</Paragraph>
+  </Section>
+  <Section>
+    <Paragraph>Creative Collaboration Presents Fashion for Charity</Paragraph>
+    <Paragraph>When: Sunday 24th November 2013
+Where: 5.30pm at Vodafone Events Centre</Paragraph>
+    <BlockUIContainer>
+      <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Creative-Collaboration-Presents-Fashion-for-Charit.jpeg" />
+    </BlockUIContainer>
+    <Paragraph>Tickets are now on sale for the launch of the Fashion for Charity fashion event. This event is a collaboration between industry professionals who have chosen to work together to raise funds for kids with cancer.</Paragraph>
   </Section>
   <Section>
     <Paragraph>funrazor: The 10th Anniversary Event</Paragraph>
     <Paragraph>When: Thursday 5th December 2013
 Where: 4.30pm at ReStart Mall, Cashel Street</Paragraph>
     <BlockUIContainer>
-      <Image Source="../../Resources/events/funrazor--The-10th-Anniversary-Event.jpeg" />
+      <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\funrazor--The-10th-Anniversary-Event.jpeg" />
     </BlockUIContainer>
     <Paragraph>It is a very special year for funrazor this year - not only is it back in the Heart of Christchurch, it is funrazor's 10th Anniversary!! </Paragraph>
   </Section>
@@ -31,7 +40,7 @@ Where: 4.30pm at ReStart Mall, Cashel Street</Paragraph>
     <Paragraph>When: Monday 27th January to Sunday 2nd February 2014
 Where: Te Pohue, Hawke's Bay</Paragraph>
     <BlockUIContainer>
-      <Image Source="../../Resources/events/Top-of-the-Range-Horse-Trek.jpeg" />
+      <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Top-of-the-Range-Horse-Trek.jpeg" />
     </BlockUIContainer>
     <Paragraph>The Top of the Range Horse Trek is being held in the beautiful Hawke's Bay over 4 days across a course that will feature stunning views of the Te Pohue area from 1000 metres above sea level. Register now to take part in this great event!
 </Paragraph>
@@ -41,7 +50,7 @@ Where: Te Pohue, Hawke's Bay</Paragraph>
     <Paragraph>When: Saturday 3rd May 2013
 Where: Rotorua</Paragraph>
     <BlockUIContainer>
-      <Image Source="../../Resources/events/Rotorua-Marathon.jpeg" />
+      <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Rotorua-Marathon.jpeg" />
     </BlockUIContainer>
     <Paragraph>Take on the Lake! The 50th Lion Foundation Rotorua Marathon is set for Saturday 3 May 2014, along with the Half &amp; Quarter Marathons and 5.5km Fun Run.</Paragraph>
   </Section>
