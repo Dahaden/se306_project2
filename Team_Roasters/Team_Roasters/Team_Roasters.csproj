@@ -67,6 +67,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\VideoPlayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SurfaceWindow1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,6 +81,9 @@
     </Compile>
     <Compile Include="Controls\DonateControl.xaml.cs">
       <DependentUpon>DonateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VideoPlayer.xaml.cs">
+      <DependentUpon>VideoPlayer.xaml</DependentUpon>
     </Compile>
     <Compile Include="SurfaceWindow1.xaml.cs">
       <DependentUpon>SurfaceWindow1.xaml</DependentUpon>
@@ -115,16 +122,27 @@
     <Resource Include="Resources\Fitout-S-child-cancer.jpg" />
     <Resource Include="Resources\CCF-Logo-Transparent.png" />
     <Resource Include="Resources\heart.png" />
+    <Resource Include="Controls\Resources\video_frame.png" />
+    <Resource Include="Controls\Resources\video_overlay.png" />
+    <Resource Include="Controls\Resources\video_pausebutton.png" />
+    <Resource Include="Controls\Resources\video_playbutton_large.png" />
+    <Resource Include="Controls\Resources\video_playbutton_small.png" />
+    <Resource Include="Controls\Resources\video_rewindbutton.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\photographing-babies-1e.jpg" />
     <Resource Include="Resources\tagline2.png" />
+    <None Include="Resources\intro-video.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
