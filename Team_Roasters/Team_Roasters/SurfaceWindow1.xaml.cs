@@ -15,6 +15,11 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
+using System.Net;
+using System.IO;
+using HtmlAgilityPack;
+using System.Xml.Linq;
+using System.Xml;
 
 using System.Collections.ObjectModel;
 
@@ -34,6 +39,8 @@ namespace Team_Roasters
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
+
+            GetEvents();
             
         }
 
@@ -205,6 +212,166 @@ namespace Team_Roasters
         {
             Family_Support.Visibility = System.Windows.Visibility.Collapsed;
 			Home.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void GetEvents()
+        {
+            if (CheckInternetConnection())
+            {
+                WebClient client = new WebClient();
+                String url;
+                string excep = "";
+                string target;
+                string titlename;
+                string whenwhere;
+                string imgsrc;
+                string desc;
+                string filename;
+
+                url = "http://www.childcancer.org.nz/News-and-events/Events.aspx";
+
+                string filepath;
+                //string yes = "";
+                /*string fp;
+                FileStream file =  File.OpenWrite("../../Team_Roasters.csproj");
+                Byte[] info = new UTF8Encoding(true).GetBytes("<Resource Include=\"Resources/events/Charity.jpg\" />");
+
+                // Add some information to the file.
+                file.Write(info, 0, info.Length);
+                file.Close();
+                 */
+
+                //client.DownloadFileAsync(new Uri("http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx"), filepath);
+                //client.DownloadFile(new Uri("http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx"), filepath);
+                try
+                {
+
+                    byte[] myDataBuffer = client.DownloadData(url);
+                    string result = System.Text.Encoding.UTF8.GetString(myDataBuffer);
+                    string baseURI = "http://www.childcancer.org.nz";
+
+                    /*StringWriter sw = new StringWriter();
+                    XmlTextWriter writer = new XmlTextWriter(sw);
+                    HtmlWeb web = new HtmlWeb();
+                    web.LoadHtmlAsXml("http://www.childcancer.org.nz/News-and-events/Events.aspx", writer);
+                    string xml = sw.ToString();
+                    XDocument responseXml = XDocument.Parse(xml);
+                    responseXml.Save("test.xml" );*/
+                    //XDocument responseXml = XDocument();
+                    //HtmlDocument doc = web.Load();
+                    
+
+                    HtmlDocument doc = new HtmlDocument();
+                    doc.LoadHtml(result);
+
+                    Encoding utf8 = new UTF8Encoding(true);
+                    XmlTextWriter writer = new XmlTextWriter("../../Resources/events/events.xaml", utf8);
+                    writer.Formatting = Formatting.Indented;
+
+                    writer.WriteStartElement("FlowDocument");
+                    writer.WriteAttributeString("xmlns", "http://schemas.microsoft.com/winfx/2006/xaml/presentation");
+                    writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
+                    writer.WriteAttributeString("xmlns:s" , "http://schemas.microsoft.com/surface/2008");
+
+                    //writer.WriteEndElement();
+                    //writer.Close();
+
+                    
+                    // Looks like I need to do lots of loops. Nope
+                    HtmlNodeCollection collection = doc.DocumentNode.SelectNodes("//div[@class='item']");
+                    //HtmlNodeCollection collection = doc.DocumentNode.SelectNodes("//a[@class=\"title\"]");
+                    foreach (HtmlNode link in collection)
+                    {
+                        writer.WriteStartElement("Section");
+
+                        writer.WriteStartElement("Paragraph");
+
+                        target = link.SelectSingleNode("h3//a").Attributes["href"].Value;
+                        //string target = link.Attributes["href"].Value;
+                        titlename = link.SelectSingleNode("h3//a").InnerText;
+
+                        filename = target.Substring(target.LastIndexOf('/')+1, target.LastIndexOf('.') - target.LastIndexOf('/') -1);
+                        writer.WriteString(titlename);
+                        writer.WriteEndElement();
+
+                        writer.WriteStartElement("Paragraph");
+                        whenwhere = link.SelectSingleNode("small").InnerText;
+                        writer.WriteString(whenwhere);
+                        writer.WriteEndElement();
+
+                        writer.WriteStartElement("BlockUIContainer");
+                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+
+                        filepath = "../../Resources/events/" + filename + ".jpeg";
+                        string test = baseURI + imgsrc;
+                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        writer.WriteStartElement("Image");
+                        writer.WriteAttributeString("Source",filepath);
+                        //writer.WriteString("The image should be here");
+                        writer.WriteEndElement();
+                        writer.WriteEndElement();
+
+                        writer.WriteStartElement("Paragraph");
+                        desc = link.SelectSingleNode("p").InnerText;
+                        writer.WriteString(desc);
+                        writer.WriteEndElement();
+
+                        writer.WriteEndElement();
+                        //events.
+
+                        
+                    }
+
+                    writer.WriteEndElement();
+                    writer.Close();
+
+                    //XDocument responseXml = XDocument.Parse(result);
+
+                    /**XNamespace sc = "http://www.w3.org/1999/xhtml";
+
+                    IEnumerable<XElement> elements =
+                    from el in responseXml.Root.Elements(sc + "html")
+                    select el;
+                    foreach (XElement el in elements)
+                    {
+                        yes += el.Element(sc + "title").Value;
+                    }**/
+                    // FlowDocument
+                    
+                }
+                catch (Exception e)
+                {
+                    while (e != null)
+                    {
+                        //excep += e.Message;
+                        excep = e.ToString();
+                        //Console.WriteLine(e.Message);
+                        //e = e.InnerException;
+                    }
+                }
+                // Event image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
+            }
+            else
+            {
+                // Implement reading from stored file
+            }
+            
+        }
+
+        private bool CheckInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (var stream = client.OpenRead("http://www.google.com"))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
