@@ -353,8 +353,8 @@
                     <!-- News, Upcoming events, twitter etc go here -->
                     <Grid Grid.Column="3">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="400" />
-                            <RowDefinition Height="400" />
+                            <RowDefinition Height="1*" />
+
                         </Grid.RowDefinitions>
                         <ListView HorizontalAlignment="Right" Width="290" Margin="0,0,0,-17" Grid.RowSpan="2" Background="#FFFCFCDA">
                             <ListView.View>
@@ -367,7 +367,7 @@
                             <TextBox TextWrapping="Wrap" Text="Executive Travel have embarked on a year long fundraising programme for CCF."/>
                             <TextBox TextWrapping="Wrap" Text="The Governor-General Dinner held in Hamilton last week was a fantastic event and a great night was had by all. Sir Jerry pictured right with CCF CEO, Sarah."/>
                         </ListView>
-                        <RichTextBox Width="290" Height="700" x:Name="infoViewer" IsReadOnly="True" IsDocumentEnabled="False"/>
+                        <RichTextBox Width="290" x:Name="infoViewer" IsReadOnly="True" IsDocumentEnabled="False"/>
                         <!--ListView Name="Events" HorizontalAlignment="Center" Width="290" Margin="0,0,0,-17" Grid.RowSpan="2" Background="#FFFCFCDA">
                             <ListView.View>
                                 <GridView>
@@ -394,7 +394,7 @@
                         </ListView>
                     </Grid>
 
-                    <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="3" />
+                    
                 </Grid>
             </s:SurfaceScrollViewer>
         </Grid>

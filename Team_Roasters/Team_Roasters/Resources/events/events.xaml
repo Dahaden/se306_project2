@@ -1,44 +1,49 @@
-﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008" TextAlignment="Justify">
   <Section>
-    <Paragraph>Charity Home for CCF</Paragraph>
-    <Paragraph>When: Saturday 12 October to Saturday 30 November 2013
-Where: Lawn in front of PlaceMakers Hutt City</Paragraph>
+    <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+      <Underline>Charity Home for CCF</Underline>
+    </Paragraph>
+    <Paragraph>When: Saturday 12 October to Saturday 30 November 2013<LineBreak />Where: Lawn in front of PlaceMakers Hutt City</Paragraph>
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Charity-Home-for-CCF.jpeg" />
     </BlockUIContainer>
     <Paragraph>Proud sponsor Professionals Hutt City, in partnership with PlaceMakers Hutt City and Certified Builders, are building a house in October in support of CCF.</Paragraph>
   </Section>
   <Section>
-    <Paragraph>Crafty Knitwits Knitathon Grand Auction</Paragraph>
-    <Paragraph>When: Saturday 19th October 2013
-Where: 11am at Crafty Knitwits, 101 Kitchener Road, Milford</Paragraph>
+    <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+      <Underline>Crafty Knitwits Knitathon Grand Auction</Underline>
+    </Paragraph>
+    <Paragraph>When: Saturday 19th October 2013<LineBreak />Where: 11am at Crafty Knitwits, 101 Kitchener Road, Milford</Paragraph>
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Crafty-Knitwits-Knitathon-Grand-Auction.jpeg" />
     </BlockUIContainer>
     <Paragraph>The Knitathon was run for the first time in 2011 and has grown exponentially since then, with all items auctioned off for CCF.</Paragraph>
   </Section>
   <Section>
-    <Paragraph>Creative Collaboration Presents Fashion for Charity</Paragraph>
-    <Paragraph>When: Sunday 24th November 2013
-Where: 5.30pm at Vodafone Events Centre</Paragraph>
+    <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+      <Underline>Creative Collaboration Presents Fashion for Charity</Underline>
+    </Paragraph>
+    <Paragraph>When: Sunday 24th November 2013<LineBreak />Where: 5.30pm at Vodafone Events Centre</Paragraph>
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Creative-Collaboration-Presents-Fashion-for-Charit.jpeg" />
     </BlockUIContainer>
     <Paragraph>Tickets are now on sale for the launch of the Fashion for Charity fashion event. This event is a collaboration between industry professionals who have chosen to work together to raise funds for kids with cancer.</Paragraph>
   </Section>
   <Section>
-    <Paragraph>funrazor: The 10th Anniversary Event</Paragraph>
-    <Paragraph>When: Thursday 5th December 2013
-Where: 4.30pm at ReStart Mall, Cashel Street</Paragraph>
+    <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+      <Underline>funrazor: The 10th Anniversary Event</Underline>
+    </Paragraph>
+    <Paragraph>When: Thursday 5th December 2013<LineBreak />Where: 4.30pm at ReStart Mall, Cashel Street</Paragraph>
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\funrazor--The-10th-Anniversary-Event.jpeg" />
     </BlockUIContainer>
     <Paragraph>It is a very special year for funrazor this year - not only is it back in the Heart of Christchurch, it is funrazor's 10th Anniversary!! </Paragraph>
   </Section>
   <Section>
-    <Paragraph>Top of the Range Horse Trek</Paragraph>
-    <Paragraph>When: Monday 27th January to Sunday 2nd February 2014
-Where: Te Pohue, Hawke's Bay</Paragraph>
+    <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+      <Underline>Top of the Range Horse Trek</Underline>
+    </Paragraph>
+    <Paragraph>When: Monday 27th January to Sunday 2nd February 2014<LineBreak />Where: Te Pohue, Hawke's Bay</Paragraph>
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Top-of-the-Range-Horse-Trek.jpeg" />
     </BlockUIContainer>
@@ -46,9 +51,10 @@ Where: Te Pohue, Hawke's Bay</Paragraph>
 </Paragraph>
   </Section>
   <Section>
-    <Paragraph>Rotorua Marathon</Paragraph>
-    <Paragraph>When: Saturday 3rd May 2013
-Where: Rotorua</Paragraph>
+    <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+      <Underline>Rotorua Marathon</Underline>
+    </Paragraph>
+    <Paragraph>When: Saturday 3rd May 2013<LineBreak />Where: Rotorua</Paragraph>
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Rotorua-Marathon.jpeg" />
     </BlockUIContainer>

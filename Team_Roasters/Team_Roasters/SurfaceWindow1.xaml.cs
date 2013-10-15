@@ -278,6 +278,7 @@ namespace Team_Roasters
                     writer.WriteAttributeString("xmlns", "http://schemas.microsoft.com/winfx/2006/xaml/presentation");
                     writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
                     writer.WriteAttributeString("xmlns:s" , "http://schemas.microsoft.com/surface/2008");
+                    writer.WriteAttributeString("TextAlignment", "Justify");
                     //writer.WriteAttributeString("x:Key", "EventsDoc");
 
                     //writer.WriteEndElement();
@@ -292,18 +293,29 @@ namespace Team_Roasters
                         writer.WriteStartElement("Section");
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "20");
+                        writer.WriteAttributeString("FontWeight", "Bold");
+                        writer.WriteAttributeString("TextAlignment", "Center");
 
                         target = link.SelectSingleNode("h3//a").Attributes["href"].Value;
                         //string target = link.Attributes["href"].Value;
                         titlename = link.SelectSingleNode("h3//a").InnerText;
 
                         filename = target.Substring(target.LastIndexOf('/')+1, target.LastIndexOf('.') - target.LastIndexOf('/') -1);
+                        writer.WriteStartElement("Underline");
                         writer.WriteString(titlename);
+                        writer.WriteEndElement(); // Underline
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("Paragraph");
                         whenwhere = link.SelectSingleNode("small").InnerText;
-                        writer.WriteString(whenwhere);
+                        //int index = whenwhere.IndexOf('\\');
+                        string[] splitstring = whenwhere.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+                        //writer.WriteString(whenwhere);
+                        writer.WriteString(splitstring[0]);
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
+                        writer.WriteString(splitstring[1]);
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("BlockUIContainer");
