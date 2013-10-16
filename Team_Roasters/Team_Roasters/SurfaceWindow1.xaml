@@ -269,7 +269,7 @@
         <Style x:Key="BackButtonTemplate" TargetType="{x:Type Rectangle}"/>
 
         <XmlDataProvider x:Key="EventData" Source="Resources/events/events.xml" XPath="Items" />
-        
+
         <!-- Home page -->
     </s:SurfaceWindow.Resources>
     <Grid Name="MultiPage">
@@ -353,7 +353,7 @@
                     <!-- News, Upcoming events, twitter etc go here -->
                     <Grid Grid.Column="3">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="400" />
 
                         </Grid.RowDefinitions>
                         <ListView HorizontalAlignment="Right" Width="290" Margin="0,0,0,-17" Grid.RowSpan="2" Background="#FFFCFCDA">
@@ -362,25 +362,16 @@
                                     <GridViewColumn/>
                                 </GridView>
                             </ListView.View>
-                            
+
                             <TextBox TextWrapping="Wrap" Text="Assurity Consulting Group has been generously supporting CCF through fundraising initiatives during the year, and they came on board once again as part of our One Day for Child Cancer campaign in July."/>
                             <TextBox TextWrapping="Wrap" Text="Executive Travel have embarked on a year long fundraising programme for CCF."/>
                             <TextBox TextWrapping="Wrap" Text="The Governor-General Dinner held in Hamilton last week was a fantastic event and a great night was had by all. Sir Jerry pictured right with CCF CEO, Sarah."/>
                         </ListView>
-                        <RichTextBox Width="290" x:Name="infoViewer" IsReadOnly="True" IsDocumentEnabled="False"/>
-                        <!--ListView Name="Events" HorizontalAlignment="Center" Width="290" Margin="0,0,0,-17" Grid.RowSpan="2" Background="#FFFCFCDA">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn/>
-                                </GridView>
-                            </ListView.View -->
-                            
-                            <!--ListBox ItemsSource="{Binding Source={StaticResource EventData}}" DisplayMemberPath="Section" /-->
-                            <!--FlowDocumentScrollViewer Width="280" Height="400" Focusable="True" 
-                          IsToolBarVisible="False"
-                          ScrollViewer.CanContentScroll="True"                             
-                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                          ScrollViewer.VerticalScrollBarVisibility="Visible"  Name="EventsDocReader"></FlowDocumentScrollViewer-->
+                        <RichTextBox Width="290" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False">
+                            <RichTextBox.Effect>
+                                <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                            </RichTextBox.Effect>
+                        </RichTextBox>
                         <!--/ListView-->
                         <ListView x:Name="Twitter" HorizontalAlignment="Left" Width="290" Margin="0,0,0,-17" Grid.RowSpan="2" Background="#FFFCFCDA">
                             <ListView.View>
@@ -394,7 +385,7 @@
                         </ListView>
                     </Grid>
 
-                    
+
                 </Grid>
             </s:SurfaceScrollViewer>
         </Grid>

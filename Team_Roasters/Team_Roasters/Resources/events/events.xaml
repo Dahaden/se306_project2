@@ -8,6 +8,9 @@
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Charity-Home-for-CCF.jpeg" />
     </BlockUIContainer>
     <Paragraph>Proud sponsor Professionals Hutt City, in partnership with PlaceMakers Hutt City and Certified Builders, are building a house in October in support of CCF.</Paragraph>
+    <Paragraph>
+      <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
+    </Paragraph>
   </Section>
   <Section>
     <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
@@ -18,6 +21,22 @@
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Crafty-Knitwits-Knitathon-Grand-Auction.jpeg" />
     </BlockUIContainer>
     <Paragraph>The Knitathon was run for the first time in 2011 and has grown exponentially since then, with all items auctioned off for CCF.</Paragraph>
+    <Paragraph>
+      <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
+    </Paragraph>
+  </Section>
+  <Section>
+    <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+      <Underline>Child Cancer Legends Luncheon </Underline>
+    </Paragraph>
+    <Paragraph>When: Friday 22 November 2013<LineBreak />Where: Classic Flyers, 9 Jean Batten Drive, Mt Maunganui</Paragraph>
+    <BlockUIContainer>
+      <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Child-Cancer-Legends-Luncheon.jpeg" />
+    </BlockUIContainer>
+    <Paragraph>You're invited to attend the inaugural Child Cancer Legends Luncheon in Mt Maunganui to dine with World Champions!</Paragraph>
+    <Paragraph>
+      <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
+    </Paragraph>
   </Section>
   <Section>
     <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
@@ -28,6 +47,9 @@
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Creative-Collaboration-Presents-Fashion-for-Charit.jpeg" />
     </BlockUIContainer>
     <Paragraph>Tickets are now on sale for the launch of the Fashion for Charity fashion event. This event is a collaboration between industry professionals who have chosen to work together to raise funds for kids with cancer.</Paragraph>
+    <Paragraph>
+      <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
+    </Paragraph>
   </Section>
   <Section>
     <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
@@ -38,6 +60,9 @@
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\funrazor--The-10th-Anniversary-Event.jpeg" />
     </BlockUIContainer>
     <Paragraph>It is a very special year for funrazor this year - not only is it back in the Heart of Christchurch, it is funrazor's 10th Anniversary!! </Paragraph>
+    <Paragraph>
+      <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
+    </Paragraph>
   </Section>
   <Section>
     <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
@@ -49,15 +74,21 @@
     </BlockUIContainer>
     <Paragraph>The Top of the Range Horse Trek is being held in the beautiful Hawke's Bay over 4 days across a course that will feature stunning views of the Te Pohue area from 1000 metres above sea level. Register now to take part in this great event!
 </Paragraph>
+    <Paragraph>
+      <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
+    </Paragraph>
   </Section>
   <Section>
     <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
       <Underline>Rotorua Marathon</Underline>
     </Paragraph>
-    <Paragraph>When: Saturday 3rd May 2013<LineBreak />Where: Rotorua</Paragraph>
+    <Paragraph>When: Saturday 3rd May 2014<LineBreak />Where: Rotorua</Paragraph>
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Rotorua-Marathon.jpeg" />
     </BlockUIContainer>
     <Paragraph>Take on the Lake! The 50th Lion Foundation Rotorua Marathon is set for Saturday 3 May 2014, along with the Half &amp; Quarter Marathons and 5.5km Fun Run.</Paragraph>
+    <Paragraph>
+      <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
+    </Paragraph>
   </Section>
 </FlowDocument>
