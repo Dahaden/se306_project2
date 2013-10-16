@@ -21,7 +21,7 @@ using System.IO;
 using System.Security.Cryptography;
 using Newtonsoft.Json;
 
-using SurfaceApplication1.Tweet;
+using SurfaceApplication1;
 
 
 
@@ -196,11 +196,11 @@ namespace SurfaceApplication1
             //var tweets = getTwitterFeed();
             //Tweet_Heading.Text = tweets;
 
-            var jarray = JsonConvert.DeserializeObject<List<Tweet.Tweet>>(getTwitterFeed());
+            var jarray = JsonConvert.DeserializeObject<List<Tweet>>(getTwitterFeed());
 
-            foreach (Tweet.Tweet t in jarray)
+            foreach (Tweet t in jarray)
             {
-                Tweet_Heading.Text = Tweet_Heading.Text + "\n" + "hello";
+                Tweet_Heading.Text = Tweet_Heading.Text + "\n" + t.text;
             }
         }
     }
