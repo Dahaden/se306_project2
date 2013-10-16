@@ -263,7 +263,74 @@
         </Style>
         <Style x:Key="BackButtonTemplate" TargetType="{x:Type Rectangle}"/>
 
-        <XmlDataProvider x:Key="EventData" Source="Resources/events/events.xml" XPath="Items" />
+         <XmlDataProvider x:Key="EventData" Source="Resources/events/events.xml" XPath="Items" />
+
+            <!-- ScrollViewer ScrollBar Thumb, that part that can be dragged
+            up/down or left/right Buttons -->
+        <Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="IsTabStop" Value="false"/>
+            <Setter Property="Focusable" Value="false"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border CornerRadius="2" Background="{TemplateBinding Background}" BorderBrush="#888" BorderThickness="1" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- HorizontalScrollBar Template using the previously created Templates -->
+        <ControlTemplate x:Key="HorizontalScrollBar"
+            TargetType="{x:Type ScrollBar}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MaxWidth="18"/>
+                    <ColumnDefinition Width="0.00001*"/>
+                    <ColumnDefinition MaxWidth="18"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.ColumnSpan="3" CornerRadius="2" Background="#F0F0F0" />
+                <Track Name="PART_Track" Grid.Column="1" IsDirectionReversed="False">
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource ScrollBarThumb}" Margin="0,1,0,1" Background="#888" BorderBrush="#888" />
+                    </Track.Thumb>
+                </Track>
+            </Grid>
+        </ControlTemplate>
+        <!-- Style for overall ScrollBar -->
+        <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Style.Triggers>
+                <Trigger Property="Orientation" Value="Horizontal">
+                    <Setter Property="Width" Value="Auto"/>
+                    <Setter Property="Height" Value="8" />
+                    <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style for overall ScrollViewer -->
+        <Style x:Key="ScrollViewer" TargetType="{x:Type ScrollViewer}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ScrollContentPresenter Grid.Column="1"/>
+                            <ScrollBar Name="PART_HorizontalScrollBar" Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Value="{TemplateBinding HorizontalOffset}" Maximum="{TemplateBinding ScrollableWidth}" ViewportSize="{TemplateBinding ViewportWidth}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
     </s:SurfaceWindow.Resources>
 
@@ -298,7 +365,7 @@
                 </Grid>
 
                 <!-- Main Content goes here -->
-                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="2" HorizontalScrollBarVisibility="Visible">
+                    <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="2" HorizontalScrollBarVisibility="Visible" Style="{StaticResource ScrollViewer}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1200" />
@@ -376,6 +443,7 @@
                                 <RowDefinition Height="400" />
                                 <RowDefinition Height="400" />
                             </Grid.RowDefinitions>
+                            
                             <s:SurfaceScrollViewer HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                                 <RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False">
                                     <RichTextBox.Effect>
@@ -397,6 +465,7 @@
                                     </RichTextBox.Effect>
                                 </RichTextBox>
                             </s:SurfaceScrollViewer>
+
                         </Grid>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,0,0,0" Stroke="#FF818181" Width="4.556" Height="825" VerticalAlignment="Top"/>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Right" Margin="0,0,26.476,0" Stroke="#FF818181" Width="4.556" Height="825" VerticalAlignment="Top"/>
@@ -491,7 +560,7 @@
                             <TextBlock Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy.  They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation.  These provide a story of a child's journey recognising their strength and courage.  Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment).  The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
                         </Border>
                     </Grid>
-
+                    
                     <Grid x:Name="Scholarships" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                             <Border.Effect>
