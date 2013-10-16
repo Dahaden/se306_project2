@@ -34,7 +34,6 @@ namespace Team_Roasters
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
-            
         }
 
         /// <summary>
@@ -122,14 +121,14 @@ namespace Team_Roasters
         {
 
         }
-		
+
         private void FamilyButton_Click(object sender, RoutedEventArgs e)
         {
-			Home.Visibility = System.Windows.Visibility.Collapsed;
+            Home.Visibility = System.Windows.Visibility.Collapsed;
             Family_Support.Visibility = System.Windows.Visibility.Visible;
         }
 
-		protected override void OnInitialized(EventArgs e)
+        protected override void OnInitialized(EventArgs e)
         {
             base.OnInitialized(e);
             DataContext = this;
@@ -138,10 +137,10 @@ namespace Team_Roasters
             pages.Add(Support_Services);
             pages.Add(Scholarships);
         }
-		
+
         private ObservableCollection<Grid> pages = new ObservableCollection<Grid>();
-		
-		private void SurfaceButton_ParentResources(object sender, RoutedEventArgs e)
+
+        private void SurfaceButton_ParentResources(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < pages.Count(); i++)
             {
@@ -200,11 +199,13 @@ namespace Team_Roasters
                 }
             }
         }
-  
-		private void SurfaceButton_Back(object sender, RoutedEventArgs e)
+
+        private void SurfaceButton_Back(object sender, RoutedEventArgs e)
         {
             Family_Support.Visibility = System.Windows.Visibility.Collapsed;
-			Home.Visibility = System.Windows.Visibility.Visible;
+            Home.Visibility = System.Windows.Visibility.Visible;
         }
+
+
     }
 }

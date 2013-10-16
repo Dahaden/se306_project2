@@ -464,7 +464,7 @@
     			</Grid.RowDefinitions>
     			<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,36,23.253" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
     				<Border.Effect>
-    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+    					<DropShadowEffect />
     				</Border.Effect>
     				<TextBlock Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify" />
     			</Border>
