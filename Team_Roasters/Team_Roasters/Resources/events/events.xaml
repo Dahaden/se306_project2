@@ -33,7 +33,7 @@
     <BlockUIContainer>
       <Image Source="C:\Users\Theo\Desktop\306_Project_2\se306_project2\Team_Roasters\Team_Roasters\Resources\events\Child-Cancer-Legends-Luncheon.jpeg" />
     </BlockUIContainer>
-    <Paragraph>You're invited to attend the inaugural Child Cancer Legends Luncheon in Mt Maunganui to dine with World Champions!</Paragraph>
+    <Paragraph>You're invited to attend the inaugural Child Cancer Legends Luncheon in Mt Maunganui to dine with sporting legends!</Paragraph>
     <Paragraph>
       <Line Stretch="Fill" Stroke="Black" X2="1" Margin="-5" />
     </Paragraph>

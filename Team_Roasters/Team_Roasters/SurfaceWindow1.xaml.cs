@@ -285,7 +285,9 @@ namespace Team_Roasters
                         imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
 
                         filepath = "../../Resources/events/" + filename + ".jpeg";
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+
+                        // Uncomment below line to download the images. Otherwise it will download images each run
+                        // client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
 
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
                         string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
