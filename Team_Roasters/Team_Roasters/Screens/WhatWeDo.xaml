@@ -322,7 +322,7 @@
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
                 <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
+                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
                     <Grid.RowDefinitions>
                     	<RowDefinition Height="0.821*"/>
                     	<RowDefinition Height="0.179*"/>
@@ -380,7 +380,7 @@
                     </Grid>
                 </s:SurfaceScrollViewer>
 
-                <Grid x:Name="How_We_Help" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="How_We_Help" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
