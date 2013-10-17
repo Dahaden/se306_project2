@@ -45,6 +45,20 @@ namespace Team_Roasters.Screens
                 twit.updateTweets();
                 List<List<string>> tweets = twit.GetTweets();
 
+                Encoding utf8 = new UTF8Encoding(true);
+                XmlTextWriter writer = new XmlTextWriter("../../Resources/events/events.xaml", utf8);
+                writer.Formatting = Formatting.Indented;
+
+                writer.WriteStartElement("FlowDocument");
+                writer.WriteAttributeString("xmlns", "http://schemas.microsoft.com/winfx/2006/xaml/presentation");
+                writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
+                writer.WriteAttributeString("xmlns:s", "http://schemas.microsoft.com/surface/2008");
+                writer.WriteAttributeString("TextAlignment", "Justify");
+
+                foreach (List<string> t in tweets)
+                {
+
+                }
             }
         }
 
