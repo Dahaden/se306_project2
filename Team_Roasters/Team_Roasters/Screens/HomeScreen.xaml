@@ -356,7 +356,7 @@
                         <s:SurfaceButton 
                 	x:Name="donate" 
                 	Content="Donate" 
-                	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="what_we_do_Click" Margin="0,52,68.333,0" Height="116" VerticalAlignment="Top" HorizontalAlignment="Right" Width="255.667" FontFamily="Gill Sans MT" Foreground="Black" >
+                	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="Donate_Click" Margin="0,52,68.333,0" Height="116" VerticalAlignment="Top" HorizontalAlignment="Right" Width="255.667" FontFamily="Gill Sans MT" Foreground="Black" >
                             <s:SurfaceButton.Effect>
                                 <DropShadowEffect BlurRadius="10" Opacity="0.8"/>
                             </s:SurfaceButton.Effect>
@@ -392,7 +392,7 @@
                             <s:SurfaceButton 
                          Name="what_we_do" 
                          Content="What We Do" 
-                         Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="what_we_do_Click" Margin="13.515,70.747,0,0" Height="329.253" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
+                         Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="What_we_do_Click" Margin="13.515,70.747,0,0" Height="329.253" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>

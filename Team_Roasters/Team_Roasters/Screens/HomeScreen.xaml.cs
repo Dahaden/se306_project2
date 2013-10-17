@@ -19,7 +19,7 @@ namespace Team_Roasters.Screens
             GetEvents();
         }
 
-        private void what_we_do_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void What_we_do_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.pushScreen(new WhatWeDo(parentWindow));
         }
@@ -27,6 +27,11 @@ namespace Team_Roasters.Screens
         private void FamilyButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
+        }
+
+        private void Donate_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new Donate(parentWindow));
         }
 
         private void GetEvents()
