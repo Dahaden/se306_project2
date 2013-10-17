@@ -43,6 +43,9 @@
     <Reference Include="Microsoft.Expression.Drawing" />
     <Reference Include="Microsoft.Expression.Effects" />
     <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity" />
@@ -67,6 +70,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Controls\VideoPlayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+	  <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="TwitterFeed.cs" />
+    <Page Include="Controls\DonateControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
