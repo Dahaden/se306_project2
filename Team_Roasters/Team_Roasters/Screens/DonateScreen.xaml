@@ -303,12 +303,12 @@
         	</ed:BlockArrow>
             <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="Black" FontSize="42.667" Margin="0,86,1,780" FontFamily="Gill Sans MT" Grid.RowSpan="2" />
             <Label Foreground="Black" Content="Please Donate" HorizontalAlignment="Left" FontSize="64" FontFamily="Gill Sans MT" Margin="92,158,0,0" d:LayoutOverrides="Height" Grid.Column="1"/>
-            <Image Margin="-199,335.867,0,202" Grid.Row="1" Source="/Team_Roasters;component/Resources/Donate/ccfappeal.jpg" Stretch="Fill" Grid.Column="1" HorizontalAlignment="Left" Width="907"/>
+            <Image Margin="-199,399.867,0,138" Grid.Row="1" Source="/Team_Roasters;component/Resources/Donate/ccfappeal.jpg" Stretch="Fill" Grid.Column="1" HorizontalAlignment="Left" Width="907"/>
             <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,146.867,120,238.853" Orientation="Vertical" Grid.Row="1" Width="520" d:LayoutOverrides="Height">
             	<Image Margin="78,0,87,0" Source="/Team_Roasters;component/Resources/Donate/donate_qrcode.png" Stretch="Fill" Height="355"/>
-                <TextBlock Foreground="Black" Height="75" TextWrapping="Wrap" FontSize="48" Text="www.childcancer.org.nz " Width="570" />
+            	<TextBlock Foreground="Black" Height="75" TextWrapping="Wrap" FontSize="48" Text="www.childcancer.org.nz " Width="570" Margin="0,0,-50,0" />
             </StackPanel>
-            <TextBlock Foreground="Black" Height="156" Margin="-199,146.867,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Grid.Column="1" HorizontalAlignment="Left" Width="907"><Run Text="Please visit www.childcancer.org.nz or text"/><Run FontWeight="Bold" Language="en-nz" Text=" '"/><Run FontWeight="Bold" Text="bead' to 206"/><Run FontWeight="Bold" Language="en-nz" Text=" "/><Run Language="en-nz" Text="to make a $3 donation"/><Run Text=" "/></TextBlock>
+            <TextBlock Foreground="Black" Height="256" Margin="191,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Left" Width="896" Grid.ColumnSpan="2"><Run Text="Please visit www.childcancer.org.nz or text"/><Run FontWeight="Bold" Language="en-nz" Text=" '"/><Run FontWeight="Bold" Text="bead' to 206"/><Run FontWeight="Bold" Language="en-nz" Text=" "/><Run Language="en-nz" Text="to make a $3 donation"/><Run Text=" "/></TextBlock>
         </Grid>
     </Viewbox>
 </view:Screen>
