@@ -147,6 +147,11 @@
     <Resource Include="Controls\Resources\video_playbutton_small.png" />
     <Resource Include="Controls\Resources\video_rewindbutton.png" />
     <Resource Include="Resources\events\DoNotDeleteThisFolder.txt" />
+    <Resource Include="Resources\Ambassadors\Amanda-Billing.jpg" />
+    <Resource Include="Resources\Ambassadors\Bernadine-Oliver-Kerby.jpg" />
+    <Resource Include="Resources\Ambassadors\Jack-Chris.jpg" />
+    <Resource Include="Resources\Ambassadors\Lorraine-Downes.jpg" />
+    <Resource Include="Resources\Ambassadors\Steve-Price.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
