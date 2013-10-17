@@ -340,15 +340,15 @@
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
-                    			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
+                    			<TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
                     		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Right" Margin="0,3.603,211.12,0" Orientation="Vertical" Width="188.506" VerticalAlignment="Center" Height="288.348">
-                    			<Image Margin="0,10,8,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="UniformToFill" Height="193.347" RenderTransformOrigin="0.08,0.436" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    		<StackPanel HorizontalAlignment="Right" Margin="0,7.606,229.469,8" Orientation="Vertical" Width="195.178">
+                                    <Image Margin="0,10,8,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="UniformToFill" Height="193.347" RenderTransformOrigin="0.08,0.436" VerticalAlignment="Center" HorizontalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
-                    			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" HorizontalAlignment="Left" d:LayoutOverrides="Width" Margin="0,30,0,0"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
+                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="202.664" HorizontalAlignment="Left" Margin="0,30,0,0"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
                     		</StackPanel>
                     		<StackPanel HorizontalAlignment="Left" Margin="0,0,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
                     			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -356,7 +356,7 @@
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
-                    			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
+                                    <TextBlock Foreground="Black" Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
                     		</StackPanel>
                     		<StackPanel Margin="477,3,470.888,-41.397" Orientation="Vertical" d:LayoutOverrides="Height" VerticalAlignment="Center">
                     			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Jack-Chris.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -364,7 +364,7 @@
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
-                    			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Chris Jack"/></TextBlock>
+                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Chris Jack"/></TextBlock>
                     		</StackPanel>
                     		<StackPanel HorizontalAlignment="Left" Margin="237,3,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
                     			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Bernadine-Oliver-Kerby.jpg" Stretch="Fill" Height="222" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -372,11 +372,11 @@
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
-                    			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
+                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
                     		</StackPanel>
                     	</Grid>
                     </Viewbox>
-                    <TextBlock Height="96" Margin="30.414,33.775,14.586,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="en-nz" Text="The Child Caner Foundation is incredibly grateful for the wonderful support and work our ambassadors do. Meet our ambassadors "/><LineBreak/><Run Language="en-nz" Text="and find out why they are so passionate about the Child Cancer Foundation."/></TextBlock>
+                        <TextBlock Foreground="Black" Height="96" Margin="30.414,33.775,14.586,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="en-nz" Text="The Child Caner Foundation is incredibly grateful for the wonderful support and work our ambassadors do. Meet our ambassadors and find out why they are so passionate about the Child Cancer Foundation."/></TextBlock>
                     </Grid>
                 </s:SurfaceScrollViewer>
 
