@@ -16,13 +16,13 @@ namespace Team_Roasters.Screens
         public HomeScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
-            GetEvents();
             getNews();
+            GetEvents();
         }
 
-        private void what_we_do_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void What_we_do_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-
+            parentWindow.pushScreen(new WhatWeDo(parentWindow));
         }
 
         private void FamilyButton_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -30,6 +30,20 @@ namespace Team_Roasters.Screens
             parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
         }
 
+        private void Donate_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new DonateScreen(parentWindow));
+        }
+
+        private void CorporateSponsers_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new CorporateScreen(parentWindow));
+        }
+
+        private void Volunteers_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new Volunteer(parentWindow));
+        }
 
         private void getNews()
         {

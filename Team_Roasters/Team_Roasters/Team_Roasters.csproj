@@ -66,11 +66,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\DonateControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\VideoPlayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\CorporateScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\DonateScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\Volunteer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\WhatWeDo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -90,13 +102,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\DonateControl.xaml.cs">
-      <DependentUpon>DonateControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\VideoPlayer.xaml.cs">
       <DependentUpon>VideoPlayer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screen.cs" />
+    <Compile Include="Screens\CorporateScreen.xaml.cs">
+      <DependentUpon>CorporateScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DonateScreen.xaml.cs">
+      <DependentUpon>DonateScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Volunteer.xaml.cs">
+      <DependentUpon>Volunteer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\WhatWeDo.xaml.cs">
+      <DependentUpon>WhatWeDo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\FamilySupportScreen.xaml.cs">
       <DependentUpon>FamilySupportScreen.xaml</DependentUpon>
     </Compile>
@@ -147,6 +168,32 @@
     <Resource Include="Controls\Resources\video_playbutton_small.png" />
     <Resource Include="Controls\Resources\video_rewindbutton.png" />
     <Resource Include="Resources\events\DoNotDeleteThisFolder.txt" />
+    <Resource Include="Resources\Ambassadors\Amanda-Billing.jpg" />
+    <Resource Include="Resources\Ambassadors\Bernadine-Oliver-Kerby.jpg" />
+    <Resource Include="Resources\Ambassadors\Jack-Chris.jpg" />
+    <Resource Include="Resources\Ambassadors\Lorraine-Downes.jpg" />
+    <Resource Include="Resources\Ambassadors\Steve-Price.jpg" />
+    <Resource Include="Resources\How_We_Make_A_Difference.png" />
+    <Resource Include="Resources\Donate\CCF-Logo-Transparent.png" />
+    <Resource Include="Resources\Donate\ccfappeal.jpg" />
+    <Resource Include="Resources\Donate\donate_qrcode.png" />
+    <Resource Include="Resources\Corporate\99-Logo.jpg" />
+    <Resource Include="Resources\Corporate\alabar.jpg" />
+    <Resource Include="Resources\Corporate\Apparelmaster-New-Logo-07.jpg" />
+    <Resource Include="Resources\Corporate\Bartercard-charity-logo-2D4.jpg" />
+    <Resource Include="Resources\Corporate\Bluebridge.jpeg" />
+    <Resource Include="Resources\Corporate\Buzzy-Bee-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\Farmers-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\Gold-Buyers.jpg" />
+    <Resource Include="Resources\Corporate\Gold-Star-Logo.jpg" />
+    <Resource Include="Resources\Corporate\Hansen-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\Millennium-Logo-Sponsors-Page.jpg" />
+    <Resource Include="Resources\Corporate\NZ-Herald-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\NZC-logo-new2.jpg" />
+    <Resource Include="Resources\Corporate\Platinum-Star-Logo_1.jpg" />
+    <Resource Include="Resources\Corporate\Profesionals.jpg" />
+    <Resource Include="Resources\Corporate\RCP-logo.jpg" />
+    <Resource Include="Resources\Corporate\Savemart_1.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -155,6 +202,7 @@
     <None Include="Resources\intro-video.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Resource Include="Resources\VolunteerQR.png" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
