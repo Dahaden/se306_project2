@@ -271,6 +271,72 @@
 
         <XmlDataProvider x:Key="EventData" Source="Resources/events/events.xml" XPath="Items" />
 
+        <!-- ScrollViewer ScrollBar Thumb, that part that can be dragged left/right -->
+        <Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="IsTabStop" Value="false"/>
+            <Setter Property="Focusable" Value="false"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border CornerRadius="2" Background="{TemplateBinding Background}" BorderBrush="#888" BorderThickness="1" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- HorizontalScrollBar Template using the previously created Templates -->
+        <ControlTemplate x:Key="HorizontalScrollBar"
+            TargetType="{x:Type ScrollBar}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MaxWidth="18"/>
+                    <ColumnDefinition Width="0.00001*"/>
+                    <ColumnDefinition MaxWidth="18"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.ColumnSpan="3" CornerRadius="2" Background="#F0F0F0" />
+                <Track Name="PART_Track" Grid.Column="1" IsDirectionReversed="False">
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource ScrollBarThumb}" Margin="0,1,0,1" Background="#888" BorderBrush="#888" />
+                    </Track.Thumb>
+                </Track>
+            </Grid>
+        </ControlTemplate>
+        <!-- Style for overall ScrollBar -->
+        <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Style.Triggers>
+                <Trigger Property="Orientation" Value="Horizontal">
+                    <Setter Property="Width" Value="Auto"/>
+                    <Setter Property="Height" Value="8" />
+                    <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style for overall ScrollViewer -->
+        <Style x:Key="ScrollViewer" TargetType="{x:Type ScrollViewer}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ScrollContentPresenter Grid.Column="1"/>
+                            <ScrollBar Name="PART_HorizontalScrollBar" Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Value="{TemplateBinding HorizontalOffset}" Maximum="{TemplateBinding ScrollableWidth}" ViewportSize="{TemplateBinding ViewportWidth}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </view:Screen.Resources>
 
     <Viewbox>
@@ -286,7 +352,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Image Margin="383,52,301,80" Source="Resources/tagline2.png" Stretch="UniformToFill"/>
+                        <Image Margin="383,52,301,80" Source="../Resources/tagline2.png" Stretch="UniformToFill"/>
                         <s:SurfaceButton 
                 	x:Name="donate" 
                 	Content="Donate" 
@@ -295,7 +361,7 @@
                                 <DropShadowEffect BlurRadius="10" Opacity="0.8"/>
                             </s:SurfaceButton.Effect>
                         </s:SurfaceButton>
-                        <Image Stretch="Uniform" Source="Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0">
+                        <Image Stretch="Uniform" Source="../Resources/CCF-Logo-Transparent.png" Margin="100,10,10,10" HorizontalAlignment="Left" Width="331" Grid.Column="0">
                             <Image.Effect>
                                 <BlurEffect Radius="2"/>
                             </Image.Effect>
@@ -304,7 +370,7 @@
                 </Grid>
 
                 <!-- Main Content goes here -->
-                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Margin="0,8,-636,-8" d:LayoutOverrides="GridBox">
+                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="2" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1200" />
