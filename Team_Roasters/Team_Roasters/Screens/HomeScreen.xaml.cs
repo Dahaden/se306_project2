@@ -53,7 +53,7 @@ namespace Team_Roasters.Screens
 
                     byte[] myDataBuffer = client.DownloadData(url);
                     string result = System.Text.Encoding.UTF8.GetString(myDataBuffer);
-                    //string baseURI = "http://www.childcancer.org.nz";
+                    string baseURI = "http://www.childcancer.org.nz";
 
                     HtmlDocument doc = new HtmlDocument();
                     doc.LoadHtml(result);
@@ -94,7 +94,7 @@ namespace Team_Roasters.Screens
                         writer.WriteString(splitstring[0]); // "When"
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
-                        writer.WriteString(splitstring[1]); // "Where"
+//                        writer.WriteString(splitstring[1]); // "Where"
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("BlockUIContainer");
@@ -103,7 +103,7 @@ namespace Team_Roasters.Screens
                         filepath = "../../Resources/news/" + filename + ".jpeg";
 
                         // Uncomment below line to download the images. Otherwise it will download images each run
-                        // client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
+                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
 
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
                         string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
