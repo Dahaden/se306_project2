@@ -21,7 +21,7 @@ namespace Team_Roasters.Screens
 
         private void what_we_do_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-
+            parentWindow.pushScreen(new WhatWeDo(parentWindow));
         }
 
         private void FamilyButton_Click(object sender, System.Windows.RoutedEventArgs e)
