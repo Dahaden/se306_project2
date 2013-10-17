@@ -297,7 +297,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Row="0" Grid.Column="0">
-                <ed:BlockArrow Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC">
+                <ed:BlockArrow x:Name="ButtonBody2" Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC">
                     <ed:BlockArrow.Effect>
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     </ed:BlockArrow.Effect>
@@ -306,7 +306,7 @@
             </Grid>
 
             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-                <Label Foreground="Black" Content="Volunteer" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT"/>
+                <Label Foreground="Black" Content="What We Do" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
