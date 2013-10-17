@@ -370,7 +370,7 @@
                 </Grid>
 
                 <!-- Main Content goes here -->
-                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" Margin="0,0,-978,0" d:LayoutOverrides="GridBox">
+                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" d:LayoutOverrides="GridBox">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1200" />
