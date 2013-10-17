@@ -7,7 +7,7 @@
              xmlns:view="clr-namespace:Team_Roasters"
              xmlns:my="clr-namespace:Team_Roasters.Controls"
              xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
-             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.WhatWeDo"
+             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.Volunteer"
              mc:Ignorable="d"
              d:DesignHeight="1080"
              d:DesignWidth="1920">
@@ -286,7 +286,7 @@
 
     </view:Screen.Resources>
     <Viewbox>
-        <Grid x:Name="What_We_Do" Background="#FFFFFCF0" Width="1920" Height="1080">
+        <Grid x:Name="Volunteer_Page" Background="#FFFFFCF0" Width="1920" Height="1080">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition Height="0.8*"/>
@@ -306,14 +306,14 @@
             </Grid>
 
             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-                <Label Foreground="Black" Content="Volunteer" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT"/>
+                <Label Foreground="Black" Content="Volunteering for CCF" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton Content="Our Ambassadors" Click="SurfaceButton_OurAmbassadors" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton Content="How We Help" Click="SurfaceButton_HowWeHelp" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton Content="Our History" Click="SurfaceButton_OurHistory" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="What is it?" Click="SurfaceButton_WhatIsVolunteering" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="Who can do it?" Click="SurfaceButton_WhoCanVolunteer" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="What would I do?" Click="SurfaceButton_WhatWouldIDo" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="Can I Volunteer?" Click="SurfaceButton_Volunteering" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
             <Grid Grid.Row="1" Grid.Column="1" Margin="20">
@@ -321,21 +321,21 @@
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
-                <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
+                <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2" d:IsHidden="True">
+                <Grid x:Name="WhatIsVolunteering" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
                     <Grid.RowDefinitions>
                     	<RowDefinition Height="0.821*"/>
                     	<RowDefinition Height="0.179*"/>
                     </Grid.RowDefinitions>
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0,0,14.586,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
+                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0,0,14.586,32.478" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
                     	<Border.Effect>
                     		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     	</Border.Effect>
                     </Border>
-                    <Viewbox Margin="0,37.775,14.586,199.8" Stretch="Fill">
+                    <Viewbox Margin="0,174.775,14.586,62.8" Stretch="Fill">
                     	<Grid Height="315.606" Width="1128.888" Margin="50,0">
                     		<StackPanel HorizontalAlignment="Right" Margin="0,0,-9.374,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Steve-Price.jpg" Stretch="Fill" RenderTransformOrigin="-6.006,0.517" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_SP">
+                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Steve-Price.jpg" Stretch="Fill" RenderTransformOrigin="-6.006,0.517" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
@@ -343,14 +343,14 @@
                     			<TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
                     		</StackPanel>
                     		<StackPanel HorizontalAlignment="Right" Margin="0,7.606,229.469,8" Orientation="Vertical" Width="195.178">
-                                    <Image Margin="0,10,8,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="UniformToFill" Height="193.347" RenderTransformOrigin="0.08,0.436" VerticalAlignment="Center" HorizontalAlignment="Center" TouchEnter="Our_Amb_Enter_LD">
+                                    <Image Margin="0,10,8,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="UniformToFill" Height="193.347" RenderTransformOrigin="0.08,0.436" VerticalAlignment="Center" HorizontalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
                                     <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="202.664" HorizontalAlignment="Left" Margin="0,30,0,0"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
                     		</StackPanel>
-                    		<StackPanel x:Name="Our_Amb_AB" HorizontalAlignment="Left" Margin="0,0,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_AB" RenderTransformOrigin="0.5,0.5">
+                    		<StackPanel HorizontalAlignment="Left" Margin="0,0,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
                     			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
@@ -359,7 +359,7 @@
                                     <TextBlock Foreground="Black" Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
                     		</StackPanel>
                     		<StackPanel Margin="477,3,470.888,-41.397" Orientation="Vertical" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Jack-Chris.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_CJ">
+                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Jack-Chris.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
@@ -367,7 +367,7 @@
                                     <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Chris Jack"/></TextBlock>
                     		</StackPanel>
                     		<StackPanel HorizontalAlignment="Left" Margin="237,3,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Bernadine-Oliver-Kerby.jpg" Stretch="Fill" Height="222" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_BOK">
+                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Bernadine-Oliver-Kerby.jpg" Stretch="Fill" Height="222" HorizontalAlignment="Center" VerticalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
@@ -376,26 +376,11 @@
                     		</StackPanel>
                     	</Grid>
                     </Viewbox>
-                        <TextBlock x:Name="AB_text" Visibility="Visible"  Foreground="Black" Margin="30.414,-133.8,50.586,63.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1"><Run Language="en-nz" Text="Amanda Billing is best known for her role as Dr Sarah Potts on TVNZ’s Shortland Street."/><LineBreak/><Run Language="en-nz" Text="Amanda’s first project with the foundation was to lead a group of children with cancer who together painted a giant fibreglass horse, in 2011.  Maia, as he is now known, has been covered in Child Cancer Foundation Beads of Courage®.  Amanda has given selflessly of her time and artistic talents and been a wonderful friend to the young people she has met. She was, along with Megan Alatini the ambassador for One Day for Child Cancer launched in 2012, manages the kids’ section in Sharing Magazine and helps out at any event she can."/><LineBreak/><Run Language="en-nz"/><LineBreak/><Run Language="en-nz" Text="Amanda joined CCF in 2011"/></TextBlock>
-                        <TextBlock x:Name="BOK_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="We were very fortunate to have someone as professional as Bernadine featuring on our Child Cancer Foundation Appeal Month television commercial this year. The clip with young Emma was beautiful. "/><LineBreak/><Run Text="Bernadine began her broadcasting career in children’s television in Christchurch and moved to Auckland to specialise in sport. These days, with two young daughters to care for, she reads breakfast bulletins on Newstalk ZB as well as presenting One News at 6pm on weekends.  Bernadine fronted CCF’s National Appeal TV and radio advertisements in 2011 and 2012 and is influential in helping the Foundation gain media coverage.  Bernadine is extremely well liked and has helped at numerous events including Round the Bays and the Steve Price Night of Courage, where she was a brilliant MC."/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text="Bernadine joined CCF in 2009"/></TextBlock>
-                        <TextBlock x:Name="LD_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="Lorraine Downes has been a passionate and much appreciated supporter of the Child Cancer Foundation over the years. "/><LineBreak/><Run Text="Lorraine’s association with the Foundation began in spectacular fashion in 2006 when she selected the Child Cancer Foundation as her chosen charity while competing on TVNZ’s Dancing with the Stars. Lorraine won the competition with partner Aaron Gilmore, and raised an amazing nearly $112,000.  Lorraine has gone on to help promote the Child Cancer Foundation on radio, television and magazines and has been instrumental in gaining considerable media profile for our cause."/><LineBreak/><Run/><LineBreak/><Run Text="Lorraine joined CCF in 2010."/></TextBlock>
-                        <TextBlock x:Name="CJ_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="Chris Jack is a well-known sporting icon in New Zealand and overseas. He has been an enthusiastic and passionate supporter of Child Cancer for several years. Chris officially came on board as an ambassador in 2011."/><LineBreak/><Run Text="The popular Crusaders lock ended his All Black career in 2007 as the country’s second most capped lock, with only Ian Jones (79 Tests) ahead of him.Chris has young children, Sophia and Samuel and gives very generously of his time both behind the scenes visiting children with cancer and also lending his profile in the public arena.  Chris is well known among children with cancer in Christchurch for his generous good nature and he regularly brightens children’s  days. Chris has also enlisted the help of several other well known members of the Crusaders to help out."/></TextBlock>
-                        <TextBlock x:Name="SP_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="Steve Price is a legend of league on both sides of the Tasman and is recognised as one of the best role models and leaders in sport today."/><Run Language="en-nz" Text=" "/><Run Text="Steve is a former Australian rugby league and Warriors team captain. His most recent major contribution to the Foundation is his support of the Steve Price Night of Courage which now launches Appeal Month and is highly successful.  Steve’s mana and personality brings a huge amount to the event and he is instrumental in selling tables and securing auction items. Steve also shaves his head at the event. He has raised a considerable amount for CCF through funrazor head shaves over the years.  Steve has strong media contacts and is referred to as “the most loved Australian sportsperson in New Zealand.”"/><LineBreak/><Run Text="He joined CCF in 2008. "/></TextBlock>
+                        <TextBlock Foreground="Black" Height="96" Margin="30.414,33.775,14.586,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="en-nz" Text="The Child Caner Foundation is incredibly grateful for the wonderful support and work our ambassadors do. Meet our ambassadors and find out why they are so passionate about the Child Cancer Foundation."/></TextBlock>
                     </Grid>
                 </s:SurfaceScrollViewer>
 
-                <Grid x:Name="How_We_Help" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
-                        	<Image Height="684.001" Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Width="900"/>
-                    </Border>
-                        </s:SurfaceScrollViewer>
-                </Grid>
-
-                <Grid x:Name="Our_History" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="WhoCanVolunteer" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" d:IsHidden="True">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
 
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
@@ -407,7 +392,7 @@
                     </s:SurfaceScrollViewer>
                 </Grid>
 
-                    <Grid x:Name="Our_People" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <Grid x:Name="WhatWouldIDo" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" d:IsHidden="True">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
@@ -416,6 +401,20 @@
                         <TextBlock Foreground="Black" HorizontalAlignment="Center" Padding="10" FontSize="24" TextAlignment="Justify" Margin="0,0,0,7" Width="1480.055"><Run FontWeight="Bold" Text="Meet the team and find out more about main shareholders and board members."/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Sarah Thomson &#x9;Chief Executive"/><LineBreak/><Run Text="PHN 09 303 9974 &#x9;EML sthomson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Paula Elder &#x9;Manager - Chief Executive's Office"/><LineBreak/><Run Text="PHN 09 303 9970 &#x9;EML pelder@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="MARKETING &amp; FUNDRAISING"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Darragh O'Riordan &#x9;National Manager Sponsorship"/><LineBreak/><Run Text="PHN 09 303 9882 &#x9;EML doriordan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sue Jury &#x9;National Manager Fundraising"/><LineBreak/><Run Text="PHN 09 366 2354 &#x9;EML sjury@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Megan Horsburgh &#x9;PR &amp; Communications Manager"/><LineBreak/><Run Text="PHN 09 303 9884 &#x9;EML mhorsburgh@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Jade Le Geyt &#x9;Marketing &amp; Relationship Manager"/><LineBreak/><Run Text="PHN 09 303 9979 &#x9;EML jlegeyt@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sophie Armitage &#x9;Information &amp; Data Manager"/><LineBreak/><Run Text="PHN 09 303 9972 &#x9;EML sarmitage@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Amber West &#x9;National Funding Manager          "/><LineBreak/><Run Text="PHN 09 303 9978 &#x9;EML awest@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Hema Prashar &#x9;Events &amp; Fundraising Manager - Auckland / Northland"/><LineBreak/><Run Text="PHN 09 303 9976 &#x9;EML hprashar@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Kylie Green &#x9;Fundraising &amp; Marketing Coordinator"/><LineBreak/><Run Text="PHN 09 303 9973 &#x9;EML kgreen@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Linda Walsh &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Hawkes Bay"/><LineBreak/><Run Text="PHN 06 870 3189 &#x9;EML lwalsh@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Clare Wilkinson &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Canterbury / West Coast"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML cwilkinson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Delwynne Hahunga &#x9; Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text=" Bay of Plenty / Lakes"/><LineBreak/><Run Text="PHN 07 579 4141 &#x9;EML dhahunga@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Keri McLachlan &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Otago / Southland"/><LineBreak/><Run Text="PHN 03 471 7258 &#x9;EML kmclachlan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Scott Lancaster &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Central"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML slancaster@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sharon Robertson &#x9;Fundraising &amp; Business Development Manager Waikato"/><LineBreak/><Run Text="PHN 021 858 903 &#x9;EML srobertson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="CHILD CANCER SERVICES"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Maryanne Thomson &#x9; National Manager - Child Cancer Services"/><LineBreak/><Run Text="PHN 09 303 9888 &#x9;EML mthomson@childcancer.org.nz"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Family Support"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Auckland &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Janet Masina &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 09 303 9885 &#x9;EML jmasina@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Mary Mangan &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 09 303 9971 &#x9;EML mmangan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Supriya Maharaj &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 09 303 9886 &#x9;EML smaharaj@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Northland &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Abigail Alger &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 021856451 &#x9;EML aalger@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Waikato, Lakes &amp; Bays"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Robyn Cresswell  &#x9;Family Support Manager"/><LineBreak/><Run Text="PHN 021 714 088 &#x9;EML rcresswell@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Raewyn Sayers &#x9;Family Support Coordinator – Waikato"/><LineBreak/><Run Text="PHN 021 229 9792 &#x9;EML rsayers@childcancer.org.nz"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Barbara Richardson &#x9;Family Support Coordinator – The Lakes"/><LineBreak/><Run Text="PHN 027 533 3793 &#x9;EML brichardson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Shannyn Hansen &#x9;Family Support Coordinator – Hawkes Bay"/><LineBreak/><Run Text="PHN 027 432 0307 &#x9;EML shansen@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Cheryl Scott &#x9;Family Support Coordinator – Tairawhiti"/><LineBreak/><Run Text="PHN 027 361 7000 &#x9;EML cscott@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Debbie Hockly &#x9;Family Support Coordinator – Tauranga"/><LineBreak/><Run Text="PHN 07 579 4107 &#x9;EML dhockly@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Central &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sally Black &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML sblack@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Tracy Ward &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML tward@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Bev Randall &#x9;Family Support Coordinator - Manuwatu &amp; Districts"/><LineBreak/><Run Text="PHN 021 891 791 &#x9;EML brandall@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Kathryn Hensley &#x9;Family Support Coordinator - Taranaki"/><LineBreak/><Run Text="PHN 021 525 938 &#x9;EML khensley@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Nelson &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Family Support &#x9;EML nelsonbranch@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="South Island &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Robin Furley &#x9;Family Support Manager - Central / South Island"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML rfurley@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Christine Graham &#x9;Family Support Coordinator - Christchurch"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML cgraham@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Diane Kerr &#x9;Family Support Coordinator - Christchurch"/><LineBreak/><Run Text="PHN 021 838 142 &#x9;EML dkerr@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Otago / Southland &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Christine Donovan &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 03 471 7258 &#x9;EML cdonovan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Family Place Administration"/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text="Corrie Cook "/><LineBreak/><Run Text="&amp; Aliisa Prebble"/><LineBreak/><Run Text="&#x9;Family Place Administrator - Auckland"/><LineBreak/><Run Text="PHN 09 366 1270 &#x9;EML akl.familyplace@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Alison O’Connor &#x9;Family Place Administrator - Wellington"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML aoconnor@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Melissa Walker  &#x9;Family Place Administrator – South Island"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML mwalker@chilodcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="FINANCE "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Simon Lala &#x9;National Finance Manager"/><LineBreak/><Run Text="PHN 021 905 575 &#x9;EML slala@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Susan Hays &#x9;Assistant Accountant"/><LineBreak/><Run Text="PHN 09 262 2128 &#x9;EML susan@slightlala.co.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Geeta Unka &#x9;Assistant Accountant"/><LineBreak/><Run Text="PHN 04 471 2600 &#x9;EML geeta@slightlala.co.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Michelle Nuttall &#x9;Accounts Administrator"/><LineBreak/><Run Text="PHN 09 303 9883 &#x9;EML mnuttall@childcancer.org.nz"/><LineBreak/><Run/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Board members"/><LineBreak/><Run/><LineBreak/><Run Text="John Robson &#x9;Chair"/><LineBreak/><Run Text="Dr Jane Skeen &#x9;Health Professional Representative"/><LineBreak/><Run Text="Shane Dowling &#x9;Canterbury Regional Representative"/><LineBreak/><Run Text="Pat Wilkes &#x9;Deputy Chair and Northern Regional Representative"/><LineBreak/><Run Text="Leanne Fescer &#x9;Central Region Representative"/><LineBreak/><Run Text="Yvonne Osborne &#x9;Mid Northern Region Representative"/><LineBreak/><Run Text="Guy Alexander &#x9;CanTeen Representative"/><LineBreak/><Run Text="Stuart Hutchinson &#x9;Legal Advisor"/><LineBreak/><Run Text="Jim Boult &#x9;Co-opted Board Member"/><LineBreak/><Run Text="Karen Heslip &#x9;Otago / Southland Regional Representative"/><LineBreak/><Run Text="Nick Beale &#x9;Co-opted Board Member"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Life members"/><LineBreak/><Run/><LineBreak/><Run Text="1991 &#x9;Paul Cressey"/><LineBreak/><Run Text="1994 &#x9;Janette Falconer"/><LineBreak/><Run Text="1997 &#x9;Robyn Gordon"/><LineBreak/><Run Text="1998 &#x9;the late Dr David Holdaway"/><LineBreak/><Run Text="1998 &#x9;the late Kerry Goldstone"/><LineBreak/><Run Text="1999 &#x9;the late Dawn Hamilton-Irvine"/><LineBreak/><Run Text="2000 &#x9;Professor Sir David Mauger"/><LineBreak/><Run Text="2001 &#x9;Dr Jane Skeen"/><LineBreak/><Run Text="2001 &#x9;the late Andrew &amp; Diana Robinson"/><LineBreak/><Run Text="2002 &#x9;Lynda Read"/><LineBreak/><Run Text="2003 &#x9;the late Warren Shirley"/><LineBreak/><Run Text="2004 &#x9;Mark Conelly"/><LineBreak/><Run Text="2006 &#x9;Simon Lala"/><LineBreak/><Run Text="2007 &#x9;Kay Morris"/><LineBreak/><Run Text="2008 &#x9;Pauline Hapi"/><LineBreak/><Run Text="2008 &#x9;Denis Kirkcaldie"/><LineBreak/><Run/></TextBlock>
                     </Border>
                 </s:SurfaceScrollViewer>
+                </Grid>
+
+                <Grid x:Name="Volunteering" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White">
+                    		<Border.Effect>
+                    			<DropShadowEffect/>
+                    		</Border.Effect>
+                    		<DataGridRowsPresenter HorizontalAlignment="Left" Height="825" VerticalAlignment="Top" Width="1495">
+                    			<TextBox Margin="0,20,300,0" TextAlignment="Center" TextWrapping="Wrap" Text="To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer" FontSize="30" HorizontalAlignment="Right" Width="955" RenderTransformOrigin="0.603,0.66"/>
+                    			<Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="500,20,500,0"/>
+                    		</DataGridRowsPresenter>
+                    	</Border>
+                    </s:SurfaceScrollViewer>
                 </Grid>
 
             </Grid>

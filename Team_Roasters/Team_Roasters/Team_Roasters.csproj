@@ -71,6 +71,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Screens\CorporateScreen.xaml">
+    <Page Include="Screens\Volunteer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -90,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SurfaceWindow1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,6 +109,8 @@
     <Compile Include="Screen.cs" />
     <Compile Include="Screens\CorporateScreen.xaml.cs">
       <DependentUpon>CorporateScreen.xaml</DependentUpon>
+    <Compile Include="Screens\Volunteer.xaml.cs">
+      <DependentUpon>Volunteer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\DonateScreen.xaml.cs">
       <DependentUpon>DonateScreen.xaml</DependentUpon>
@@ -198,6 +205,8 @@
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\Volunteer-teaser.jpg" />
+    <Resource Include="Resources\VolunteerQR.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
