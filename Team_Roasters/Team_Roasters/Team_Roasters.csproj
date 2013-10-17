@@ -155,6 +155,7 @@
     <None Include="Resources\intro-video.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Resource Include="Resources\news\DoNotDeleteThisFolder.txt" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
