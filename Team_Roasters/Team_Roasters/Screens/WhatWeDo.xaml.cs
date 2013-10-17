@@ -1,4 +1,4 @@
-namespace Team_Roasters.Screens
+﻿namespace Team_Roasters.Screens
 {
     /// <summary>
     /// Interaction logic for FamilySupportScreen.xaml
@@ -47,5 +47,52 @@ namespace Team_Roasters.Screens
             Our_History.Visibility = System.Windows.Visibility.Collapsed;
             How_We_Help.Visibility = System.Windows.Visibility.Visible;
         }
+
+        private void Our_Amb_Enter_AB(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            AB_text.Visibility = System.Windows.Visibility.Visible;
+            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
+            LD_text.Visibility = System.Windows.Visibility.Collapsed;
+            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
+            SP_text.Visibility = System.Windows.Visibility.Collapsed;
+
+        }
+
+        private void Our_Amb_Enter_BOK(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            AB_text.Visibility = System.Windows.Visibility.Collapsed;
+            BOK_text.Visibility = System.Windows.Visibility.Visible;
+            LD_text.Visibility = System.Windows.Visibility.Collapsed;
+            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
+            SP_text.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void Our_Amb_Enter_CJ(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            AB_text.Visibility = System.Windows.Visibility.Collapsed;
+            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
+            LD_text.Visibility = System.Windows.Visibility.Collapsed;
+            CJ_text.Visibility = System.Windows.Visibility.Visible;
+            SP_text.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void Our_Amb_Enter_LD(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            AB_text.Visibility = System.Windows.Visibility.Collapsed;
+            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
+            LD_text.Visibility = System.Windows.Visibility.Visible;
+            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
+            SP_text.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void Our_Amb_Enter_SP(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            AB_text.Visibility = System.Windows.Visibility.Collapsed;
+            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
+            LD_text.Visibility = System.Windows.Visibility.Collapsed;
+            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
+            SP_text.Visibility = System.Windows.Visibility.Visible;
+        }
+
     }
 }

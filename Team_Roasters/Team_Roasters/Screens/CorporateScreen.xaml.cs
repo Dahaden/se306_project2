@@ -1,11 +1,12 @@
-namespace Team_Roasters.Screens
+﻿namespace Team_Roasters.Screens
 {
     /// <summary>
     /// Interaction logic for FamilySupportScreen.xaml
     /// </summary>
-    public partial class Donate : Screen
+    public partial class CorporateScreen : Screen
     {
-        public Donate(SurfaceWindow1 parentWindow) : base(parentWindow)
+        public CorporateScreen(SurfaceWindow1 parentWindow)
+            : base(parentWindow)
         {
             InitializeComponent();           
         }
@@ -14,6 +15,7 @@ namespace Team_Roasters.Screens
         {
             parentWindow.popScreen();
         }
-       
+             
+
     }
 }

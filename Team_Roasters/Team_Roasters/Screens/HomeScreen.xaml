@@ -370,7 +370,7 @@
                 </Grid>
 
                 <!-- Main Content goes here -->
-                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="2" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}">
+                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" Margin="0,0,-978,0" d:LayoutOverrides="GridBox">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1200" />
@@ -401,8 +401,9 @@
                             <s:SurfaceButton 
                          Grid.RowSpan="1" 
                          Grid.ColumnSpan="1" 
-                         Name="how_you_can_help" 
-                         Content="How you can help" 
+                         Name="volunteers" 
+                         Content="Volunteers" 
+                         Click="Volunteers_Click"
                          Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="1" Height="329.253" Margin="0,70.747,-373.515,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
@@ -424,9 +425,9 @@
                             <s:SurfaceButton 
                          Grid.RowSpan="1"
                          Grid.ColumnSpan="1"
-                         Name="volunteers_and_corporate"
-                         Content="Volunteers and &#xd;&#xa;corporate sponsors"
-                         Background="#FFD7E583"  FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,-373.515,69.754" Foreground="Black" >
+                         Name="corporate"
+                         Content="Corporate Sponsors"
+                         Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,-373.515,69.754" Foreground="Black" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -463,6 +464,9 @@
                                 </RichTextBox>
                             </s:SurfaceScrollViewer>
                             <s:SurfaceScrollViewer HorizontalAlignment="Left" Margin="-0.979,112.984,0,23.422" Width="439.984" Grid.RowSpan="2" Background="#FF00ABF0">
+                            	<s:SurfaceScrollViewer.Effect>
+                            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                            	</s:SurfaceScrollViewer.Effect>
                             	<Grid x:Name="Twitable" Width="441.708">
                             		<Grid x:Name="Tweet" VerticalAlignment="Top" Height="100"/>
                             	</Grid>
@@ -481,7 +485,7 @@
                                 <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                             </s:SurfaceButton.Effect>
                         </s:SurfaceButton>
-                        <ListView x:Name="Twitter_Copy" Margin="79.745,0,74.363,49.723" Background="White" Height="190.791" VerticalAlignment="Bottom" Grid.Column="1">
+                        <ListView x:Name="CommentBox" Margin="79.745,0,74.363,49.723" Background="White" Height="190.791" VerticalAlignment="Bottom" Grid.Column="1">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn/>
@@ -493,6 +497,14 @@
                         </ListView>
                         <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="-1,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="439.999" Height="54.626"><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
                         <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
+                        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="2.833" Margin="20,101.5,0,0" VerticalAlignment="Top" Width="400.499">
+                        	<Rectangle.Fill>
+                        		<RadialGradientBrush>
+                        			<GradientStop Color="#FF0FA9F9" Offset="1"/>
+                        			<GradientStop Color="#FF2148E4"/>
+                        		</RadialGradientBrush>
+                        	</Rectangle.Fill>
+                        </Rectangle>
                     </Grid>
                 </s:SurfaceScrollViewer>
             </Grid>

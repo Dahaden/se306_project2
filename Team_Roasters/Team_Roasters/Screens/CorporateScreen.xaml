@@ -7,7 +7,7 @@
              xmlns:view="clr-namespace:Team_Roasters"
              xmlns:my="clr-namespace:Team_Roasters.Controls"
              xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
-             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.DonateScreen"
+             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.CorporateScreen"
              mc:Ignorable="d"
              d:DesignHeight="1080"
              d:DesignWidth="1920">
@@ -286,29 +286,82 @@
 
     </view:Screen.Resources>
     <Viewbox>
-        <Grid x:Name="Donate_Grid" Background="#FFFFFCF0" Width="1920" Height="1080">
+        <Grid x:Name="What_We_Do" Background="#FFFFFCF0" Width="1920" Height="1080">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.241*"/>
-                <RowDefinition Height="0.759*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.8*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
 
-            <ed:BlockArrow x:Name="ButtonBody2" Margin="47,115,56,809" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC" Grid.RowSpan="2">
-        		<ed:BlockArrow.Effect>
-        			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-        		</ed:BlockArrow.Effect>
-        	</ed:BlockArrow>
-            <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="Black" FontSize="42.667" Margin="0,86,1,780" FontFamily="Gill Sans MT" Grid.RowSpan="2" />
-            <Label Foreground="Black" Content="Please Donate" HorizontalAlignment="Left" FontSize="64" FontFamily="Gill Sans MT" Margin="92,158,0,0" d:LayoutOverrides="Height" Grid.Column="1"/>
-            <Image Margin="-199,399.867,0,138" Grid.Row="1" Source="/Team_Roasters;component/Resources/Donate/ccfappeal.jpg" Stretch="Fill" Grid.Column="1" HorizontalAlignment="Left" Width="907"/>
-            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,146.867,120,238.853" Orientation="Vertical" Grid.Row="1" Width="520" d:LayoutOverrides="Height">
-            	<Image Margin="78,0,87,0" Source="/Team_Roasters;component/Resources/Donate/donate_qrcode.png" Stretch="Fill" Height="355"/>
-            	<TextBlock Foreground="Black" Height="75" TextWrapping="Wrap" FontSize="48" Text="www.childcancer.org.nz " Width="570" Margin="0,0,-50,0" />
+            <Grid Grid.Row="0" Grid.Column="0">
+                <ed:BlockArrow x:Name="ButtonBody2" Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC">
+                    <ed:BlockArrow.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </ed:BlockArrow.Effect>
+                </ed:BlockArrow>
+                <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="Black" FontSize="42.667" Margin="0,1,1,1" FontFamily="Gill Sans MT"/>
+            </Grid>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+                <Label Foreground="Black" Content="Corporate Sponsors" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT"/>
             </StackPanel>
-            <TextBlock Foreground="Black" Height="256" Margin="191,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Left" Width="896" Grid.ColumnSpan="2"><Run Text="Please visit www.childcancer.org.nz or text"/><Run FontWeight="Bold" Language="en-nz" Text=" '"/><Run FontWeight="Bold" Text="bead' to 206"/><Run FontWeight="Bold" Language="en-nz" Text=" "/><Run Language="en-nz" Text="to make a $3 donation"/><Run Text=" "/></TextBlock>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
+                </StackPanel>
+            <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="-321,-85,-77,-29" Grid.ColumnSpan="2" Grid.Row="1">
+            	<Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="703.21" Width="1266" d:LayoutOverrides="Height">
+            		<Grid.ColumnDefinitions>
+            			<ColumnDefinition Width="0.75*"/>
+            			<ColumnDefinition Width="0.145*"/>
+            			<ColumnDefinition Width="0.081*"/>
+            			<ColumnDefinition Width="0.024*"/>
+            		</Grid.ColumnDefinitions>
+            		<Grid.RowDefinitions>
+            			<RowDefinition Height="0.846*"/>
+            			<RowDefinition Height="0.154*"/>
+            		</Grid.RowDefinitions>
+            		<Border BorderBrush="#FF007294" BorderThickness="1" Margin="-124,0,-379.414,-13" Grid.RowSpan="2" Background="White" Grid.ColumnSpan="4">
+            			<Border.Effect>
+            				<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            			</Border.Effect>
+            			<Image HorizontalAlignment="Right" Height="136" Source="/Team_Roasters;component/Resources/Corporate/Millennium-Logo-Sponsors-Page.jpg" Stretch="Fill" VerticalAlignment="Bottom" Width="205" Margin="0,0,34,7"/>
+            		</Border>
+            		<Image Margin="-28.458,17.417,-125,16.293" Source="/Team_Roasters;component/Resources/Corporate/Hansen-Logo-Hm-Page.jpg" Stretch="Fill" Grid.Row="1" Grid.Column="3" VerticalAlignment="Bottom"/>
+            		<Image Margin="8,282.5,47.5,221.416" Source="/Team_Roasters;component/Resources/Corporate/RCP-logo.jpg" Stretch="Fill" Grid.Column="1"/>
+            		<Image HorizontalAlignment="Right" Margin="0,-5.415,7.958,21.708" Source="/Team_Roasters;component/Resources/Corporate/NZ-Herald-Logo-Hm-Page.jpg" Stretch="Fill" Width="198" Grid.Row="1" VerticalAlignment="Bottom"/>
+            		<Image HorizontalAlignment="Left" Margin="23,2.585,0,21.708" Source="/Team_Roasters;component/Resources/Corporate/Buzzy-Bee-Logo-Hm-Page.jpg" Stretch="Fill" Width="163" Grid.Row="1" VerticalAlignment="Bottom"/>
+            		<Image Margin="0,14.754,235.958,21.708" Source="/Team_Roasters;component/Resources/Corporate/Bluebridge.jpeg" Stretch="Fill" Grid.Row="1" HorizontalAlignment="Right" Width="171.542" VerticalAlignment="Bottom"/>
+            		<Image Margin="0,342,-253.842,150.416" Source="/Team_Roasters;component/Resources/Corporate/Bartercard-charity-logo-2D4.jpg" Stretch="Fill" Grid.Column="3" HorizontalAlignment="Right" Width="245.842"/>
+            		<Image Margin="336,18.585,453.5,16.293" Source="/Team_Roasters;component/Resources/Corporate/Apparelmaster-New-Logo-07.jpg" Stretch="Fill" Grid.Row="1" VerticalAlignment="Bottom"/>
+            		<Image HorizontalAlignment="Left" Margin="190,2.585,0,14.709" Source="/Team_Roasters;component/Resources/Corporate/alabar.jpg" Stretch="Fill" Width="98" Grid.Row="1" VerticalAlignment="Bottom"/>
+            		<Image HorizontalAlignment="Left" Margin="-72,20.169,0,21.708" Source="/Team_Roasters;component/Resources/Corporate/99-Logo.jpg" Stretch="Fill" Width="83" Grid.Row="1" VerticalAlignment="Bottom"/>
+            		<Image Height="74" Margin="7.542,141.5,-202,0" Source="/Team_Roasters;component/Resources/Corporate/Savemart_1.jpg" Stretch="Fill" VerticalAlignment="Top" Grid.Column="3"/>
+                    <TextBlock Foreground="Black" Height="60" Margin="4.542,66.5,-301,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" Grid.Column="3"><Run Language="en-nz" Text="Major Funding Partner"/></TextBlock>
+            		<Image Margin="0,267.5,38.958,221.416" Source="/Team_Roasters;component/Resources/Corporate/Farmers-Logo-Hm-Page.jpg" Stretch="Fill" HorizontalAlignment="Right" Width="196"/>
+            		<Image Margin="0,264.624,286.5,224.417" Source="/Team_Roasters;component/Resources/Corporate/Profesionals.jpg" Stretch="Fill" HorizontalAlignment="Right" Width="121"/>
+            		<Image HorizontalAlignment="Left" Margin="-55,267.5,0,159.416" Source="/Team_Roasters;component/Resources/Corporate/Gold-Buyers.jpg" Stretch="Fill" Width="451"/>
+            		<Image Source="/Team_Roasters;component/Resources/Corporate/Platinum-Star-Logo_1.jpg" Stretch="Fill" Margin="-55,55.5,0,0" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="451">
+            			<Image.Effect>
+            				<DropShadowEffect/>
+            			</Image.Effect>
+            		</Image>
+            		<Image Height="160" Margin="0,55.5,-36.112,0" Source="/Team_Roasters;component/Resources/Corporate/Gold-Star-Logo.jpg" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Right" Width="335.182">
+            			<Image.Effect>
+            				<DropShadowEffect/>
+            			</Image.Effect>
+            		</Image>
+            		<TextBlock Foreground="Black"  Margin="4.542,278.5,-301,256.416" TextWrapping="Wrap" FontSize="26.667" Grid.Column="3"><Run Language="en-nz" Text="Foundation Partner"/></TextBlock>
+            		<Image Margin="36.042,8.585,-38.542,14.709" Source="/Team_Roasters;component/Resources/Corporate/NZC-logo-new2.jpg" Stretch="Fill" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom"/>
+            	</Grid>
+            </s:SurfaceScrollViewer>
+            <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
+                <Image.Effect>
+                    <BlurEffect Radius="2"/>
+                </Image.Effect>
+            </Image>
         </Grid>
     </Viewbox>
 </view:Screen>

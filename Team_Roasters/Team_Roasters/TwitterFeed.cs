@@ -12,7 +12,7 @@ namespace Team_Roasters
 {
     class TwitterFeed
     {
-        List<Tweet> tweets;
+        public List<Tweet> tweets;
 
         private string getTwitterFeed()
         {

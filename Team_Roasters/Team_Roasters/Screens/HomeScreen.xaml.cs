@@ -37,7 +37,17 @@ namespace Team_Roasters.Screens
             parentWindow.pushScreen(new DonateScreen(parentWindow));
         }
 
-        private void GetTweets()
+        private void CorporateSponsers_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new CorporateScreen(parentWindow));
+        }
+
+        private void Volunteers_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new Volunteer(parentWindow));
+        }
+		
+		private void GetTweets()
         {
             if (CheckInternetConnection())
             {
@@ -54,13 +64,26 @@ namespace Team_Roasters.Screens
                 writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
                 writer.WriteAttributeString("xmlns:s", "http://schemas.microsoft.com/surface/2008");
                 writer.WriteAttributeString("TextAlignment", "Justify");
-
+                writer.WriteStartElement("Section");
                 foreach (List<string> t in tweets)
                 {
+                    writer.WriteStartElement("Paragraph");
+                    //client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
+                    foreach (string name in t)
+                    {
 
+                    }
+
+                    writer.WriteStartElement("Line");
+                    writer.WriteAttributeString("Stretch", "Fill");
+                    writer.WriteAttributeString("Stroke", "Black");
+                    writer.WriteAttributeString("X2", "1");
+                    writer.WriteAttributeString("Margin", "-5");
+                    writer.WriteEndElement(); // Line
+                    writer.WriteEndElement(); // Paragraph
                 }
             }
-        }
+		}
 
         private void GetEvents()
         {

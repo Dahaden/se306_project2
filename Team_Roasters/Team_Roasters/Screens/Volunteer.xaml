@@ -7,7 +7,7 @@
              xmlns:view="clr-namespace:Team_Roasters"
              xmlns:my="clr-namespace:Team_Roasters.Controls"
              xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
-             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.DonateScreen"
+             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.Volunteer"
              mc:Ignorable="d"
              d:DesignHeight="1080"
              d:DesignWidth="1920">
@@ -286,29 +286,101 @@
 
     </view:Screen.Resources>
     <Viewbox>
-        <Grid x:Name="Donate_Grid" Background="#FFFFFCF0" Width="1920" Height="1080">
+        <Grid x:Name="Volunteer_Page" Background="#FFFFFCF0" Width="1920" Height="1080">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.241*"/>
-                <RowDefinition Height="0.759*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.8*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
 
-            <ed:BlockArrow x:Name="ButtonBody2" Margin="47,115,56,809" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC" Grid.RowSpan="2">
-        		<ed:BlockArrow.Effect>
-        			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-        		</ed:BlockArrow.Effect>
-        	</ed:BlockArrow>
-            <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="Black" FontSize="42.667" Margin="0,86,1,780" FontFamily="Gill Sans MT" Grid.RowSpan="2" />
-            <Label Foreground="Black" Content="Please Donate" HorizontalAlignment="Left" FontSize="64" FontFamily="Gill Sans MT" Margin="92,158,0,0" d:LayoutOverrides="Height" Grid.Column="1"/>
-            <Image Margin="-199,399.867,0,138" Grid.Row="1" Source="/Team_Roasters;component/Resources/Donate/ccfappeal.jpg" Stretch="Fill" Grid.Column="1" HorizontalAlignment="Left" Width="907"/>
-            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,146.867,120,238.853" Orientation="Vertical" Grid.Row="1" Width="520" d:LayoutOverrides="Height">
-            	<Image Margin="78,0,87,0" Source="/Team_Roasters;component/Resources/Donate/donate_qrcode.png" Stretch="Fill" Height="355"/>
-            	<TextBlock Foreground="Black" Height="75" TextWrapping="Wrap" FontSize="48" Text="www.childcancer.org.nz " Width="570" Margin="0,0,-50,0" />
+            <Grid Grid.Row="0" Grid.Column="0">
+                <ed:BlockArrow Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC">
+                    <ed:BlockArrow.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </ed:BlockArrow.Effect>
+                </ed:BlockArrow>
+                <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="Black" FontSize="42.667" Margin="0,1,1,1" FontFamily="Gill Sans MT"/>
+            </Grid>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+                <Label Foreground="Black" Content="Volunteering for CCF" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT"/>
             </StackPanel>
-            <TextBlock Foreground="Black" Height="256" Margin="191,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Left" Width="896" Grid.ColumnSpan="2"><Run Text="Please visit www.childcancer.org.nz or text"/><Run FontWeight="Bold" Language="en-nz" Text=" '"/><Run FontWeight="Bold" Text="bead' to 206"/><Run FontWeight="Bold" Language="en-nz" Text=" "/><Run Language="en-nz" Text="to make a $3 donation"/><Run Text=" "/></TextBlock>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
+                <s:SurfaceButton Content="What is it?" Click="SurfaceButton_WhatIsVolunteering" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="Who can do it?" Click="SurfaceButton_WhoCanVolunteer" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="What would I do?" Click="SurfaceButton_WhatWouldIDo" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="Can I Volunteer?" Click="SurfaceButton_Volunteering" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
+            </StackPanel>
+
+            <Grid Grid.Row="1" Grid.Column="1" Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.597*"/>
+                    <RowDefinition Height="0.403*"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="WhatIsVolunteering" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7"><Run FontSize="40" Text="What is volunteering?" />
+                        		<LineBreak/>
+								<Run Text="Volunteering provides a wonderful opportunity for people to meet, contribute and support a common cause." /><LineBreak/><LineBreak/>
+								<Run Text="Volunteers are vital to us at Child Cancer Foundation." /><LineBreak/>
+								<Run Text="They help us to achieve our purpose by offering their time, skills and valuable advice." /><LineBreak/>
+								</TextBlock>
+                        </Border>
+                    </s:SurfaceScrollViewer>
+                </Grid>
+
+                <Grid x:Name="WhoCanVolunteer" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7"><Run FontSize="40" Text="What sort of people volunteer for CCF?" /><LineBreak/><Run Text="CCF volunteers are ordinary people who come from a wide range of backgrounds and age groups. " /><LineBreak/><Run Text="Some are parents, relatives or friends of families who have experienced the childhood cancer journey; " /><LineBreak/><Run Text="some are from businesses and the public. Volunteers are interested in supporting our objectives, " /><LineBreak/><Run Text="have a desire to support children with cancer and their families and help raise funds."/></TextBlock>
+                        </Border>
+                    </s:SurfaceScrollViewer>
+                </Grid>
+
+                <Grid x:Name="WhatWouldIDo" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7"><Run FontSize="40" Text="What do CCF volunteers do?" /><LineBreak/><Run Text="Our volunteers provide a range of services and support including participating in CCF Branch activities, " /><LineBreak/><Run Text="helping out at the Family Places, working alongside our staff and helping our fundraising team during " /><LineBreak/><Run Text="events such as the national Annual Street Appeal and Funrazor events."/></TextBlock>
+                    </Border>
+                </s:SurfaceScrollViewer>
+                </Grid>
+
+                <Grid x:Name="Volunteering" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White">
+                    		<Border.Effect>
+                    			<DropShadowEffect/>
+                    		</Border.Effect>
+                    		<DataGridRowsPresenter HorizontalAlignment="Center" Height="700" VerticalAlignment="Center" Width="1400">
+                    			<TextBox Margin="0,20,300,0" TextAlignment="Center" TextWrapping="Wrap" Text="To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer" FontSize="30" HorizontalAlignment="Right" Width="955" RenderTransformOrigin="0.603,0.66"/>
+                    			<Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="500,20,500,0"/>
+                    		</DataGridRowsPresenter>
+                    	</Border>
+                    </s:SurfaceScrollViewer>
+                </Grid>
+
+            </Grid>
+            <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
+                <Image.Effect>
+                    <BlurEffect Radius="2"/>
+                </Image.Effect>
+            </Image>
         </Grid>
     </Viewbox>
 </view:Screen>
