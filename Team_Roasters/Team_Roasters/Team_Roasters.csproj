@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Controls" />
     <Reference Include="Microsoft.Expression.Drawing" />
     <Reference Include="Microsoft.Expression.Effects" />
@@ -71,6 +74,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Screens\FamilySupportScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\HomeScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SurfaceWindow1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +95,13 @@
     </Compile>
     <Compile Include="Controls\VideoPlayer.xaml.cs">
       <DependentUpon>VideoPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen.cs" />
+    <Compile Include="Screens\FamilySupportScreen.xaml.cs">
+      <DependentUpon>FamilySupportScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="SurfaceWindow1.xaml.cs">
       <DependentUpon>SurfaceWindow1.xaml</DependentUpon>
@@ -128,6 +146,7 @@
     <Resource Include="Controls\Resources\video_playbutton_large.png" />
     <Resource Include="Controls\Resources\video_playbutton_small.png" />
     <Resource Include="Controls\Resources\video_rewindbutton.png" />
+    <Resource Include="Resources\events\DoNotDeleteThisFolder.txt" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -143,6 +162,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

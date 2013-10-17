@@ -15,6 +15,12 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
+using System.Net;
+using System.IO;
+using HtmlAgilityPack;
+using System.Xml.Linq;
+using System.Xml;
+using System.Windows.Markup;
 
 using System.Collections.ObjectModel;
 
@@ -23,18 +29,54 @@ namespace Team_Roasters
     /// <summary>
     /// Interaction logic for SurfaceWindow1.xaml
     /// </summary>
-    public partial class Home_Page : SurfaceWindow
+    public partial class SurfaceWindow1 : SurfaceWindow
     {
+        private Stack<Screen> screenStack;
+
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public Home_Page()
+        public SurfaceWindow1()
         {
             InitializeComponent();
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
-            
+
+            screenStack = new Stack<Screen>();
+            //Setting starting Screen here, maybe should be in one of the other OnXXX methods of this class
+            pushScreen(new Screens.HomeScreen(this));
+
+        }
+
+        public void popScreen()
+        {
+            if (screenStack.Count > 1)
+            {
+                screenStack.Pop();
+                this.Content = screenStack.Peek();
+                this.WindowState = WindowState.Maximized;
+                this.WindowStyle = WindowStyle.None;
+            }
+        }
+        public void pushScreen(Screen screen)
+        {
+            screenStack.Push(screen);
+            this.Content = screenStack.Peek();
+            this.WindowState = WindowState.Maximized;
+            this.WindowStyle = WindowStyle.None;
+
+        }
+
+        public void popAll()
+        {
+            while (screenStack.Count > 1)
+            {
+                screenStack.Pop();
+            }
+            this.Content = screenStack.Peek();
+            this.WindowState = WindowState.Maximized;
+            this.WindowStyle = WindowStyle.None;
         }
 
         /// <summary>
@@ -101,110 +143,6 @@ namespace Team_Roasters
         private void OnWindowUnavailable(object sender, EventArgs e)
         {
             //TODO: disable audio, animations here
-        }
-
-        private void ccf_hidden_text_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ccf_close_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void SurfaceButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void what_we_do_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-		
-        private void FamilyButton_Click(object sender, RoutedEventArgs e)
-        {
-			Home.Visibility = System.Windows.Visibility.Collapsed;
-            Family_Support.Visibility = System.Windows.Visibility.Visible;
-        }
-
-		protected override void OnInitialized(EventArgs e)
-        {
-            base.OnInitialized(e);
-            DataContext = this;
-            pages.Add(Parent_Resources);
-            pages.Add(Holiday_Homes);
-            pages.Add(Support_Services);
-            pages.Add(Scholarships);
-        }
-		
-        private ObservableCollection<Grid> pages = new ObservableCollection<Grid>();
-		
-		private void SurfaceButton_ParentResources(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Parent_Resources))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
-
-        private void SurfaceButton_HolidayHomes(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Holiday_Homes))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
-
-        private void SurfaceButton_SupportServices(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Support_Services))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
-
-        private void SurfaceButton_Scholarships(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < pages.Count(); i++)
-            {
-                Grid page = pages.ElementAt(i);
-
-                page.Visibility = System.Windows.Visibility.Collapsed;
-
-                if (page.Equals(Scholarships))
-                {
-                    page.Visibility = System.Windows.Visibility.Visible;
-                }
-            }
-        }
-  
-		private void SurfaceButton_Back(object sender, RoutedEventArgs e)
-        {
-            Family_Support.Visibility = System.Windows.Visibility.Collapsed;
-			Home.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }
