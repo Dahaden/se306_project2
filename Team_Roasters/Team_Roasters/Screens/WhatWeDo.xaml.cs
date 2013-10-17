@@ -18,6 +18,7 @@ namespace Team_Roasters.Screens
         private void SurfaceButton_OurAmbassadors(object sender, System.Windows.RoutedEventArgs e)
         {
             Our_Ambassadors.Visibility = System.Windows.Visibility.Visible;
+
             Our_People.Visibility = System.Windows.Visibility.Collapsed;
             Our_History.Visibility = System.Windows.Visibility.Collapsed;
             How_We_Help.Visibility = System.Windows.Visibility.Collapsed;

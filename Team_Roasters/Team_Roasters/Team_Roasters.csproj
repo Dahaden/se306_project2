@@ -152,6 +152,7 @@
     <Resource Include="Resources\Ambassadors\Jack-Chris.jpg" />
     <Resource Include="Resources\Ambassadors\Lorraine-Downes.jpg" />
     <Resource Include="Resources\Ambassadors\Steve-Price.jpg" />
+    <Resource Include="Resources\How_We_Make_A_Difference.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

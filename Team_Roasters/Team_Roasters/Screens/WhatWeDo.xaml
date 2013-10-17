@@ -322,7 +322,7 @@
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
                 <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
+                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
                     <Grid.RowDefinitions>
                     	<RowDefinition Height="0.821*"/>
                     	<RowDefinition Height="0.179*"/>
@@ -334,45 +334,45 @@
                     </Border>
                     <Viewbox Margin="0,174.775,14.586,62.8" Stretch="Fill">
                     	<Grid Height="315.606" Width="1128.888" Margin="50,0">
-                    		<StackPanel HorizontalAlignment="Right" Margin="0,0,-9.374,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Steve-Price.jpg" Stretch="Fill" RenderTransformOrigin="-6.006,0.517" Height="225">
+                    		<StackPanel HorizontalAlignment="Right" Margin="0,0,-9.374,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
+                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Steve-Price.jpg" Stretch="Fill" RenderTransformOrigin="-6.006,0.517" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
                     			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
                     		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Right" Margin="0,45,218.626,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height">
-                    			<Image Margin="0,0,58,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="None" Height="135">
+                    		<StackPanel HorizontalAlignment="Right" Margin="0,3.603,211.12,0" Orientation="Vertical" Width="188.506" VerticalAlignment="Center" Height="288.348">
+                    			<Image Margin="0,10,8,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="UniformToFill" Height="193.347" RenderTransformOrigin="0.08,0.436" VerticalAlignment="Center" HorizontalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
                     			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" HorizontalAlignment="Left" d:LayoutOverrides="Width" Margin="0,30,0,0"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
                     		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Left" Margin="0,0,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Height="225">
+                    		<StackPanel HorizontalAlignment="Left" Margin="0,0,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
+                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
                     			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
                     		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Left" Margin="237,3,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Bernadine-Oliver-Kerby.jpg" Stretch="Fill" Height="222">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                    			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel Margin="477,3,470.888,-41.397" Orientation="Vertical" d:LayoutOverrides="Height">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Jack-Chris.jpg" Stretch="Fill" Height="225">
+                    		<StackPanel Margin="477,3,470.888,-41.397" Orientation="Vertical" d:LayoutOverrides="Height" VerticalAlignment="Center">
+                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Jack-Chris.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
                     				<Image.Effect>
                     					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     				</Image.Effect>
                     			</Image>
                     			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Chris Jack"/></TextBlock>
+                    		</StackPanel>
+                    		<StackPanel HorizontalAlignment="Left" Margin="237,3,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
+                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Bernadine-Oliver-Kerby.jpg" Stretch="Fill" Height="222" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    				<Image.Effect>
+                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    				</Image.Effect>
+                    			</Image>
+                    			<TextBlock Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
                     		</StackPanel>
                     	</Grid>
                     </Viewbox>
@@ -380,13 +380,13 @@
                     </Grid>
                 </s:SurfaceScrollViewer>
 
-                <Grid x:Name="How_We_Help" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="How_We_Help" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="26.667" TextAlignment="Justify" Margin="7" Width="1460.177"><Run FontWeight="Bold" Text="Child Cancer Foundation aims to reduce isolation and the impact of cancer through offering and "/><LineBreak/><Run FontWeight="Bold" Text="coordinating support services, programmes and resources that ensure children and families are "/><LineBreak/><Run FontWeight="Bold" Text="well cared for, supported and informed at every stage of their journey.&#xa;"/><Run Text="&#xa;Our support services for families include:&#xa;&#xa;"/><Run Text="• "/><Run Text="Our People"/><Run Language="en-nz" Text=":"/><Run Text=" Family Support Coordinators, Volunteer Branches and Health Professionals"/><LineBreak/><Run Text="• "/><Run Text="Our Support Programmes"/><Run Language="en-nz" Text=":"/><Run Text=" Scholarship Programme, Beads of Courage®, Sharing Magazine, Family "/><LineBreak/><Run Text="Places and Holiday Homes&#xa;&#xa;Family Support Coordinators provide:&#xa;&#xa;• Support in hospital, at home and in the community&#xa;• Information and resources relating to child cancer&#xa;• Support groups to connect families&#xa;• Access to Child Cancer Foundation Family Places, activities and programmes&#xa;• Some financial assistance through difficult times&#xa;• Assistance with back to school transition&#xa;• Coordination and a link to other agencies and community support groups&#xa;• Advocacy for the special needs of children with cancer and their families&#xa;&#xa;Volunteer Branches are a nationwide network of parents, caregivers and volunteers who:&#xa;&#xa;• Provide access to social activities&#xa;• Connect families&#xa;• Offer parent support&#xa;&#xa;Health Professionals receive some financial support for continuing medical education and research "/><LineBreak/><Run Text="from"/><Run Language="en-nz" Text=" "/><Run Text="the Child Cancer Foundation.&#xa;&#xa;Support Programmes:&#xa;&#xa;There are a variety of local and regional child, parent, grandparent, sibling and bereaved support "/><LineBreak/><Run Text="programmes and events that aim to inform, reduce isolation and support your family through the"/><LineBreak/><Run Text="experiences and challenges of child cancer. Parent events, children’s holiday programmes and sibling "/><LineBreak/><Run Text="days are among many that are well attended.&#xa;&#xa;Scholarship Programme:&#xa;&#xa;Child Cancer Foundation recognises that many children with cancer will experience interruption to their"/><LineBreak/><Run Text=" formal education. Child cancer can also reduce opportunities for social interaction between children and"/><LineBreak/><Run Text=" their peers. Disruptions to family life can mean that siblings and parents of a child with cancer can be "/><LineBreak/><Run Text="socially and educationally disadvantaged while the child undergoes treatment.&#xa;&#xa;Our Scholarship Programme aims to reduce the impact of child cancer by providing an opportunity for "/><LineBreak/><Run Text="children, siblings and parents to achieve their full potential through personal growth and development.&#xa;&#xa;• Children and siblings aged 0-12 years and parents can apply (although applications from patients will"/><LineBreak/><Run Text=" be considered first)&#xa;• Scholarships are awarded four times a year&#xa;• Examples of scholarships include teacher aide support, additional tuition for specific subjects, special "/><LineBreak/><Run Text="interest tuition (i.e. music or swimming lessons)&#xa;&#xa;Beads of Courage® is a therapeutic programme that recognises the strength and courage of each"/><LineBreak/><Run Text=" child during cancer treatment and procedures.&#xa;&#xa;Each bead represents a treatment (for example chemotherapy, injections, scans); an experience"/><LineBreak/><Run Text=" (hair loss, isolation, fever) or a milestone (completion of treatment).&#xa;&#xa;For each medical procedure or treatment the child will receive a bead.&#xa;&#xa;Beads of Courage® provide a physical story of the child’s journey – one which can be shared with"/><LineBreak/><Run Text=" friends and family. They are also a great way for the child to make meaning of their cancer journey.&#xa;&#xa;The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying"/><LineBreak/><Run Text=" positive behaviour and helpful attitudes to assist the family through the cancer journey. These unique "/><LineBreak/><Run Text="beads offer siblings a representation of their part in supporting their brother or sister with cancer.&#xa;&#xa;Sharing Magazine is produced for families, members and friends of the Foundation. It is published "/><LineBreak/><Run Text="three times a year and includes:&#xa;&#xa;• Family, siblings and grandparent stories&#xa;• CEO message&#xa;• Events and new initiatives&#xa;• Health professionals report&#xa;• Advice page&#xa;• Regional news&#xa;&#xa;Family Places are a base for children and families to take time-out from the hospital and to meet with "/><LineBreak/><Run Text="other families, staff and volunteers in a caring private environment. Child Cancer Foundation has four"/><LineBreak/><Run Text=" Family Places in Auckland, Wellington, Christchurch and Dunedin.&#xa;&#xa;These centres provide families with:&#xa;• Play/activity mornings for children and parents&#xa;• The opportunity to meet other families who understand the journey&#xa;• Information and resources&#xa;• Access to videos, books and computers&#xa;&#xa;Holiday Homes located in the North and South Island are provided free of charge to families living with "/><LineBreak/><Run Text="the effects of child cancer. Long months of treatment can take a significant financial and emotional toll on"/><LineBreak/><Run Text="families, and finding funds for a much-needed holiday can be very difficult. Kindly donated and maintained"/><LineBreak/><Run Text=" by the Professionals, Child Cancer Foundation Sunshine Lodge holiday homes are fully furnished and equipped, all that’s left to do is have a wonderful and relaxing holiday. We also have the Little Elms holiday home in Hawkes Bay."/></TextBlock>
+                        	<Image Height="684.001" Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Width="900"/>
                     </Border>
                         </s:SurfaceScrollViewer>
                 </Grid>
