@@ -319,7 +319,7 @@
                         <Border.Effect>
                             <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Border.Effect>
-                        <TextBlock Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify" />
+                        <TextBlock Text="Meet our ambassadors and find out why they are so passionate about the Child Cancer Foundation: " Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify" />
                     </Border>
                 </Grid>
 
