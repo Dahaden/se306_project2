@@ -7,7 +7,7 @@
              xmlns:view="clr-namespace:Team_Roasters"
              xmlns:my="clr-namespace:Team_Roasters.Controls"
              xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
-             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.Donate"
+             xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="Team_Roasters.Screens.DonateScreen"
              mc:Ignorable="d"
              d:DesignHeight="1080"
              d:DesignWidth="1920">
@@ -15,7 +15,7 @@
     <view:Screen.Resources>
         <!-- Base Grid style for 55 dpi -->
         <Style TargetType="{x:Type Control}" x:Key="ControlBaseStyle">
-            <Setter Property="FocusVisualStyle"	
+            <Setter Property="FocusVisualStyle"
 				Value="{x:Null}"/>
             <Setter Property="SnapsToDevicePixels"
 				Value="False"/>
@@ -41,6 +41,81 @@
 				Value="2"/>
         </Style>
 
+        <!-- ButtonBase -->
+        <Style x:Key="HomeContentButton"
+			TargetType="{x:Type s:SurfaceButton}" 
+			BasedOn="{StaticResource ControlBaseStyle}">
+            <Setter Property="IsTabStop"
+				Value="False" />
+            <Setter Property="Focusable"
+				Value="True" />
+            <Setter Property="Background"
+				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundBrushKey}}" />
+            <Setter Property="Foreground"
+				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundBrushKey}}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type s:SurfaceButton}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Press">
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+									Storyboard.TargetName="PressOverlay"
+									Storyboard.TargetProperty="(UIElement.Opacity)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000"
+										Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Release">
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+									Storyboard.TargetName="PressOverlay"
+									Storyboard.TargetProperty="(UIElement.Opacity)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1500000"
+										Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="Grid"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            <Rectangle  x:Name="ButtonBody"
+								Fill ="{TemplateBinding Background}"
+								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Rectangle  x:Name="PressOverlay"
+								Opacity="0"
+								Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
+								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Stretch"/>
+                            <ContentPresenter  x:Name="Content"
+								Margin="{TemplateBinding Padding}"
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed"
+								Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource Press}" />
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource Release}" />
+                                </Trigger.ExitActions>
+                                <Setter Property="Foreground"
+									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundPressedBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled"
+								Value="False">
+                                <Setter Property="Fill"
+									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundDisabledBrushKey}}"
+									TargetName="ButtonBody" />
+                                <Setter Property="Foreground"
+									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundDisabledBrushKey}}"/>
+                                <Setter Property="Opacity"
+									Value="0.33"
+									TargetName="Content" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style x:Key="BackButton"
 			TargetType="{x:Type s:SurfaceButton}" 
 			BasedOn="{StaticResource ControlBaseStyle}">
@@ -194,75 +269,46 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="BackButtonTemplate" TargetType="{x:Type Rectangle}"/>
+
+        <XmlDataProvider x:Key="EventData" Source="Resources/events/events.xml" XPath="Items" />
+    	<Style x:Key="ScatterViewItemStyle_AB" TargetType="{x:Type s:ScatterViewItem}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type s:ScatterViewItem}">
+    					<Grid>
+    						<Image Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Margin="0,0,0,8"/>
+    					</Grid>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
 
     </view:Screen.Resources>
     <Viewbox>
-        <Grid x:Name="LayoutRoot">
-            <Grid x:Name="Donate_grid" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,-1296,-638" d:LayoutOverrides="Width, Height">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.2*"/>
-                    <RowDefinition Height="0.8*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition Width="0.8*"/>
-                </Grid.ColumnDefinitions>
+        <Grid x:Name="Donate_Grid" Background="#FFFFFCF0" Width="1920" Height="1080">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.241*"/>
+                <RowDefinition Height="0.759*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
 
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <ed:BlockArrow x:Name="ButtonBody1" Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC">
-                        <ed:BlockArrow.Effect>
-                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                        </ed:BlockArrow.Effect>
-                    </ed:BlockArrow>
-                </Grid>
-
-                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-                    <Label Foreground="Black" Content="Please Donate" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20"/>
-
-                <Grid Grid.Row="1" Grid.Column="1" Margin="20,182,20,20" d:LayoutOverrides="VerticalAlignment">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.224*"/>
-                        <ColumnDefinition Width="0.776*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.334*"/>
-                        <RowDefinition Height="0.666*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid x:Name="Grid_1" Background="White" Visibility="Collapsed" Margin="0,0,0,-162.21" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <TextBlock Text="Families can also access our Family Places – day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
-                        </Border>
-                    </Grid>
-
-                    <Grid x:Name="Grid_2" Background="White" Visibility="Collapsed" Margin="0,0,0,-162.21" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <TextBlock Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy.  They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation.  These provide a story of a child's journey recognising their strength and courage.  Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment).  The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
-                        </Border>
-                    </Grid>
-
-                    <Grid x:Name="Grid_3" Background="White" Visibility="Collapsed" Margin="0,0,0,-162.21" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <TextBlock Text="We offer a Scholarship Programme to assist children with cancer, their siblings, and parents to reach their potential and not be disadvantaged by their cancer journey." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
-                        </Border>
-                    </Grid>
-                </Grid>
-                
-                <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="-191,182,0,258" Grid.Row="1" TextWrapping="Wrap" Width="711" FontSize="48" RenderTransformOrigin="0.5,0.5"><Run Language="en-nz" Text="Please visit www.childcancer.org.nz or text "/><Run FontWeight="Bold" Language="en-nz" Text="'bead' to 206 "/><Run Language="en-nz" Text="to make a "/><Run FontWeight="Bold" Language="en-nz" Text="$3 "/><Run Language="en-nz" Text="donation."/></TextBlock>
-                
-            </Grid>
-        </Grid>       
+            <ed:BlockArrow x:Name="ButtonBody2" Margin="47,115,56,809" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC" Grid.RowSpan="2">
+        		<ed:BlockArrow.Effect>
+        			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+        		</ed:BlockArrow.Effect>
+        	</ed:BlockArrow>
+            <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="Black" FontSize="42.667" Margin="0,86,1,780" FontFamily="Gill Sans MT" Grid.RowSpan="2" />
+            <Label Foreground="Black" Content="Please Donate" HorizontalAlignment="Left" FontSize="64" FontFamily="Gill Sans MT" Margin="92,158,0,0" d:LayoutOverrides="Height" Grid.Column="1"/>
+            <Image Margin="-199,335.867,0,202" Grid.Row="1" Source="/Team_Roasters;component/Resources/Donate/ccfappeal.jpg" Stretch="Fill" Grid.Column="1" HorizontalAlignment="Left" Width="907"/>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,146.867,120,238.853" Orientation="Vertical" Grid.Row="1" Width="520" d:LayoutOverrides="Height">
+            	<Image Margin="78,0,87,0" Source="/Team_Roasters;component/Resources/Donate/donate_qrcode.png" Stretch="Fill" Height="355"/>
+                <TextBlock Foreground="Black" Height="75" TextWrapping="Wrap" FontSize="48" Text="www.childcancer.org.nz " Width="570" />
+            </StackPanel>
+            <TextBlock Foreground="Black" Height="156" Margin="-199,146.867,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Grid.Column="1" HorizontalAlignment="Left" Width="907"><Run Text="Please visit www.childcancer.org.nz or text"/><Run FontWeight="Bold" Language="en-nz" Text=" '"/><Run FontWeight="Bold" Text="bead' to 206"/><Run FontWeight="Bold" Language="en-nz" Text=" "/><Run Language="en-nz" Text="to make a $3 donation"/><Run Text=" "/></TextBlock>
+        </Grid>
     </Viewbox>
 </view:Screen>

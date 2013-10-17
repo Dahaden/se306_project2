@@ -31,7 +31,7 @@ namespace Team_Roasters.Screens
 
         private void Donate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            parentWindow.pushScreen(new Donate(parentWindow));
+            parentWindow.pushScreen(new DonateScreen(parentWindow));
         }
 
         private void GetEvents()

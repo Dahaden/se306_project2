@@ -70,7 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Screens\Donate.xaml">
+    <Page Include="Screens\DonateScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -98,8 +98,8 @@
       <DependentUpon>VideoPlayer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screen.cs" />
-    <Compile Include="Screens\Donate.xaml.cs">
-      <DependentUpon>Donate.xaml</DependentUpon>
+    <Compile Include="Screens\DonateScreen.xaml.cs">
+      <DependentUpon>DonateScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
@@ -160,6 +160,9 @@
     <Resource Include="Resources\Ambassadors\Lorraine-Downes.jpg" />
     <Resource Include="Resources\Ambassadors\Steve-Price.jpg" />
     <Resource Include="Resources\How_We_Make_A_Difference.png" />
+    <Resource Include="Resources\Donate\CCF-Logo-Transparent.png" />
+    <Resource Include="Resources\Donate\ccfappeal.jpg" />
+    <Resource Include="Resources\Donate\donate_qrcode.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
