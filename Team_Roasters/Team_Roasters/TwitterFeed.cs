@@ -104,11 +104,15 @@ namespace Team_Roasters
             {
                 //plug in values for each tweet
                 //Tweet author name
+                string name = t.user.name;
                 //Tweet author @username
+                string username = t.user.screen_name;
                 //Tweet author avatar
+                string avatar = t.user.profile_image_url;
                 //Tweet text
+                string text = t.text;
                 //Tweet timestamp
-                //Tweet entity
+                DateTime timestamp = Convert.ToDateTime(t.created_at);
             }
         }
 
