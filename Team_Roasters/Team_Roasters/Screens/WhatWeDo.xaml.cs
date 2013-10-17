@@ -7,8 +7,7 @@ namespace Team_Roasters.Screens
     {
         public WhatWeDo(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
-            InitializeComponent();
-
+            InitializeComponent();           
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
