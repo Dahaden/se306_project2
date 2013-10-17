@@ -70,6 +70,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Screens\CorporateScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Screens\DonateScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,6 +102,9 @@
       <DependentUpon>VideoPlayer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screen.cs" />
+    <Compile Include="Screens\CorporateScreen.xaml.cs">
+      <DependentUpon>CorporateScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\DonateScreen.xaml.cs">
       <DependentUpon>DonateScreen.xaml</DependentUpon>
     </Compile>
@@ -163,6 +170,23 @@
     <Resource Include="Resources\Donate\CCF-Logo-Transparent.png" />
     <Resource Include="Resources\Donate\ccfappeal.jpg" />
     <Resource Include="Resources\Donate\donate_qrcode.png" />
+    <Resource Include="Resources\Corporate\99-Logo.jpg" />
+    <Resource Include="Resources\Corporate\alabar.jpg" />
+    <Resource Include="Resources\Corporate\Apparelmaster-New-Logo-07.jpg" />
+    <Resource Include="Resources\Corporate\Bartercard-charity-logo-2D4.jpg" />
+    <Resource Include="Resources\Corporate\Bluebridge.jpeg" />
+    <Resource Include="Resources\Corporate\Buzzy-Bee-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\Farmers-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\Gold-Buyers.jpg" />
+    <Resource Include="Resources\Corporate\Gold-Star-Logo.jpg" />
+    <Resource Include="Resources\Corporate\Hansen-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\Millennium-Logo-Sponsors-Page.jpg" />
+    <Resource Include="Resources\Corporate\NZ-Herald-Logo-Hm-Page.jpg" />
+    <Resource Include="Resources\Corporate\NZC-logo-new2.jpg" />
+    <Resource Include="Resources\Corporate\Platinum-Star-Logo_1.jpg" />
+    <Resource Include="Resources\Corporate\Profesionals.jpg" />
+    <Resource Include="Resources\Corporate\RCP-logo.jpg" />
+    <Resource Include="Resources\Corporate\Savemart_1.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

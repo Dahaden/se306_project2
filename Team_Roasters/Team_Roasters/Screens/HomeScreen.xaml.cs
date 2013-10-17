@@ -34,6 +34,16 @@ namespace Team_Roasters.Screens
             parentWindow.pushScreen(new DonateScreen(parentWindow));
         }
 
+        private void CorporateSponsers_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new CorporateScreen(parentWindow));
+        }
+
+        private void Volunteers_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
+        }
+
         private void GetEvents()
         {
             if (CheckInternetConnection())
