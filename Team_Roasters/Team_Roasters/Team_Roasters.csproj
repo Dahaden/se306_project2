@@ -78,6 +78,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Screens\Volunteer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Screens\WhatWeDo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,6 +111,9 @@
     </Compile>
     <Compile Include="Screens\DonateScreen.xaml.cs">
       <DependentUpon>DonateScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Volunteer.xaml.cs">
+      <DependentUpon>Volunteer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
@@ -195,6 +202,7 @@
     <None Include="Resources\intro-video.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Resource Include="Resources\VolunteerQR.png" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

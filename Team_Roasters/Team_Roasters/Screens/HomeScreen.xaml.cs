@@ -41,7 +41,7 @@ namespace Team_Roasters.Screens
 
         private void Volunteers_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
+            parentWindow.pushScreen(new Volunteer(parentWindow));
         }
 
         private void GetEvents()
