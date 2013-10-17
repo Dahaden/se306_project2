@@ -71,13 +71,13 @@
     </ApplicationDefinition>
     <Page Include="Controls\VideoPlayer.xaml">
       <Generator>MSBuild:Compile</Generator>
-	  <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="TwitterFeed.cs" />
-    <Page Include="Controls\DonateControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="TwitterFeed.cs" />
+    <!--<Page Include="Controls\DonateControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>-->
     <Page Include="Screens\DonateScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -182,7 +182,7 @@
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Screens\TweetyBird.jpg" />
+    <Resource Include="Resources\TweetyBird.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

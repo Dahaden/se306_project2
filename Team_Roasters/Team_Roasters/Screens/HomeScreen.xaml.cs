@@ -6,6 +6,9 @@ using HtmlAgilityPack;
 using System.Text;
 using System.Xml;
 using System.Net;
+using Team_Roasters;
+using System.Collections.Generic;
+
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -32,6 +35,17 @@ namespace Team_Roasters.Screens
         private void Donate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.pushScreen(new DonateScreen(parentWindow));
+        }
+
+        private void GetTweets()
+        {
+            if (CheckInternetConnection())
+            {
+                TwitterFeed twit = new TwitterFeed();
+                twit.updateTweets();
+                List<List<string>> tweets = twit.GetTweets();
+
+            }
         }
 
         private void GetEvents()

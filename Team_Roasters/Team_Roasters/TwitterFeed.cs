@@ -116,6 +116,29 @@ namespace Team_Roasters
             }
         }
 
+        public List<List<string>> GetTweets()
+        {
+            List<List<string>> result = new List<List<string>>();
+            List<string> twerk;
+            foreach (Tweet t in tweets)
+            {
+                twerk = new List<string>();
+                //plug in values for each tweet
+                //Tweet author name
+                twerk.Add(t.user.name);
+                //Tweet author @username
+                twerk.Add(t.user.screen_name);
+                //Tweet author avatar
+                twerk.Add(t.user.profile_image_url);
+                //Tweet text
+                twerk.Add(t.text);
+                //Tweet timestamp
+                twerk.Add(Convert.ToDateTime(t.created_at).ToString());
+                result.Add(twerk);
+            }
+            return result;
+        }
+
     }
 
     public class Tweet

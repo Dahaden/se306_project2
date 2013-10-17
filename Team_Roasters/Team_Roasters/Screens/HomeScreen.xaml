@@ -492,7 +492,7 @@
                             <TextBox TextWrapping="Wrap" Text="I love lamp"/>
                         </ListView>
                         <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="-1,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="439.999" Height="54.626"><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
-                        <Image HorizontalAlignment="Left" Height="46" Source="TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
+                        <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
                     </Grid>
                 </s:SurfaceScrollViewer>
             </Grid>
