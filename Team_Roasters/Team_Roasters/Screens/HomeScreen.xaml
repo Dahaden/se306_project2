@@ -450,11 +450,7 @@
                                 <RowDefinition Height="400" />
                             </Grid.RowDefinitions>
                             <s:SurfaceScrollViewer HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                                <RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False">
-                                    <RichTextBox.Effect>
-                                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                    </RichTextBox.Effect>
-                                </RichTextBox>
+                                <RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False"/>
                             </s:SurfaceScrollViewer>
                             <s:SurfaceScrollViewer HorizontalAlignment="Center" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="450">
                                 <RichTextBox Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False">
@@ -472,15 +468,15 @@
                             	</Grid>
                             </s:SurfaceScrollViewer>
                         </Grid>
-                        <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,0,0,0" Stroke="#FF818181" Width="4.556" Height="825" VerticalAlignment="Top"/>
-                        <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Right" Margin="0,0,26.476,0" Stroke="#FF818181" Width="4.556" Height="825" VerticalAlignment="Top"/>
+                        <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
+                        <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Right" Margin="0,8,26.476,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
                         <TextBox TextWrapping="Wrap" Margin="79.745,0,420.57,261.202" VerticalAlignment="Bottom" Grid.Column="1" Height="140.902"/>
                         <s:SurfaceButton 
                	Grid.RowSpan="1" 
                	Grid.ColumnSpan="1" 
                	x:Name="how_you_can_help_Copy" 
                	Content="Leave a comment..." 
-               	Background="#FFFBA5D6" FontSize="26.667"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Height="140.902" Margin="0,422.896,74.363,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" Grid.Column="1" HorizontalAlignment="Right" Width="325.761" >
+               	Background="#FFFBA5D6" FontSize="26.667"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Height="140.902" Margin="0,452.896,74.363,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" Grid.Column="1" HorizontalAlignment="Right" Width="325.761" >
                             <s:SurfaceButton.Effect>
                                 <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                             </s:SurfaceButton.Effect>
@@ -507,6 +503,7 @@
                         </Rectangle>
                     </Grid>
                 </s:SurfaceScrollViewer>
+                <Rectangle Fill="#FF8ECADC" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2"/>
             </Grid>
         </Grid>
     </Viewbox>
