@@ -15,7 +15,8 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class HomeScreen : Screen
     {
-        public HomeScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
+        public HomeScreen(SurfaceWindow1 parentWindow)
+            : base(parentWindow)
         {
             InitializeComponent();
             getNews();
@@ -71,12 +72,12 @@ namespace Team_Roasters.Screens
         {
             parentWindow.pushScreen(new Volunteer(parentWindow));
         }
-		
+
         /// <summary>
         /// Gets tweets from the CCF twitter feed (if there is internet connection)
         /// and writes them to a document to be opened and read to a RichTextBox
         /// </summary>
-		private void GetTweets()
+        private void GetTweets()
         {
             if (CheckInternetConnection())
             {
@@ -112,7 +113,7 @@ namespace Team_Roasters.Screens
                     writer.WriteEndElement(); // Paragraph
                 }
             }
-		}
+        }
 
         /// <summary>
         /// Pulls latest news from the CCF website (if connected to the internet)
@@ -136,13 +137,13 @@ namespace Team_Roasters.Screens
 
                 // URL to the news page on the CCF website
                 url = "http://www.childcancer.org.nz/News-and-events/News.aspx";
-               
+
                 try
                 {
                     // Downloads the page (all the html code) into a buffer
                     byte[] myDataBuffer = client.DownloadData(url);
                     string result = System.Text.Encoding.UTF8.GetString(myDataBuffer);
-                    
+
                     string baseURI = "http://www.childcancer.org.nz";
 
                     // A HTML document (from HtmlAgilityPack) that loads the 
@@ -210,7 +211,7 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
+                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
 
                         // Dynamically gets the full directory location of where the image is stored locally which is used in the loading of the document
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -254,7 +255,7 @@ namespace Team_Roasters.Screens
                 {
                     excep = e.ToString();
                 }
-                
+
             }
             else // No internet connection
             {
@@ -289,7 +290,7 @@ namespace Team_Roasters.Screens
                 // URL to the events page on the CCF website
                 url = "http://www.childcancer.org.nz/News-and-events/Events.aspx";
 
-                
+
                 try
                 {
                     // Downloads the page (all the html code) into a buffer
@@ -333,7 +334,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
-                        
+
                         // Returned string format: "When:.....  CRLF Where:......."
                         whenwhere = link.SelectSingleNode("small").InnerText;
 
@@ -352,7 +353,7 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
+                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
 
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
                         string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
