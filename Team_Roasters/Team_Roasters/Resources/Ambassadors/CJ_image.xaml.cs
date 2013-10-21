@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Team_Roasters
 {
 	/// <summary>
-	/// Interaction logic for AB_image.xaml
+    /// Interaction logic for CJ_image.xaml
 	/// </summary>
-	public partial class AB_image : UserControl
+	public partial class CJ_image : UserControl
 	{
-		public AB_image()
+        public CJ_image()
 		{
 			this.InitializeComponent();
 		}

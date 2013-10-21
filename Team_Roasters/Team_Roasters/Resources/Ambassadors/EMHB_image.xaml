@@ -4,11 +4,11 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d"
-	x:Class="Team_Roasters.AB_image"
+	x:Class="Team_Roasters.EMHB_image"
 	x:Name="UserControl" d:DesignHeight="589.576" Width="513.5">
 
 	<Grid x:Name="LayoutRoot">
         <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" VerticalAlignment="Bottom" Margin="43.5,0,34.5,96" HorizontalAlignment="Center"><Run Language="en-nz" Text="Hamish Bond and Eric Murray"/></TextBlock>
-        <Image Margin="0,0,0,213.576" Source="Eric-Murray--Hamish-Bond.jpg" Stretch="Fill" HorizontalAlignment="Center"/>
+        <Image Margin="0,0,0,213.576" Source="Eric-Murray--Hamish-Bond.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"/>
 	</Grid>
 </UserControl>

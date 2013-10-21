@@ -82,23 +82,23 @@
     <Compile Include="Resources\Ambassadors\CJ_image.xaml.cs">
       <DependentUpon>CJ_image.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Ambassadors\SP_image.xaml.cs">
-      <DependentUpon>SP_image.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\Ambassadors\MA_image.xaml.cs">
-      <DependentUpon>MA_image.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\Ambassadors\LD_image.xaml.cs">
-      <DependentUpon>LD_image.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\Ambassadors\KR_image.xaml.cs">
-      <DependentUpon>KR_image.xaml</DependentUpon>
+    <Compile Include="Resources\Ambassadors\EMHB_image.xaml.cs">
+      <DependentUpon>EMHB_image.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Ambassadors\JK_image.xaml.cs">
       <DependentUpon>JK_image.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Ambassadors\EMHB_image.xaml.cs">
-      <DependentUpon>EMHB_image.xaml</DependentUpon>
+    <Compile Include="Resources\Ambassadors\KR_image.xaml.cs">
+      <DependentUpon>KR_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\LD_image.xaml.cs">
+      <DependentUpon>LD_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\MA_image.xaml.cs">
+      <DependentUpon>MA_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\SP_image.xaml.cs">
+      <DependentUpon>SP_image.xaml</DependentUpon>
     </Compile>
     <Compile Include="TwitterFeed.cs" />
     <Page Include="Resources\Ambassadors\Amb_AB.xaml">

@@ -4,12 +4,12 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d"
-	x:Class="Team_Roasters.AB_image"
+	x:Class="Team_Roasters.CJ_image"
 	x:Name="UserControl"
 	d:DesignWidth="341" d:DesignHeight="589.576">
 
 	<Grid x:Name="LayoutRoot">
         <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="46.501" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="148"><Run Language="en-nz" Text="Chris Jack"/><LineBreak/><Run/></TextBlock>
-        <Image Margin="1,0,0,79.576" Source="Jack-Chris.jpg" Stretch="Fill" HorizontalAlignment="Center"/>
+        <Image Margin="0,0,0,78.076" Source="Chris-Jack.jpg" Stretch="UniformToFill"/>
 	</Grid>
 </UserControl>

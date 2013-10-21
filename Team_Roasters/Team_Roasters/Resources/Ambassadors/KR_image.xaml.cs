@@ -16,9 +16,9 @@ namespace Team_Roasters
 	/// <summary>
 	/// Interaction logic for AB_image.xaml
 	/// </summary>
-	public partial class AB_image : UserControl
+	public partial class KR_image : UserControl
 	{
-		public AB_image()
+		public KR_image()
 		{
 			this.InitializeComponent();
 		}
