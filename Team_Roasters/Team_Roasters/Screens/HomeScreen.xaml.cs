@@ -81,7 +81,11 @@ namespace Team_Roasters.Screens
         {
             if (CheckInternetConnection())
             {
+                WebClient client = new WebClient(); // Creates a new WebClient which is used to grab data from sites
                 TwitterFeed twit = new TwitterFeed();
+                string filename;
+                string avatar_url;
+
                 twit.updateTweets();
                 List<List<string>> tweets = twit.GetTweets();
 
@@ -98,19 +102,17 @@ namespace Team_Roasters.Screens
                 foreach (List<string> t in tweets)
                 {
                     writer.WriteStartElement("Paragraph");
-                    //client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
-                    foreach (string name in t)
+                    //client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                    // Tweet Info = {[name], [username], [avatar_url], [text], [timestamp]}
+                    avatar_url = t[2];
+                    filename = avatar_url.Substring(avatar_url.LastIndexOf('/'), avatar_url.Length);
+                    if (!File.Exists(filename))  // Check if File is already there
                     {
-
+                        client.DownloadFile(new Uri(avatar_url), filename);
                     }
-
-                    writer.WriteStartElement("Line");
-                    writer.WriteAttributeString("Stretch", "Fill");
-                    writer.WriteAttributeString("Stroke", "Black");
-                    writer.WriteAttributeString("X2", "1");
-                    writer.WriteAttributeString("Margin", "-5");
-                    writer.WriteEndElement(); // Line
-                    writer.WriteEndElement(); // Paragraph
+                    string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                    string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
+                    string fullfilepath = (commonPath + @"Resources\news\") + filename.Substring(filename.LastIndexOf('/'), filename.Length);
                 }
             }
         }
@@ -211,8 +213,10 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
-
+                        if(!File.Exists(filepath))
+                        {
+                            client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        }
                         // Dynamically gets the full directory location of where the image is stored locally which is used in the loading of the document
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
                         string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
@@ -353,8 +357,10 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
-
+                        if (!File.Exists(filepath))
+                        {
+                            client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        }
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
                         string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
                         string fullfilepath = (commonPath + @"Resources\events\") + filename + ".jpeg";
