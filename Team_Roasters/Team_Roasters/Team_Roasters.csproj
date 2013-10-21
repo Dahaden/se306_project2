@@ -94,6 +94,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Resources\Ambassadors\Amb_EMHB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\Amb_JK.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\Amb_KR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\Amb_MA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Screens\CorporateScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -218,6 +234,10 @@
     <Resource Include="Resources\Corporate\Profesionals.jpg" />
     <Resource Include="Resources\Corporate\RCP-logo.jpg" />
     <Resource Include="Resources\Corporate\Savemart_1.jpg" />
+    <Resource Include="Resources\Ambassadors\Eric-Murray--Hamish-Bond.jpg" />
+    <Resource Include="Resources\Ambassadors\Jerome_Kaino.jpg" />
+    <Resource Include="Resources\Ambassadors\Kieran-Read.jpg" />
+    <Resource Include="Resources\Ambassadors\megan-alatini.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
