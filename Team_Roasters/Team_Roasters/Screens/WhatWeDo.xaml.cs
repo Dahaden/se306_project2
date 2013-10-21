@@ -15,15 +15,19 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class WhatWeDo : Screen
     {
-        // Creates a FlowDocument from the finished saved .xaml file
-        FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_AB.xaml"));
+        // Creates a FlowDocuments for each Ambassador from the saved .xaml file
+        FlowDocument Amb_AB = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_AB.xaml"));
+        FlowDocument Amb_BOK = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_BOK.xaml"));
+        FlowDocument Amb_CJ = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_CJ.xaml"));
+        FlowDocument Amb_LD = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_LD.xaml"));
+        FlowDocument Amb_SP = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_SP.xaml"));
             
         public WhatWeDo(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
             
             // Passes the document into the RichTextBox which displays the formatted contents in the app
-            AB_text.Document = flowDocument;
+            Amb_text.Document = Amb_AB;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
@@ -40,7 +44,7 @@ namespace Team_Roasters.Screens
             How_We_Help.Visibility = System.Windows.Visibility.Collapsed;
 
             // Passes the document into the RichTextBox which displays the formatted contents in the app
-            AB_text.Document = flowDocument;
+            Amb_text.Document = Amb_AB;
         }
 
         private void SurfaceButton_OurPeople(object sender, System.Windows.RoutedEventArgs e)
@@ -69,48 +73,27 @@ namespace Team_Roasters.Screens
 
         private void Our_Amb_Enter_AB(object sender, System.Windows.Input.TouchEventArgs e)
         {
-            AB_text.Visibility = System.Windows.Visibility.Visible;
-            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
-            LD_text.Visibility = System.Windows.Visibility.Collapsed;
-            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
-            SP_text.Visibility = System.Windows.Visibility.Collapsed;
-
+            Amb_text.Document = Amb_AB;
         }
 
         private void Our_Amb_Enter_BOK(object sender, System.Windows.Input.TouchEventArgs e)
         {
-            AB_text.Visibility = System.Windows.Visibility.Collapsed;
-            BOK_text.Visibility = System.Windows.Visibility.Visible;
-            LD_text.Visibility = System.Windows.Visibility.Collapsed;
-            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
-            SP_text.Visibility = System.Windows.Visibility.Collapsed;
+            Amb_text.Document = Amb_BOK;
         }
 
         private void Our_Amb_Enter_CJ(object sender, System.Windows.Input.TouchEventArgs e)
         {
-            AB_text.Visibility = System.Windows.Visibility.Collapsed;
-            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
-            LD_text.Visibility = System.Windows.Visibility.Collapsed;
-            CJ_text.Visibility = System.Windows.Visibility.Visible;
-            SP_text.Visibility = System.Windows.Visibility.Collapsed;
+            Amb_text.Document = Amb_CJ;
         }
 
         private void Our_Amb_Enter_LD(object sender, System.Windows.Input.TouchEventArgs e)
         {
-            AB_text.Visibility = System.Windows.Visibility.Collapsed;
-            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
-            LD_text.Visibility = System.Windows.Visibility.Visible;
-            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
-            SP_text.Visibility = System.Windows.Visibility.Collapsed;
+            Amb_text.Document = Amb_LD;
         }
 
         private void Our_Amb_Enter_SP(object sender, System.Windows.Input.TouchEventArgs e)
         {
-            AB_text.Visibility = System.Windows.Visibility.Collapsed;
-            BOK_text.Visibility = System.Windows.Visibility.Collapsed;
-            LD_text.Visibility = System.Windows.Visibility.Collapsed;
-            CJ_text.Visibility = System.Windows.Visibility.Collapsed;
-            SP_text.Visibility = System.Windows.Visibility.Visible;
+            Amb_text.Document = Amb_SP;
         }
 
     }
