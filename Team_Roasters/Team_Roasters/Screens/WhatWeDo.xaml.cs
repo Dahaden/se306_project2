@@ -21,11 +21,21 @@ namespace Team_Roasters.Screens
         FlowDocument Amb_CJ = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_CJ.xaml"));
         FlowDocument Amb_LD = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_LD.xaml"));
         FlowDocument Amb_SP = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_SP.xaml"));
+        FlowDocument Amb_EMHB = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_EMHB.xaml"));
+        FlowDocument Amb_JK = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_JK.xaml"));
+        FlowDocument Amb_KR = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_KR.xaml"));
+        FlowDocument Amb_MA = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_MA.xaml"));
             
         public WhatWeDo(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
             
+            FlowDocument Amb_Image_AB = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Ambassadors/Amb_Image_AB.xaml"));
+
+            AB_image abimage = new AB_image();
+
+            Amb_image.Children.Add(abimage);
+
             // Passes the document into the RichTextBox which displays the formatted contents in the app
             Amb_text.Document = Amb_AB;
         }
@@ -96,5 +106,22 @@ namespace Team_Roasters.Screens
             Amb_text.Document = Amb_SP;
         }
 
+
+
+        private void Next_image(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+        	Amb_text.Document = Amb_SP;
+        }
+
+        private void Touch_enter(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            Amb_image.Opacity = 0.5;
+        }
+
+        private void Touch_leave(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+        	Amb_text.Document = Amb_BOK;
+        }
+              
     }
 }

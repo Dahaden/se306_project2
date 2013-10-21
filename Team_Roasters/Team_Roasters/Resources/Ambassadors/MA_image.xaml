@@ -1,0 +1,14 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Team_Roasters.AB_image"
+	x:Name="UserControl" d:DesignHeight="589.576" Width="569">
+
+	<Grid x:Name="LayoutRoot">
+        <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" VerticalAlignment="Bottom" Margin="167.5,0,165.5,88"><Run Language="en-nz" Text="Megan Alatini"/></TextBlock>
+        <Image Margin="-41.619,-52,-36,197.576" Source="megan-alatini.jpg" Stretch="Fill" HorizontalAlignment="Center"/>
+	</Grid>
+</UserControl>

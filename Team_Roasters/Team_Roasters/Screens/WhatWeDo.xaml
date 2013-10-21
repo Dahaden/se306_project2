@@ -322,7 +322,7 @@
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
                 <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
+                    <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height" TouchEnter="Touch_enter" TouchLeave="Touch_leave">
                     <Grid.RowDefinitions>
                     	<RowDefinition Height="0.821*"/>
                     	<RowDefinition Height="0.179*"/>
@@ -332,52 +332,13 @@
                     		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     	</Border.Effect>
                     </Border>
-                    <Viewbox Margin="0,37.775,14.586,199.8" Stretch="Fill">
-                    	<Grid Height="315.606" Width="1128.888" Margin="50,0">
-                    		<StackPanel HorizontalAlignment="Right" Margin="0,0,-9.374,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Steve-Price.jpg" Stretch="Fill" RenderTransformOrigin="-6.006,0.517" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_SP">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                    			<TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Right" Margin="0,7.606,229.469,8" Orientation="Vertical" Width="195.178">
-                                    <Image Margin="0,10,8,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="UniformToFill" Height="193.347" RenderTransformOrigin="0.08,0.436" VerticalAlignment="Center" HorizontalAlignment="Center" TouchEnter="Our_Amb_Enter_LD">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="202.664" HorizontalAlignment="Left" Margin="0,30,0,0"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel x:Name="Our_Amb_AB" HorizontalAlignment="Left" Margin="0,0,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_AB" RenderTransformOrigin="0.5,0.5">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Foreground="Black" Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel Margin="477,3,470.888,-41.397" Orientation="Vertical" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Jack-Chris.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_CJ">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Chris Jack"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Left" Margin="237,3,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Bernadine-Oliver-Kerby.jpg" Stretch="Fill" Height="222" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_BOK">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
-                    		</StackPanel>
-                    	</Grid>
-                    </Viewbox>
-                        <RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="30.414,-133.8,50.586,63.634" FontSize="24" Grid.Row="1" IsDocumentEnabled="False">
-                        </RichTextBox>
+                    <Border HorizontalAlignment="Left" Margin="80,0,0,35" Width="178" Height="259.576" VerticalAlignment="Bottom">
+                            <StackPanel Name="Amb_image" Margin="0,-244,-337,-81">
+                            </StackPanel>
+                    </Border>
+                    <StackPanel x:Name="Our_Amb_AB" HorizontalAlignment="Left" Margin="8,0,0,-41.397" Orientation="Vertical" Width="173" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_AB" RenderTransformOrigin="0.5,0.5" Height="346.002"/>
+                    <Grid Margin="50,37.775,309.112,241.195"/>
+                        <RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="732.414,37.775,59.586,63.634" FontSize="24" IsDocumentEnabled="False" Grid.RowSpan="2"/>
                         </Grid>
                 </s:SurfaceScrollViewer>
 
