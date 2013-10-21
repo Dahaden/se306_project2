@@ -374,12 +374,12 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1200" />
-                            <ColumnDefinition Width="900" />
+                            <ColumnDefinition Width="1400" />
                             <ColumnDefinition Width="1350" />
                         </Grid.ColumnDefinitions>
 
                         <!-- Buttons go here - what we do etc-->
-                        <Grid Grid.Column="0" Margin="30,0,-30,0">
+                        <Grid Grid.Column="1" Margin="105,0,-30,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="567.667" />
                                 <ColumnDefinition Width="232.333" />
@@ -434,17 +434,17 @@
                             </s:SurfaceButton>
                         </Grid>
                         <!-- Video and information go here -->
-                        <Grid Grid.Column="1">
+                        <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="400" />
                                 <RowDefinition Height="400" />
                             </Grid.RowDefinitions>
-                            <my:VideoPlayer Margin="78.122,58.19,68.722,-7.636" Source="Resources/intro-video.mp4" />
+                            <my:VideoPlayer Margin="63,103,68.722,97" Source="Resources/intro-video.mp4" Grid.RowSpan="2" />
 
                         </Grid>
 
                         <!-- News, Upcoming events, twitter etc go here -->
-                        <Grid Grid.Column="3">
+                        <Grid Grid.Column="2">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="400" />
                                 <RowDefinition Height="400" />
@@ -470,27 +470,6 @@
                         </Grid>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Right" Margin="0,8,26.476,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
-                        <TextBox TextWrapping="Wrap" Margin="79.745,0,420.57,261.202" VerticalAlignment="Bottom" Grid.Column="1" Height="140.902"/>
-                        <s:SurfaceButton 
-               	Grid.RowSpan="1" 
-               	Grid.ColumnSpan="1" 
-               	x:Name="how_you_can_help_Copy" 
-               	Content="Leave a comment..." 
-               	Background="#FFFBA5D6" FontSize="26.667"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Height="140.902" Margin="0,452.896,74.363,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" Grid.Column="1" HorizontalAlignment="Right" Width="325.761" >
-                            <s:SurfaceButton.Effect>
-                                <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                            </s:SurfaceButton.Effect>
-                        </s:SurfaceButton>
-                        <ListView x:Name="CommentBox" Margin="79.745,0,74.363,49.723" Background="White" Height="190.791" VerticalAlignment="Bottom" Grid.Column="1">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn/>
-                                </GridView>
-                            </ListView.View>
-                            <TextBox TextWrapping="Wrap" Text="Great video!"/>
-                            <TextBox TextWrapping="Wrap" Text="Good video would watch again A++"/>
-                            <TextBox TextWrapping="Wrap" Text="I love lamp"/>
-                        </ListView>
                         <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="-1,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="439.999" Height="54.626"><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
                         <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
                         <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="2.833" Margin="20,101.5,0,0" VerticalAlignment="Top" Width="400.499">

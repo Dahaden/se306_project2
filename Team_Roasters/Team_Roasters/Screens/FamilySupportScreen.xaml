@@ -269,10 +269,8 @@
             </Setter>
         </Style>
         <Style x:Key="BackButtonTemplate" TargetType="{x:Type Rectangle}"/>
-
-        <XmlDataProvider x:Key="EventData" Source="Resources/events/events.xml" XPath="Items" />
-
     </view:Screen.Resources>
+    
     <Viewbox>
         <Grid x:Name="Family_Support" Background="#FFFFFCF0" Width="1920" Height="1080">
             <Grid.RowDefinitions>
@@ -298,8 +296,8 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton Content="Holiday Homes" Click="SurfaceButton_HolidayHomes" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
                 <s:SurfaceButton Content="Parent Resources" Click="SurfaceButton_ParentResources" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton Content="Holiday Homes" Click="SurfaceButton_HolidayHomes" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
                 <s:SurfaceButton Content="Support Services" Click="SurfaceButton_SupportServices" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
                 <s:SurfaceButton Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
             </StackPanel>
@@ -315,38 +313,38 @@
                         <RowDefinition Height="0.721*"/>
                         <RowDefinition Height="0.279*"/>
                     </Grid.RowDefinitions>
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,36,23.253" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
+                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
                         <Border.Effect>
                             <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Border.Effect>
-                        <TextBlock Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify" />
+                        <TextBlock Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." Foreground="Black" VerticalAlignment="Top" Padding="10" FontSize="24" TextAlignment="Left" />
                     </Border>
                 </Grid>
 
                 <Grid x:Name="Holiday_Homes" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
-                            <DropShadowEffect/>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Border.Effect>
-                        <TextBlock Text="Families can also access our Family Places - day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
+                        <TextBlock Text="Families can also access our Family Places - day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone." Foreground="Black" VerticalAlignment="Top" Padding="10" FontSize="24" TextAlignment="Justify"/> 
                     </Border>
                 </Grid>
 
                 <Grid x:Name="Support_Services" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
-                            <DropShadowEffect/>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Border.Effect>
-                        <TextBlock Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy.  They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation.  These provide a story of a child's journey recognising their strength and courage.  Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment).  The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
+                        <TextBlock Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy.  They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation.  These provide a story of a child's journey recognising their strength and courage.  Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment).  The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family." Foreground="Black" VerticalAlignment="Top" Padding="10" FontSize="24" TextAlignment="Justify"/>
                     </Border>
                 </Grid>
 
                 <Grid x:Name="Scholarships" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
-                            <DropShadowEffect/>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Border.Effect>
-                        <TextBlock Text="We offer a Scholarship Programme to assist children with cancer, their siblings, and parents to reach their potential and not be disadvantaged by their cancer journey." Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" FontSize="20" TextAlignment="Justify"/>
+                        <TextBlock Text="We offer a Scholarship Programme to assist children with cancer, their siblings, and parents to reach their potential and not be disadvantaged by their cancer journey." Foreground="Black" VerticalAlignment="Top" Padding="10" FontSize="24" TextAlignment="Justify"/>
                     </Border>
                 </Grid>
             </Grid>

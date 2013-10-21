@@ -21,6 +21,9 @@ namespace Team_Roasters.Screens
             InitializeComponent();
             getNews();
             GetEvents();
+
+            // Position the scroller in the middle
+            MainContent.ScrollToHorizontalOffset(950);
         }
 
         /// <summary>
@@ -213,7 +216,7 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        if(!File.Exists(filepath))
+                        if (!File.Exists(filepath)) // Doesn't re-download the file if it already exists. Saves time in execution
                         {
                             client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
                         }
@@ -357,7 +360,8 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        if (!File.Exists(filepath))
+
+                        if (!File.Exists(filepath)) // Doesn't re-download the file if it already exists. Saves time in execution
                         {
                             client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
                         }

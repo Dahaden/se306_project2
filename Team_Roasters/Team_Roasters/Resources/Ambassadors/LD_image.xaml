@@ -1,0 +1,16 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Team_Roasters.LD_image"
+	x:Name="UserControl" d:DesignHeight="589.576" Width="563">
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Source="Lorraine-Downes.jpg" HorizontalAlignment="Center" Height="484.18"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="241.5"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
+		</StackPanel>
+	</Grid>
+</UserControl>

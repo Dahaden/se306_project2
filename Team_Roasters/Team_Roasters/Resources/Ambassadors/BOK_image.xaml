@@ -1,0 +1,17 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Team_Roasters.BOK_image"
+	x:Name="UserControl"
+	d:DesignWidth="341" d:DesignHeight="589.576">
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel Margin="0" Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Margin="0" Source="Bernadine-Oliver-Kerby.jpg" Height="504.68" HorizontalAlignment="Center"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="334.5" Margin="0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
+		</StackPanel>
+	</Grid>
+</UserControl>

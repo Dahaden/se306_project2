@@ -13,7 +13,11 @@ namespace Team_Roasters.Screens
 
         private void SurfaceButton_ParentResources(object sender, System.Windows.RoutedEventArgs e)
         {
+            Parent_Resources.Visibility = System.Windows.Visibility.Visible;
 
+            Holiday_Homes.Visibility = System.Windows.Visibility.Collapsed;
+            Support_Services.Visibility = System.Windows.Visibility.Collapsed;
+            Scholarships.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
@@ -23,17 +27,29 @@ namespace Team_Roasters.Screens
 
         private void SurfaceButton_HolidayHomes(object sender, System.Windows.RoutedEventArgs e)
         {
-            
+            Holiday_Homes.Visibility = System.Windows.Visibility.Visible;
+
+            Parent_Resources.Visibility = System.Windows.Visibility.Collapsed;
+            Support_Services.Visibility = System.Windows.Visibility.Collapsed;
+            Scholarships.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         private void SurfaceButton_SupportServices(object sender, System.Windows.RoutedEventArgs e)
         {
+            Support_Services.Visibility = System.Windows.Visibility.Visible;
 
+            Holiday_Homes.Visibility = System.Windows.Visibility.Collapsed;
+            Parent_Resources.Visibility = System.Windows.Visibility.Collapsed;
+            Scholarships.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         private void SurfaceButton_Scholarships(object sender, System.Windows.RoutedEventArgs e)
         {
+            Scholarships.Visibility = System.Windows.Visibility.Visible;
 
+            Holiday_Homes.Visibility = System.Windows.Visibility.Collapsed;
+            Support_Services.Visibility = System.Windows.Visibility.Collapsed;
+            Parent_Resources.Visibility = System.Windows.Visibility.Collapsed;
         }
     }
 }

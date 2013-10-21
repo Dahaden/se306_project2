@@ -1,0 +1,17 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Team_Roasters.JK_image"
+	x:Name="UserControl"
+	d:DesignWidth="341" d:DesignHeight="589.576">
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Source="Jerome_Kaino.jpg" HorizontalAlignment="Center" Height="466.033"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="199.5"><Run Language="en-nz" Text="Jerome Kaino"/></TextBlock>
+		</StackPanel>
+	</Grid>
+</UserControl>

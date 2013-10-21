@@ -1,0 +1,16 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Team_Roasters.EMHB_image"
+	x:Name="UserControl" d:DesignHeight="589.576" Width="513.5">
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel Margin="0,0,0,96" Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Source="Eric-Murray--Hamish-Bond.jpg" HorizontalAlignment="Center" Height="376"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="453.775"><Run Language="en-nz" Text="Hamish Bond and Eric Murray"/></TextBlock>
+		</StackPanel>
+	</Grid>
+</UserControl>
