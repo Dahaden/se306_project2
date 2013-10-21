@@ -43,12 +43,16 @@ namespace Team_Roasters
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
 
+            // Create the stack of screens, and push the home screen on to start with.
             screenStack = new Stack<Screen>();
-            //Setting starting Screen here, maybe should be in one of the other OnXXX methods of this class
             pushScreen(new Screens.HomeScreen(this));
 
         }
 
+        /// <summary>
+        /// Remove the top screen from the stack
+        /// Display the next screen
+        /// </summary>
         public void popScreen()
         {
             if (screenStack.Count > 1)
@@ -59,6 +63,10 @@ namespace Team_Roasters
                 this.WindowStyle = WindowStyle.None;
             }
         }
+
+        /// <summary>
+        /// Add a screen to the stack and display it
+        /// </summary>
         public void pushScreen(Screen screen)
         {
             screenStack.Push(screen);
@@ -68,6 +76,10 @@ namespace Team_Roasters
 
         }
 
+        /// <summary>
+        /// Display the first screen on the stack
+        /// Useful for 'return to home' functionality
+        /// </summary>
         public void popAll()
         {
             while (screenStack.Count > 1)
