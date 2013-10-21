@@ -9,7 +9,9 @@
 	d:DesignWidth="341" d:DesignHeight="589.576">
 
 	<Grid x:Name="LayoutRoot">
-        <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="45.001" RenderTransformOrigin="0.488,1.065" VerticalAlignment="Bottom" Margin="93.836,0,78.836,8" d:LayoutOverrides="Width"><Run Language="en-nz" Text="Kieran Read"/><LineBreak/><Run Language="en-nz"/></TextBlock>
-        <Image Margin="0,0,0,78.076" Source="Kieran-Read.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+		<StackPanel Margin="0,0,0,8" Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Source="Kieran-Read.jpg" HorizontalAlignment="Center" Height="511.5"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="45.001" RenderTransformOrigin="0.488,1.065" Margin="0" d:LayoutOverrides="Width" HorizontalAlignment="Center"><Run Language="en-nz" Text="Kieran Read"/><LineBreak/><Run Language="en-nz"/></TextBlock>
+		</StackPanel>
 	</Grid>
 </UserControl>

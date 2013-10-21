@@ -132,6 +132,7 @@ namespace Team_Roasters.Screens
             {
                 Amb_counter = 0;
             }
+            System.Threading.Thread.Sleep(500); //TODO - get rid of sleep but still have it that it doesn't click through to the next one straight away
         }
               
     }

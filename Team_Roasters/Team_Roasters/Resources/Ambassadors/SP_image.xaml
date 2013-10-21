@@ -9,7 +9,9 @@
 	d:DesignWidth="341" d:DesignHeight="589.576">
 
 	<Grid x:Name="LayoutRoot">
-        <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="48.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="171" Margin="8,0,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
-        <Image Margin="0,0,0,78.076" Source="Steve-Price.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Source="Steve-Price.jpg" HorizontalAlignment="Center" Height="511.5"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="48.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="171" Margin="8,0,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
+		</StackPanel>
 	</Grid>
 </UserControl>

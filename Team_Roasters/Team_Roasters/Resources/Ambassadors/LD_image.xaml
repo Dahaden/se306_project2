@@ -8,7 +8,9 @@
 	x:Name="UserControl" d:DesignHeight="589.576" Width="563">
 
 	<Grid x:Name="LayoutRoot">
-        <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="241.5"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
-        <Image Margin="0,0,0,105.396" Source="Lorraine-Downes.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Source="Lorraine-Downes.jpg" HorizontalAlignment="Center" Height="484.18"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="241.5"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
+		</StackPanel>
 	</Grid>
 </UserControl>

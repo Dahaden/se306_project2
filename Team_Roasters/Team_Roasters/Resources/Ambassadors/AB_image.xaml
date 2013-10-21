@@ -9,7 +9,9 @@
 	d:DesignWidth="341" d:DesignHeight="589.576">
 
 	<Grid x:Name="LayoutRoot">
-		<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="55.501" Margin="61.1,0,43.1,0" RenderTransformOrigin="0.488,1.065" VerticalAlignment="Bottom"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
-		<Image Margin="0,0,0,78.076" Source="Amanda-Billing.jpg" Stretch="Fill"/>
+		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
+			<Image Source="Amanda-Billing.jpg" Height="511.5" HorizontalAlignment="Center"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="55.501" Margin="61.1,0,43.1,0" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
+		</StackPanel>
 	</Grid>
 </UserControl>

@@ -333,7 +333,7 @@
                     	</Border.Effect>
                     	<StackPanel x:Name="Amb_image" HorizontalAlignment="Left" Margin="26,38,0,58.21" Width="708"/>
                     </Border>
-                        <RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="732.414,37.775,59.586,63.634" FontSize="24" IsDocumentEnabled="False" Grid.RowSpan="2"/>
+                        <RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="732.414,37.775,59.586,63.634" FontSize="24" IsDocumentEnabled="False" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
                         </Grid>
                 </s:SurfaceScrollViewer>
 
