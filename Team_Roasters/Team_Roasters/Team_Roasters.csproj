@@ -73,6 +73,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Resources\Ambassadors\AB_image.xaml.cs">
+      <DependentUpon>AB_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\BOK_image.xaml.cs">
+      <DependentUpon>BOK_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\CJ_image.xaml.cs">
+      <DependentUpon>CJ_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\EMHB_image.xaml.cs">
+      <DependentUpon>EMHB_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\JK_image.xaml.cs">
+      <DependentUpon>JK_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\KR_image.xaml.cs">
+      <DependentUpon>KR_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\LD_image.xaml.cs">
+      <DependentUpon>LD_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\MA_image.xaml.cs">
+      <DependentUpon>MA_image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Ambassadors\SP_image.xaml.cs">
+      <DependentUpon>SP_image.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TwitterFeed.cs" />
     <Page Include="Resources\Ambassadors\Amb_AB.xaml">
       <SubType>Designer</SubType>
@@ -91,6 +118,58 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources\Ambassadors\Amb_SP.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\Amb_EMHB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\Amb_JK.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\Amb_KR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\Amb_MA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\AB_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\BOK_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\CJ_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\SP_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\MA_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\LD_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\KR_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\JK_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Ambassadors\EMHB_image.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -194,7 +273,7 @@
     <Resource Include="Resources\events\DoNotDeleteThisFolder.txt" />
     <Resource Include="Resources\Ambassadors\Amanda-Billing.jpg" />
     <Resource Include="Resources\Ambassadors\Bernadine-Oliver-Kerby.jpg" />
-    <Resource Include="Resources\Ambassadors\Jack-Chris.jpg" />
+    <Resource Include="Resources\Ambassadors\Chris-Jack.jpg" />
     <Resource Include="Resources\Ambassadors\Lorraine-Downes.jpg" />
     <Resource Include="Resources\Ambassadors\Steve-Price.jpg" />
     <Resource Include="Resources\How_We_Make_A_Difference.png" />
@@ -218,6 +297,10 @@
     <Resource Include="Resources\Corporate\Profesionals.jpg" />
     <Resource Include="Resources\Corporate\RCP-logo.jpg" />
     <Resource Include="Resources\Corporate\Savemart_1.jpg" />
+    <Resource Include="Resources\Ambassadors\Eric-Murray--Hamish-Bond.jpg" />
+    <Resource Include="Resources\Ambassadors\Jerome_Kaino.jpg" />
+    <Resource Include="Resources\Ambassadors\Kieran-Read.jpg" />
+    <Resource Include="Resources\Ambassadors\megan-alatini.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
