@@ -21,6 +21,9 @@ namespace Team_Roasters.Screens
             InitializeComponent();
             getNews();
             GetEvents();
+
+            // Position the scroller in the middle
+            MainContent.ScrollToHorizontalOffset(950);
         }
 
         /// <summary>
