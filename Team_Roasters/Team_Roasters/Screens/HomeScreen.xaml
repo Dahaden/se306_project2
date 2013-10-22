@@ -83,17 +83,135 @@
     </view:Screen.Resources>
 
     <Viewbox>
-        <Grid Name="MultiPage">
-            <Grid Name="Home" Background="#FFFFFCF0" Width="1920" Height="1080" Visibility="Visible">
+        <Grid Name="MultiPage" Background="Black">
+            <Grid Name="Home" Background="#FFFEFBEF" Width="1920" Height="1080" Visibility="Visible">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="217*" />
-                    <RowDefinition Height="863"/>
+                    <RowDefinition Height="0.926*" />
+                    <RowDefinition Height="0.074*"/>
+                    <RowDefinition Height="826.667"/>
                 </Grid.RowDefinitions>
                 <!-- Top Menu / Title bar goes here -->
-                <Grid Height="220" Margin="0,0,0,0">
-                    <Grid Name="ccf_grid" Margin="0,0,0,0">
+                <!-- Main Content goes here -->
+                <!-- Top Menu / Title bar goes here -->
+                <!-- Main Content goes here -->
+                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="2" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" Background="#FFFEFBEF" BorderBrush="#FFB7B5AC" Margin="0,25.426,0,0">
+                	<Grid>
+                		<Grid.ColumnDefinitions>
+                			<ColumnDefinition Width="1200" />
+                			<ColumnDefinition Width="1400" />
+                			<ColumnDefinition Width="1350" />
+                		</Grid.ColumnDefinitions>
+
+                        <!-- Buttons go here - what we do etc-->
+                		<Grid Grid.Column="1" Margin="105,0,-30,0">
+                			<Grid.ColumnDefinitions>
+                				<ColumnDefinition Width="567.667" />
+                				<ColumnDefinition Width="232.333" />
+                			</Grid.ColumnDefinitions>
+                			<Grid.RowDefinitions>
+                				<RowDefinition Height="400" />
+                				<RowDefinition Height="400" />
+                			</Grid.RowDefinitions>
+
+                			<s:SurfaceButton 
+                				x:Name="what_we_do" 
+                				Content="What We Do" 
+                				Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="What_we_do_Click" Margin="13.515,70.747,0,0" Height="329.253" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
+                				<s:SurfaceButton.Effect>
+                					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                				</s:SurfaceButton.Effect>
+                			</s:SurfaceButton>
+
+                			<s:SurfaceButton 
+                				Grid.RowSpan="1" 
+                				Grid.ColumnSpan="1" 
+                				x:Name="volunteers" 
+                				Content="Volunteers" 
+                				Click="Volunteers_Click"
+                				Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="1" Height="329.253" Margin="0,70.747,-373.515,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
+                				<s:SurfaceButton.Effect>
+                					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                				</s:SurfaceButton.Effect>
+                			</s:SurfaceButton>
+
+                			<s:SurfaceButton 
+                				Grid.RowSpan="1" 
+                				Grid.ColumnSpan="1" 
+
+                				x:Name="family_and_support" 
+                				Content="Family and Support"
+                				Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="13.515,0,0,69.754" Click="FamilyButton_Click" Grid.Row="1" Foreground="Black">
+                				<s:SurfaceButton.Effect>
+                					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                				</s:SurfaceButton.Effect>
+                			</s:SurfaceButton>
+
+                			<s:SurfaceButton 
+                				Grid.RowSpan="1"
+                				Grid.ColumnSpan="1"
+                				x:Name="corporate"
+                				Content="Corporate Sponsors"
+                				Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,-373.515,69.754" Foreground="Black" >
+                				<s:SurfaceButton.Effect>
+                					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                				</s:SurfaceButton.Effect>
+                			</s:SurfaceButton>
+                		</Grid>
+                        <!-- Video and information go here -->
+                		<Grid Grid.Column="0">
+                			<Grid.RowDefinitions>
+                				<RowDefinition Height="400" />
+                				<RowDefinition Height="400" />
+                			</Grid.RowDefinitions>
+                			<my:VideoPlayer Margin="63,103,68.722,97" Source="Resources/intro-video.mp4" Grid.RowSpan="2" />
+
+                		</Grid>
+
+                        <!-- News, Upcoming events, twitter etc go here -->
+                		<Grid Grid.Column="2">
+                			<Grid.RowDefinitions>
+                				<RowDefinition Height="400" />
+                				<RowDefinition Height="400" />
+                			</Grid.RowDefinitions>
+                			<s:SurfaceScrollViewer HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                				<RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False"/>
+                			</s:SurfaceScrollViewer>
+                			<s:SurfaceScrollViewer HorizontalAlignment="Center" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="450">
+                				<RichTextBox Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False">
+                					<RichTextBox.Effect>
+                						<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                					</RichTextBox.Effect>
+                				</RichTextBox>
+                			</s:SurfaceScrollViewer>
+                			<s:SurfaceScrollViewer HorizontalAlignment="Left" Margin="-0.979,112.984,0,23.422" Width="439.984" Grid.RowSpan="2" Background="#FF00ABF0">
+                				<s:SurfaceScrollViewer.Effect>
+                					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                				</s:SurfaceScrollViewer.Effect>
+                				<Grid Width="440" x:Name="twitterViewer">
+                					<Grid.ColumnDefinitions>
+                						<ColumnDefinition Width="Auto" />
+                						<ColumnDefinition />
+                					</Grid.ColumnDefinitions>
+                				</Grid>
+                			</s:SurfaceScrollViewer>
+                		</Grid>
+                		<TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="-1,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="439.999" Height="54.626"><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
+                		<Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
+                		<Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="2.833" Margin="20,101.5,0,0" VerticalAlignment="Top" Width="400.499">
+                			<Rectangle.Fill>
+                				<RadialGradientBrush>
+                					<GradientStop Color="#FF0FA9F9" Offset="1"/>
+                					<GradientStop Color="#FF2148E4"/>
+                				</RadialGradientBrush>
+                			</Rectangle.Fill>
+                		</Rectangle>
+                	</Grid>
+                </s:SurfaceScrollViewer>
+                <!-- Top Menu / Title bar goes here -->
+                <Grid Height="220" Margin="0,8.5,0,6.833">
+                    <Grid x:Name="ccf_grid" Margin="0,-8,0,-11" Background="#FFFEFBEF">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
+                        	<ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Image Margin="383,52,301,80" Source="../Resources/tagline2.png" Stretch="UniformToFill"/>
                         <s:SurfaceButton 
@@ -112,123 +230,11 @@
                     </Grid>
                 </Grid>
 
-                <!-- Main Content goes here -->
-                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" d:LayoutOverrides="GridBox">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1200" />
-                            <ColumnDefinition Width="1400" />
-                            <ColumnDefinition Width="1350" />
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Buttons go here - what we do etc-->
-                        <Grid Grid.Column="1" Margin="105,0,-30,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="567.667" />
-                                <ColumnDefinition Width="232.333" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="400" />
-                                <RowDefinition Height="400" />
-                            </Grid.RowDefinitions>
-
-                            <s:SurfaceButton 
-                         Name="what_we_do" 
-                         Content="What We Do" 
-                         Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="What_we_do_Click" Margin="13.515,70.747,0,0" Height="329.253" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
-                                <s:SurfaceButton.Effect>
-                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                </s:SurfaceButton.Effect>
-                            </s:SurfaceButton>
-
-                            <s:SurfaceButton 
-                         Grid.RowSpan="1" 
-                         Grid.ColumnSpan="1" 
-                         Name="volunteers" 
-                         Content="Volunteers" 
-                         Click="Volunteers_Click"
-                         Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="1" Height="329.253" Margin="0,70.747,-373.515,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
-                                <s:SurfaceButton.Effect>
-                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                </s:SurfaceButton.Effect>
-                            </s:SurfaceButton>
-
-                            <s:SurfaceButton 
-                         Grid.RowSpan="1" 
-                         Grid.ColumnSpan="1" 
-
-                         Name="family_and_support" 
-                         Content="Family and Support"
-                         Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="13.515,0,0,69.754" Click="FamilyButton_Click" Grid.Row="1" Foreground="Black">
-                                <s:SurfaceButton.Effect>
-                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                </s:SurfaceButton.Effect>
-                            </s:SurfaceButton>
-
-                            <s:SurfaceButton 
-                         Grid.RowSpan="1"
-                         Grid.ColumnSpan="1"
-                         Name="corporate"
-                         Content="Corporate Sponsors"
-                         Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,-373.515,69.754" Foreground="Black" >
-                                <s:SurfaceButton.Effect>
-                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                </s:SurfaceButton.Effect>
-                            </s:SurfaceButton>
-                        </Grid>
-                        <!-- Video and information go here -->
-                        <Grid Grid.Column="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="400" />
-                                <RowDefinition Height="400" />
-                            </Grid.RowDefinitions>
-                            <my:VideoPlayer Margin="63,103,68.722,97" Source="Resources/intro-video.mp4" Grid.RowSpan="2" />
-
-                        </Grid>
-
-                        <!-- News, Upcoming events, twitter etc go here -->
-                        <Grid Grid.Column="2">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="400" />
-                                <RowDefinition Height="400" />
-                            </Grid.RowDefinitions>
-                            <s:SurfaceScrollViewer HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                                <RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False"/>
-                            </s:SurfaceScrollViewer>
-                            <s:SurfaceScrollViewer HorizontalAlignment="Center" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="450">
-                                <RichTextBox Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False">
-                                    <RichTextBox.Effect>
-                                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                    </RichTextBox.Effect>
-                                </RichTextBox>
-                            </s:SurfaceScrollViewer>
-                            <s:SurfaceScrollViewer HorizontalAlignment="Left" Margin="-0.979,112.984,0,23.422" Width="439.984" Grid.RowSpan="2" Background="#FF00ABF0">
-                            	<s:SurfaceScrollViewer.Effect>
-                            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                            	</s:SurfaceScrollViewer.Effect>
-                                <Grid Width="440" x:Name="twitterViewer">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition />
-                                    </Grid.ColumnDefinitions>
-                                </Grid>
-                            </s:SurfaceScrollViewer>
-                        </Grid>
-                        <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
-                        <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Right" Margin="0,8,26.476,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="-1,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="439.999" Height="54.626"><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
-                        <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
-                        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="2.833" Margin="20,101.5,0,0" VerticalAlignment="Top" Width="400.499">
-                        	<Rectangle.Fill>
-                        		<RadialGradientBrush>
-                        			<GradientStop Color="#FF0FA9F9" Offset="1"/>
-                        			<GradientStop Color="#FF2148E4"/>
-                        		</RadialGradientBrush>
-                        	</Rectangle.Fill>
-                        </Rectangle>
-                    </Grid>
-                </s:SurfaceScrollViewer>
-                <Rectangle Fill="#FF8ECADC" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2"/>
+                <Rectangle Fill="#FF7C7C7C" Height="2.806" Margin="-4.667,15.426,-2.266,0" VerticalAlignment="Top" Grid.Row="2">
+                	<Rectangle.Effect>
+                		<DropShadowEffect BlurRadius="15"/>
+                	</Rectangle.Effect>
+                </Rectangle>
             </Grid>
         </Grid>
     </Viewbox>
