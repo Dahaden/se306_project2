@@ -666,8 +666,8 @@
                                 </RadialGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <TextBlock x:Name="EventsTitle" Grid.Column="2" Margin="526,58.333,537,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" TextAlignment="Center" FontWeight="Bold" FontSize="37.333" Height="54.626" Width="437" Foreground="Black"><Run Language="en-nz" Text="  Events   "/></TextBlock>
-                        <TextBlock x:Name="NewsTitle" Grid.Column="2" Margin="0,58.333,37.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" TextAlignment="Center" FontWeight="Bold" FontSize="37.333" Height="54.626" Width="437" Foreground="Black" HorizontalAlignment="Right" d:LayoutOverrides="Width"><Run Language="en-nz" Text="  News   "/></TextBlock>
+                        <TextBlock x:Name="EventsTitle" Grid.Column="2" Margin="526,58.333,537,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gill Sans MT" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontSize="37.333" Height="54.626" Width="437" Foreground="Black"><Run Language="en-nz" Text="  Events   "/></TextBlock>
+                        <TextBlock x:Name="NewsTitle" Grid.Column="2" Margin="0,58.333,37.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gill Sans MT" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontSize="37.333" Height="54.626" Width="437" Foreground="Black" HorizontalAlignment="Right" d:LayoutOverrides="Width"><Run Language="en-nz" Text="  News   "/></TextBlock>
                     </Grid>
                 </s:SurfaceScrollViewer>
                 <Rectangle x:Name="Left_arrow" Margin="-1,11.556,0,0" Opacity="0.5" HorizontalAlignment="Left" Width="70" Grid.Row="1">
