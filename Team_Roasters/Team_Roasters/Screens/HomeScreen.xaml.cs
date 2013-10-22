@@ -439,9 +439,23 @@ namespace Team_Roasters.Screens
         private void Scroll_changed(object sender, System.Windows.Controls.ScrollChangedEventArgs e)
         {
             if (MainContent.IsScrolling)
-            {
-                Left_arrow.Visibility = Visibility.Collapsed;
-                Right_arrow.Visibility = Visibility.Collapsed;
+            {            
+                if (MainContent.HorizontalOffset < 100)
+                {
+                    Left_arrow.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Left_arrow.Visibility = Visibility.Visible;
+                }
+                if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width )
+                {
+                    Right_arrow.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Right_arrow.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -450,15 +464,6 @@ namespace Team_Roasters.Screens
             }
         }
 
-        private void Preview_touch_move(object sender, System.Windows.Input.TouchEventArgs e)
-        {
-        	// TODO: Add event handler implementation here.
-        }
-
-        private void Touch_leave(object sender, System.Windows.Input.TouchEventArgs e)
-        {
-            Left_arrow.Visibility = Visibility.Visible;
-            Right_arrow.Visibility = Visibility.Visible;
-        }
+     
     }
 }
