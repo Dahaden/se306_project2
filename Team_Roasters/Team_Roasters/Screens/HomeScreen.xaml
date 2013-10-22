@@ -482,9 +482,19 @@
                         </Rectangle>
                     </Grid>
                 </s:SurfaceScrollViewer>
-                <Rectangle x:Name="Left_arrow" Fill="#FF305280" Margin="-1,11.556,0,0" Opacity="0.5" HorizontalAlignment="Left" Width="70" Grid.Row="1"/>
+                <Rectangle x:Name="Left_arrow" Margin="-1,11.556,0,0" Opacity="0.5" HorizontalAlignment="Left" Width="70" Grid.Row="1">
+                	<Rectangle.Fill>
+                		<ImageBrush ImageSource="arrow_l.png" Stretch="None"/>
+                	</Rectangle.Fill>
+                </Rectangle>
                 <Rectangle Fill="#FF8ECADC" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2"/>
-                <Rectangle x:Name="Right_arrow" Fill="#FF305280" Margin="0,11.5,0,0.056" Opacity="0.5" Grid.Row="1" HorizontalAlignment="Right" Width="70"/>
+                <Rectangle x:Name="Right_arrow" Margin="0,11.5,0,0.056" Opacity="0.5" Grid.Row="1" HorizontalAlignment="Right" Width="70">
+                	<Rectangle.Fill>
+                		<ImageBrush Stretch="None" ImageSource="arrow_r.png"/>
+                	</Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="Left_arrow_block" Margin="-1,11.556,0,0" Opacity="0.3" HorizontalAlignment="Left" Width="70" Grid.Row="1" Fill="Black"/>
+                <Rectangle x:Name="Right_arrow_block" Margin="0,11.5,0,0.056" Opacity="0.3" Grid.Row="1" HorizontalAlignment="Right" Width="70" Fill="Black"/>
             </Grid>
         </Grid>
     </Viewbox>
