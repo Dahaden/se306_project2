@@ -24,9 +24,10 @@ namespace Team_Roasters.Screens
             getNews();
             GetEvents();
             GetTweets();
-
+           
             // Position the scroller in the middle
             MainContent.ScrollToHorizontalOffset(950);
+
         }
 
         /// <summary>
@@ -81,7 +82,7 @@ namespace Team_Roasters.Screens
 
         /// <summary>
         /// Gets tweets from the CCF twitter feed (if there is internet connection)
-        /// and writes them to a document to be opened and read to a RichTextBox
+        /// and shows them on the main page
         /// </summary>
         private void GetTweets()
         {
@@ -119,22 +120,27 @@ namespace Team_Roasters.Screens
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
                     
-                    Grid inner = new Grid();
-
-                    RowDefinition colDef1 = new RowDefinition();
-                    RowDefinition colDef2 = new RowDefinition();
-                    inner.RowDefinitions.Add(colDef1);
-                    inner.RowDefinitions.Add(colDef2);
-                    Grid.SetColumn(inner, 1);
-                    Grid.SetRow(inner, i);
-
                     TextBlock userName = new TextBlock();
+                    userName.FontWeight = FontWeights.Bold;
+                    userName.FontSize = 23;
                     userName.Text = tweets[i][1];
                     Grid.SetRow(userName, 0);
 
                     TextBlock tweet = new TextBlock();
+                    tweet.FontSize = 17;
                     tweet.Text = tweets[i][3];
+                    tweet.TextWrapping = TextWrapping.Wrap;
                     Grid.SetRow(tweet, 1);
+
+                    Grid inner = new Grid();
+
+                    RowDefinition colDef1 = new RowDefinition();
+                    RowDefinition colDef2 = new RowDefinition();
+                    colDef1.Height = new GridLength(30);
+                    inner.RowDefinitions.Add(colDef1);
+                    inner.RowDefinitions.Add(colDef2);
+                    Grid.SetColumn(inner, 1);
+                    Grid.SetRow(inner, i);
 
                     inner.Children.Add(userName);
                     inner.Children.Add(tweet);
