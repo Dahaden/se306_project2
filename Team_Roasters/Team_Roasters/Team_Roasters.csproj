@@ -321,8 +321,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\TweetyBird.jpg" />
-    <Resource Include="Screens\arrow_l.png" />
-    <Resource Include="Screens\arrow_r.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
