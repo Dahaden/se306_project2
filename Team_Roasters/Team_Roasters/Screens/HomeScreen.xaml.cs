@@ -1,4 +1,4 @@
-using Team_Roasters;
+﻿using Team_Roasters;
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Markup;
@@ -8,6 +8,7 @@ using HtmlAgilityPack;
 using System.Text;
 using System.Xml;
 using System.Net;
+using System.Windows;
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -433,6 +434,31 @@ namespace Team_Roasters.Screens
             {
                 return false;
             }
+        }
+
+        private void Scroll_changed(object sender, System.Windows.Controls.ScrollChangedEventArgs e)
+        {
+            if (MainContent.IsScrolling)
+            {
+                Left_arrow.Visibility = Visibility.Collapsed;
+                Right_arrow.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                Left_arrow.Visibility = Visibility.Visible;
+                Right_arrow.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Preview_touch_move(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void Touch_leave(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            Left_arrow.Visibility = Visibility.Visible;
+            Right_arrow.Visibility = Visibility.Visible;
         }
     }
 }

@@ -370,7 +370,7 @@
                 </Grid>
 
                 <!-- Main Content goes here -->
-                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" d:LayoutOverrides="GridBox">
+                <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" d:LayoutOverrides="GridBox" ScrollChanged="Scroll_changed" PreviewTouchMove="Preview_touch_move" TouchLeave="Touch_leave">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1200" />
@@ -482,7 +482,9 @@
                         </Rectangle>
                     </Grid>
                 </s:SurfaceScrollViewer>
+                <Rectangle x:Name="Left_arrow" Fill="#FF305280" Margin="-1,11.556,0,0" Opacity="0.5" HorizontalAlignment="Left" Width="70" Grid.Row="1"/>
                 <Rectangle Fill="#FF8ECADC" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2"/>
+                <Rectangle x:Name="Right_arrow" Fill="#FF305280" Margin="0,11.5,0,0.056" Opacity="0.5" Grid.Row="1" HorizontalAlignment="Right" Width="70"/>
             </Grid>
         </Grid>
     </Viewbox>
