@@ -1,4 +1,4 @@
-using Team_Roasters;
+﻿using Team_Roasters;
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Markup;
@@ -8,6 +8,7 @@ using HtmlAgilityPack;
 using System.Text;
 using System.Xml;
 using System.Net;
+using System.Windows;
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -433,5 +434,35 @@ namespace Team_Roasters.Screens
                 return false;
             }
         }
+
+        private void Scroll_changed(object sender, System.Windows.Controls.ScrollChangedEventArgs e)
+        {
+            if (MainContent.IsScrolling)
+            {            
+                if (MainContent.HorizontalOffset < 100)
+                {
+                    Left_arrow.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Left_arrow.Visibility = Visibility.Visible;
+                }
+                if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width )
+                {
+                    Right_arrow.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Right_arrow.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                Left_arrow.Visibility = Visibility.Visible;
+                Right_arrow.Visibility = Visibility.Visible;
+            }
+        }
+
+     
     }
 }
