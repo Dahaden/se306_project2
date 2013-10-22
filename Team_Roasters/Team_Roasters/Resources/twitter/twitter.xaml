@@ -1,0 +1,50 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008" TextAlignment="Justify">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="0" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="1" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="2" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="3" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="4" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="5" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="6" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="7" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="8" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="9" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="10" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="11" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="12" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="13" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="14" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="15" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="16" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="17" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="18" Grid.Column="0" />
+    <Image Source="C:\Users\Dave\Dropbox\Uni\306\p2\repo\se306_project2\Team_Roasters\Team_Roasters\Resources\news\/86da00fa7ee7f8aa8a0b0614b48363d8_normal.png" Grid.Row="19" Grid.Column="0" />
+  </Grid>
+</FlowDocument>

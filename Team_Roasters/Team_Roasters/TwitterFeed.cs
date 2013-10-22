@@ -112,7 +112,14 @@ namespace Team_Roasters
                 //Tweet text
                 string text = t.text;
                 //Tweet timestamp
-                DateTime timestamp = Convert.ToDateTime(t.created_at);
+                try
+                {
+                    DateTime timestamp = Convert.ToDateTime(t.created_at);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine(e.Message + "\nTime Given: " + t.created_at);
+                }
             }
         }
 
@@ -133,7 +140,7 @@ namespace Team_Roasters
                 //Tweet text
                 twerk.Add(t.text);
                 //Tweet timestamp
-                twerk.Add(Convert.ToDateTime(t.created_at).ToString());
+                twerk.Add(t.created_at);
                 result.Add(twerk);
             }
             return result;

@@ -463,9 +463,11 @@
                             	<s:SurfaceScrollViewer.Effect>
                             		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                             	</s:SurfaceScrollViewer.Effect>
-                            	<Grid x:Name="Twitable" Width="441.708">
-                            		<Grid x:Name="Tweet" VerticalAlignment="Top" Height="100"/>
-                            	</Grid>
+                                <RichTextBox Width="440" x:Name="twitterViewer" IsReadOnly="True" IsDocumentEnabled="False">
+                                    <RichTextBox.Effect>
+                                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                                    </RichTextBox.Effect>
+                                </RichTextBox>
                             </s:SurfaceScrollViewer>
                         </Grid>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>

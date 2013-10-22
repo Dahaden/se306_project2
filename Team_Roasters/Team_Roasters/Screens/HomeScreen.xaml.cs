@@ -21,6 +21,7 @@ namespace Team_Roasters.Screens
             InitializeComponent();
             getNews();
             GetEvents();
+            GetTweets();
 
             // Position the scroller in the middle
             MainContent.ScrollToHorizontalOffset(950);
@@ -93,7 +94,7 @@ namespace Team_Roasters.Screens
                 List<List<string>> tweets = twit.GetTweets();
 
                 Encoding utf8 = new UTF8Encoding(true);
-                XmlTextWriter writer = new XmlTextWriter("../../Resources/events/events.xaml", utf8);
+                XmlTextWriter writer = new XmlTextWriter("../../Resources/twitter/twitter.xaml", utf8);
                 writer.Formatting = Formatting.Indented;
 
                 writer.WriteStartElement("FlowDocument");
@@ -101,22 +102,48 @@ namespace Team_Roasters.Screens
                 writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
                 writer.WriteAttributeString("xmlns:s", "http://schemas.microsoft.com/surface/2008");
                 writer.WriteAttributeString("TextAlignment", "Justify");
-                writer.WriteStartElement("Section");
-                foreach (List<string> t in tweets)
+                writer.WriteStartElement("Grid");
+                writer.WriteStartElement("Grid.ColumnDefinitions");
+                writer.WriteStartElement("ColumnDefinition");
+                writer.WriteAttributeString("Width", "Auto");
+                writer.WriteEndElement(); // ColumnDefinition 1
+                writer.WriteStartElement("ColumnDefinition");
+                writer.WriteEndElement(); // ColumnDefinition 2
+                writer.WriteEndElement(); // Grid.ColumnDefinitions
+                writer.WriteStartElement("Grid.RowDefinitions");
+                for (int x = 0; x < tweets.Count; x++)
                 {
-                    writer.WriteStartElement("Paragraph");
-                    //client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                    writer.WriteStartElement("RowDefinition");
+                    writer.WriteAttributeString("Height", "Auto");
+                    writer.WriteEndElement(); // RowDefinition
+                }
+                writer.WriteEndElement(); // Grid.RowDefinitions
+                for (int i = 0; i < tweets.Count; i++)
+                {
+                    //writer.WriteStartElement("Section");
                     // Tweet Info = {[name], [username], [avatar_url], [text], [timestamp]}
-                    avatar_url = t[2];
-                    filename = avatar_url.Substring(avatar_url.LastIndexOf('/'), avatar_url.Length);
+                    avatar_url = tweets[i][2];
+                    filename = "../../Resources/twitter/" + avatar_url.Substring(avatar_url.LastIndexOf('/'));
                     if (!File.Exists(filename))  // Check if File is already there
                     {
                         client.DownloadFile(new Uri(avatar_url), filename);
                     }
                     string basePath = AppDomain.CurrentDomain.BaseDirectory;
                     string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
-                    string fullfilepath = (commonPath + @"Resources\news\") + filename.Substring(filename.LastIndexOf('/'), filename.Length);
+                    string fullfilepath = (commonPath + @"Resources\news\") + filename.Substring(filename.LastIndexOf('/'));
+
+                    writer.WriteStartElement("Image");
+                    writer.WriteAttributeString("Source", fullfilepath);
+                    writer.WriteAttributeString("Grid.Row", i.ToString());
+                    writer.WriteAttributeString("Grid.Column", "0");
+                    writer.WriteEndElement(); // Image
                 }
+                writer.WriteEndElement(); // Grid
+                writer.WriteEndElement(); // FlowDocument
+                writer.Close();
+                //FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/twitter/twitter.xaml"));
+
+                //twitterViewer.Document = flowDocument;
             }
         }
 
