@@ -366,7 +366,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string whenwhere;
-                string imgsrc;
+                string imgsrc="";
                 string desc;
                 string filename;
                 string filepath;
@@ -459,7 +459,15 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("BlockUIContainer");
-                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+
+                        try
+                        {
+                            imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        }
+                        catch (Exception e)
+                        {
+                            // No image for this news item
+                        }
 
                         filepath = "../../Resources/events/" + filename + ".jpeg";
 
