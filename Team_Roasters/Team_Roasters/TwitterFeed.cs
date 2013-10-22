@@ -99,21 +99,6 @@ namespace Team_Roasters
         public void updateTweets()
         {
             tweets = JsonConvert.DeserializeObject<List<Tweet>>(getTwitterFeed());
-
-            foreach (Tweet t in tweets)
-            {
-                //plug in values for each tweet
-                //Tweet author name
-                string name = t.user.name;
-                //Tweet author @username
-                string username = t.user.screen_name;
-                //Tweet author avatar
-                string avatar = t.user.profile_image_url;
-                //Tweet text
-                string text = t.text;
-                //Tweet timestamp
-                DateTime timestamp = Convert.ToDateTime(t.created_at);
-            }
         }
 
         public List<List<string>> GetTweets()
