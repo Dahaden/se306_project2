@@ -118,7 +118,7 @@ namespace Team_Roasters
                 //Tweet text
                 twerk.Add(t.text);
                 //Tweet timestamp
-                twerk.Add(Convert.ToDateTime(t.created_at).ToString());
+                twerk.Add(t.created_at);
                 result.Add(twerk);
             }
             return result;

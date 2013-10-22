@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Markup;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using System.IO;
 using System;
 using HtmlAgilityPack;
@@ -21,6 +23,7 @@ namespace Team_Roasters.Screens
             InitializeComponent();
             getNews();
             GetEvents();
+            GetTweets();
 
             // Position the scroller in the middle
             MainContent.ScrollToHorizontalOffset(950);
@@ -84,37 +87,62 @@ namespace Team_Roasters.Screens
         {
             if (CheckInternetConnection())
             {
+                WebClient client = new WebClient(); // Creates a new WebClient which is used to grab data from sites
                 TwitterFeed twit = new TwitterFeed();
+                string filename;
+                string avatar_url;
+
                 twit.updateTweets();
                 List<List<string>> tweets = twit.GetTweets();
-
-                Encoding utf8 = new UTF8Encoding(true);
-                XmlTextWriter writer = new XmlTextWriter("../../Resources/events/events.xaml", utf8);
-                writer.Formatting = Formatting.Indented;
-
-                writer.WriteStartElement("FlowDocument");
-                writer.WriteAttributeString("xmlns", "http://schemas.microsoft.com/winfx/2006/xaml/presentation");
-                writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
-                writer.WriteAttributeString("xmlns:s", "http://schemas.microsoft.com/surface/2008");
-                writer.WriteAttributeString("TextAlignment", "Justify");
-                writer.WriteStartElement("Section");
-                foreach (List<string> t in tweets)
+                for (int i = 0; i < tweets.Count; i++)
                 {
-                    writer.WriteStartElement("Paragraph");
-                    //client.DownloadFile(new Uri(baseURI + imgsrc), filepath); 
-                    foreach (string name in t)
+                    //writer.WriteStartElement("Section");
+                    // Tweet Info = {[name], [username], [avatar_url], [text], [timestamp]}
+                    avatar_url = tweets[i][2];
+                    filename = "../../Resources/twitter/" + avatar_url.Substring(avatar_url.LastIndexOf('/'));
+                    if (!File.Exists(filename))  // Check if File is already there
                     {
-
+                        client.DownloadFile(new Uri(avatar_url), filename);
                     }
+                    string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                    string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
+                    string fullfilepath = (commonPath + @"Resources\twitter\") + filename.Substring(filename.LastIndexOf('/'));
 
-                    writer.WriteStartElement("Line");
-                    writer.WriteAttributeString("Stretch", "Fill");
-                    writer.WriteAttributeString("Stroke", "Black");
-                    writer.WriteAttributeString("X2", "1");
-                    writer.WriteAttributeString("Margin", "-5");
-                    writer.WriteEndElement(); // Line
-                    writer.WriteEndElement(); // Paragraph
+                    var uri = new Uri(fullfilepath);
+                    var bitmap = new BitmapImage(uri);
+
+                    Image img = new Image();
+                    img.Source = bitmap;
+                    Grid.SetColumn(img, 0);
+                    Grid.SetRow(img, i);
+                    
+                    RowDefinition rowDef = new RowDefinition();
+                    twitterViewer.RowDefinitions.Add(rowDef);
+                    
+                    Grid inner = new Grid();
+
+                    RowDefinition colDef1 = new RowDefinition();
+                    RowDefinition colDef2 = new RowDefinition();
+                    inner.RowDefinitions.Add(colDef1);
+                    inner.RowDefinitions.Add(colDef2);
+                    Grid.SetColumn(inner, 1);
+                    Grid.SetRow(inner, i);
+
+                    TextBlock userName = new TextBlock();
+                    userName.Text = tweets[i][1];
+                    Grid.SetRow(userName, 0);
+
+                    TextBlock tweet = new TextBlock();
+                    tweet.Text = tweets[i][3];
+                    Grid.SetRow(tweet, 1);
+
+                    inner.Children.Add(userName);
+                    inner.Children.Add(tweet);
+
+                    twitterViewer.Children.Add(img);
+                    twitterViewer.Children.Add(inner);
                 }
+
             }
         }
 
@@ -218,7 +246,6 @@ namespace Team_Roasters.Screens
                         {
                             client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
                         }
-
                         // Dynamically gets the full directory location of where the image is stored locally which is used in the loading of the document
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
                         string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
@@ -359,6 +386,7 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
+
                         if (!File.Exists(filepath)) // Doesn't re-download the file if it already exists. Saves time in execution
                         {
                             client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
