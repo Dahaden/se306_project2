@@ -29,7 +29,7 @@
             </Image>
             <s:SurfaceButton Background="Transparent" x:Name="PlayButton" Click="PlayButton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <s:SurfaceButton.Content>
-                    <Image Source="Resources/video_playbutton_large.png">
+                    <Image Source="Resources/video_playbutton_large.png" Height="250" Width="250">
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
                                 <Style.Triggers>

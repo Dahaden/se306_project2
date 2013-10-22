@@ -1,4 +1,4 @@
-using Team_Roasters;
+﻿using Team_Roasters;
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Markup;
@@ -10,6 +10,7 @@ using HtmlAgilityPack;
 using System.Text;
 using System.Xml;
 using System.Net;
+using System.Windows;
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -112,12 +113,34 @@ namespace Team_Roasters.Screens
 
                     Image img = new Image();
                     img.Source = bitmap;
+                    Grid.SetColumn(img, 0);
+                    Grid.SetRow(img, i);
                     
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
-                    Grid.SetColumn(img,0);
+                    
+                    Grid inner = new Grid();
+
+                    RowDefinition colDef1 = new RowDefinition();
+                    RowDefinition colDef2 = new RowDefinition();
+                    inner.RowDefinitions.Add(colDef1);
+                    inner.RowDefinitions.Add(colDef2);
+                    Grid.SetColumn(inner, 1);
+                    Grid.SetRow(inner, i);
+
+                    TextBlock userName = new TextBlock();
+                    userName.Text = tweets[i][1];
+                    Grid.SetRow(userName, 0);
+
+                    TextBlock tweet = new TextBlock();
+                    tweet.Text = tweets[i][3];
+                    Grid.SetRow(tweet, 1);
+
+                    inner.Children.Add(userName);
+                    inner.Children.Add(tweet);
 
                     twitterViewer.Children.Add(img);
+                    twitterViewer.Children.Add(inner);
                 }
 
             }
@@ -439,5 +462,41 @@ namespace Team_Roasters.Screens
                 return false;
             }
         }
+
+        private void Scroll_changed(object sender, System.Windows.Controls.ScrollChangedEventArgs e)
+        {
+            if (MainContent.IsScrolling)
+            {            
+                if (MainContent.HorizontalOffset < 100)
+                {
+                    Left_arrow.Visibility = Visibility.Collapsed;
+                    Left_arrow_block.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Left_arrow.Visibility = Visibility.Visible;
+                    Left_arrow_block.Visibility = Visibility.Visible;
+                }
+                if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width )
+                {
+                    Right_arrow.Visibility = Visibility.Collapsed;
+                    Right_arrow_block.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Right_arrow.Visibility = Visibility.Visible;
+                    Right_arrow_block.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                Left_arrow.Visibility = Visibility.Visible;
+                Left_arrow_block.Visibility = Visibility.Visible;
+                Right_arrow.Visibility = Visibility.Visible;
+                Right_arrow_block.Visibility = Visibility.Visible;
+            }
+        }
+
+     
     }
 }
