@@ -12,279 +12,6 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
-    <view:Screen.Resources>
-        <!-- Base Grid style for 55 dpi -->
-        <Style TargetType="{x:Type Control}" x:Key="ControlBaseStyle">
-            <Setter Property="FocusVisualStyle"
-				Value="{x:Null}"/>
-            <Setter Property="SnapsToDevicePixels"
-				Value="False"/>
-            <Setter Property="FontFamily"
-				Value="Segoe360"/>
-            <Setter Property="FontWeight"
-				Value="Normal"/>
-            <Setter Property="FontSize"
-				Value="17"/>
-            <Setter Property="Padding"
-				Value="6,2,10,10"/>
-            <Setter Property="MinHeight"
-				Value="38"/>
-            <Setter Property="MinWidth"
-				Value="38"/>
-            <Setter Property="Margin"
-				Value="1"/>
-            <Setter Property="HorizontalContentAlignment"
-				Value="Left"/>
-            <Setter Property="VerticalContentAlignment"
-				Value="Top"/>
-            <Setter Property="BorderThickness"
-				Value="2"/>
-        </Style>
-
-        <!-- ButtonBase -->
-        <Style x:Key="HomeContentButton"
-			TargetType="{x:Type s:SurfaceButton}" 
-			BasedOn="{StaticResource ControlBaseStyle}">
-            <Setter Property="IsTabStop"
-				Value="False" />
-            <Setter Property="Focusable"
-				Value="True" />
-            <Setter Property="Background"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundBrushKey}}" />
-            <Setter Property="Foreground"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundBrushKey}}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type s:SurfaceButton}">
-                        <ControlTemplate.Resources>
-                            <Storyboard x:Key="Press">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000"
-										Value="1" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                            <Storyboard x:Key="Release">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1500000"
-										Value="0" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </ControlTemplate.Resources>
-                        <Grid x:Name="Grid"
-							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                            <Rectangle  x:Name="ButtonBody"
-								Fill ="{TemplateBinding Background}"
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
-                            <Rectangle  x:Name="PressOverlay"
-								Opacity="0"
-								Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Stretch"/>
-                            <ContentPresenter  x:Name="Content"
-								Margin="{TemplateBinding Padding}"
-								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed"
-								Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Press}" />
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Release}" />
-                                </Trigger.ExitActions>
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundPressedBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled"
-								Value="False">
-                                <Setter Property="Fill"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundDisabledBrushKey}}"
-									TargetName="ButtonBody" />
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundDisabledBrushKey}}"/>
-                                <Setter Property="Opacity"
-									Value="0.33"
-									TargetName="Content" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="BackButton"
-			TargetType="{x:Type s:SurfaceButton}" 
-			BasedOn="{StaticResource ControlBaseStyle}">
-            <Setter Property="IsTabStop"
-				Value="False" />
-            <Setter Property="Focusable"
-				Value="True" />
-            <Setter Property="Background"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundBrushKey}}" />
-            <Setter Property="Foreground"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundBrushKey}}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type s:SurfaceButton}">
-                        <ControlTemplate.Resources>
-                            <Storyboard x:Key="Press">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000"
-										Value="1" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                            <Storyboard x:Key="Release">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1500000"
-										Value="0" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </ControlTemplate.Resources>
-                        <Grid x:Name="Grid"
-							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                            <Rectangle  x:Name="PressOverlay"
-								Opacity="0"
-								Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
-                            <ContentPresenter  x:Name="Content"
-								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center" OpacityMask="White" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" Margin="0,0,-80,0"/>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed"
-								Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Press}" />
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Release}" />
-                                </Trigger.ExitActions>
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundPressedBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled"
-								Value="False">
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundDisabledBrushKey}}"/>
-                                <Setter Property="Opacity"
-									Value="0.33"
-									TargetName="Content" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="InfoButton"
-			TargetType="{x:Type s:SurfaceButton}" 
-			BasedOn="{StaticResource ControlBaseStyle}">
-            <Setter Property="IsTabStop"
-				Value="False" />
-            <Setter Property="Focusable"
-				Value="True" />
-            <Setter Property="Background"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundBrushKey}}" />
-            <Setter Property="Foreground"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundBrushKey}}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type s:SurfaceButton}">
-                        <ControlTemplate.Resources>
-                            <Storyboard x:Key="Press">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000"
-										Value="1" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                            <Storyboard x:Key="Release">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1500000"
-										Value="0" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </ControlTemplate.Resources>
-                        <Grid x:Name="Grid"
-							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                            <Rectangle  x:Name="ButtonBody"
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Stretch" Margin="8,4" Fill="#FFFDC37D" RadiusX="2" RadiusY="2">
-                                <Rectangle.Effect>
-                                    <DropShadowEffect Color="#FF9D9D9D" BlurRadius="10"/>
-                                </Rectangle.Effect>
-                            </Rectangle>
-                            <Rectangle  x:Name="PressOverlay"
-								Opacity="0"
-								Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
-                            <ContentPresenter  x:Name="Content"
-								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed"
-								Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Press}" />
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Release}" />
-                                </Trigger.ExitActions>
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundPressedBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled"
-								Value="False">
-                                <Setter Property="Fill"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundDisabledBrushKey}}"
-									TargetName="ButtonBody" />
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundDisabledBrushKey}}"/>
-                                <Setter Property="Opacity"
-									Value="0.33"
-									TargetName="Content" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="StackPanelStyle1" TargetType="{x:Type StackPanel}">
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="White" Offset="1"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="BackButtonTemplate" TargetType="{x:Type Rectangle}"/>
-
-        <XmlDataProvider x:Key="EventData" Source="Resources/events/events.xml" XPath="Items" />
-    	<Style x:Key="ScatterViewItemStyle_AB" TargetType="{x:Type s:ScatterViewItem}">
-    		<Setter Property="Template">
-    			<Setter.Value>
-    				<ControlTemplate TargetType="{x:Type s:ScatterViewItem}">
-    					<Grid>
-    						<Image Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Margin="0,0,0,8"/>
-    					</Grid>
-    				</ControlTemplate>
-    			</Setter.Value>
-    		</Setter>
-    	</Style>
-
-    </view:Screen.Resources>
     <Viewbox>
         <Grid x:Name="What_We_Do" Background="#FFFFFCF0" Width="1920" Height="1080">
             <Grid.RowDefinitions>
@@ -310,10 +37,10 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton Content="Our Ambassadors" Click="SurfaceButton_OurAmbassadors" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton Content="How We Help" Click="SurfaceButton_HowWeHelp" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton Content="Our History" Click="SurfaceButton_OurHistory" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource InfoButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="Ambassador_Button" Content="Our Ambassadors" Click="SurfaceButton_OurAmbassadors" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoSelectedColour}" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="Help_Button" Content="How We Help" Click="SurfaceButton_HowWeHelp" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource WhatWeDoNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="History_Button" Content="Our History" Click="SurfaceButton_OurHistory" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource WhatWeDoNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="People_Button" Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoNotSelectedColour}" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
             <Grid Grid.Row="1" Grid.Column="1" Margin="20">
@@ -322,66 +49,19 @@
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
                 <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height">
+                    <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height" >
                     <Grid.RowDefinitions>
                     	<RowDefinition Height="0.821*"/>
                     	<RowDefinition Height="0.179*"/>
                     </Grid.RowDefinitions>
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0,0,14.586,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
+                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0,0,14.586,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox" TouchEnter="Touch_enter" TouchLeave="Touch_leave">
                     	<Border.Effect>
                     		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     	</Border.Effect>
+                    	<StackPanel x:Name="Amb_image" HorizontalAlignment="Left" Margin="26,38,0,58.21" Width="708"/>
                     </Border>
-                    <Viewbox Margin="0,37.775,14.586,199.8" Stretch="Fill">
-                    	<Grid Height="315.606" Width="1128.888" Margin="50,0">
-                    		<StackPanel HorizontalAlignment="Right" Margin="0,0,-9.374,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Steve-Price.jpg" Stretch="Fill" RenderTransformOrigin="-6.006,0.517" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_SP">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                    			<TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Steve Price"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Right" Margin="0,7.606,229.469,8" Orientation="Vertical" Width="195.178">
-                                    <Image Margin="0,10,8,0" Source="/Team_Roasters;component/Resources/Ambassadors/Lorraine-Downes.jpg" Stretch="UniformToFill" Height="193.347" RenderTransformOrigin="0.08,0.436" VerticalAlignment="Center" HorizontalAlignment="Center" TouchEnter="Our_Amb_Enter_LD">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="202.664" HorizontalAlignment="Left" Margin="0,30,0,0"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel x:Name="Our_Amb_AB" HorizontalAlignment="Left" Margin="0,0,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_AB" RenderTransformOrigin="0.5,0.5">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Amanda-Billing.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Foreground="Black" Height="96" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel Margin="477,3,470.888,-41.397" Orientation="Vertical" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Jack-Chris.jpg" Stretch="Fill" Height="225" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_CJ">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Chris Jack"/></TextBlock>
-                    		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Left" Margin="237,3,0,-41.397" Orientation="Vertical" Width="181" d:LayoutOverrides="Height" VerticalAlignment="Center">
-                    			<Image Margin="0,0,31,0" Source="/Team_Roasters;component/Resources/Ambassadors/Bernadine-Oliver-Kerby.jpg" Stretch="Fill" Height="222" HorizontalAlignment="Center" VerticalAlignment="Center" TouchEnter="Our_Amb_Enter_BOK">
-                    				<Image.Effect>
-                    					<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    				</Image.Effect>
-                    			</Image>
-                                    <TextBlock Height="96" Foreground="Black" TextWrapping="Wrap" FontSize="24" Width="181" d:LayoutOverrides="HorizontalAlignment" Margin="0,30,0,0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
-                    		</StackPanel>
-                    	</Grid>
-                    </Viewbox>
-                        <TextBlock x:Name="AB_text" Visibility="Visible"  Foreground="Black" Margin="30.414,-133.8,50.586,63.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1"><Run Language="en-nz" Text="Amanda Billing is best known for her role as Dr Sarah Potts on TVNZ’s Shortland Street."/><LineBreak/><Run Language="en-nz" Text="Amanda’s first project with the foundation was to lead a group of children with cancer who together painted a giant fibreglass horse, in 2011.  Maia, as he is now known, has been covered in Child Cancer Foundation Beads of Courage®.  Amanda has given selflessly of her time and artistic talents and been a wonderful friend to the young people she has met. She was, along with Megan Alatini the ambassador for One Day for Child Cancer launched in 2012, manages the kids’ section in Sharing Magazine and helps out at any event she can."/><LineBreak/><Run Language="en-nz"/><LineBreak/><Run Language="en-nz" Text="Amanda joined CCF in 2011"/></TextBlock>
-                        <TextBlock x:Name="BOK_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="We were very fortunate to have someone as professional as Bernadine featuring on our Child Cancer Foundation Appeal Month television commercial this year. The clip with young Emma was beautiful. "/><LineBreak/><Run Text="Bernadine began her broadcasting career in children’s television in Christchurch and moved to Auckland to specialise in sport. These days, with two young daughters to care for, she reads breakfast bulletins on Newstalk ZB as well as presenting One News at 6pm on weekends.  Bernadine fronted CCF’s National Appeal TV and radio advertisements in 2011 and 2012 and is influential in helping the Foundation gain media coverage.  Bernadine is extremely well liked and has helped at numerous events including Round the Bays and the Steve Price Night of Courage, where she was a brilliant MC."/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text="Bernadine joined CCF in 2009"/></TextBlock>
-                        <TextBlock x:Name="LD_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="Lorraine Downes has been a passionate and much appreciated supporter of the Child Cancer Foundation over the years. "/><LineBreak/><Run Text="Lorraine’s association with the Foundation began in spectacular fashion in 2006 when she selected the Child Cancer Foundation as her chosen charity while competing on TVNZ’s Dancing with the Stars. Lorraine won the competition with partner Aaron Gilmore, and raised an amazing nearly $112,000.  Lorraine has gone on to help promote the Child Cancer Foundation on radio, television and magazines and has been instrumental in gaining considerable media profile for our cause."/><LineBreak/><Run/><LineBreak/><Run Text="Lorraine joined CCF in 2010."/></TextBlock>
-                        <TextBlock x:Name="CJ_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="Chris Jack is a well-known sporting icon in New Zealand and overseas. He has been an enthusiastic and passionate supporter of Child Cancer for several years. Chris officially came on board as an ambassador in 2011."/><LineBreak/><Run Text="The popular Crusaders lock ended his All Black career in 2007 as the country’s second most capped lock, with only Ian Jones (79 Tests) ahead of him.Chris has young children, Sophia and Samuel and gives very generously of his time both behind the scenes visiting children with cancer and also lending his profile in the public arena.  Chris is well known among children with cancer in Christchurch for his generous good nature and he regularly brightens children’s  days. Chris has also enlisted the help of several other well known members of the Crusaders to help out."/></TextBlock>
-                        <TextBlock x:Name="SP_text" Visibility="Collapsed" Foreground="Black" Margin="30.414,-133.8,50.586,36.634" TextWrapping="Wrap" FontSize="24" Grid.Row="1" d:IsHidden="True"><Run Text="Steve Price is a legend of league on both sides of the Tasman and is recognised as one of the best role models and leaders in sport today."/><Run Language="en-nz" Text=" "/><Run Text="Steve is a former Australian rugby league and Warriors team captain. His most recent major contribution to the Foundation is his support of the Steve Price Night of Courage which now launches Appeal Month and is highly successful.  Steve’s mana and personality brings a huge amount to the event and he is instrumental in selling tables and securing auction items. Steve also shaves his head at the event. He has raised a considerable amount for CCF through funrazor head shaves over the years.  Steve has strong media contacts and is referred to as “the most loved Australian sportsperson in New Zealand.”"/><LineBreak/><Run Text="He joined CCF in 2008. "/></TextBlock>
-                    </Grid>
+                        <RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="732.414,37.775,59.586,63.634" FontSize="24" IsDocumentEnabled="False" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
+                        </Grid>
                 </s:SurfaceScrollViewer>
 
                 <Grid x:Name="How_We_Help" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">

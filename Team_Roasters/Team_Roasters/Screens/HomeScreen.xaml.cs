@@ -15,12 +15,14 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class HomeScreen : Screen
     {
-        public HomeScreen(SurfaceWindow1 parentWindow)
-            : base(parentWindow)
+        public HomeScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
             getNews();
             GetEvents();
+
+            // Position the scroller in the middle
+            MainContent.ScrollToHorizontalOffset(950);
         }
 
         /// <summary>
@@ -211,7 +213,10 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        if (!File.Exists(filepath)) // Doesn't re-download the file if it already exists. Saves time in execution
+                        {
+                            client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        }
 
                         // Dynamically gets the full directory location of where the image is stored locally which is used in the loading of the document
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -353,8 +358,10 @@ namespace Team_Roasters.Screens
 
                         // Downloads the file at the specified URL to the input filepath
                         // image source format: http://www.childcancer.org.nz/getattachment/0a92bafb-27d4-43c0-9d07-d8d5689bc1ad/Charity-Home-for-CCF.aspx
-                        client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
-
+                        if (!File.Exists(filepath)) // Doesn't re-download the file if it already exists. Saves time in execution
+                        {
+                            client.DownloadFile(new Uri(baseURI + imgsrc), filepath);
+                        }
                         string basePath = AppDomain.CurrentDomain.BaseDirectory;
                         string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
                         string fullfilepath = (commonPath + @"Resources\events\") + filename + ".jpeg";
