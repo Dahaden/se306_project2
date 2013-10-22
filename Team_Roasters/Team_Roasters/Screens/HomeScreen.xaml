@@ -206,11 +206,12 @@
                             	<s:SurfaceScrollViewer.Effect>
                             		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                             	</s:SurfaceScrollViewer.Effect>
-                                <RichTextBox Width="440" x:Name="twitterViewer" IsReadOnly="True" IsDocumentEnabled="False">
-                                    <RichTextBox.Effect>
-                                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                    </RichTextBox.Effect>
-                                </RichTextBox>
+                                <Grid Width="440" x:Name="twitterViewer">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                </Grid>
                             </s:SurfaceScrollViewer>
                         </Grid>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>

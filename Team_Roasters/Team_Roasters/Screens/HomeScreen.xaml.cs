@@ -2,6 +2,8 @@ using Team_Roasters;
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Markup;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using System.IO;
 using System;
 using HtmlAgilityPack;
@@ -91,32 +93,6 @@ namespace Team_Roasters.Screens
 
                 twit.updateTweets();
                 List<List<string>> tweets = twit.GetTweets();
-
-                Encoding utf8 = new UTF8Encoding(true);
-                XmlTextWriter writer = new XmlTextWriter("../../Resources/twitter/twitter.xaml", utf8);
-                writer.Formatting = Formatting.Indented;
-
-                writer.WriteStartElement("FlowDocument");
-                writer.WriteAttributeString("xmlns", "http://schemas.microsoft.com/winfx/2006/xaml/presentation");
-                writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
-                writer.WriteAttributeString("xmlns:s", "http://schemas.microsoft.com/surface/2008");
-                writer.WriteAttributeString("TextAlignment", "Justify");
-                writer.WriteStartElement("Grid");
-                writer.WriteStartElement("Grid.ColumnDefinitions");
-                writer.WriteStartElement("ColumnDefinition");
-                writer.WriteAttributeString("Width", "Auto");
-                writer.WriteEndElement(); // ColumnDefinition 1
-                writer.WriteStartElement("ColumnDefinition");
-                writer.WriteEndElement(); // ColumnDefinition 2
-                writer.WriteEndElement(); // Grid.ColumnDefinitions
-                writer.WriteStartElement("Grid.RowDefinitions");
-                for (int x = 0; x < tweets.Count; x++)
-                {
-                    writer.WriteStartElement("RowDefinition");
-                    writer.WriteAttributeString("Height", "Auto");
-                    writer.WriteEndElement(); // RowDefinition
-                }
-                writer.WriteEndElement(); // Grid.RowDefinitions
                 for (int i = 0; i < tweets.Count; i++)
                 {
                     //writer.WriteStartElement("Section");
@@ -129,20 +105,21 @@ namespace Team_Roasters.Screens
                     }
                     string basePath = AppDomain.CurrentDomain.BaseDirectory;
                     string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
-                    string fullfilepath = (commonPath + @"Resources\news\") + filename.Substring(filename.LastIndexOf('/'));
+                    string fullfilepath = (commonPath + @"Resources\twitter\") + filename.Substring(filename.LastIndexOf('/'));
 
-                    writer.WriteStartElement("Image");
-                    writer.WriteAttributeString("Source", fullfilepath);
-                    writer.WriteAttributeString("Grid.Row", i.ToString());
-                    writer.WriteAttributeString("Grid.Column", "0");
-                    writer.WriteEndElement(); // Image
+                    var uri = new Uri(fullfilepath);
+                    var bitmap = new BitmapImage(uri);
+
+                    Image img = new Image();
+                    img.Source = bitmap;
+                    
+                    RowDefinition rowDef = new RowDefinition();
+                    twitterViewer.RowDefinitions.Add(rowDef);
+                    Grid.SetColumn(img,0);
+
+                    twitterViewer.Children.Add(img);
                 }
-                writer.WriteEndElement(); // Grid
-                writer.WriteEndElement(); // FlowDocument
-                writer.Close();
-                //FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/twitter/twitter.xaml"));
 
-                //twitterViewer.Document = flowDocument;
             }
         }
 
