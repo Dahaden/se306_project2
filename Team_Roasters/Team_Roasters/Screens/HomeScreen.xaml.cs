@@ -112,12 +112,34 @@ namespace Team_Roasters.Screens
 
                     Image img = new Image();
                     img.Source = bitmap;
+                    Grid.SetColumn(img, 0);
+                    Grid.SetRow(img, i);
                     
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
-                    Grid.SetColumn(img,0);
+                    
+                    Grid inner = new Grid();
+
+                    RowDefinition colDef1 = new RowDefinition();
+                    RowDefinition colDef2 = new RowDefinition();
+                    inner.RowDefinitions.Add(colDef1);
+                    inner.RowDefinitions.Add(colDef2);
+                    Grid.SetColumn(inner, 1);
+                    Grid.SetRow(inner, i);
+
+                    TextBlock userName = new TextBlock();
+                    userName.Text = tweets[i][1];
+                    Grid.SetRow(userName, 0);
+
+                    TextBlock tweet = new TextBlock();
+                    tweet.Text = tweets[i][3];
+                    Grid.SetRow(tweet, 1);
+
+                    inner.Children.Add(userName);
+                    inner.Children.Add(tweet);
 
                     twitterViewer.Children.Add(img);
+                    twitterViewer.Children.Add(inner);
                 }
 
             }
