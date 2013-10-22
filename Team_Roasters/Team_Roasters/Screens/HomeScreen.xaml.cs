@@ -185,6 +185,9 @@ namespace Team_Roasters.Screens
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
 
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
+
                         // XPath expression that gets the href attribute from the h3 node nested in the div item class
                         target = link.SelectSingleNode("h3//a").Attributes["href"].Value;
 
@@ -233,13 +236,17 @@ namespace Team_Roasters.Screens
                         writer.WriteStartElement("Paragraph");
                         desc = link.SelectSingleNode("p").InnerText;
                         writer.WriteString(desc);
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "20");
                         writer.WriteStartElement("Line");
                         writer.WriteAttributeString("Stretch", "Fill");
                         writer.WriteAttributeString("Stroke", "Black");
                         writer.WriteAttributeString("X2", "1");
+                        writer.WriteAttributeString("StrokeThickness", "5");
                         writer.WriteAttributeString("Margin", "-5");
                         writer.WriteEndElement(); // Line
                         writer.WriteEndElement(); // Paragraph
@@ -330,6 +337,9 @@ namespace Team_Roasters.Screens
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
 
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
+
                         target = link.SelectSingleNode("h3//a").Attributes["href"].Value;
                         titlename = link.SelectSingleNode("h3//a").InnerText;
 
@@ -376,18 +386,23 @@ namespace Team_Roasters.Screens
                         writer.WriteStartElement("Paragraph");
                         desc = link.SelectSingleNode("p").InnerText;
                         writer.WriteString(desc);
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "20");
                         writer.WriteStartElement("Line");
                         writer.WriteAttributeString("Stretch", "Fill");
                         writer.WriteAttributeString("Stroke", "Black");
                         writer.WriteAttributeString("X2", "1");
+                        writer.WriteAttributeString("StrokeThickness", "5");
                         writer.WriteAttributeString("Margin", "-5");
                         writer.WriteEndElement(); // Line
-                        writer.WriteEndElement(); // Paragraph
 
                         writer.WriteEndElement(); // Paragraph
+
+                        writer.WriteEndElement(); // Section
                     }
 
                     writer.WriteEndElement(); // FlowDocument
