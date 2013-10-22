@@ -15,8 +15,7 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class HomeScreen : Screen
     {
-        public HomeScreen(SurfaceWindow1 parentWindow)
-            : base(parentWindow)
+        public HomeScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
             getNews();
