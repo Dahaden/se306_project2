@@ -29,6 +29,16 @@ namespace Team_Roasters.Screens
             MainContent.ScrollToHorizontalOffset(950);
         }
 
+        public void showScreenSaver()
+        {
+            this.screensaver_overlay.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        public void hideScreenSaver()
+        {
+            this.screensaver_overlay.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
         /// <summary>
         /// Opens new window containing the What We Do info
         /// </summary>

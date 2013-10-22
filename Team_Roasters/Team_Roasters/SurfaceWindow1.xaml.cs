@@ -23,6 +23,9 @@ using System.Xml;
 using System.Windows.Markup;
 
 using System.Collections.ObjectModel;
+using System.Windows.Threading;
+using System.ComponentModel;
+using System.Diagnostics;
 
 namespace Team_Roasters
 {
@@ -32,6 +35,12 @@ namespace Team_Roasters
     public partial class SurfaceWindow1 : SurfaceWindow
     {
         private Stack<Screen> screenStack;
+
+        private DispatcherTimer inactivityTimer = new DispatcherTimer();
+        private TimeSpan inactiveTime = new TimeSpan();
+        private bool screensaver = false;
+
+        const int TIMEOUT_TIME = 5;
 
         /// <summary>
         /// Default constructor.
@@ -47,6 +56,21 @@ namespace Team_Roasters
             screenStack = new Stack<Screen>();
             pushScreen(new Screens.HomeScreen(this));
 
+            inactiveTime = TimeSpan.FromSeconds(0);
+            inactivityTimer.Interval = TimeSpan.FromSeconds(2);
+            inactivityTimer.Tick += new EventHandler(checkInactivity);
+            inactivityTimer.Start();
+        }
+
+        public void checkInactivity(Object sender, EventArgs e)
+        {
+            if (inactiveTime.CompareTo(TimeSpan.FromSeconds(TIMEOUT_TIME)) > 0)
+            {
+                popAll();
+                ((Screens.HomeScreen)screenStack.Peek()).showScreenSaver();
+                screensaver = true;
+            }
+            inactiveTime = inactiveTime.Add(TimeSpan.FromSeconds(2));
         }
 
         /// <summary>
@@ -91,7 +115,6 @@ namespace Team_Roasters
             this.WindowStyle = WindowStyle.None;
         }
 
-        /// <summary>
         /// Occurs when the window is about to close. 
         /// </summary>
         /// <param name="e"></param>
@@ -132,7 +155,7 @@ namespace Team_Roasters
         /// <param name="e"></param>
         private void OnWindowInteractive(object sender, EventArgs e)
         {
-            //TODO: enable audio, animations here
+
         }
 
         /// <summary>
@@ -155,6 +178,26 @@ namespace Team_Roasters
         private void OnWindowUnavailable(object sender, EventArgs e)
         {
             //TODO: disable audio, animations here
+        }
+
+        private void resetTimeout(object sender, MouseEventArgs e)
+        {
+           activityEvent();
+        }
+
+        private void resetTimeout(object sender, TouchEventArgs e)
+        {
+            activityEvent();
+        }
+
+        private void activityEvent()
+        {
+            if (screensaver)
+            {
+                ((Screens.HomeScreen)screenStack.Peek()).hideScreenSaver();
+                screensaver = false;
+            }
+            inactiveTime = TimeSpan.FromSeconds(0);
         }
 
     }
