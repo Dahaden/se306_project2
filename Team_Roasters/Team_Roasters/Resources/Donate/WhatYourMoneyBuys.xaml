@@ -1,0 +1,49 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008" TextAlignment="Justify" FontSize="36" FontFamily="Gill MT Sans">
+    <Paragraph>
+        <Bold>$10 provides a parent with a meal voucher for the hospital cafe.</Bold>
+        <LineBreak/>
+        Parents can spend many hours and days at the hospital looking after their child during treatment.  A meal voucher for the hospital cafe ensures a parent can stay close by for their child.
+    </Paragraph>
+
+    <Paragraph>
+        <Bold>$15 provides a family with a digital thermometer to accurately check a child’s temperature.</Bold>
+        <LineBreak/>
+        During the intensive treatment period a child’s immunity can be affected placing them at risk of infection.  A digital thermometer helps a family keep an eye on their child’s wellbeing when they are away from the hospital.
+    </Paragraph>
+
+    <Paragraph>
+        <Bold>$20 provides a family with a phone top-up.</Bold>
+        <LineBreak/>
+        During treatment, many families that live far away from the hospital have to leave their loved ones behind.  The Foundation therefore provides financial assistance in the form of phone top-ups so that all family members can remain in touch during this difficult and stressful time.
+    </Paragraph>
+
+    <Paragraph>
+        <Bold>$30 provides a family with a petrol voucher.</Bold>
+        <LineBreak/>
+        Due to the frequent hospital visits and other associated appointments with a child receiving treatment for cancer increased travel costs can have a significant impact on a families financial situation.  The Foundation therefore provides families with petrol vouchers to assist with additional travel costs.
+    </Paragraph>
+
+    <Paragraph>
+        <Bold>$50 provides a family witha St Johns Ambulance membership.</Bold>
+        <LineBreak/>
+        This membership provides families with FREE access to the St Johns Ambulance service in an emergency situation.
+    </Paragraph>
+
+    <Paragraph>
+        <Bold>$100 provides a family with a grocery voucher.</Bold>
+        <LineBreak/>
+        Due to the long and enduring treatment process many families have to survive on one income. The Foundation therefore provides financial assistance in the form of grocery vouchers.
+    </Paragraph>
+
+    <Paragraph>
+        <Bold>$160 contributes towards 1 week of additional educational assistnace.</Bold>
+        <LineBreak/>
+        Scholarships are given to children with cancer and their siblings who require additional tuition, reintegration support and encouragement with social and physical development.  This is because children miss out on school and after school activities (siblings) during the intense treatment period.
+    </Paragraph>
+
+    <Paragraph>
+        <Bold>$300 provides a child with cancer and their siblings with beads.</Bold>
+        <LineBreak/>
+        The Beads of Courage and Sibling Bead programmes are unique and designed to honour the challenging journey a patient and their siblings take while receiving care for cancer.  Each bead symbolizes a child’s courage and recognises the milestones achieved during treatment.  The Sibling Bead programme acknowledges the impact on and the support a sibling provides to their brother or sister with cancer.
+    </Paragraph>
+</FlowDocument>
