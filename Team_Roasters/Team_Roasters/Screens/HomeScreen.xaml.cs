@@ -119,14 +119,7 @@ namespace Team_Roasters.Screens
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
                     
-                    Grid inner = new Grid();
-
-                    RowDefinition colDef1 = new RowDefinition();
-                    RowDefinition colDef2 = new RowDefinition();
-                    inner.RowDefinitions.Add(colDef1);
-                    inner.RowDefinitions.Add(colDef2);
-                    Grid.SetColumn(inner, 1);
-                    Grid.SetRow(inner, i);
+                    
 
                     TextBlock userName = new TextBlock();
                     userName.FontWeight = FontWeights.Bold;
@@ -139,6 +132,16 @@ namespace Team_Roasters.Screens
                     tweet.Text = tweets[i][3];
                     tweet.TextWrapping = TextWrapping.Wrap;
                     Grid.SetRow(tweet, 1);
+
+                    Grid inner = new Grid();
+
+                    RowDefinition colDef1 = new RowDefinition();
+                    RowDefinition colDef2 = new RowDefinition();
+                    colDef1.Height = new GridLength(20);
+                    inner.RowDefinitions.Add(colDef1);
+                    inner.RowDefinitions.Add(colDef2);
+                    Grid.SetColumn(inner, 1);
+                    Grid.SetRow(inner, i);
 
                     inner.Children.Add(userName);
                     inner.Children.Add(tweet);
