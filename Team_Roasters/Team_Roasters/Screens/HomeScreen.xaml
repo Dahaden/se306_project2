@@ -1,4 +1,4 @@
-﻿<view:Screen
+﻿<view:Screen x:Class="Team_Roasters.Screens.HomeScreen"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:s="http://schemas.microsoft.com/surface/2008"
@@ -6,269 +6,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:view="clr-namespace:Team_Roasters"
              xmlns:my="clr-namespace:Team_Roasters.Controls"
-             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Team_Roasters.Screens.HomeScreen"
+             xmlns:System="clr-namespace:System;assembly=mscorlib" 
              mc:Ignorable="d"
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
     <view:Screen.Resources>
-        <!-- Base Grid style for 55 dpi -->
-        <Style TargetType="{x:Type Control}" x:Key="ControlBaseStyle">
-            <Setter Property="FocusVisualStyle"
-				Value="{x:Null}"/>
-            <Setter Property="SnapsToDevicePixels"
-				Value="False"/>
-            <Setter Property="FontFamily"
-				Value="Segoe360"/>
-            <Setter Property="FontWeight"
-				Value="Normal"/>
-            <Setter Property="FontSize"
-				Value="17"/>
-            <Setter Property="Padding"
-				Value="6,2,10,10"/>
-            <Setter Property="MinHeight"
-				Value="38"/>
-            <Setter Property="MinWidth"
-				Value="38"/>
-            <Setter Property="Margin"
-				Value="1"/>
-            <Setter Property="HorizontalContentAlignment"
-				Value="Left"/>
-            <Setter Property="VerticalContentAlignment"
-				Value="Top"/>
-            <Setter Property="BorderThickness"
-				Value="2"/>
-        </Style>
-
-        <!-- ButtonBase -->
-        <Style x:Key="HomeContentButton"
-			TargetType="{x:Type s:SurfaceButton}" 
-			BasedOn="{StaticResource ControlBaseStyle}">
-            <Setter Property="IsTabStop"
-				Value="False" />
-            <Setter Property="Focusable"
-				Value="True" />
-            <Setter Property="Background"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundBrushKey}}" />
-            <Setter Property="Foreground"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundBrushKey}}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type s:SurfaceButton}">
-                        <ControlTemplate.Resources>
-                            <Storyboard x:Key="Press">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000"
-										Value="1" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                            <Storyboard x:Key="Release">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1500000"
-										Value="0" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </ControlTemplate.Resources>
-                        <Grid x:Name="Grid"
-							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                            <Rectangle  x:Name="ButtonBody"
-								Fill ="{TemplateBinding Background}"
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
-                            <Rectangle  x:Name="PressOverlay"
-								Opacity="0"
-								Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Stretch"/>
-                            <ContentPresenter  x:Name="Content"
-								Margin="{TemplateBinding Padding}"
-								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed"
-								Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Press}" />
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Release}" />
-                                </Trigger.ExitActions>
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundPressedBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled"
-								Value="False">
-                                <Setter Property="Fill"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundDisabledBrushKey}}"
-									TargetName="ButtonBody" />
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundDisabledBrushKey}}"/>
-                                <Setter Property="Opacity"
-									Value="0.33"
-									TargetName="Content" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="BackButton"
-			TargetType="{x:Type s:SurfaceButton}" 
-			BasedOn="{StaticResource ControlBaseStyle}">
-            <Setter Property="IsTabStop"
-				Value="False" />
-            <Setter Property="Focusable"
-				Value="True" />
-            <Setter Property="Background"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundBrushKey}}" />
-            <Setter Property="Foreground"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundBrushKey}}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type s:SurfaceButton}">
-                        <ControlTemplate.Resources>
-                            <Storyboard x:Key="Press">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000"
-										Value="1" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                            <Storyboard x:Key="Release">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1500000"
-										Value="0" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </ControlTemplate.Resources>
-                        <Grid x:Name="Grid"
-							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                            <Rectangle  x:Name="PressOverlay"
-								Opacity="0"
-								Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
-                            <ContentPresenter  x:Name="Content"
-								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center" OpacityMask="White" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" Margin="0,0,-80,0"/>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed"
-								Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Press}" />
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Release}" />
-                                </Trigger.ExitActions>
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundPressedBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled"
-								Value="False">
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundDisabledBrushKey}}"/>
-                                <Setter Property="Opacity"
-									Value="0.33"
-									TargetName="Content" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="InfoButton"
-			TargetType="{x:Type s:SurfaceButton}" 
-			BasedOn="{StaticResource ControlBaseStyle}">
-            <Setter Property="IsTabStop"
-				Value="False" />
-            <Setter Property="Focusable"
-				Value="True" />
-            <Setter Property="Background"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundBrushKey}}" />
-            <Setter Property="Foreground"
-				Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundBrushKey}}" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type s:SurfaceButton}">
-                        <ControlTemplate.Resources>
-                            <Storyboard x:Key="Press">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000"
-										Value="1" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                            <Storyboard x:Key="Release">
-                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-									Storyboard.TargetName="PressOverlay"
-									Storyboard.TargetProperty="(UIElement.Opacity)">
-                                    <SplineDoubleKeyFrame KeyTime="00:00:00.1500000"
-										Value="0" />
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </ControlTemplate.Resources>
-                        <Grid x:Name="Grid"
-							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                            <Rectangle  x:Name="ButtonBody"
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Stretch" Margin="8,4" Fill="#FFFDC37D" RadiusX="2" RadiusY="2">
-                                <Rectangle.Effect>
-                                    <DropShadowEffect Color="#FF9D9D9D" BlurRadius="10"/>
-                                </Rectangle.Effect>
-                            </Rectangle>
-                            <Rectangle  x:Name="PressOverlay"
-								Opacity="0"
-								Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
-								SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
-                            <ContentPresenter  x:Name="Content"
-								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed"
-								Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Press}" />
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard Storyboard="{StaticResource Release}" />
-                                </Trigger.ExitActions>
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundPressedBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled"
-								Value="False">
-                                <Setter Property="Fill"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundDisabledBrushKey}}"
-									TargetName="ButtonBody" />
-                                <Setter Property="Foreground"
-									Value="{DynamicResource {x:Static s:SurfaceColors.ButtonForegroundDisabledBrushKey}}"/>
-                                <Setter Property="Opacity"
-									Value="0.33"
-									TargetName="Content" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="StackPanelStyle1" TargetType="{x:Type StackPanel}">
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="White" Offset="1"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="BackButtonTemplate" TargetType="{x:Type Rectangle}"/>
 
         <!-- Minimum HitArea Base Style for 55 dpi-->
         <Style x:Key="SurfaceHitAreaBaseStyle"
@@ -724,7 +467,7 @@
                     <ColumnDefinition MaxWidth="18"/>
                 </Grid.ColumnDefinitions>
                 <Border Grid.ColumnSpan="3" CornerRadius="2" Background="#F0F0F0" />
-                <Track x:Name="PART_Track" Grid.Column="1" IsDirectionReversed="False">
+                <Track Name="PART_Track" Grid.Column="1" IsDirectionReversed="False">
                     <Track.Thumb>
                         <Thumb Style="{StaticResource ScrollBarThumb}" Margin="0,1,0,1" Background="#888" BorderBrush="#888" />
                     </Track.Thumb>
@@ -759,7 +502,7 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <ScrollContentPresenter Grid.Column="1"/>
-                            <ScrollBar x:Name="PART_HorizontalScrollBar" Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Value="{TemplateBinding HorizontalOffset}" Maximum="{TemplateBinding ScrollableWidth}" ViewportSize="{TemplateBinding ViewportWidth}" Height="5"/>
+                            <ScrollBar Name="PART_HorizontalScrollBar" Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Value="{TemplateBinding HorizontalOffset}" Maximum="{TemplateBinding ScrollableWidth}" ViewportSize="{TemplateBinding ViewportWidth}"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -769,15 +512,15 @@
     </view:Screen.Resources>
 
     <Viewbox>
-        <Grid x:Name="MultiPage">
-            <Grid x:Name="Home" Background="#FFFFFCF0" Width="1920" Height="1080" Visibility="Visible">
+        <Grid Name="MultiPage">
+            <Grid Name="Home" Background="#FFFFFCF0" Width="1920" Height="1080" Visibility="Visible">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="217*" />
                     <RowDefinition Height="863"/>
                 </Grid.RowDefinitions>
                 <!-- Top Menu / Title bar goes here -->
                 <Grid Height="220" Margin="0,0,0,0">
-                    <Grid x:Name="ccf_grid" Margin="0,0,0,0">
+                    <Grid Name="ccf_grid" Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
@@ -785,7 +528,8 @@
                         <s:SurfaceButton 
                 	x:Name="donate" 
                 	Content="Donate" 
-                	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="Donate_Click" Margin="0,52,68.333,0" Height="116" VerticalAlignment="Top" HorizontalAlignment="Right" Width="255.667" FontFamily="Gill Sans MT" Foreground="Black" >
+
+                	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="Donate_Click" Margin="0,52,68.333,0" Height="116" VerticalAlignment="Top" HorizontalAlignment="Right" Width="255.667" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
                             <s:SurfaceButton.Effect>
                                 <DropShadowEffect BlurRadius="10" Opacity="0.8"/>
                             </s:SurfaceButton.Effect>
@@ -819,9 +563,9 @@
                             </Grid.RowDefinitions>
 
                             <s:SurfaceButton 
-                         x:Name="what_we_do" 
+                         Name="what_we_do" 
                          Content="What We Do" 
-                         Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="What_we_do_Click" Margin="13.515,70.747,0,0" Height="329.253" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
+                         Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="What_we_do_Click" Margin="13.515,70.747,0,0" Height="329.253" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -830,10 +574,10 @@
                             <s:SurfaceButton 
                          Grid.RowSpan="1" 
                          Grid.ColumnSpan="1" 
-                         x:Name="volunteers" 
+                         Name="volunteers" 
                          Content="Volunteers" 
                          Click="Volunteers_Click"
-                         Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="1" Height="329.253" Margin="0,70.747,-373.515,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" >
+                         Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="1" Height="329.253" Margin="0,70.747,-373.515,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -843,9 +587,9 @@
                          Grid.RowSpan="1" 
                          Grid.ColumnSpan="1" 
 
-                         x:Name="family_and_support" 
+                         Name="family_and_support" 
                          Content="Family and Support"
-                         Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="13.515,0,0,69.754" Click="FamilyButton_Click" Grid.Row="1" Foreground="Black">
+                         Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="13.515,0,0,69.754" Click="FamilyButton_Click" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic">
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -854,9 +598,9 @@
                             <s:SurfaceButton 
                          Grid.RowSpan="1"
                          Grid.ColumnSpan="1"
-                         x:Name="corporate"
+                         Name="corporate"
                          Content="Corporate Sponsors"
-                         Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,-373.515,69.754" Foreground="Black" >
+                         Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,-373.515,69.754" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -884,29 +628,31 @@
                                 <ColumnDefinition Width="0.333*" />
                             </Grid.ColumnDefinitions>
                             <s:SurfaceScrollViewer x:Name="News_SurfaceScrollViewer_" HorizontalAlignment="Right" Grid.Column="2" Grid.RowSpan="2" Margin="0,112.984,25,23.422"   Width="450" Style="{DynamicResource SurfaceScrollViewerStyle1}">
-
-                                <RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,57.0079999999999">
-                                    <!--RichTextBox.Effect>
-                                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                    </RichTextBox.Effect-->
-                                </RichTextBox>
-                            </s:SurfaceScrollViewer>
-                            <s:SurfaceScrollViewer x:Name="Events_SurfaceScrollViewer_" Grid.Column="1" Grid.RowSpan="2" Margin="25,112.984,25,23.422"  ScrollViewer.VerticalScrollBarVisibility="Visible" Style="{DynamicResource SurfaceScrollViewerStyle1}">
-
-                                <RichTextBox Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,56.0079999999999">
-                                    <!--RichTextBox.Effect>
-                                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                    </RichTextBox.Effect-->
-                                </RichTextBox>
-                            </s:SurfaceScrollViewer>
-                            <s:SurfaceScrollViewer x:Name="Twitter_SurfaceScrollViewer_" HorizontalAlignment="Left" Grid.Column="0" Margin="25,112.984,0,23.422" Width="450" Grid.RowSpan="2" Background="#FF00ABF0">
                                 <s:SurfaceScrollViewer.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceScrollViewer.Effect>
-                                <Grid x:Name="Twitable" Width="441.708">
-                                    <Grid x:Name="Tweet" VerticalAlignment="Top" Height="100"/>
+                                <RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,57.0079999999999">
+                                </RichTextBox>
+                            </s:SurfaceScrollViewer>
+                            <s:SurfaceScrollViewer x:Name="Events_SurfaceScrollViewer_" Grid.Column="1" Grid.RowSpan="2" Margin="25,112.984,25,23.422"  ScrollViewer.VerticalScrollBarVisibility="Visible" Style="{DynamicResource SurfaceScrollViewerStyle1}">
+                                <s:SurfaceScrollViewer.Effect>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                                </s:SurfaceScrollViewer.Effect>
+                                <RichTextBox Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,56.0079999999999">
+                                </RichTextBox>
+                            </s:SurfaceScrollViewer>
+                            <s:SurfaceScrollViewer x:Name="Twitter_SurfaceScrollViewer_" HorizontalAlignment="Left" Grid.Column="0" Margin="25,112.984,0,23.422" Width="450" Grid.RowSpan="2" HorizontalScrollBarVisibility="Disabled" Background="#FF00ABF0">
+                                <s:SurfaceScrollViewer.Effect>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                                </s:SurfaceScrollViewer.Effect>
+                                <Grid Width="440" x:Name="twitterViewer">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
                                 </Grid>
                             </s:SurfaceScrollViewer>
+
                         </Grid>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Right" Margin="0,8,25,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
@@ -924,9 +670,25 @@
                         <TextBlock x:Name="NewsTitle" Grid.Column="2" Margin="0,58.333,37.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" TextAlignment="Center" FontWeight="Bold" FontSize="37.333" Height="54.626" Width="437" Foreground="Black" HorizontalAlignment="Right" d:LayoutOverrides="Width"><Run Language="en-nz" Text="  News   "/></TextBlock>
                     </Grid>
                 </s:SurfaceScrollViewer>
-                <Rectangle Fill="#FF8ECADC" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2"/>
+                <Rectangle x:Name="Left_arrow" Margin="-1,11.556,0,0" Opacity="0.5" HorizontalAlignment="Left" Width="70" Grid.Row="1">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="../Resources/arrow_l.png" Stretch="None"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Fill="#FF999999" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="13"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+                <Rectangle x:Name="Right_arrow" Margin="0,11.5,0,0.056" Opacity="0.5" Grid.Row="1" HorizontalAlignment="Right" Width="70">
+                    <Rectangle.Fill>
+                        <ImageBrush Stretch="None" ImageSource="../Resources/arrow_r.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="Left_arrow_block" Margin="-1,11.556,0,0" Opacity="0.3" HorizontalAlignment="Left" Width="70" Grid.Row="1" Fill="Black"/>
+                <Rectangle x:Name="Right_arrow_block" Margin="0,11.5,0,0.056" Opacity="0.3" Grid.Row="1" HorizontalAlignment="Right" Width="70" Fill="Black"/>
+
             </Grid>
         </Grid>
     </Viewbox>
-
 </view:Screen>

@@ -10,6 +10,7 @@ using System.Xml;
 using System.Net;
 using System.Collections;
 using System.Windows;
+﻿using System.Windows.Media;
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -24,8 +25,9 @@ namespace Team_Roasters.Screens
        
         public WhatWeDo(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
+            setButtonColours();
             InitializeComponent();
-                        
+
             AB_image ABimage = new AB_image();
             BOK_image BOKimage = new BOK_image();
             CJ_image CJimage = new CJ_image();
@@ -69,7 +71,7 @@ namespace Team_Roasters.Screens
 
             Amb_image.Children.Add(ABimage);
             Amb_text.Document = Amb_AB;
-
+            
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
@@ -79,34 +81,50 @@ namespace Team_Roasters.Screens
 
         private void SurfaceButton_OurAmbassadors(object sender, System.Windows.RoutedEventArgs e)
         {
-            Our_Ambassadors.Visibility = Visibility.Visible;
-            Our_People.Visibility = Visibility.Collapsed;
-            Our_History.Visibility = Visibility.Collapsed;
-            How_We_Help.Visibility = Visibility.Collapsed;
+            Our_Ambassadors.Visibility = System.Windows.Visibility.Visible;
+            Ambassador_Button.Style = (Style)FindResource("SelectedButton");
+            Our_People.Visibility = System.Windows.Visibility.Collapsed;
+            People_Button.Style = (Style)FindResource("NotSelectedButton");
+            Our_History.Visibility = System.Windows.Visibility.Collapsed;
+            History_Button.Style = (Style)FindResource("NotSelectedButton");
+            How_We_Help.Visibility = System.Windows.Visibility.Collapsed;
+            Help_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
         private void SurfaceButton_OurPeople(object sender, System.Windows.RoutedEventArgs e)
         {
-            Our_Ambassadors.Visibility = Visibility.Collapsed;
-            Our_People.Visibility = Visibility.Visible;
-            Our_History.Visibility = Visibility.Collapsed;
-            How_We_Help.Visibility = Visibility.Collapsed;
+            Our_Ambassadors.Visibility = System.Windows.Visibility.Collapsed;
+            Ambassador_Button.Style = (Style)FindResource("NotSelectedButton");
+            Our_People.Visibility = System.Windows.Visibility.Visible;
+            People_Button.Style = (Style)FindResource("SelectedButton");
+            Our_History.Visibility = System.Windows.Visibility.Collapsed;
+            History_Button.Style = (Style)FindResource("NotSelectedButton");
+            How_We_Help.Visibility = System.Windows.Visibility.Collapsed;
+            Help_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
         private void SurfaceButton_OurHistory(object sender, System.Windows.RoutedEventArgs e)
         {
-            Our_Ambassadors.Visibility = Visibility.Collapsed;
-            Our_People.Visibility = Visibility.Collapsed;
-            Our_History.Visibility = Visibility.Visible;
-            How_We_Help.Visibility = Visibility.Collapsed;
+            Our_Ambassadors.Visibility = System.Windows.Visibility.Collapsed;
+            Ambassador_Button.Style = (Style)FindResource("NotSelectedButton");
+            Our_People.Visibility = System.Windows.Visibility.Collapsed;
+            People_Button.Style = (Style)FindResource("NotSelectedButton");
+            Our_History.Visibility = System.Windows.Visibility.Visible;
+            History_Button.Style = (Style)FindResource("SelectedButton");
+            How_We_Help.Visibility = System.Windows.Visibility.Collapsed;
+            Help_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
         private void SurfaceButton_HowWeHelp(object sender, RoutedEventArgs e)
         {
-            Our_Ambassadors.Visibility = Visibility.Collapsed;
-            Our_People.Visibility = Visibility.Collapsed;
-            Our_History.Visibility = Visibility.Collapsed;
-            How_We_Help.Visibility = Visibility.Visible;
+            Our_Ambassadors.Visibility = System.Windows.Visibility.Collapsed;
+            Ambassador_Button.Style = (Style)FindResource("NotSelectedButton");
+            Our_People.Visibility = System.Windows.Visibility.Collapsed;
+            People_Button.Style = (Style)FindResource("NotSelectedButton");
+            Our_History.Visibility = System.Windows.Visibility.Collapsed;
+            History_Button.Style = (Style)FindResource("NotSelectedButton");
+            How_We_Help.Visibility = System.Windows.Visibility.Visible;
+            Help_Button.Style = (Style)FindResource("SelectedButton");
         }
 
           
@@ -134,6 +152,12 @@ namespace Team_Roasters.Screens
             }
             System.Threading.Thread.Sleep(500); //TODO - get rid of sleep but still have it that it doesn't click through to the next one straight away
         }
-              
+
+        private void setButtonColours()
+        {
+            System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
+            App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF68B9D2");
+            App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF8ECADC");
+        }
     }
 }
