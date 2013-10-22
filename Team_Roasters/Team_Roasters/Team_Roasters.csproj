@@ -305,6 +305,8 @@
     <Resource Include="Resources\Ambassadors\Jerome_Kaino.jpg" />
     <Resource Include="Resources\Ambassadors\Kieran-Read.jpg" />
     <Resource Include="Resources\Ambassadors\megan-alatini.jpg" />
+    <Resource Include="Resources\arrow_l.png" />
+    <Resource Include="Resources\arrow_r.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -319,6 +321,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\TweetyBird.jpg" />
+    <Resource Include="Screens\arrow_l.png" />
+    <Resource Include="Screens\arrow_r.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

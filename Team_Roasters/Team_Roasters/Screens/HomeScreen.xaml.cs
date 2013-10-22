@@ -442,24 +442,30 @@ namespace Team_Roasters.Screens
                 if (MainContent.HorizontalOffset < 100)
                 {
                     Left_arrow.Visibility = Visibility.Collapsed;
+                    Left_arrow_block.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
                     Left_arrow.Visibility = Visibility.Visible;
+                    Left_arrow_block.Visibility = Visibility.Visible;
                 }
                 if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width )
                 {
                     Right_arrow.Visibility = Visibility.Collapsed;
+                    Right_arrow_block.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
                     Right_arrow.Visibility = Visibility.Visible;
+                    Right_arrow_block.Visibility = Visibility.Visible;
                 }
             }
             else
             {
                 Left_arrow.Visibility = Visibility.Visible;
+                Left_arrow_block.Visibility = Visibility.Visible;
                 Right_arrow.Visibility = Visibility.Visible;
+                Right_arrow_block.Visibility = Visibility.Visible;
             }
         }
 
