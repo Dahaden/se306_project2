@@ -323,6 +323,7 @@
     </None>
     <Resource Include="Resources\VolunteerQR.png" />
     <Resource Include="Resources\news\DoNotDeleteThisFolder.txt" />
+    <Resource Include="Resources\wm_back.png" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
