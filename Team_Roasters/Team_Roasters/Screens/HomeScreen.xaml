@@ -215,6 +215,7 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="100" />
                                         <ColumnDefinition />
+                                        <ColumnDefinition Width="30"/>
                                     </Grid.ColumnDefinitions>
                                 </Grid>
                             </s:SurfaceScrollViewer>

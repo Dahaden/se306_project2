@@ -11,6 +11,7 @@ using System.Text;
 using System.Xml;
 using System.Net;
 using System.Windows;
+using System.Threading;
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -21,12 +22,15 @@ namespace Team_Roasters.Screens
         public HomeScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
-            getNews();
-            GetEvents();
-            GetTweets();
-
+            Thread newsThread = new Thread(new ThreadStart(this.getNews));
+            Thread eventsThread = new Thread(new ThreadStart(this.GetEvents));
+            Thread tweetThread = new Thread(new ThreadStart(this.GetTweets));
+            newsThread.Start();
+            eventsThread.Start();
+            tweetThread.Start();
             // Position the scroller in the middle
             MainContent.ScrollToHorizontalOffset(950);
+
         }
 
         /// <summary>
@@ -81,7 +85,7 @@ namespace Team_Roasters.Screens
 
         /// <summary>
         /// Gets tweets from the CCF twitter feed (if there is internet connection)
-        /// and writes them to a document to be opened and read to a RichTextBox
+        /// and shows them on the main page
         /// </summary>
         private void GetTweets()
         {
@@ -119,16 +123,14 @@ namespace Team_Roasters.Screens
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
                     
-                    
-
                     TextBlock userName = new TextBlock();
                     userName.FontWeight = FontWeights.Bold;
-                    userName.FontSize = 20;
+                    userName.FontSize = 23;
                     userName.Text = tweets[i][1];
                     Grid.SetRow(userName, 0);
 
                     TextBlock tweet = new TextBlock();
-                    tweet.FontSize = 14;
+                    tweet.FontSize = 17;
                     tweet.Text = tweets[i][3];
                     tweet.TextWrapping = TextWrapping.Wrap;
                     Grid.SetRow(tweet, 1);
@@ -137,7 +139,7 @@ namespace Team_Roasters.Screens
 
                     RowDefinition colDef1 = new RowDefinition();
                     RowDefinition colDef2 = new RowDefinition();
-                    colDef1.Height = new GridLength(20);
+                    colDef1.Height = new GridLength(30);
                     inner.RowDefinitions.Add(colDef1);
                     inner.RowDefinitions.Add(colDef2);
                     Grid.SetColumn(inner, 1);
