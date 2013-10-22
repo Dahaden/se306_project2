@@ -558,26 +558,14 @@
                                 <ColumnDefinition Width="232.333" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="400" />
-                                <RowDefinition Height="400" />
+                                <RowDefinition Height="415" />
+                                <RowDefinition Height="385" />
                             </Grid.RowDefinitions>
 
                             <s:SurfaceButton 
                          Name="what_we_do" 
                          Content="What We Do" 
-                         Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="What_we_do_Click" Margin="13.515,70.747,0,0" Height="329.253" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
-                                <s:SurfaceButton.Effect>
-                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                </s:SurfaceButton.Effect>
-                            </s:SurfaceButton>
-
-                            <s:SurfaceButton 
-                         Grid.RowSpan="1" 
-                         Grid.ColumnSpan="1" 
-                         Name="volunteers" 
-                         Content="Volunteers" 
-                         Click="Volunteers_Click"
-                         Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="1" Height="329.253" Margin="0,70.747,-373.515,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
+                         Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="0" Click="What_we_do_Click" Margin="29.5,59.414,-68,0" Height="355.586" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -589,7 +577,18 @@
 
                          Name="family_and_support" 
                          Content="Family and Support"
-                         Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="13.515,0,0,69.754" Click="FamilyButton_Click" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic">
+                         Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="29.5,0,-68,23" Click="FamilyButton_Click" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic">
+                                <s:SurfaceButton.Effect>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                                </s:SurfaceButton.Effect>
+                            </s:SurfaceButton>
+                            <s:SurfaceButton 
+                         Grid.RowSpan="1" 
+                         Grid.ColumnSpan="1" 
+                         x:Name="volunteers" 
+                         Content="Volunteers" 
+                         Click="Volunteers_Click"
+                         Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="0" Grid.Column="1" Height="355.586" Margin="68,59.414,-441.515,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -600,7 +599,7 @@
                          Grid.ColumnSpan="1"
                          Name="corporate"
                          Content="Corporate Sponsors"
-                         Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,-373.515,69.754" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" >
+                         Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="68,0,-441.515,23" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" >
                                 <s:SurfaceButton.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceButton.Effect>
@@ -612,9 +611,12 @@
                                 <RowDefinition Height="400" />
                                 <RowDefinition Height="400" />
                             </Grid.RowDefinitions>
-                            <my:VideoPlayer Margin="63,103,68.722,97" Source="Resources/intro-video.mp4" Grid.RowSpan="2" />
+                            <my:VideoPlayer Margin="63,61,-52,34.25" Source="Resources/intro-video.mp4" Grid.RowSpan="2" />
 
                         </Grid>
+                        <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="25,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="450" Height="54.626"><TextBlock.Effect>
+                        		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        	</TextBlock.Effect><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
 
                         <!-- News, Upcoming events, twitter etc go here -->
                         <Grid Grid.Column="2">
@@ -655,7 +657,6 @@
                             </s:SurfaceScrollViewer>
 
                         </Grid>
-                        <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="25,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="450" Height="54.626"><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
                         <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="396.498,58.333,0,0" Grid.Column="2"/>
                         <TextBlock x:Name="EventsTitle" Grid.Column="2" Margin="526,58.333,537,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gill Sans MT" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontSize="37.333" Height="54.626" Width="437" Foreground="Black"><Run Language="en-nz" Text="  Events   "/></TextBlock>
                         <TextBlock x:Name="NewsTitle" Grid.Column="2" Margin="0,58.333,37.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gill Sans MT" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontSize="37.333" Height="54.626" Width="437" Foreground="Black" HorizontalAlignment="Right" d:LayoutOverrides="Width"><Run Language="en-nz" Text="  News   "/></TextBlock>
