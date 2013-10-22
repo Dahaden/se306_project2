@@ -451,21 +451,23 @@
                             </Grid.RowDefinitions>
                             <s:SurfaceScrollViewer HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                                 <RichTextBox Width="440" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly"  IsReadOnly="True" IsDocumentEnabled="False"/>
+                                <s:SurfaceScrollViewer.Effect>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.6" />
+                                </s:SurfaceScrollViewer.Effect>
                             </s:SurfaceScrollViewer>
-                            <s:SurfaceScrollViewer HorizontalAlignment="Center" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="450">
-                                <RichTextBox Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False">
-                                    <RichTextBox.Effect>
-                                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                    </RichTextBox.Effect>
-                                </RichTextBox>
+                            <s:SurfaceScrollViewer HorizontalAlignment="Center" Grid.RowSpan="2" Margin="0,58.47,8,23.422" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                                <RichTextBox Width="440" x:Name="eventViewer" ScrollViewer.PanningMode="VerticalOnly" IsReadOnly="True" IsDocumentEnabled="False"/>
+                                <s:SurfaceScrollViewer.Effect>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.6" />
+                                </s:SurfaceScrollViewer.Effect>
                             </s:SurfaceScrollViewer>
                             <s:SurfaceScrollViewer HorizontalAlignment="Left" Margin="-0.979,112.984,0,23.422" Width="439.984" Grid.RowSpan="2" Background="#FF00ABF0">
-                            	<s:SurfaceScrollViewer.Effect>
-                            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                            	</s:SurfaceScrollViewer.Effect>
-                            	<Grid x:Name="Twitable" Width="441.708">
-                            		<Grid x:Name="Tweet" VerticalAlignment="Top" Height="100"/>
-                            	</Grid>
+                                <s:SurfaceScrollViewer.Effect>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                                </s:SurfaceScrollViewer.Effect>
+                                <Grid x:Name="Twitable" Width="441.708">
+                                    <Grid x:Name="Tweet" VerticalAlignment="Top" Height="100"/>
+                                </Grid>
                             </s:SurfaceScrollViewer>
                         </Grid>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
@@ -494,12 +496,12 @@
                         <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="-1,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="439.999" Height="54.626"><Run Language="en-nz" Text="  @ChildCancerNZ   "/></TextBlock>
                         <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
                         <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="2.833" Margin="20,101.5,0,0" VerticalAlignment="Top" Width="400.499">
-                        	<Rectangle.Fill>
-                        		<RadialGradientBrush>
-                        			<GradientStop Color="#FF0FA9F9" Offset="1"/>
-                        			<GradientStop Color="#FF2148E4"/>
-                        		</RadialGradientBrush>
-                        	</Rectangle.Fill>
+                            <Rectangle.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FF0FA9F9" Offset="1"/>
+                                    <GradientStop Color="#FF2148E4"/>
+                                </RadialGradientBrush>
+                            </Rectangle.Fill>
                         </Rectangle>
                     </Grid>
                 </s:SurfaceScrollViewer>
