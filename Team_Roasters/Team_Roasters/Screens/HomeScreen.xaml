@@ -544,7 +544,7 @@
 
                 <!-- Main Content goes here -->
                 <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" d:LayoutOverrides="GridBox">
-                    <Grid>
+                    <Grid Width="4200">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1200" />
                             <ColumnDefinition Width="1400" />
