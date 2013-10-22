@@ -1,4 +1,4 @@
-<view:Screen x:Class="Team_Roasters.Screens.FamilySupportScreen"
+﻿<view:Screen x:Class="Team_Roasters.Screens.FamilySupportScreen"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:s="http://schemas.microsoft.com/surface/2008"
@@ -42,7 +42,7 @@
                 <s:SurfaceButton x:Name="Scholarships_Button" Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource FamilySupportNotSelectedColour}" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1" Margin="20">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="33.293,20,607.293,154.324" Width="895.414">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
@@ -93,6 +93,46 @@
                     <BlurEffect Radius="2"/>
                 </Image.Effect>
             </Image>
+            <s:SurfaceButton 
+            	x:Name="what_we_do" 
+            	Content="What We Do" 
+            	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Click="What_we_do_Click" Margin="0,29.331,55,0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" d:LayoutOverrides="VerticalAlignment" >
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
+            <s:SurfaceButton 
+            	Grid.RowSpan="1" 
+            	Grid.ColumnSpan="1" 
+
+            	x:Name="family_and_support" 
+            	Content="Family and Support"
+            	Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Click="FamilyButton_Click" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Grid.Column="1" HorizontalAlignment="Right" Height="171.984" VerticalAlignment="Top" Width="491.48">
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
+            <s:SurfaceButton 
+            	Grid.RowSpan="1" 
+            	Grid.ColumnSpan="1" 
+            	x:Name="volunteers" 
+            	Content="Volunteers" 
+            	Click="Volunteers_Click"
+            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Height="168.188" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" >
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
+            <s:SurfaceButton 
+            	Grid.RowSpan="1"
+            	Grid.ColumnSpan="1"
+            	x:Name="corporate"
+            	Content="Corporate Sponsors"
+            	Background="#FFD7E583" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,154.324" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="168.189" VerticalAlignment="Bottom" >
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
         </Grid>
     </Viewbox>
 </view:Screen>
