@@ -213,7 +213,7 @@
                             	</s:SurfaceScrollViewer.Effect>
                                 <Grid Width="440" x:Name="twitterViewer">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="100" />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
                                 </Grid>

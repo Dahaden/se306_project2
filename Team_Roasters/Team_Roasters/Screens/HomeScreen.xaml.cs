@@ -129,11 +129,15 @@ namespace Team_Roasters.Screens
                     Grid.SetRow(inner, i);
 
                     TextBlock userName = new TextBlock();
+                    userName.FontWeight = FontWeights.Bold;
+                    userName.FontSize = 20;
                     userName.Text = tweets[i][1];
                     Grid.SetRow(userName, 0);
 
                     TextBlock tweet = new TextBlock();
+                    tweet.FontSize = 14;
                     tweet.Text = tweets[i][3];
+                    tweet.TextWrapping = TextWrapping.Wrap;
                     Grid.SetRow(tweet, 1);
 
                     inner.Children.Add(userName);
