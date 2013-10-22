@@ -219,17 +219,8 @@
                                 </Grid>
                             </s:SurfaceScrollViewer>
                         </Grid>
-                        <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Left" Margin="35.54,8,0,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
                         <Rectangle Grid.Column="1" Fill="#FF8ECADC" HorizontalAlignment="Right" Margin="0,8,26.476,0" Stroke="#FF818181" Width="4.556" Height="817" VerticalAlignment="Top"/>
                         <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="393.499,58.333,0,0" Grid.Column="2"/>
-                        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="2.833" Margin="20,101.5,0,0" VerticalAlignment="Top" Width="400.499">
-                            <Rectangle.Fill>
-                                <RadialGradientBrush>
-                                    <GradientStop Color="#FF0FA9F9" Offset="1"/>
-                                    <GradientStop Color="#FF2148E4"/>
-                                </RadialGradientBrush>
-                            </Rectangle.Fill>
-                        </Rectangle>
                     </Grid>
                 </s:SurfaceScrollViewer>
                 <Rectangle x:Name="Left_arrow" Margin="-1,11.556,0,0" Opacity="0.5" HorizontalAlignment="Left" Width="70" Grid.Row="1">
@@ -237,7 +228,11 @@
                 		<ImageBrush ImageSource="../Resources/arrow_l.png" Stretch="None"/>
                 	</Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Fill="#FF8ECADC" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2"/>
+                <Rectangle Fill="#FF999999" Height="4.556" Margin="-0.667,7,0,0" Stroke="#FF818181" VerticalAlignment="Top" Grid.Row="2">
+                	<Rectangle.Effect>
+                		<DropShadowEffect BlurRadius="13"/>
+                	</Rectangle.Effect>
+                </Rectangle>
                 <Rectangle x:Name="Right_arrow" Margin="0,11.5,0,0.056" Opacity="0.5" Grid.Row="1" HorizontalAlignment="Right" Width="70">
                 	<Rectangle.Fill>
                 		<ImageBrush Stretch="None" ImageSource="../Resources/arrow_r.png"/>
