@@ -45,10 +45,10 @@
                     <Style TargetType="{x:Type s:SurfaceButton}">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding VideoIsPlaying}" Value="True">
-                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="Opacity" Value="0"/>
                             </DataTrigger>
                             <DataTrigger Binding="{Binding VideoIsPlaying}" Value="False">
-                                <Setter Property="Visibility" Value="Visible"/>
+                                <Setter Property="Opacity" Value="1"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
