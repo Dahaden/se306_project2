@@ -43,7 +43,7 @@
                 <s:SurfaceButton x:Name="CanI_Button" Content="Can I Volunteer?" Click="SurfaceButton_Volunteering" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1" Margin="1,23.331,550.48,86">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="0,22,0,146.824" Width="986.5" HorizontalAlignment="Left">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
@@ -84,12 +84,12 @@
                 </Grid>
 
                 <Grid x:Name="Volunteering" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2" IsManipulationEnabled="False">
-                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White" Height="677.651">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,0" Grid.RowSpan="2" IsManipulationEnabled="False">
+                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White">
                     		<Border.Effect>
                     			<DropShadowEffect/>
                     		</Border.Effect>
-                    		<DataGridRowsPresenter Height="700" Width="890">
+                    		<DataGridRowsPresenter Width="890" Margin="0">
                                 <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhatIsVolViewer" Foreground="Black" IsSelectionEnabled="False"  VerticalScrollBarVisibility="Hidden"/>
                                 <Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
                     		</DataGridRowsPresenter>
