@@ -313,12 +313,8 @@
     <Resource Include="Resources\Ambassadors\megan-alatini.jpg" />
     <Resource Include="Resources\arrow_l.png" />
     <Resource Include="Resources\arrow_r.png" />
-    <Resource Include="Resources\Button Pics\2011-CCF-Childrens-Group.jpg" />
-    <Resource Include="Resources\Button Pics\28073-nzh.jpg" />
     <Resource Include="Resources\Button Pics\Claudia.jpg" />
     <Resource Include="Resources\Button Pics\emma-in-2011.jpg" />
-    <Resource Include="Resources\Button Pics\emma-now-%282%29.jpg" />
-    <Resource Include="Resources\Button Pics\Grace-and-Brenna_RT.jpg" />
     <Resource Include="Resources\Button Pics\Group-Appeal-News.jpg" />
     <Resource Include="Resources\Button Pics\Teaser-Dequarn.jpg" />
     <Content Include="Resources\icon.png">
