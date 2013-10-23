@@ -142,6 +142,7 @@ namespace Team_Roasters
         {
             Storyboard enter = next.FindResource("Enter") as Storyboard;
             this.Content = next;
+            next.setButtonColours();
             enter.Begin(next);
         }
 

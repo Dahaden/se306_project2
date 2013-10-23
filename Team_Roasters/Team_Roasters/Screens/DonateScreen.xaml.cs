@@ -17,8 +17,6 @@ namespace Team_Roasters.Screens
         public DonateScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
-            setButtonColours();
-            //Loads document into window
             FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Donate/WhatYourMoneyBuys.xaml"));
             moneyBuysViewer.Document = flowDocument;
         }
@@ -64,7 +62,7 @@ namespace Team_Roasters.Screens
         /// <summary>
         /// Sets the colours of the buttons to the correct colour scheme.
         /// </summary>
-        private void setButtonColours()
+        public override void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF15A6D2");
@@ -80,6 +78,11 @@ namespace Team_Roasters.Screens
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();
+        }
+
+        private void Storyboard_Completed_1(object sender, EventArgs e)
+        {
+            setButtonColours();
         }
     }
 }

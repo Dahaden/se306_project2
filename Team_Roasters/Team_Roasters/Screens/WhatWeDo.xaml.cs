@@ -25,7 +25,6 @@ namespace Team_Roasters.Screens
        
         public WhatWeDo(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
-            setButtonColours();
             InitializeComponent();
             
             AB_image ABimage = new AB_image();
@@ -179,8 +178,7 @@ namespace Team_Roasters.Screens
             Amb_text.Document = (FlowDocument)text[Amb_counter];
         }
 
-
-        private void setButtonColours()
+        public override void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF15A6D2");
@@ -196,6 +194,11 @@ namespace Team_Roasters.Screens
         {
             SwitchNext();
             System.Threading.Thread.Sleep(500);
+        }
+
+        private void Storyboard_Completed_1(object sender, EventArgs e)
+        {
+            setButtonColours();
         }
     }
 }

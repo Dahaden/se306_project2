@@ -699,5 +699,7 @@ namespace Team_Roasters.Screens
         {
             parentWindow.pushScreen(new CorporateScreen(parentWindow));
         }
+
+        public override void setButtonColours(){   }
     }
 }
