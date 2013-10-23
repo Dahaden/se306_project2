@@ -56,8 +56,8 @@
                 		</s:SurfaceScrollViewer.Effect>
                 		<Border BorderBrush="#FF007294" BorderThickness="1" Background="White" Height="678.231" Width="971.52"/>
                 	</s:SurfaceScrollViewer>
-                    <RichTextBox ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,32,32.586,32.287" x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" BorderThickness="0,1" Width="476" >
-                		<FlowDocument>
+                    <RichTextBox IsEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,32,32.586,32.287" x:Name="Amb_text" Visibility="Visible"  Foreground="Black" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" BorderThickness="0,1" Width="476" >
+                        <FlowDocument IsEnabled="False">
                 			<Paragraph/>
                 		</FlowDocument>
                 	</RichTextBox>
