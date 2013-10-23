@@ -30,6 +30,18 @@ namespace Team_Roasters.Screens
 
         }
 
+        public void showScreenSaver()
+        {
+            this.screensaver_overlay.Visibility = System.Windows.Visibility.Visible;
+            this.screensaver_text.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        public void hideScreenSaver()
+        {
+            this.screensaver_overlay.Visibility = System.Windows.Visibility.Collapsed;
+            this.screensaver_text.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
         /// <summary>
         /// Opens new window containing the What We Do info
         /// </summary>
