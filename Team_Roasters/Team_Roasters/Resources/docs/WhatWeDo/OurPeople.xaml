@@ -1,7 +1,7 @@
 ﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
-
-    <Paragraph FontWeight="Bold" FontSize="25" TextAlignment="Center">
-        Meet the team and find out more about main shareholders and board members.
+    <FlowDocument.FontFamily>Gills Sans MT</FlowDocument.FontFamily>
+    <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        <Bold>Meet the team and find out more about main shareholders and board members.</Bold>        
     </Paragraph>
     <Table>
         <Table.Columns>

@@ -74,6 +74,9 @@ namespace Team_Roasters.Screens
 
             FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/WhatWeDo/OurPeople.xaml"));
             ourPeopleViewer.Document = flowDocument;
+
+            FlowDocument ourhistoryDoc = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/WhatWeDo/OurHistory.xaml"));
+            ourHistoryViewer.Document = ourhistoryDoc;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
@@ -180,7 +183,7 @@ namespace Team_Roasters.Screens
         private void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
-            App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF68B9D2");
+            App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF15A6D2");
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF8ECADC");
         }
 

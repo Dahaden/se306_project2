@@ -1,0 +1,20 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <FlowDocument.FontFamily>Gills Sans MT</FlowDocument.FontFamily>
+    <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        <Bold>Our Family Support team work in conjunction with the Foundation’s branch members (parents, caregivers and volunteers) to deliver a range of support services to ensure every child and their family walking the child cancer journey will never feel alone.</Bold>        
+    </Paragraph>
+    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        Our Family Support Coordinators provide support to children and their families in hospital, at home and in the community. They offer individual and group support, information, financial assistance and advocacy. Our Coordinators also offer support for bereaved families. They connect similar families and provide a link to other agencies and community support groups.
+        <LineBreak></LineBreak>
+        <LineBreak></LineBreak>
+        The Foundation offers children with cancer Beads of Courage®, a registered, therapeutic programme of the Child Cancer Foundation. The programme provides a physical story of a child’s journey recognising their strength and courage during cancer treatments and procedures. Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment). The Sibling Beads Programme offers siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family.
+        <LineBreak></LineBreak>
+        <LineBreak></LineBreak>
+        Our 22 voluntary branches comprised of parents, caregivers, and volunteers nationwide host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences.
+        <LineBreak></LineBreak>
+        <LineBreak></LineBreak>
+        Families are informed and linked nationwide by receiving our Sharing Magazine, a publication produced by the foundation three times annually. Families can also access our Family Places (Auckland, Wellington, Christchurch and Dunedin) – day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone.
+        <LineBreak></LineBreak>
+        <LineBreak></LineBreak>
+        We also offer a Scholarship Programme to assist children with cancer, their siblings and/or their parents to reach their full potential and not be disadvantaged by their cancer journey.    </Paragraph>
+</FlowDocument>

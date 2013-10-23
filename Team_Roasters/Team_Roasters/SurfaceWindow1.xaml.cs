@@ -38,7 +38,7 @@ namespace Team_Roasters
 
         private DispatcherTimer inactivityTimer = new DispatcherTimer();
         private int inactiveTime = 0;
-        private bool screensaver = true;
+        private bool screensaver = false;
 
         // How long to wait before displaying the screensaver
         const int TIMEOUT_TIME = 600;
@@ -62,6 +62,9 @@ namespace Team_Roasters
             inactivityTimer.Interval = TimeSpan.FromSeconds(1);
             inactivityTimer.Tick += new EventHandler(checkInactivity);
             inactivityTimer.Start();
+
+            ((Screens.HomeScreen)screenStack.Peek()).showScreenSaver();
+            this.screensaver = true;
         }
 
         /// <summary>
