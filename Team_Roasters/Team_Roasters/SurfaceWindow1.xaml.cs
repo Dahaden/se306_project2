@@ -40,7 +40,7 @@ namespace Team_Roasters
         private int inactiveTime = 0;
         private bool screensaver = true;
 
-        const int TIMEOUT_TIME = 5;
+        const int TIMEOUT_TIME = 600;
 
         /// <summary>
         /// Default constructor.
