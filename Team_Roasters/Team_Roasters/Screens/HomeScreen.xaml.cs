@@ -586,7 +586,7 @@ namespace Team_Roasters.Screens
                 Left_arrow.Visibility = Visibility.Visible;
                 Left_arrow_block.Visibility = Visibility.Visible;
             }
-            if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width)
+            if (MainContent.HorizontalOffset >= MainContent.ViewportWidth - 100)
             {
                 Right_arrow.Visibility = Visibility.Collapsed;
                 Right_arrow_block.Visibility = Visibility.Collapsed;
@@ -616,6 +616,26 @@ namespace Team_Roasters.Screens
         private void Right_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MainContent.ScrollToRightEnd();
-        }  
+        }
+
+        private void FamilyButton_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
+        }
+
+        private void What_we_do_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new WhatWeDo(parentWindow));
+        }
+
+        private void Volunteers_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new Volunteer(parentWindow));
+        }
+
+        private void CorporateSponsers_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new CorporateScreen(parentWindow));
+        }
     }
 }
