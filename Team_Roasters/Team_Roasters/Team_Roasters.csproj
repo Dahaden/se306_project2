@@ -315,6 +315,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Beads\bluebead.jpg" />
     <Resource Include="Resources\ccfappeal.jpg" />
     <Resource Include="Resources\Fitout-S-child-cancer.jpg" />
     <Resource Include="Resources\CCF-Logo-Transparent.png" />
@@ -362,6 +363,11 @@
     <Resource Include="Resources\Button Pics\emma-in-2011.jpg" />
     <Resource Include="Resources\Button Pics\Group-Appeal-News.jpg" />
     <Resource Include="Resources\Button Pics\Teaser-Dequarn.jpg" />
+    <Resource Include="Resources\Beads\orangebead.jpg" />
+    <Resource Include="Resources\Beads\whitebead.jpg" />
+    <Resource Include="Resources\Beads\brownbead.jpg" />
+    <Resource Include="Resources\Beads\redbead.jpg" />
+    <Resource Include="Resources\Beads\starbead.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
