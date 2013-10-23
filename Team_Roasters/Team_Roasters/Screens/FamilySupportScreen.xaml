@@ -36,9 +36,9 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton x:Name="PR_Button" Content="Parent Resources" Click="SurfaceButton_ParentResources" Style="{DynamicResource SelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource FamilySupportSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="SS_Button" Content="Support Services" Click="SurfaceButton_SupportServices" Style="{DynamicResource SelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource FamilySupportNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="PR_Button" Content="Parent Resources" Click="SurfaceButton_ParentResources" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource FamilySupportSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
                 <s:SurfaceButton x:Name="HH_Button" Content="Holiday Homes" Click="SurfaceButton_HolidayHomes" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource FamilySupportNotSelectedColour}" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="SS_Button" Content="Support Services" Click="SurfaceButton_SupportServices" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource FamilySupportNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
                 <s:SurfaceButton x:Name="Scholarships_Button" Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource FamilySupportNotSelectedColour}" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
@@ -48,7 +48,7 @@
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
 
-                <Grid x:Name="Parent_Resources" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="Parent_Resources" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.721*"/>
                         <RowDefinition Height="0.279*"/>
@@ -70,7 +70,7 @@
                     </Border>
                 </Grid>
 
-                <Grid x:Name="Support_Services" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="Support_Services" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
                             <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
