@@ -297,12 +297,12 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Row="0" Grid.Column="0">
-                <ed:BlockArrow x:Name="ButtonBody2" Height="Auto" Margin="47,30,55.832,30" Orientation="Left" Width="Auto" ArrowBodySize="1" ArrowheadAngle="50" Fill="#FF8ECADC">
-                    <ed:BlockArrow.Effect>
+                <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                    <Image.Effect>
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    </ed:BlockArrow.Effect>
-                </ed:BlockArrow>
-                <s:SurfaceButton Content="Back" Click="SurfaceButton_Back" Style="{DynamicResource BackButton}" Foreground="Black" FontSize="42.667" Margin="0,1,1,1" FontFamily="Gill Sans MT"/>
+                    </Image.Effect>
+                </Image>
+                <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
             </Grid>
 
             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
