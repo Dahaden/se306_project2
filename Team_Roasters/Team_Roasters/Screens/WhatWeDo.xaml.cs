@@ -74,6 +74,9 @@ namespace Team_Roasters.Screens
 
             FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/WhatWeDo/OurPeople.xaml"));
             ourPeopleViewer.Document = flowDocument;
+
+            FlowDocument ourhistoryDoc = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/WhatWeDo/OurHistory.xaml"));
+            ourHistoryViewer.Document = ourhistoryDoc;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)

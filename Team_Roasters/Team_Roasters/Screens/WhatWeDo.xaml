@@ -84,8 +84,9 @@
                     	</s:SurfaceScrollViewer.Effect>
 
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.494" Height="678.252" HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
-                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" TextWrapping="Wrap" HorizontalAlignment="Left" Width="962.52"><Run FontWeight="Bold" Text="We have been operating for over 30 years, read about how Child Cancer Foundation began."/><LineBreak/><Run/><LineBreak/><Run Text="In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking "/><LineBreak/><Run Text="at the special needs of children with cancer and their families."/><LineBreak/><Run/><LineBreak/><Run Text="From the small beginning, dedicated people established what is now a national organization which is made up of 6 regions "/><LineBreak/><Run Text="Northern, Waikato, Mid-Northern, Central, Canterbury/West Coast and Otago Southland.  These regions support 22 branches "/><LineBreak/><Run Text="around the country."/></TextBlock>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ourHistoryViewer" Foreground="Black"/>
                         </Border>
+
                     </s:SurfaceScrollViewer>
                 </Grid>
 

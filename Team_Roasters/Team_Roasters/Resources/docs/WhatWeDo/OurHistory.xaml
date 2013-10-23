@@ -1,0 +1,10 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <FlowDocument.FontFamily>Gills Sans MT</FlowDocument.FontFamily>
+    <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        <Bold>We have been operating for over 30 years, read about how Child Cancer Foundation began.</Bold>        
+    </Paragraph>
+    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking at the special needs of children with cancer and their families.
+From the small beginning, dedicated people established what is now a national organization which is made up of 6 regions Northern, Waikato, Mid-Northern, Central, Canterbury/West Coast and Otago Southland.  These regions support 22 branches around the country.
+    </Paragraph>
+</FlowDocument>
