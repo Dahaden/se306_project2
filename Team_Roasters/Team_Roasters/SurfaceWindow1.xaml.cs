@@ -8,6 +8,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -45,7 +46,13 @@ namespace Team_Roasters
 
             // Create the stack of screens, and push the home screen on to start with.
             screenStack = new Stack<Screen>();
-            pushScreen(new Screens.HomeScreen(this));
+            
+            screenStack.Push(new Screens.HomeScreen(this));
+            this.Content = screenStack.Peek();
+            this.WindowState = WindowState.Maximized;
+            this.WindowStyle = WindowStyle.None;
+
+            //pushScreen(new Screens.HomeScreen(this));
 
         }
 
@@ -57,7 +64,16 @@ namespace Team_Roasters
         {
             if (screenStack.Count > 1)
             {
+                Screen prev = screenStack.Peek();
                 screenStack.Pop();
+                Screen next = screenStack.Peek();
+
+                Storyboard exit = prev.FindResource("Shrink") as Storyboard;
+                Storyboard enter = next.FindResource("Grow") as Storyboard;
+
+                exit.Begin(prev);
+                enter.Begin(next);
+
                 this.Content = screenStack.Peek();
                 this.WindowState = WindowState.Maximized;
                 this.WindowStyle = WindowStyle.None;
@@ -69,10 +85,19 @@ namespace Team_Roasters
         /// </summary>
         public void pushScreen(Screen screen)
         {
+            Screen prev = screenStack.Peek();
             screenStack.Push(screen);
-            this.Content = screenStack.Peek();
-            this.WindowState = WindowState.Maximized;
-            this.WindowStyle = WindowStyle.None;
+            Screen next = screenStack.Peek();
+
+            Storyboard exit = prev.FindResource("Shrink") as Storyboard;
+            Storyboard enter = next.FindResource("Grow") as Storyboard;
+
+            exit.Begin(prev);
+            enter.Begin(next);
+
+            this.Content = next;
+            //this.WindowState = WindowState.Maximized;
+            //this.WindowStyle = WindowStyle.None;
 
         }
 

@@ -509,10 +509,22 @@
             </Setter>
         </Style>
 
+        <Storyboard x:Key="Shrink">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.ScaleX" From="1" To="0"/>
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.ScaleY" From="1" To="0"/>
+        </Storyboard>
+
+        <Storyboard x:Key="Grow">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.ScaleX" From="0" To="1"/>
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.ScaleY" From="0" To="1"/>
+        </Storyboard>
     </view:Screen.Resources>
 
     <Viewbox>
         <Grid Name="MultiPage">
+            <Grid.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="960" CenterY="540" />
+            </Grid.RenderTransform>
             <Grid Name="Home" Background="#FFFFFCF0" Width="1920" Height="1080" Visibility="Visible">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="217*" />
