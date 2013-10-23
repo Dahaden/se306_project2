@@ -43,7 +43,7 @@
                 <s:SurfaceButton x:Name="CanI_Button" Content="Can I Volunteer?" Click="SurfaceButton_Volunteering" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1" Margin="20,20,600,88">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="1,23.331,550.48,86">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
@@ -55,7 +55,7 @@
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="960.24">
                                 <Run FontSize="40" Text="What is volunteering?"/><LineBreak/>
                                 <Run Text="Volunteering provides a wonderful opportunity for people to meet, contribute and "/>
                                 <Run Text="support a common cause."/>
@@ -67,14 +67,14 @@
                     </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="WhoCanVolunteer" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2" d:IsHidden="True">
+                <Grid x:Name="WhoCanVolunteer" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
 
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="962">
                                 <Run FontSize="40" Text="What sort of people volunteer for CCF?" /><LineBreak/>
                                 <Run Text="CCF volunteers are ordinary people who come from a wide range of backgrounds and age groups. " />
                                 <Run Text="Some are parents, relatives or friends of families who have experienced the childhood cancer journey; " />
@@ -84,13 +84,13 @@
                     </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="WhatWouldIDo" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="WhatWouldIDo" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="962">
                                 <Run FontSize="40" Text="What do CCF volunteers do?" /><LineBreak/>
                                 <Run Text="Our volunteers provide a range of services and support including participating in CCF Branch activities, " />
                                 <Run Text="helping out at the Family Places, working alongside our staff and helping our fundraising team during " />
@@ -99,9 +99,9 @@
                 </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="Volunteering" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="Volunteering" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White" Height="678.985">
+                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White" Height="677.651">
                     		<Border.Effect>
                     			<DropShadowEffect/>
                     		</Border.Effect>

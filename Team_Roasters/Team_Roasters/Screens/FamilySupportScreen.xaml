@@ -42,22 +42,22 @@
                 <s:SurfaceButton x:Name="Scholarships_Button" Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource FamilySupportNotSelectedColour}" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1" Margin="33.293,20,607.293,154.324" Width="895.414">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="0,22,0,146.824" Width="986.5" HorizontalAlignment="Left">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
 
-                <Grid x:Name="Parent_Resources" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="Parent_Resources" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.721*"/>
                         <RowDefinition Height="0.279*"/>
                     </Grid.RowDefinitions>
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
                         <Border.Effect>
-                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                            <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="7">
                             <Run FontSize="40" Text="Parent Resources" />
                             <LineBreak/>
                             <Run Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." />
@@ -65,12 +65,12 @@
                     </Border>
                 </Grid>
 
-                <Grid x:Name="Holiday_Homes" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="Holiday_Homes" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
-                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                            <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7">
                             <Run FontSize="40" Text="Holiday Homes" />
                             <LineBreak/>
                             <Run Text="Families can also access our Family Places - day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone."/>
@@ -81,9 +81,9 @@
                 <Grid x:Name="Support_Services" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
-                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                            <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7">
                             <Run FontSize="40" Text="Support Services" />
                             <LineBreak/>
                             <Run Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy.  They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation.  These provide a story of a child's journey recognising their strength and courage.  Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment).  The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family."/>
@@ -91,12 +91,12 @@
                     </Border>
                 </Grid>
 
-                <Grid x:Name="Scholarships" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="Scholarships" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
-                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                            <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7">
                             <Run FontSize="40" Text="Scholarships" />
                             <LineBreak/>
                         <Run Text="We offer a Scholarship Programme to assist children with cancer, their siblings, and parents to reach their potential and not be disadvantaged by their cancer journey."/>
