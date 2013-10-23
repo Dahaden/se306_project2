@@ -566,7 +566,7 @@
 
                             <Grid x:Name="What_We_Do_Grid" Margin="33.5,59.414,-72,2">
 
-                                        <Border BorderThickness="0" Background="#FF8ECADC" d:IsEffectDisabled="True">
+                                        <Border BorderThickness="0" Background="#FF8ECADC" d:IsEffectDisabled="True" TouchDown="What_we_do_Click">
                                                 <s:SurfaceButton
                                                         x:Name="what_we_do"
                                                         Content="" FontSize="48" Style="{DynamicResource HomeContentButton}" Click="What_we_do_Click" Margin="7,7,7,0" Height="281.586" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" BorderThickness="10" d:IsEffectDisabled="True" >
@@ -576,12 +576,12 @@
                                                 </s:SurfaceButton>
                                         </Border>
 
-                                        <TextBlock Foreground="Black" Margin="148.5,0,167,0" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="283.697"><Run Language="en-nz" Text="What We "/><Run Language="en-nz" Text="Do"/></TextBlock>
+                                        <TextBlock Foreground="Black" Margin="148.5,0,167,0" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="283.697" TouchDown="What_we_do_Click"><Run Language="en-nz" Text="What We "/><Run Language="en-nz" Text="Do"/></TextBlock>
 
                                 </Grid>
                             <Grid x:Name="Family_Support_Grid" Margin="33.333,-2,-71.833,25" Grid.Row="1">
 
-                                    <Border BorderThickness="0" Background="#FFFDC37D" d:IsEffectDisabled="True">
+                                    <Border BorderThickness="0" Background="#FFFDC37D" d:IsEffectDisabled="True" TouchDown="FamilyButton_Click">
                                             <s:SurfaceButton
 
                                                     x:Name="family_and_support"
@@ -592,15 +592,15 @@
                                             </s:SurfaceButton>
                                     </Border>
 
-                                <TextBlock Foreground="Black" Margin="66.673,0,0,6" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="469.196"><Run Language="en-nz" Text="Family and Support"/></TextBlock>
+                                <TextBlock Foreground="Black" Margin="66.673,0,0,6" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="469.196" TouchDown="FamilyButton_Click"><Run Language="en-nz" Text="Family and Support"/></TextBlock>
 
                             </Grid>
                             <Grid x:Name="Volunteers_Grid" Margin="71.833,59,-445.667,2" Grid.Column="1">
 
-                                    <Border BorderThickness="0" Background="#FFFBA5D6" d:IsEffectDisabled="True">
+                                    <Border BorderThickness="0" Background="#FFFBA5D6" d:IsEffectDisabled="True" TouchDown="Volunteers_Click">
                                             <s:SurfaceButton
                                                     x:Name="volunteers"
-                                                    Content="&#xa;&#xa;&#xa;&#xa;&#xa;Volunteers"
+                                                    Content=""
                                                     Click="Volunteers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}" Height="281.586" Margin="8,8,8,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
                                                     <s:SurfaceButton.Background>
                                             <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Button Pics/Claudia.jpg"/>
@@ -608,12 +608,12 @@
                                             </s:SurfaceButton>
                                     </Border>
 
-                                <TextBlock Foreground="Black" Margin="189.948,0,195.275,0.683" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" Text="Volunteers" HorizontalAlignment="Center"/>
+                                <TextBlock Foreground="Black" Margin="189.948,0,195.275,0.683" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" Text="Volunteers" HorizontalAlignment="Center" TouchDown="Volunteers_Click"/>
 
                             </Grid>
                             <Grid x:Name="Corporate_Grid" Margin="71.833,-2,-445.667,25" Grid.Row="1" Grid.Column="1">
 
-                                    <Border BorderThickness="0" Background="#FFD7E583" d:IsEffectDisabled="True">
+                                    <Border BorderThickness="0" Background="#FFD7E583" d:IsEffectDisabled="True" TouchDown="CorporateSponsers_Click">
                                             <s:SurfaceButton
                                                     x:Name="corporate"
                                                     Content="" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="8,8,8,74" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" BorderThickness="0" >
@@ -623,7 +623,7 @@
                                             </s:SurfaceButton>
                                     </Border>
 
-                                <TextBlock Foreground="Black" Margin="73.822,0,63.149,8" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" Text="Corporate Sponsors"/>
+                                <TextBlock Foreground="Black" Margin="73.822,0,63.149,8" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" Text="Corporate Sponsors" TouchDown="CorporateSponsers_Click"/>
 
                             </Grid>
                         </Grid>
