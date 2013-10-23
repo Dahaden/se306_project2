@@ -57,11 +57,7 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="7">
-                            <Run FontSize="40" Text="Parent Resources" />
-                            <LineBreak/>
-                            <Run Text="Our voluntary branches host regular social activities to connect families. Parent volunteers offer mutual support and shared experiences." />
-                        </TextBlock>
+                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ParentResourcesViewer" Foreground="Black"/>
                     </Border>
                 </Grid>
 
@@ -70,11 +66,7 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7">
-                            <Run FontSize="40" Text="Holiday Homes" />
-                            <LineBreak/>
-                            <Run Text="Families can also access our Family Places - day centres where local children and their families, as well as those away from their home towns for treatment, can relax and source information and support from our Coordinators. Our holiday homes (Taupo and Arrowtown) offer families quality time together away from the stressors of the treatment journey or to celebrate a milestone."/>
-                        </TextBlock>
+                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="HolidayHomesViewer" Foreground="Black"/>
                     </Border>
                 </Grid>
 
@@ -83,11 +75,7 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7">
-                            <Run FontSize="40" Text="Support Services" />
-                            <LineBreak/>
-                            <Run Text="Our Family Support Coordinators offer individual and group support, information, financial assistance, and advocacy.  They also connect similar families and provide a link to other agencies and community support groups. We offer children with cancer the Beads of Courage, therapeutic programme of the Child Cancer Foundation.  These provide a story of a child's journey recognising their strength and courage.  Each bead represents a treatment (for example chemotherapy, injections, scans); an experience (hair loss, isolation, fever) or milestone (completion of treatment).  The Sibling Beads Programme offers special siblings the opportunity to earn beads by displaying positive behaviour and helpful attitudes to assist their family."/>
-                        </TextBlock>
+                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="SupportServicesViewer" Foreground="Black"/>
                     </Border>
                 </Grid>
 
@@ -96,12 +84,8 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7">
-                            <Run FontSize="40" Text="Scholarships" />
-                            <LineBreak/>
-                        <Run Text="We offer a Scholarship Programme to assist children with cancer, their siblings, and parents to reach their potential and not be disadvantaged by their cancer journey."/>
-                   </TextBlock>
-                        </Border>
+                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ScholarshipsViewer" Foreground="Black"/>
+                    </Border>
                 </Grid>
             </Grid>
             <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">

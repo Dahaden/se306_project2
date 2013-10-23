@@ -1,5 +1,8 @@
 using System.Windows.Media;
 using System.Windows;
+using System.Windows.Documents;
+using System.Windows.Markup;
+using System.IO;
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -11,6 +14,15 @@ namespace Team_Roasters.Screens
         {
             setButtonColours();
             InitializeComponent();
+
+            FlowDocument HoldiayHomesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/HolidayHomes.xaml"));
+            HolidayHomesViewer.Document = HoldiayHomesDocument;
+            FlowDocument ParentResourcesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/ParentResources.xaml"));
+            ParentResourcesViewer.Document = ParentResourcesDocument;
+            FlowDocument ScholarshipsDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/Scholarships.xaml"));
+            ScholarshipsViewer.Document = ScholarshipsDocument;
+            FlowDocument SupportServicesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/SupportServices.xaml"));
+            SupportServicesViewer.Document = SupportServicesDocument;
         }
 
         private void SurfaceButton_ParentResources(object sender, System.Windows.RoutedEventArgs e)
