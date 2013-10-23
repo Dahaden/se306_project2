@@ -1,6 +1,8 @@
 ﻿using System.Windows.Media;
 using System.Windows;
-
+using System.Windows.Documents;
+using System.Windows.Markup;
+using System.IO;
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -11,7 +13,16 @@ namespace Team_Roasters.Screens
         public Volunteer(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             setButtonColours();
-            InitializeComponent();           
+            InitializeComponent();
+
+            FlowDocument VolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/Volunteering.xaml"));
+            VolViewer.Document = VolDocument;
+            FlowDocument WhatIsVolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/WhatIsVolunteering.xaml"));
+            WhatIsVolViewer.Document = WhatIsVolDocument;
+            FlowDocument WhatWouldIDoDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/WhatWouldIDo.xaml"));
+            WhatWouldIDoViewer.Document = WhatWouldIDoDocument;
+            FlowDocument WhoVolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/WhoCanVolunteer.xaml"));
+            WhoVolViewer.Document = WhoVolDocument;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)

@@ -55,14 +55,7 @@
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="960.24">
-                                <Run FontSize="40" Text="What is volunteering?"/><LineBreak/>
-                                <Run Text="Volunteering provides a wonderful opportunity for people to meet, contribute and "/>
-                                <Run Text="support a common cause."/>
-                                <LineBreak/>
-                                <Run Text="Volunteers are vital to us at Child Cancer Foundation."/>
-                                <Run Text="They help us to achieve our purpose by offering their time, skills and valuable advice."/>
-                            </TextBlock>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="VolViewer" Foreground="Black"/>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
@@ -74,12 +67,7 @@
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="962">
-                                <Run FontSize="40" Text="What sort of people volunteer for CCF?" /><LineBreak/>
-                                <Run Text="CCF volunteers are ordinary people who come from a wide range of backgrounds and age groups. " />
-                                <Run Text="Some are parents, relatives or friends of families who have experienced the childhood cancer journey; " />
-                                <Run Text="some are from businesses and the public. Volunteers are interested in supporting our objectives, " />
-                                <Run Text="have a desire to support children with cancer and their families and help raise funds."/></TextBlock>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhoVolViewer" Foreground="Black"/>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
@@ -90,11 +78,7 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="962">
-                                <Run FontSize="40" Text="What do CCF volunteers do?" /><LineBreak/>
-                                <Run Text="Our volunteers provide a range of services and support including participating in CCF Branch activities, " />
-                                <Run Text="helping out at the Family Places, working alongside our staff and helping our fundraising team during " />
-                                <Run Text="events such as the national Annual Street Appeal and Funrazor events."/></TextBlock>
+                        	    <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhatWouldIDoViewer" Foreground="Black"/>
                     </Border>
                 </s:SurfaceScrollViewer>
                 </Grid>
@@ -106,8 +90,8 @@
                     			<DropShadowEffect/>
                     		</Border.Effect>
                     		<DataGridRowsPresenter Height="700" Width="890">
-                    			<TextBox Margin="0,20,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer" FontSize="30" HorizontalAlignment="Center" Width="870" RenderTransformOrigin="0.603,0.66" BorderBrush="{x:Null}" Background="{x:Null}" SelectionBrush="{x:Null}"/>
-                    			<Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhatIsVolViewer" Foreground="Black"/>
+                                <Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
                     		</DataGridRowsPresenter>
                     	</Border>
                     </s:SurfaceScrollViewer>
