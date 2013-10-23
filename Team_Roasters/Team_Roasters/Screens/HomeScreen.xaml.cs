@@ -242,7 +242,7 @@ namespace Team_Roasters.Screens
                             writer.WriteAttributeString("Background", "#FFDACFCF");
                         }
                         writer.WriteStartElement("Paragraph");
-                        writer.WriteAttributeString("FontSize", "20");
+                        writer.WriteAttributeString("FontSize", "23");
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
 
@@ -265,6 +265,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // Ends Paragraph node
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         when = link.SelectSingleNode("small").InnerText;
@@ -309,6 +310,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // BlockUIContainer
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         writer.WriteStartElement("LineBreak");
@@ -434,7 +436,7 @@ namespace Team_Roasters.Screens
                         }
                         
                         writer.WriteStartElement("Paragraph");
-                        writer.WriteAttributeString("FontSize", "20");
+                        writer.WriteAttributeString("FontSize", "23");
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
 
@@ -453,6 +455,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         // Returned string format: "When:.....  CRLF Where:......."
@@ -501,6 +504,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // BlockUIContainer
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         writer.WriteStartElement("LineBreak");
