@@ -11,7 +11,7 @@
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
 			<Image Source="Jerome_Kaino.jpg" HorizontalAlignment="Center" Height="466.033"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="199.5"><Run Language="en-nz" Text="Jerome Kaino"/></TextBlock>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="216.5"><Run Language="en-nz" Text="Jerome Kaino"/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>

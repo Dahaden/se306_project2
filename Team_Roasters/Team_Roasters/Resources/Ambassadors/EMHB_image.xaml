@@ -10,7 +10,7 @@
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Margin="0,0,0,96" Orientation="Vertical" d:LayoutOverrides="Height">
 			<Image Source="Eric-Murray--Hamish-Bond.jpg" HorizontalAlignment="Center" Height="376"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="453.775"><Run Language="en-nz" Text="Hamish Bond and Eric Murray"/></TextBlock>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="73.001" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="475.636"><Run Language="en-nz" Text="Hamish Bond and Eric Murray"/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>

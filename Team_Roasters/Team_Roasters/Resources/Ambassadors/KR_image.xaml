@@ -11,7 +11,7 @@
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Margin="0,0,0,8" Orientation="Vertical" d:LayoutOverrides="Height">
 			<Image Source="Kieran-Read.jpg" HorizontalAlignment="Center" Height="511.5"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="45.001" RenderTransformOrigin="0.488,1.065" Margin="0" d:LayoutOverrides="Width" HorizontalAlignment="Center"><Run Language="en-nz" Text="Kieran Read"/><LineBreak/><Run Language="en-nz"/></TextBlock>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="45.001" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="182.326"><Run Language="en-nz" Text="Kieran Read"/><LineBreak/><Run Language="en-nz"/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>

@@ -6,12 +6,12 @@
 	mc:Ignorable="d"
 	x:Class="Team_Roasters.BOK_image"
 	x:Name="UserControl"
-	d:DesignWidth="341" d:DesignHeight="589.576">
+	d:DesignWidth="383" d:DesignHeight="597.576">
 
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Margin="0" Orientation="Vertical" d:LayoutOverrides="Height">
-			<Image Margin="0" Source="Bernadine-Oliver-Kerby.jpg" Height="504.68" HorizontalAlignment="Center"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="334.5" Margin="0"><Run Language="en-nz" Text="Bernadine Oliver-Kerby"/></TextBlock>
+			<Image Margin="0" Source="Bernadine-Oliver-Kerby.jpg" Height="445.76" HorizontalAlignment="Center" Width="301.189"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="88.501" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="202.33"><Run Language="en-nz" Text="  Bernadine"/><LineBreak/><Run Language="en-nz" Text="Oliver-Kerby"/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>
