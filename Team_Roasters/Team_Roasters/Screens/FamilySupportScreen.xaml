@@ -107,7 +107,7 @@
                             </Canvas.RenderTransform>
                             <s:ScatterView Margin="0,0,0,0" Height="676.161" Canvas.Left="1" Canvas.Top="1" Width="969.914">
                                 <s:ScatterViewItem x:Name="blueBead" Center="75,75" Panel.ZIndex="-2"
-                    				Background="White" MouseDown="blueBead_MouseDown" TouchDown="blueBead_TouchDown" TouchLeave="blueBead_TouchDown" Height="134.384" ContainerActivated="blueBead_ContainerActivated" RenderTransformOrigin="-0.914,-2.313" Margin="0,0,-512.906,-283.114" SnapsToDevicePixels="False" HorizontalAlignment="Right" Width="134.384">
+                    				Background="White" MouseDown="blueBead_MouseDown" TouchDown="blueBead_TouchDown" TouchLeave="blueBead_TouchDown" Height="134.384" ContainerActivated="blueBead_ContainerActivated" RenderTransformOrigin="-0.914,-2.313" Margin="0,196.154,-532.283,-330.539" SnapsToDevicePixels="False" HorizontalAlignment="Right" Width="134.384">
                                     <s:ScatterViewItem.RenderTransform>
                                         <TransformGroup>
                                             <ScaleTransform/>
@@ -141,15 +141,17 @@
                             </s:ScatterView>
                         </Canvas>
                     </Border>
-                    <TextBlock x:Name="bluedesc"  Height="68" Margin="167,0,146.5,-99.614" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Blue Beads are given for every clinic visit"/></TextBlock>
-                    <TextBlock x:Name="browndesc"  Height="99" Margin="167,0,146.5,-130.614" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Brown Beads are when hair thins or falls out for the first time"/></TextBlock>
-                    <TextBlock x:Name="orangedesc"  Height="99" Margin="167,0,146.5,-129.614" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Orange Bead for each time a line is put in or replaced or removed"/></TextBlock>
-                    <TextBlock x:Name="reddesc"  Height="68" Margin="167,0,146.5,-98.614" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="A Red Bead is given for each Transfusion"/></TextBlock>
-                    <TextBlock x:Name="stardesc"  Height="68" Margin="257,0,275.5,-98.614" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Star Beads for each surgery"/></TextBlock>
-                    <TextBlock x:Name="whitedesc"  Height="98" Margin="167,0,146.5,-129.614" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="White Bead for every day that has Chemotherapy"/></TextBlock>
+                    <TextBlock x:Name="bluedesc"  Height="68" Margin="167,0,146.5,-99.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center" d:IsHidden="True"><Run Language="en-nz" Text="Blue Beads are given for every clinic visit"/></TextBlock>
+                    <TextBlock x:Name="browndesc"  Height="99" Margin="167,0,146.5,-130.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center" d:IsHidden="True"><Run Language="en-nz" Text="Brown Beads are when hair thins or falls out for the first time"/></TextBlock>
+                    <TextBlock x:Name="orangedesc"  Height="99" Margin="167,0,146.5,-129.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center" d:IsHidden="True"><Run Language="en-nz" Text="Orange Bead for each time a line is put in or replaced or removed"/></TextBlock>
+                    <TextBlock x:Name="reddesc"  Height="68" Margin="167,0,146.5,-98.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center" d:IsHidden="True"><Run Language="en-nz" Text="A Red Bead is given for each Transfusion"/></TextBlock>
+                    <TextBlock x:Name="stardesc"  Height="68" Margin="275,0,257.5,-98.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center" d:IsHidden="True"><Run Language="en-nz" Text="Star Beads for each surgery"/></TextBlock>
+                    <TextBlock x:Name="whitedesc"  Height="98" Margin="167,0,146.5,-129.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" Background="White" FontFamily="Gill Sans MT" TextAlignment="Center" d:IsHidden="True"><Run Language="en-nz" Text="White Bead for every day that has Chemotherapy"/></TextBlock>
                     <Rectangle Height="218.824" Margin="-267,0,-356,-218.614" VerticalAlignment="Bottom" Panel.ZIndex="99"/>
                     <Rectangle HorizontalAlignment="Right" Margin="0,-59,-452.5,-99.614" Width="456.5" Panel.ZIndex="99"/>
                     <Rectangle HorizontalAlignment="Left" Margin="-355.914,-59,0,-129.614" Width="358.5" Panel.ZIndex="99"/>
+                    <TextBlock x:Name="beadsDesc"  Height="149" Margin="23,23.5,12.5,0" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF15A6D2" TextAlignment="Center" FontFamily="Gill Sans MT" Background="White"  Text="Beads of Courage® is a therapeutic programme that recognises the strength and courage of each child during cancer treatment and procedures. "/>
+                    <Rectangle Height="218.824" Margin="-315,-216.824,-308,0" VerticalAlignment="Top" Panel.ZIndex="99"/>
                 </Grid>
             </Grid>
             <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
