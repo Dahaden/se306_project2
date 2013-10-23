@@ -43,52 +43,60 @@
                 <s:SurfaceButton x:Name="People_Button" Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="162.322" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoNotSelectedColour}" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1" Margin="20,20,600,88">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="0,29.331,550.48,76">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
 
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0" Grid.RowSpan="2" TouchUp="Touch_up" Height="756" >
-                	<Grid.Effect>
-                		<DropShadowEffect/>
-                	</Grid.Effect>
-                    <StackPanel x:Name="Amb_image" Margin="63,39,0,57.985" Width="484.828" HorizontalAlignment="Left"/>
-            		<RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="0,39,44.586,57.985" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="429" d:LayoutOverrides="HorizontalAlignment" SelectionBrush="{x:Null}" BorderThickness="0,1"/>
+                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Grid.RowSpan="2" TouchUp="Touch_up" Height="683.877" VerticalAlignment="Bottom" Margin="0,0,0,72.625" >
+                	<s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" Height="678.325" VerticalAlignment="Top" Margin="0,-0.281,0,0">
+                		<s:SurfaceScrollViewer.Effect>
+                			<DropShadowEffect/>
+                		</s:SurfaceScrollViewer.Effect>
+                		<Border BorderBrush="#FF007294" BorderThickness="1" Background="White" Height="678.231" Width="971.52"/>
+                	</s:SurfaceScrollViewer>
+                	<RichTextBox ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,17,21.586,74.287" x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" BorderThickness="0,1" Width="366" d:LayoutOverrides="HorizontalAlignment" >
+                		<FlowDocument>
+                			<Paragraph/>
+                		</FlowDocument>
+                	</RichTextBox>
+                	<StackPanel
+                		x:Name="Amb_image" HorizontalAlignment="Left" Width="364" Margin="0,14.21,0,62" d:LayoutOverrides="HorizontalAlignment"/>
             	</Grid>
 
-                <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" Width="972.092" Height="678.146" VerticalAlignment="Bottom" Margin="0,0,0,8.481">
                     	<s:SurfaceScrollViewer.Effect>
                     		<DropShadowEffect/>
                     	</s:SurfaceScrollViewer.Effect>
-						<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+						<Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Height="678.132" Width="971.49">
                         
-                        	<Image Height="684.001" Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Width="900"/>
+                        	<Image Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Margin="64.854,32,65.854,7"/>
                     </Border>
                         </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="Our_History" Background="#FFFFFCF0" Grid.RowSpan="2" Visibility="Hidden">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,72">
+                <Grid x:Name="Our_History" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" RenderTransformOrigin="0.438,0.123" Margin="0,0,0,70" Visibility="Collapsed">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" Margin="8,2.042,0,0" Width="969.52" Height="678.19" VerticalAlignment="Top">
                     	<s:SurfaceScrollViewer.Effect>
                     		<DropShadowEffect/>
                     	</s:SurfaceScrollViewer.Effect>
 
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="916" Height="694">
-                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" TextWrapping="Wrap"><Run FontWeight="Bold" Text="We have been operating for over 30 years, read about how Child Cancer Foundation began."/><LineBreak/><Run/><LineBreak/><Run Text="In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking "/><LineBreak/><Run Text="at the special needs of children with cancer and their families."/><LineBreak/><Run/><LineBreak/><Run Text="From the small beginning, dedicated people established what is now a national organization which is made up of 6 regions "/><LineBreak/><Run Text="Northern, Waikato, Mid-Northern, Central, Canterbury/West Coast and Otago Southland.  These regions support 22 branches "/><LineBreak/><Run Text="around the country."/></TextBlock>
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.494" Height="678.252" HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
+                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" TextWrapping="Wrap" HorizontalAlignment="Left" Width="962.52"><Run FontWeight="Bold" Text="We have been operating for over 30 years, read about how Child Cancer Foundation began."/><LineBreak/><Run/><LineBreak/><Run Text="In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking "/><LineBreak/><Run Text="at the special needs of children with cancer and their families."/><LineBreak/><Run/><LineBreak/><Run Text="From the small beginning, dedicated people established what is now a national organization which is made up of 6 regions "/><LineBreak/><Run Text="Northern, Waikato, Mid-Northern, Central, Canterbury/West Coast and Otago Southland.  These regions support 22 branches "/><LineBreak/><Run Text="around the country."/></TextBlock>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="Our_People" Background="#FFFFFCF0" Grid.RowSpan="2" d:LayoutOverrides="GridBox" Margin="0">
-                    <s:SurfaceScrollViewer Margin="0,0,0,62" Grid.RowSpan="2" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <Grid x:Name="Our_People" Background="#FFFFFCF0" Grid.RowSpan="2" d:LayoutOverrides="GridBox" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70" HorizontalAlignment="Right" Width="985.52" Visibility="Collapsed">
+                    <s:SurfaceScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="682.21" VerticalAlignment="Bottom" Margin="0,0,0,6.459">
                         <s:SurfaceScrollViewer.Effect>
                             <DropShadowEffect/>
                         </s:SurfaceScrollViewer.Effect>
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.52" Height="678.209">
                                                   
-                            <FlowDocumentScrollViewer  BorderThickness="0" Width="903" Margin="0,0,0,7" x:Name="ourPeopleViewer" Foreground="Black"/>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ourPeopleViewer" Foreground="Black"/>
                     </Border>
                 </s:SurfaceScrollViewer>
                 </Grid>
