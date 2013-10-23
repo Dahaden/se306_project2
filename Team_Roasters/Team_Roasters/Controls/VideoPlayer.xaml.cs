@@ -56,9 +56,18 @@ namespace Team_Roasters.Controls
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            videoPlayer.Play();
-            _playTimer.Start();
-            VideoIsPlaying = true;
+            if (VideoIsPlaying)
+            {
+                videoPlayer.Pause();
+                _playTimer.Stop();
+                VideoIsPlaying = false;
+            }
+            else
+            {
+                videoPlayer.Play();
+                _playTimer.Start();
+                VideoIsPlaying = true;
+            }
         }
 
         private void RewindButton_Click(object sender, RoutedEventArgs e)

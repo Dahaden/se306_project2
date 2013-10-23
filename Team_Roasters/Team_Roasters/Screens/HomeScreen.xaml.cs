@@ -24,9 +24,10 @@ namespace Team_Roasters.Screens
             getNews();
             GetEvents();
             GetTweets();
-
+           
             // Position the scroller in the middle
             MainContent.ScrollToHorizontalOffset(950);
+
         }
 
         public void showScreenSaver()
@@ -93,7 +94,7 @@ namespace Team_Roasters.Screens
 
         /// <summary>
         /// Gets tweets from the CCF twitter feed (if there is internet connection)
-        /// and writes them to a document to be opened and read to a RichTextBox
+        /// and shows them on the main page
         /// </summary>
         private void GetTweets()
         {
@@ -131,22 +132,27 @@ namespace Team_Roasters.Screens
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
                     
-                    Grid inner = new Grid();
-
-                    RowDefinition colDef1 = new RowDefinition();
-                    RowDefinition colDef2 = new RowDefinition();
-                    inner.RowDefinitions.Add(colDef1);
-                    inner.RowDefinitions.Add(colDef2);
-                    Grid.SetColumn(inner, 1);
-                    Grid.SetRow(inner, i);
-
                     TextBlock userName = new TextBlock();
+                    userName.FontWeight = FontWeights.Bold;
+                    userName.FontSize = 23;
                     userName.Text = tweets[i][1];
                     Grid.SetRow(userName, 0);
 
                     TextBlock tweet = new TextBlock();
+                    tweet.FontSize = 17;
                     tweet.Text = tweets[i][3];
+                    tweet.TextWrapping = TextWrapping.Wrap;
                     Grid.SetRow(tweet, 1);
+
+                    Grid inner = new Grid();
+
+                    RowDefinition colDef1 = new RowDefinition();
+                    RowDefinition colDef2 = new RowDefinition();
+                    colDef1.Height = new GridLength(30);
+                    inner.RowDefinitions.Add(colDef1);
+                    inner.RowDefinitions.Add(colDef2);
+                    Grid.SetColumn(inner, 1);
+                    Grid.SetRow(inner, i);
 
                     inner.Children.Add(userName);
                     inner.Children.Add(tweet);
@@ -173,7 +179,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string when;
-                string imgsrc;
+                string imgsrc = "";
                 string desc;
                 string filename;
                 string filepath;
@@ -210,20 +216,38 @@ namespace Team_Roasters.Screens
                     writer.WriteAttributeString("xmlns:s", "http://schemas.microsoft.com/surface/2008");
                     writer.WriteAttributeString("TextAlignment", "Justify");
 
+                    writer.WriteStartElement("FlowDocument.Resources");
+                    writer.WriteStartElement("Style"); // This style is used to set the margins for all paragraphs in the FlowDocument to 0.
+                    writer.WriteAttributeString("TargetType", "{x:Type Paragraph}");
+                    writer.WriteStartElement("Setter");
+                    writer.WriteAttributeString("Property", "Margin");
+                    writer.WriteAttributeString("Value", "0");
+                    writer.WriteEndElement(); // Setter
+                    writer.WriteEndElement(); // Style
+                    writer.WriteEndElement(); // FlowDocument.Resources
+
                     // Creates a list of HTML nodes that are "div[class='item']", the item class is used 
                     // only for each news item and not anywhere else on the page. So guarantees that all 
                     // of the nodes contain news items. The wanted node is input as a XPath expression.
                     HtmlNodeCollection collection = doc.DocumentNode.SelectNodes("//div[@class='item']");
 
+                    int count = 0; 
+
                     // Loops through each node in the list
                     foreach (HtmlNode link in collection)
                     {
                         writer.WriteStartElement("Section");
-
+                        if (count % 2 == 0)
+                        {
+                            writer.WriteAttributeString("Background", "#FFDACFCF");
+                        }
                         writer.WriteStartElement("Paragraph");
                         writer.WriteAttributeString("FontSize", "20");
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
+
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
 
                         // XPath expression that gets the href attribute from the h3 node nested in the div item class
                         target = link.SelectSingleNode("h3//a").Attributes["href"].Value;
@@ -236,18 +260,33 @@ namespace Team_Roasters.Screens
                         writer.WriteStartElement("Underline");
                         writer.WriteString(titlename);
                         writer.WriteEndElement(); // Ends Underline node
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement(); // Ends Paragraph node
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         when = link.SelectSingleNode("small").InnerText;
                         writer.WriteString(when); // "When"
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("BlockUIContainer");
 
                         // Latter part of link to where the news item image is stored on the website
 
-                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        try
+                        {
+                            imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        }
+                        catch (Exception e)
+                        {
+                            // No image for this news item
+                        }
 
                         // Creates a filepath that the image will be downloaded to
                         filepath = "../../Resources/news/" + filename + ".jpeg";
@@ -270,20 +309,32 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // BlockUIContainer
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         desc = link.SelectSingleNode("p").InnerText;
                         writer.WriteString(desc);
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteStartElement("Line");
                         writer.WriteAttributeString("Stretch", "Fill");
                         writer.WriteAttributeString("Stroke", "Black");
                         writer.WriteAttributeString("X2", "1");
-                        writer.WriteAttributeString("Margin", "-5");
+                        writer.WriteAttributeString("StrokeThickness", "5");
+
                         writer.WriteEndElement(); // Line
-                        writer.WriteEndElement(); // Paragraph
 
                         writer.WriteEndElement(); // Paragraph
+
+                        writer.WriteEndElement(); // Section
+
+                        count++;
                     }
 
                     writer.WriteEndElement(); // FlowDocument
@@ -327,7 +378,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string whenwhere;
-                string imgsrc;
+                string imgsrc="";
                 string desc;
                 string filename;
                 string filepath;
@@ -351,23 +402,44 @@ namespace Team_Roasters.Screens
                     writer.Formatting = Formatting.Indented;
 
                     writer.WriteStartElement("FlowDocument");
+
                     writer.WriteAttributeString("xmlns", "http://schemas.microsoft.com/winfx/2006/xaml/presentation");
                     writer.WriteAttributeString("xmlns:x", "http://schemas.microsoft.com/winfx/2006/xaml");
                     writer.WriteAttributeString("xmlns:s", "http://schemas.microsoft.com/surface/2008");
                     writer.WriteAttributeString("TextAlignment", "Justify");
 
+                    writer.WriteStartElement("FlowDocument.Resources");
+                    writer.WriteStartElement("Style"); // This style is used to set the margins for all paragraphs in the FlowDocument to 0.
+                    writer.WriteAttributeString("TargetType", "{x:Type Paragraph}");
+                    writer.WriteStartElement("Setter");
+                    writer.WriteAttributeString("Property", "Margin");
+                    writer.WriteAttributeString("Value", "0");
+                    writer.WriteEndElement(); // Setter
+                    writer.WriteEndElement(); // Style
+                    writer.WriteEndElement(); // FlowDocument.Resources
+
                     // Creates a list of HTML nodes that are "div[class='item']", the item class is used 
                     // only for each news item and not anywhere else on the page. So guarantees that all 
                     // of the nodes contain news items. The wanted node is input as a XPath expression.
                     HtmlNodeCollection collection = doc.DocumentNode.SelectNodes("//div[@class='item']");
+
+                    int count = 0;
                     foreach (HtmlNode link in collection)
                     {
+                        
                         writer.WriteStartElement("Section");
-
+                        if (count % 2 == 0)
+                        {
+                            writer.WriteAttributeString("Background", "#FFDACFCF");
+                        }
+                        
                         writer.WriteStartElement("Paragraph");
                         writer.WriteAttributeString("FontSize", "20");
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
+
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
 
                         target = link.SelectSingleNode("h3//a").Attributes["href"].Value;
                         titlename = link.SelectSingleNode("h3//a").InnerText;
@@ -376,10 +448,13 @@ namespace Team_Roasters.Screens
                         writer.WriteStartElement("Underline");
                         writer.WriteString(titlename);
                         writer.WriteEndElement(); // Underline
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
-
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         // Returned string format: "When:.....  CRLF Where:......."
                         whenwhere = link.SelectSingleNode("small").InnerText;
 
@@ -389,10 +464,22 @@ namespace Team_Roasters.Screens
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         writer.WriteString(splitstring[1]); // "Where"
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("BlockUIContainer");
-                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+
+                        try
+                        {
+                            imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        }
+                        catch (Exception e)
+                        {
+                            // No image for this news item
+                        }
 
                         filepath = "../../Resources/events/" + filename + ".jpeg";
 
@@ -414,20 +501,32 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // BlockUIContainer
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         desc = link.SelectSingleNode("p").InnerText;
                         writer.WriteString(desc);
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteStartElement("LineBreak");
+                        writer.WriteEndElement();
                         writer.WriteStartElement("Line");
                         writer.WriteAttributeString("Stretch", "Fill");
                         writer.WriteAttributeString("Stroke", "Black");
                         writer.WriteAttributeString("X2", "1");
-                        writer.WriteAttributeString("Margin", "-5");
+                        writer.WriteAttributeString("StrokeThickness", "5");
+                        
                         writer.WriteEndElement(); // Line
-                        writer.WriteEndElement(); // Paragraph
 
                         writer.WriteEndElement(); // Paragraph
+
+                        writer.WriteEndElement(); // Section
+
+                        count++;
                     }
 
                     writer.WriteEndElement(); // FlowDocument

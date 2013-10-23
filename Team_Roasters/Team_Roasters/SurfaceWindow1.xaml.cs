@@ -38,7 +38,7 @@ namespace Team_Roasters
 
         private DispatcherTimer inactivityTimer = new DispatcherTimer();
         private int inactiveTime = 0;
-        private bool screensaver = false;
+        private bool screensaver = true;
 
         const int TIMEOUT_TIME = 5;
 
@@ -59,8 +59,6 @@ namespace Team_Roasters
             inactivityTimer.Interval = TimeSpan.FromSeconds(1);
             inactivityTimer.Tick += new EventHandler(checkInactivity);
             inactivityTimer.Start();
-
-            EventManager.RegisterClassHandler(typeof(Window), Window.MouseDownEvent, new RoutedEventHandler(activityEvent));
         }
 
         public void checkInactivity(Object sender, EventArgs e)
@@ -181,7 +179,7 @@ namespace Team_Roasters
             //TODO: disable audio, animations here
         }
 
-        public void activityEvent(object sender, RoutedEventArgs e)
+        private void activityEvent(object sender, MouseButtonEventArgs e)
         {
             inactiveTime = 0;
             if (screensaver)
@@ -189,6 +187,7 @@ namespace Team_Roasters
                 ((Screens.HomeScreen)screenStack.Peek()).hideScreenSaver();
                 screensaver = false;
             }
+
         }
     }
 }

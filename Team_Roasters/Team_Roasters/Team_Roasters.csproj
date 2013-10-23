@@ -46,6 +46,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -171,6 +172,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources\Ambassadors\EMHB_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\WhatWeDo\OurPeople.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Donate\WhatYourMoneyBuys.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -308,6 +317,10 @@
     <Resource Include="Resources\Ambassadors\megan-alatini.jpg" />
     <Resource Include="Resources\arrow_l.png" />
     <Resource Include="Resources\arrow_r.png" />
+    <Resource Include="Resources\Button Pics\Claudia.jpg" />
+    <Resource Include="Resources\Button Pics\emma-in-2011.jpg" />
+    <Resource Include="Resources\Button Pics\Group-Appeal-News.jpg" />
+    <Resource Include="Resources\Button Pics\Teaser-Dequarn.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -318,6 +331,10 @@
     </None>
     <Resource Include="Resources\VolunteerQR.png" />
     <Resource Include="Resources\news\DoNotDeleteThisFolder.txt" />
+    <Resource Include="Resources\wm_back.png" />
+    <Resource Include="Screens\Gold-Star-Logo.jpg" />
+    <Resource Include="Screens\Millennium-Logo-Sponsors-Page.jpg" />
+    <Resource Include="Screens\Platinum-Star-Logo_1.jpg" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
