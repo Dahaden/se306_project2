@@ -333,12 +333,14 @@
     </None>
     <Resource Include="Resources\VolunteerQR.png" />
     <Resource Include="Resources\news\DoNotDeleteThisFolder.txt" />
+    <Resource Include="Resources\pointer-hand-icon.png" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\TweetyBird.jpg" />
     <Resource Include="Screens\28073-nzh.jpg" />
     <Resource Include="Screens\Claudia.jpg" />
+    <Resource Include="Screens\emma-in-2011.jpg" />
     <Resource Include="Screens\emma-now-%282%29.jpg" />
     <Resource Include="Screens\Grace-and-Brenna_RT.jpg" />
     <Resource Include="Screens\Group-Appeal-News.jpg" />
