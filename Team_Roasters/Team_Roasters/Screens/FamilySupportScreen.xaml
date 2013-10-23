@@ -135,7 +135,7 @@
             	x:Name="volunteers"
                 Click="Volunteers_Click"
             	Content="Volunteers" 
-            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Height="168.188" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" >
+            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Height="171.984" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" >
             	<s:SurfaceButton.Effect>
             		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
             	</s:SurfaceButton.Effect>
@@ -146,7 +146,7 @@
             	x:Name="corporate"
                 Click="Corperate_Click"
             	Content="Corporate Sponsors"
-            	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,154.324" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="168.189" VerticalAlignment="Bottom" >
+            	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="171.984" VerticalAlignment="Bottom" >
             	<s:SurfaceButton.Effect>
             		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
             	</s:SurfaceButton.Effect>
