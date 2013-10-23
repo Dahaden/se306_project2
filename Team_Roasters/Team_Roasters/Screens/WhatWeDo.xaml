@@ -99,7 +99,7 @@
                     <BlurEffect Radius="2"/>
                 </Image.Effect>
             </Image>
-            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,8,178.655" Orientation="Vertical" Grid.Row="1" Width="407.48" d:LayoutOverrides="Height">
+            <StackPanel x:Name="Navigation_Panel" Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,8,178.655" Orientation="Vertical" Grid.Row="1" Width="407.48" d:LayoutOverrides="Height">
             	<s:SurfaceButton 
             		x:Name="what_we_do" 
             		Content="What We Do" 
@@ -111,6 +111,7 @@
             	<s:SurfaceButton 
 
             		x:Name="family_and_support" 
+					Click="Family_Click"
             		Content="Family and Support"
             		Background="#FFFDC37D" FontSize="40" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984">
             		<s:SurfaceButton.Effect>
@@ -119,6 +120,7 @@
             	</s:SurfaceButton>
             	<s:SurfaceButton 
             		x:Name="volunteers" 
+					Click="Volunteers_Click"
             		Content="Volunteers" 
             		Background="#FFFBA5D6" FontSize="40"   Style="{DynamicResource HomeContentButton}" Height="168.188" Margin="0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
             		<s:SurfaceButton.Effect>
@@ -127,6 +129,7 @@
             	</s:SurfaceButton>
             	<s:SurfaceButton
             		x:Name="corporate"
+					Click="Corperate_Click"
             		Content="Corporate Sponsors"
             		Background="#FFD7E583" FontSize="40" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="168.189" >
             		<s:SurfaceButton.Effect>
@@ -134,6 +137,7 @@
             		</s:SurfaceButton.Effect>
             	</s:SurfaceButton>
             </StackPanel>
+
         </Grid>
     </Viewbox>
 </view:Screen>

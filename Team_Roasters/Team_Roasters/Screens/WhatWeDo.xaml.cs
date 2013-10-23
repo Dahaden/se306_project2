@@ -81,6 +81,24 @@ namespace Team_Roasters.Screens
             parentWindow.popScreen();
         }
 
+        private void Corperate_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.popScreen();
+            parentWindow.pushScreen(new CorporateScreen(parentWindow));
+        }
+
+        private void Volunteers_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.popScreen();
+            parentWindow.pushScreen(new Volunteer(parentWindow));
+        }
+
+        private void Family_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.popScreen();
+            parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
+        }
+
         private void SurfaceButton_OurAmbassadors(object sender, System.Windows.RoutedEventArgs e)
         {
             Our_Ambassadors.Visibility = System.Windows.Visibility.Visible;
