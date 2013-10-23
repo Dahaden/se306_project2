@@ -704,7 +704,7 @@
 			
 			<Grid>
                 <Rectangle x:Name="screensaver_overlay" Opacity="0.75" Height="1080" Width="1920" Fill="Gray" />
-                <TextBlock x:Name="screensaver_text" HorizontalAlignment="Center" Margin="347,634,375,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#000000FF" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="White">
+                <TextBlock x:Name="screensaver_text" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Background="#000000FF" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="White">
                 <Run Language="en-nz" Text="Touch anywhere to begin" /></TextBlock>
             </Grid>
         </Grid>
