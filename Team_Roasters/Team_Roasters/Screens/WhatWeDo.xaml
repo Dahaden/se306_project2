@@ -97,7 +97,7 @@
                     <BlurEffect Radius="2"/>
                 </Image.Effect>
             </Image>
-            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,8,178.655" Orientation="Vertical" Grid.Row="1" Width="407.48" d:LayoutOverrides="Height">
+            <StackPanel x:Name="Navigation_Panel" Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,8,178.655" Orientation="Vertical" Grid.Row="1" Width="407.48" d:LayoutOverrides="Height">
             	<s:SurfaceButton 
             		x:Name="what_we_do" 
             		Content="What We Do" 
