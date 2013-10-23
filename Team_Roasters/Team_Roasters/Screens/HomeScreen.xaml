@@ -571,7 +571,7 @@
                         				x:Name="what_we_do" 
                         				Content="" FontSize="48"  Style="{DynamicResource HomeContentButton}" Click="What_we_do_Click" Margin="7,7,7,0" Height="281.586" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" BorderThickness="10" d:IsEffectDisabled="True" >
                         				<s:SurfaceButton.Background>
-                        					<ImageBrush ImageSource="Group-Appeal-News.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="../Resources/Button Pics/Group-Appeal-News.jpg" Stretch="UniformToFill"/>
                         				</s:SurfaceButton.Background>
                         			</s:SurfaceButton>
                         		</Border>
@@ -587,7 +587,7 @@
                             			x:Name="family_and_support" 
                             			Content="" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="7,7,7,73.579" Click="FamilyButton_Click" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic">
                             			<s:SurfaceButton.Background>
-                            				<ImageBrush ImageSource="emma-in-2011.jpg" Stretch="UniformToFill"/>
+                            				<ImageBrush ImageSource="../Resources/Button Pics/emma-in-2011.jpg" Stretch="UniformToFill"/>
                             			</s:SurfaceButton.Background>
                             		</s:SurfaceButton>
                             	</Border>
@@ -603,7 +603,7 @@
                             			Content="&#xa;&#xa;&#xa;&#xa;&#xa;Volunteers" 
                             			Click="Volunteers_Click" FontSize="48"   Style="{DynamicResource HomeContentButton}" Height="281.586" Margin="8,8,8,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
                             			<s:SurfaceButton.Background>
-                            				<ImageBrush Stretch="UniformToFill" ImageSource="Claudia.jpg"/>
+                                            <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Button Pics/Claudia.jpg"/>
                             			</s:SurfaceButton.Background>
                             		</s:SurfaceButton>
                             	</Border>
@@ -618,7 +618,7 @@
                             			x:Name="corporate"
                             			Content="" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="8,8,8,74" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" BorderThickness="0" >
                             			<s:SurfaceButton.Background>
-                            				<ImageBrush Stretch="UniformToFill" ImageSource="Teaser-Dequarn.jpg"/>
+                                            <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Button Pics/Teaser-Dequarn.jpg"/>
                             			</s:SurfaceButton.Background>
                             		</s:SurfaceButton>
                             	</Border>
