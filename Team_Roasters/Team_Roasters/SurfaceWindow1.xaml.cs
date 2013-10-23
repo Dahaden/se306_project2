@@ -24,6 +24,7 @@ using System.Xml;
 using System.Windows.Markup;
 
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace Team_Roasters
 {
@@ -68,8 +69,8 @@ namespace Team_Roasters
                 screenStack.Pop();
                 Screen next = screenStack.Peek();
 
-                Storyboard exit = prev.FindResource("Shrink") as Storyboard;
-                Storyboard enter = next.FindResource("Grow") as Storyboard;
+                Storyboard exit = prev.FindResource("Exit") as Storyboard;
+                Storyboard enter = next.FindResource("Enter") as Storyboard;
 
                 exit.Begin(prev);
                 enter.Begin(next);
@@ -89,16 +90,15 @@ namespace Team_Roasters
             screenStack.Push(screen);
             Screen next = screenStack.Peek();
 
-            Storyboard exit = prev.FindResource("Shrink") as Storyboard;
-            Storyboard enter = next.FindResource("Grow") as Storyboard;
+            Storyboard exit = prev.FindResource("Exit") as Storyboard;
+            Storyboard enter = next.FindResource("Enter") as Storyboard;
 
             exit.Begin(prev);
             enter.Begin(next);
 
             this.Content = next;
-            //this.WindowState = WindowState.Maximized;
-            //this.WindowStyle = WindowStyle.None;
-
+            this.WindowState = WindowState.Maximized;
+            this.WindowStyle = WindowStyle.None;
         }
 
         /// <summary>

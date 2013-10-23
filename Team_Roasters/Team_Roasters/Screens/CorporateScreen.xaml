@@ -13,21 +13,21 @@
              d:DesignWidth="1920">
 
     <view:Screen.Resources>
-        <Storyboard x:Key="Shrink">
-            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.ScaleX" From="1" To="0"/>
-            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.ScaleY" From="1" To="0"/>
+        <Storyboard x:Key="Enter">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.Y" From="0" To="0"/>
         </Storyboard>
 
-        <Storyboard x:Key="Grow">
-            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.ScaleX" From="0" To="1"/>
-            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.ScaleY" From="0" To="1"/>
+        <Storyboard x:Key="Exit">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="-1920"/>
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.Y" From="0" To="0"/>
         </Storyboard>
     </view:Screen.Resources>
 
     <Viewbox>
         <Grid x:Name="MainPage">
             <Grid.RenderTransform>
-                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="960" CenterY="540" />
+                <TranslateTransform/>
             </Grid.RenderTransform>
             <Grid x:Name="What_We_Do" Background="#FFFFFCF0" Width="1920" Height="1080">
                 <Grid.RowDefinitions>
