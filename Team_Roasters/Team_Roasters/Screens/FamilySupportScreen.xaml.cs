@@ -1,4 +1,4 @@
-using System.Windows.Media;
+﻿using System.Windows.Media;
 using System.Windows;
 namespace Team_Roasters.Screens
 {
@@ -7,7 +7,8 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class FamilySupportScreen : Screen
     {
-        public FamilySupportScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
+        public FamilySupportScreen(SurfaceWindow1 parentWindow)
+            : base(parentWindow)
         {
             setButtonColours();
             InitializeComponent();
@@ -23,6 +24,9 @@ namespace Team_Roasters.Screens
             SS_Button.Style = (Style)FindResource("NotSelectedButton");
             Scholarships.Visibility = System.Windows.Visibility.Collapsed;
             Scholarships_Button.Style = (Style)FindResource("NotSelectedButton");
+            Beads.Visibility = Visibility.Collapsed;
+            Beads_Button.Style = (Style)FindResource("NotSelectedButton");
+
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
@@ -58,6 +62,8 @@ namespace Team_Roasters.Screens
             SS_Button.Style = (Style)FindResource("NotSelectedButton");
             Scholarships.Visibility = System.Windows.Visibility.Collapsed;
             Scholarships_Button.Style = (Style)FindResource("NotSelectedButton");
+            Beads.Visibility = Visibility.Collapsed;
+            Beads_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
         private void SurfaceButton_SupportServices(object sender, System.Windows.RoutedEventArgs e)
@@ -70,6 +76,8 @@ namespace Team_Roasters.Screens
             SS_Button.Style = (Style)FindResource("SelectedButton");
             Scholarships.Visibility = System.Windows.Visibility.Collapsed;
             Scholarships_Button.Style = (Style)FindResource("NotSelectedButton");
+            Beads.Visibility = Visibility.Collapsed;
+            Beads_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
         private void SurfaceButton_Scholarships(object sender, System.Windows.RoutedEventArgs e)
@@ -82,6 +90,8 @@ namespace Team_Roasters.Screens
             SS_Button.Style = (Style)FindResource("NotSelectedButton");
             Parent_Resources.Visibility = System.Windows.Visibility.Collapsed;
             Scholarships_Button.Style = (Style)FindResource("SelectedButton");
+            Beads.Visibility = Visibility.Collapsed;
+            Beads_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
         private void setButtonColours()
@@ -90,5 +100,210 @@ namespace Team_Roasters.Screens
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FFCC33");
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FFFDC37D");
         }
+
+        private void SurfaceButton_Beads(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Scholarships.Visibility = System.Windows.Visibility.Collapsed;
+            PR_Button.Style = (Style)FindResource("NotSelectedButton");
+            Holiday_Homes.Visibility = System.Windows.Visibility.Collapsed;
+            HH_Button.Style = (Style)FindResource("NotSelectedButton");
+            Support_Services.Visibility = System.Windows.Visibility.Collapsed;
+            SS_Button.Style = (Style)FindResource("NotSelectedButton");
+            Parent_Resources.Visibility = System.Windows.Visibility.Collapsed;
+            Scholarships_Button.Style = (Style)FindResource("NotSelectedButton");
+            Beads.Visibility = Visibility.Visible;
+            Beads_Button.Style = (Style)FindResource("SelectedButton");
+            stardesc.Visibility = Visibility.Hidden;
+            whitedesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+
+        }
+
+        private void blueBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            bluedesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void blueBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            bluedesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void orangeBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            browndesc.Visibility = Visibility.Hidden;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Visible;
+        }
+
+        private void brownBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            browndesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+        }
+
+        private void brownBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            browndesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+
+        }
+
+        private void orangeBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            browndesc.Visibility = Visibility.Hidden;
+            whitedesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Visible;
+
+        }
+
+        private void redBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            reddesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void redBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            reddesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void starBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            stardesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void starBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            stardesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void whiteBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            whitedesc.Visibility = Visibility.Visible;
+            bluedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void whiteBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            whitedesc.Visibility = Visibility.Visible;
+            bluedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void whiteBead_MouseDown(object sender, System.Windows.RoutedEventArgs e)
+        {
+            whitedesc.Visibility = Visibility.Visible;
+            bluedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void blueBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
+        {
+            bluedesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void brownBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
+        {
+            browndesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+        }
+
+        private void orangeBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
+        {
+            browndesc.Visibility = Visibility.Hidden;
+            whitedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Visible;
+        }
+
+        private void redBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
+        {
+            reddesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            stardesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void starBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
+        {
+            stardesc.Visibility = Visibility.Visible;
+            whitedesc.Visibility = Visibility.Hidden;
+            bluedesc.Visibility = Visibility.Hidden;
+            reddesc.Visibility = Visibility.Hidden;
+            orangedesc.Visibility = Visibility.Hidden;
+            browndesc.Visibility = Visibility.Hidden;
+        }
+
+
     }
 }
