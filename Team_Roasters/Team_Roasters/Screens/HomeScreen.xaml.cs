@@ -167,7 +167,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string when;
-                string imgsrc;
+                string imgsrc = "";
                 string desc;
                 string filename;
                 string filepath;
@@ -267,7 +267,14 @@ namespace Team_Roasters.Screens
 
                         // Latter part of link to where the news item image is stored on the website
 
-                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        try
+                        {
+                            imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        }
+                        catch (Exception e)
+                        {
+                            // No image for this news item
+                        }
 
                         // Creates a filepath that the image will be downloaded to
                         filepath = "../../Resources/news/" + filename + ".jpeg";
@@ -359,7 +366,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string whenwhere;
-                string imgsrc;
+                string imgsrc="";
                 string desc;
                 string filename;
                 string filepath;
@@ -452,7 +459,15 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("BlockUIContainer");
-                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+
+                        try
+                        {
+                            imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        }
+                        catch (Exception e)
+                        {
+                            // No image for this news item
+                        }
 
                         filepath = "../../Resources/events/" + filename + ".jpeg";
 
