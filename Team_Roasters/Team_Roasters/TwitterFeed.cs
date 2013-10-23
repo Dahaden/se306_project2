@@ -12,8 +12,16 @@ namespace Team_Roasters
 {
     class TwitterFeed
     {
+        //List of tweet objects
         public List<Tweet> tweets;
 
+        /// <summary>
+        /// Pulls tweets from Twitter using the Twitter 1.1 api.
+        /// It first authenticates using our application credentials.
+        /// It then recieves a json response containing the 20 
+        /// most recent tweets and returns it.
+        /// </summary>
+        /// <returns></returns>
         private string getTwitterFeed()
         {
             var oauth_token = "1963695506-KINm9HlNreOn3Oi0xYU5FqEuZ5CnyrdtVX35Oi6";
@@ -33,7 +41,6 @@ namespace Team_Roasters
             var oauth_timestamp = Convert.ToInt64(timeSpan.TotalSeconds).ToString();
 
             // message api details
-            //var status = "Updating status via REST API if this works";
             var resource_url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
             var screen_name = "ChildCancerNZ";
             // create oauth signature
@@ -96,11 +103,21 @@ namespace Team_Roasters
             return responseData;
         }
 
+        /// <summary>
+        /// Turns the response from getTwitterFeed()
+        /// into usable c# classes and stores them in a list.
+        /// </summary>
         public void updateTweets()
         {
             tweets = JsonConvert.DeserializeObject<List<Tweet>>(getTwitterFeed());
         }
 
+        /// <summary>
+        /// For each tweet in the tweets list,
+        /// pulls out relevant details that we can display
+        /// and stores them as a list of strings.
+        /// </summary>
+        /// <returns>List of a list of Strings containing tweet details</returns>
         public List<List<string>> GetTweets()
         {
             List<List<string>> result = new List<List<string>>();
@@ -126,6 +143,13 @@ namespace Team_Roasters
 
     }
 
+    /// <summary>
+    /// Root class of the tweet object.
+    /// The classes below Tweet are those that are
+    /// used by the Tweet class.
+    /// Keeping all this information about these tweets
+    /// gives us the option to expand on our current twitter feature.
+    /// </summary>
     public class Tweet
     {
         public string created_at { get; set; }
