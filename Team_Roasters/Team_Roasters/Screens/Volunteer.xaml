@@ -48,50 +48,66 @@
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
-                <Grid x:Name="WhatIsVolunteering" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="WhatIsVolunteering" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
 
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" FontFamily="Gill Sans MT" Height="662.985"><Run FontSize="40" Text="What is volunteering?"/><LineBreak/><Run Text="Volunteering provides a wonderful opportunity for people to meet, "/><Run Language="en-nz" Text="c"/><Run Text="ontribute and "/><LineBreak/><Run Text="support a common cause."/><LineBreak/><LineBreak/><Run Text="Volunteers are vital to us at Child Cancer Foundation."/><LineBreak/><Run Text="They help us to achieve our purpose by offering their time, skills and valuable advice."/><LineBreak/></TextBlock>
+                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                                <Run FontSize="40" Text="What is volunteering?"/><LineBreak/>
+                                <Run Text="Volunteering provides a wonderful opportunity for people to meet, contribute and "/>
+                                <Run Text="support a common cause."/>
+                                <LineBreak/>
+                                <Run Text="Volunteers are vital to us at Child Cancer Foundation."/>
+                                <Run Text="They help us to achieve our purpose by offering their time, skills and valuable advice."/>
+                            </TextBlock>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="WhoCanVolunteer" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                <Grid x:Name="WhoCanVolunteer" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2" d:IsHidden="True">
 
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7"><Run FontSize="40" Text="What sort of people volunteer for CCF?" /><LineBreak/><Run Text="CCF volunteers are ordinary people who come from a wide range of backgrounds and age groups. " /><LineBreak/><Run Text="Some are parents, relatives or friends of families who have experienced the childhood cancer journey; " /><LineBreak/><Run Text="some are from businesses and the public. Volunteers are interested in supporting our objectives, " /><LineBreak/><Run Text="have a desire to support children with cancer and their families and help raise funds."/></TextBlock>
+                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                                <Run FontSize="40" Text="What sort of people volunteer for CCF?" /><LineBreak/>
+                                <Run Text="CCF volunteers are ordinary people who come from a wide range of backgrounds and age groups. " />
+                                <Run Text="Some are parents, relatives or friends of families who have experienced the childhood cancer journey; " />
+                                <Run Text="some are from businesses and the public. Volunteers are interested in supporting our objectives, " />
+                                <Run Text="have a desire to support children with cancer and their families and help raise funds."/></TextBlock>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="WhatWouldIDo" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="WhatWouldIDo" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7"><Run FontSize="40" Text="What do CCF volunteers do?" /><LineBreak/><Run Text="Our volunteers provide a range of services and support including participating in CCF Branch activities, " /><LineBreak/><Run Text="helping out at the Family Places, working alongside our staff and helping our fundraising team during " /><LineBreak/><Run Text="events such as the national Annual Street Appeal and Funrazor events."/></TextBlock>
+                        	<TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" Width="890">
+                                <Run FontSize="40" Text="What do CCF volunteers do?" /><LineBreak/>
+                                <Run Text="Our volunteers provide a range of services and support including participating in CCF Branch activities, " />
+                                <Run Text="helping out at the Family Places, working alongside our staff and helping our fundraising team during " />
+                                <Run Text="events such as the national Annual Street Appeal and Funrazor events."/></TextBlock>
                     </Border>
                 </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="Volunteering" Background="White" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="Volunteering" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White">
+                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White" Height="678.985">
                     		<Border.Effect>
                     			<DropShadowEffect/>
                     		</Border.Effect>
-                    		<DataGridRowsPresenter HorizontalAlignment="Center" Height="700" VerticalAlignment="Center" Width="1400">
-                    			<TextBox Margin="0,20,300,0" TextAlignment="Center" TextWrapping="Wrap" Text="To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer" FontSize="30" HorizontalAlignment="Right" Width="955" RenderTransformOrigin="0.603,0.66"/>
-                    			<Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="500,20,500,0"/>
+                    		<DataGridRowsPresenter Height="700" Width="890">
+                    			<TextBox Margin="0,20,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer" FontSize="30" HorizontalAlignment="Center" Width="870" RenderTransformOrigin="0.603,0.66"/>
+                    			<Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
                     		</DataGridRowsPresenter>
                     	</Border>
                     </s:SurfaceScrollViewer>
