@@ -576,38 +576,46 @@ namespace Team_Roasters.Screens
 
         private void Scroll_changed(object sender, System.Windows.Controls.ScrollChangedEventArgs e)
         {
-            if (MainContent.IsScrolling)
-            {            
-                if (MainContent.HorizontalOffset < 100)
-                {
-                    Left_arrow.Visibility = Visibility.Collapsed;
-                    Left_arrow_block.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    Left_arrow.Visibility = Visibility.Visible;
-                    Left_arrow_block.Visibility = Visibility.Visible;
-                }
-                if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width )
-                {
-                    Right_arrow.Visibility = Visibility.Collapsed;
-                    Right_arrow_block.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    Right_arrow.Visibility = Visibility.Visible;
-                    Right_arrow_block.Visibility = Visibility.Visible;
-                }
+            if (MainContent.HorizontalOffset < 100)
+            {
+                Left_arrow.Visibility = Visibility.Collapsed;
+                Left_arrow_block.Visibility = Visibility.Collapsed;
             }
             else
             {
                 Left_arrow.Visibility = Visibility.Visible;
                 Left_arrow_block.Visibility = Visibility.Visible;
+            }
+            if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width)
+            {
+                Right_arrow.Visibility = Visibility.Collapsed;
+                Right_arrow_block.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
                 Right_arrow.Visibility = Visibility.Visible;
                 Right_arrow_block.Visibility = Visibility.Visible;
             }
         }
 
-     
+        private void Left_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            MainContent.ScrollToLeftEnd();          
+        }
+
+        private void Left_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MainContent.ScrollToLeftEnd();
+        }
+
+        private void Right_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            MainContent.ScrollToRightEnd();
+        }
+
+        private void Right_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MainContent.ScrollToRightEnd();
+        }  
     }
 }

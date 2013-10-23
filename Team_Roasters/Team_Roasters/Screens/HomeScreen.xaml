@@ -697,8 +697,8 @@
                         <ImageBrush Stretch="None" ImageSource="../Resources/arrow_r.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle x:Name="Left_arrow_block" Margin="-1,11.556,0,0" Opacity="0.3" HorizontalAlignment="Left" Width="70" Grid.Row="1" Fill="Black"/>
-                <Rectangle x:Name="Right_arrow_block" Margin="0,11.5,0,0.056" Opacity="0.3" Grid.Row="1" HorizontalAlignment="Right" Width="70" Fill="Black"/>
+                <Rectangle x:Name="Left_arrow_block" Margin="-1,11.556,0,0" Opacity="0.3" HorizontalAlignment="Left" Width="70" Grid.Row="1" Fill="Black" TouchDown="Left_arrow_block_TouchDown" MouseDown="Left_arrow_block_MouseDown"/>
+                <Rectangle x:Name="Right_arrow_block" Margin="0,11.5,0,0.056" Opacity="0.3" Grid.Row="1" HorizontalAlignment="Right" Width="70" Fill="Black" TouchDown="Right_arrow_block_TouchDown" MouseDown="Right_arrow_block_MouseDown"/>
 
             </Grid>
 			
