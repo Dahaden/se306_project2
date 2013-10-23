@@ -52,35 +52,35 @@
             		<Border.Effect>
             			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
             		</Border.Effect>
+            		<Rectangle Height="132.21" Margin="464.5,0,512.5,17" VerticalAlignment="Bottom" TouchDown="Touch_Down_Bartercard">
+            			<Rectangle.Fill>
+            				<ImageBrush Stretch="Uniform" ImageSource="Bartercard-charity-logo-2D4.jpg"/>
+            			</Rectangle.Fill>
+            		</Rectangle>
             	</Border>
+            	<Rectangle HorizontalAlignment="Left" Margin="8,-38.705,0,16" Width="351.103" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart">
+            		<Rectangle.Fill>
+            			<ImageBrush ImageSource="Savemart_1.jpg" Stretch="Uniform"/>
+            		</Rectangle.Fill>
+            	</Rectangle>
+            	<Rectangle Margin="0,0,-12.436,131.916" Grid.Column="1" HorizontalAlignment="Right" Height="138.333" VerticalAlignment="Bottom" Width="185.699" TouchDown="Touch_Down_RCP">
+            		<Rectangle.Fill>
+            			<ImageBrush Stretch="Uniform" ImageSource="RCP-logo.jpg"/>
+            		</Rectangle.Fill>
+            	</Rectangle>
+            	<Rectangle Margin="240,0,217.564,135.916" Grid.Column="1" Height="146" VerticalAlignment="Bottom" TouchDown="Touch_Down_Farmers">
+            		<Rectangle.Fill>
+            			<ImageBrush Stretch="Uniform" ImageSource="Farmers-Logo-Hm-Page.jpg"/>
+            		</Rectangle.Fill>
+            	</Rectangle>
+            	<Rectangle HorizontalAlignment="Left" Margin="38.603,0,0,131.916" Width="154.5" Grid.Column="1" Height="150" VerticalAlignment="Bottom" TouchDown="Touch_Down_Prof">
+            		<Rectangle.Fill>
+            			<ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Profesionals.jpg"/>
+            		</Rectangle.Fill>
+            	</Rectangle>
             	<TextBlock x:Name="BBnFreinds_text" HorizontalAlignment="Left" Height="76.29" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149.471" Grid.Column="3" FontSize="24"><Run Language="en-nz" Text="Buzzy Bee and Friends"/></TextBlock>
             	<TextBlock Foreground="Black" Height="60" Margin="8,0,0,38.705" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Major Funding Partner"/></TextBlock>
-            	<Button Content="" Margin="33,0,0,136.048" Grid.Column="1" HorizontalAlignment="Left" Width="161.56" d:LayoutOverrides="HorizontalAlignment" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" TouchDown="Touch_Down_Prof">
-            		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Profesionals.jpg"/>
-            		</Button.Background>
-            	</Button>
             	<TextBlock Foreground="Black"  Margin="0,0,40,38.705" TextWrapping="Wrap" FontSize="32" Grid.Column="1" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="334.69" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Foundation Partner"/></TextBlock>
-            	<Button Content="" Margin="155.523,82.562,190.977,0" Height="152.499" VerticalAlignment="Top" Grid.Column="1" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" TouchDown="Touch_Down_Gold_Buyers">
-            		<Button.Background>
-                        <ImageBrush ImageSource="../Resources/Corporate/Gold-Buyers.jpg" Stretch="Uniform"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="232,0,228.392,136.048" Grid.Column="1" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" TouchDown="Touch_Down_Farmers">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Farmers-Logo-Hm-Page.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="8,-38.705,0,30" Grid.Column="1" HorizontalAlignment="Left" Width="349.349" Grid.Row="1" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" TouchDown="Touch_Down_SaveMart">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Savemart_1.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="0,-38.705,66.977,30" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Width="287.713" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" TouchDown="Touch_Down_Bartercard">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bartercard-charity-logo-2D4.jpg"/>
-            		</Button.Background>
-            	</Button>
             	<Button Content="" Margin="0,28.56,31.5,0" Grid.Column="3" Height="88.502" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114.863" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/99-Logo.jpg"/>
@@ -123,15 +123,16 @@
             	</Button>
             	<TextBlock Foreground="Black" Height="33.625" Margin="8,252.792,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Gold Star Sponsors"/></TextBlock>
             	<TextBlock Foreground="Black" Height="60" Margin="8,22.562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Plantinum Star Sponsor"/></TextBlock>
-            	<Button Content="" Margin="0,0,0,127.048" Grid.Column="1" HorizontalAlignment="Right" Width="181.263" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" d:LayoutOverrides="HorizontalAlignment" Foreground="{x:Null}" TouchDown="Touch_Down_RCP">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/RCP-logo.jpg"/>
-            		</Button.Background>
-            	</Button>
             	<TextBlock x:Name="BBnFreinds_text_Copy" HorizontalAlignment="Right" Height="41.228" Margin="0,121.062,52.5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56.863" Grid.Column="3" FontSize="24"><Run Language="en-nz" Text=".99"/></TextBlock>
             	<TextBlock x:Name="Alabar_text" Height="74.228" Margin="8,121.062,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="4" FontSize="24"><Run Language="en-nz" Text="Alabar (NZ) Ltd"/></TextBlock>
             	<TextBlock x:Name="Blubridge_text" Height="30.125" Margin="77.697,256.292,30.381,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="3" FontSize="24" Grid.ColumnSpan="2"><Run Language="en-nz" Text="Bluebridge Cook Strait Ferry"/></TextBlock>
             	<TextBlock x:Name="The_Herald" Height="30.125" Margin="77.697,0,30.381,232.915" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="3" FontSize="24" Grid.ColumnSpan="2"><Run Language="en-nz" Text="The New Zealand Herald"/></TextBlock>
+            	<Rectangle Height="156" Margin="143.103,97,95.564,0" VerticalAlignment="Top" Grid.Column="1" TouchDown="Touch_Down_Gold_Buyers">
+            		<Rectangle.Fill>
+            			<ImageBrush Stretch="Uniform" ImageSource="Gold-Buyers.jpg"/>
+            		</Rectangle.Fill>
+            	</Rectangle>
+            	<Path Data="M811.1767,58.02779 L811.1767,635.86774" Fill="Black" Margin="0,31,21.693,32.21" Stretch="Fill" Grid.Column="2" Grid.RowSpan="2" Stroke="Black" HorizontalAlignment="Right" Width="1"/>
             </Grid>
             <StackPanel x:Name="Navigation_Panel" Grid.Column="1" Margin="0,57,37,123.921" Orientation="Vertical" HorizontalAlignment="Right" Width="445.862" Grid.Row="1">
             	<s:SurfaceButton 

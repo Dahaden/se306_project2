@@ -350,6 +350,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\TweetyBird.jpg" />
+    <Resource Include="Screens\Bartercard-charity-logo-2D4.jpg" />
+    <Resource Include="Screens\Farmers-Logo-Hm-Page.jpg" />
+    <Resource Include="Screens\Gold-Buyers.jpg" />
+    <Resource Include="Screens\RCP-logo.jpg" />
+    <Resource Include="Screens\Savemart_1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

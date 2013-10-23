@@ -46,12 +46,7 @@ namespace Team_Roasters.Screens
         {
             Our_Ambassadors.Opacity = 0.5;
             GoldBuyers_popup.Visibility = Visibility.Visible;
-        }
-
-        private void Touch_Down_Professionals(object sender, System.Windows.Input.TouchEventArgs e)
-        {
-        	// TODO: Add event handler implementation here.
-        }
+        }      
 
         private void Touch_Down_Farmers(object sender, System.Windows.Input.TouchEventArgs e)
         {
@@ -67,12 +62,14 @@ namespace Team_Roasters.Screens
 
         private void Touch_Down_SaveMart(object sender, System.Windows.Input.TouchEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            Our_Ambassadors.Opacity = 0.5;
+            SaveMart_popup.Visibility = Visibility.Visible;
         }
 
         private void Touch_Down_Bartercard(object sender, System.Windows.Input.TouchEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            Our_Ambassadors.Opacity = 0.5;
+            Bartercard_popup.Visibility = Visibility.Visible;
         }
 
         private void ToolTipOpen(object sender, System.Windows.Controls.ToolTipEventArgs e)
@@ -87,6 +84,8 @@ namespace Team_Roasters.Screens
             RCP_popup.Visibility = Visibility.Collapsed;
             Farmers_popup.Visibility = Visibility.Collapsed;
             Prof_popup.Visibility = Visibility.Collapsed;
+            SaveMart_popup.Visibility = Visibility.Collapsed;
+            Bartercard_popup.Visibility = Visibility.Collapsed;
         }
 
         private void Touch_Down_Prof(object sender, System.Windows.Input.TouchEventArgs e)
