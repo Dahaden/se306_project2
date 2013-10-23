@@ -71,7 +71,9 @@ namespace Team_Roasters.Screens
 
             Amb_image.Children.Add(ABimage);
             Amb_text.Document = Amb_AB;
-            
+
+            FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/WhatWeDo/OurPeople.xaml"));
+            ourPeopleViewer.Document = flowDocument;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
