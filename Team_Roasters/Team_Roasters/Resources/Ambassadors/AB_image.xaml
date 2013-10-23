@@ -11,7 +11,7 @@
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
 			<Image Source="Amanda-Billing.jpg" Height="511.5" HorizontalAlignment="Center"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="55.501" Margin="61.1,0,43.1,0" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="55.501" Margin="0" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="239.89"><Run Language="en-nz" Text="Amanda Billing"/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>

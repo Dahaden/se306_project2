@@ -10,7 +10,7 @@
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
 			<Image Source="Lorraine-Downes.jpg" HorizontalAlignment="Center" Height="484.18"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="241.5"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="255.5"><Run Language="en-nz" Text="Lorraine Downes"/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>

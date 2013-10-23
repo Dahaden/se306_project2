@@ -27,7 +27,7 @@ namespace Team_Roasters.Screens
         {
             setButtonColours();
             InitializeComponent();
-
+            
             AB_image ABimage = new AB_image();
             BOK_image BOKimage = new BOK_image();
             CJ_image CJimage = new CJ_image();
@@ -127,31 +127,35 @@ namespace Team_Roasters.Screens
             Help_Button.Style = (Style)FindResource("SelectedButton");
         }
 
-          
-        private void Touch_enter(object sender, System.Windows.Input.TouchEventArgs e)
+
+        private void SwitchNext()
         {
-            Amb_image.Opacity = 0.25;
-            Amb_text.Opacity = 0.25;
-        }
-
-        private void Touch_leave(object sender, System.Windows.Input.TouchEventArgs e)
-        {
-            Amb_image.Opacity = 1.0;
-            Amb_text.Opacity = 1.0;
-
-            System.Windows.UIElement imageElement = (System.Windows.UIElement)images[Amb_counter];
-            Amb_image.Children.RemoveAt(0);
-            Amb_image.Children.Add(imageElement);
-
-            Amb_text.Document = (FlowDocument)text[Amb_counter];
-            
             Amb_counter++;
             if (Amb_counter >= images.Count)
             {
                 Amb_counter = 0;
             }
-            System.Threading.Thread.Sleep(500); //TODO - get rid of sleep but still have it that it doesn't click through to the next one straight away
+            System.Windows.UIElement imageElement = (System.Windows.UIElement)images[Amb_counter];
+            Amb_image.Children.RemoveAt(0);
+            Amb_image.Children.Add(imageElement);
+
+            Amb_text.Document = (FlowDocument)text[Amb_counter];
         }
+
+        private void SwitchPrevious()
+        {
+            Amb_counter--;
+            if (Amb_counter < 0)
+            {
+                Amb_counter = images.Count - 1;
+            }
+            System.Windows.UIElement imageElement = (System.Windows.UIElement)images[Amb_counter];
+            Amb_image.Children.RemoveAt(0);
+            Amb_image.Children.Add(imageElement);
+
+            Amb_text.Document = (FlowDocument)text[Amb_counter];
+        }
+
 
         private void setButtonColours()
         {
@@ -159,5 +163,13 @@ namespace Team_Roasters.Screens
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF68B9D2");
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF8ECADC");
         }
+
+        private void Touch_up(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            SwitchNext();
+            System.Threading.Thread.Sleep(500);
+        }
+
+        
     }
 }

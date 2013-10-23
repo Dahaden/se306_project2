@@ -11,7 +11,7 @@
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
 			<Image Source="Chris-Jack.jpg" Height="511.5"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="46.501" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="148"><Run Language="en-nz" Text="Chris Jack"/><LineBreak/><Run/></TextBlock>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="46.501" RenderTransformOrigin="0.488,1.065" HorizontalAlignment="Center" Width="156"><Run Language="en-nz" Text="Chris Jack"/><LineBreak/><Run/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>
