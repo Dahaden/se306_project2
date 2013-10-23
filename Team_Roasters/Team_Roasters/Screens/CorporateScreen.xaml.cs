@@ -8,7 +8,8 @@
         public CorporateScreen(SurfaceWindow1 parentWindow)
             : base(parentWindow)
         {
-            InitializeComponent();           
+            InitializeComponent();
+            setButtonColours();
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
@@ -33,7 +34,12 @@
             parentWindow.popScreen();
             parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
         }
-             
+
+        private void setButtonColours()
+        {
+            System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
+            App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF68B9D2");
+        }             
 
     }
 }

@@ -52,82 +52,82 @@
             		<Border.Effect>
             			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
             		</Border.Effect>
-            		<Path Data="M846.5,20.5 C846.5,676.5 846.5,678.5 846.5,678.5" Fill="#FFF4F4F5" HorizontalAlignment="Right" Margin="0,19.5,462.5,22.71" Stretch="Fill" Stroke="Black" Width="1"/>
+            		<Path Data="M846.5,20.5 C846.5,676.5 846.5,678.5 846.5,678.5" Fill="#FFF4F4F5" HorizontalAlignment="Right" Margin="0,19.5,438.5,22.71" Stretch="Fill" Stroke="Black" Width="1"/>
             	</Border>
             	<TextBlock Foreground="Black" Height="60" Margin="8,0,0,38.705" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Major Funding Partner"/></TextBlock>
-            	<Button Content="" Margin="33,0,0,136.048" Grid.Column="1" HorizontalAlignment="Left" Width="161.56" d:LayoutOverrides="HorizontalAlignment" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="33,0,0,136.048" Grid.Column="1" HorizontalAlignment="Left" Width="161.56" d:LayoutOverrides="HorizontalAlignment" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Profesionals.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Profesionals.jpg"/>
             		</Button.Background>
             	</Button>
             	<TextBlock Foreground="Black"  Margin="0,0,40,38.705" TextWrapping="Wrap" FontSize="32" Grid.Column="1" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="334.69" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Foundation Partner"/></TextBlock>
-            	<Button Content="" Margin="155.523,82.562,190.977,0" Height="152.499" VerticalAlignment="Top" Grid.Column="1" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="155.523,82.562,190.977,0" Height="152.499" VerticalAlignment="Top" Grid.Column="1" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Gold-Buyers.jpg"/>
+            			<ImageBrush ImageSource="../Resources/Corporate/Gold-Buyers.jpg"  Stretch="Uniform"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="232,0,228.392,136.048" Grid.Column="1" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="232,0,228.392,136.048" Grid.Column="1" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Farmers-Logo-Hm-Page.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Farmers-Logo-Hm-Page.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="0,0,8,136.048" Grid.Column="1" HorizontalAlignment="Right" Width="169.548" d:LayoutOverrides="HorizontalAlignment" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="8,-38.705,0,30" Grid.Column="1" HorizontalAlignment="Left" Width="349.349" Grid.Row="1" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="RCP-logo.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Savemart_1.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="8,-38.705,0,30" Grid.Column="1" HorizontalAlignment="Left" Width="349.349" Grid.Row="1" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="0,-38.705,66.977,30" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Width="287.713" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Savemart_1.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bartercard-charity-logo-2D4.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="0,-38.705,66.977,30" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Width="287.713" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="0,28.56,21.5,0" Grid.Column="3" Height="88.502" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114.863" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Bartercard-charity-logo-2D4.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/99-Logo.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="0,28.56,21.5,0" Grid.Column="3" Height="88.502" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114.863" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="8,36.062,0,0" Grid.Column="3" Height="81" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134.789" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="99-Logo.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Buzzy-Bee-Logo-Hm-Page.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="8,36.062,0,0" Grid.Column="3" Height="81" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134.789" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="0,22.562,8,0" Grid.Column="4" Height="94.5" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Buzzy-Bee-Logo-Hm-Page.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/alabar.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="0,22.562,8,0" Grid.Column="4" Height="94.5" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="77.697,0,48.5,11.934" Grid.Column="3" Height="89.929" VerticalAlignment="Bottom" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="alabar.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Apparelmaster-New-Logo-07.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="77.697,0,48.5,11.934" Grid.Column="3" Height="89.929" VerticalAlignment="Bottom" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="53.697,166.29,30.381,0" Grid.Column="3" Height="86.002" VerticalAlignment="Top" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Apparelmaster-New-Logo-07.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bluebridge.jpeg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="53.697,166.29,30.381,0" Grid.Column="3" Height="86.002" VerticalAlignment="Top" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="53.697,260.792,30.381,232.415" Grid.Column="3" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Bluebridge.jpeg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/NZ-Herald-Logo-Hm-Page.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="53.697,260.792,30.381,232.415" Grid.Column="3" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="98.708,0,-23.61,16" Grid.Column="3" Grid.Row="1" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="NZ-Herald-Logo-Hm-Page.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/NZC-logo-new2.jpg"/>
             		</Button.Background>
             	</Button>
-            	<Button Content="" Margin="98.708,0,-23.61,16" Grid.Column="3" Grid.Row="1" BorderThickness="0" BorderBrush="{x:Null}">
+            	<Button Content="" Margin="98.708,0,-33.691,113.134" Grid.Column="3" Height="109.281" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="NZC-logo-new2.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="98.708,0,-33.691,113.134" Grid.Column="3" Height="109.281" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}">
-            		<Button.Background>
-            			<ImageBrush Stretch="Uniform" ImageSource="Hansen-Logo-Hm-Page.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Hansen-Logo-Hm-Page.jpg"/>
             		</Button.Background>
             	</Button>
             	<TextBlock Foreground="Black" Height="33.625" Margin="8,252.792,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Gold Star Sponsors"/></TextBlock>
             	<TextBlock Foreground="Black" Height="60" Margin="8,22.562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Plantinum Star Sponsor"/></TextBlock>
+            	<Button Content="" Margin="0,0,0,127.048" Grid.Column="1" HorizontalAlignment="Right" Width="181.263" Height="143.201" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" d:LayoutOverrides="HorizontalAlignment" Foreground="{x:Null}">
+            		<Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/RCP-logo.jpg"/>
+            		</Button.Background>
+            	</Button>
             </Grid>
             <StackPanel x:Name="Navigation_Panel" Grid.Column="1" Margin="0,57,37,123.921" Orientation="Vertical" HorizontalAlignment="Right" Width="445.862" Grid.Row="1">
             	<s:SurfaceButton 
