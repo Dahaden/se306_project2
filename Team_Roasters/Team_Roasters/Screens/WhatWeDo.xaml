@@ -65,7 +65,7 @@
                 		x:Name="Amb_image" HorizontalAlignment="Left" Width="364" Margin="0,14.21,0,62" d:LayoutOverrides="HorizontalAlignment"/>
             	</Grid>
 
-                <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70">
+                <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70" Visibility="Collapsed">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" Width="972.092" Height="678.146" VerticalAlignment="Bottom" Margin="0,0,0,8.481">
                     	<s:SurfaceScrollViewer.Effect>
                     		<DropShadowEffect/>
@@ -143,7 +143,6 @@
             		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
             	</s:SurfaceButton.Effect>
             </s:SurfaceButton>
-
         </Grid>
     </Viewbox>
 </view:Screen>
