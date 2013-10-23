@@ -332,6 +332,9 @@
     <Resource Include="Resources\VolunteerQR.png" />
     <Resource Include="Resources\news\DoNotDeleteThisFolder.txt" />
     <Resource Include="Resources\wm_back.png" />
+    <Resource Include="Screens\Gold-Star-Logo.jpg" />
+    <Resource Include="Screens\Millennium-Logo-Sponsors-Page.jpg" />
+    <Resource Include="Screens\Platinum-Star-Logo_1.jpg" />
     <Content Include="Team_Roasters.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
