@@ -332,20 +332,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\TweetyBird.jpg" />
-    <Resource Include="Screens\99-Logo.jpg" />
-    <Resource Include="Screens\alabar.jpg" />
-    <Resource Include="Screens\Apparelmaster-New-Logo-07.jpg" />
-    <Resource Include="Screens\Bartercard-charity-logo-2D4.jpg" />
-    <Resource Include="Screens\Bluebridge.jpeg" />
-    <Resource Include="Screens\Buzzy-Bee-Logo-Hm-Page.jpg" />
-    <Resource Include="Screens\Farmers-Logo-Hm-Page.jpg" />
-    <Resource Include="Screens\Gold-Buyers.jpg" />
-    <Resource Include="Screens\Hansen-Logo-Hm-Page.jpg" />
-    <Resource Include="Screens\NZ-Herald-Logo-Hm-Page.jpg" />
-    <Resource Include="Screens\NZC-logo-new2.jpg" />
-    <Resource Include="Screens\Profesionals.jpg" />
-    <Resource Include="Screens\RCP-logo.jpg" />
-    <Resource Include="Screens\Savemart_1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
