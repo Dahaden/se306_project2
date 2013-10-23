@@ -30,12 +30,14 @@ namespace Team_Roasters.Screens
 
         }
 
+        // Show the screensaver overlay
         public void showScreenSaver()
         {
             this.screensaver_overlay.Visibility = System.Windows.Visibility.Visible;
             this.screensaver_text.Visibility = System.Windows.Visibility.Visible;
         }
 
+        // Hide the screensaver overlay
         public void hideScreenSaver()
         {
             this.screensaver_overlay.Visibility = System.Windows.Visibility.Collapsed;
@@ -574,6 +576,11 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Checks whether the side arrows should be shown/hidden
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Scroll_changed(object sender, System.Windows.Controls.ScrollChangedEventArgs e)
         {
             if (MainContent.HorizontalOffset < 100)
@@ -598,24 +605,24 @@ namespace Team_Roasters.Screens
             }
         }
 
+        // Handle jump to left side of screen
         private void Left_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             MainContent.ScrollToLeftEnd();          
         }
-
         private void Left_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MainContent.ScrollToLeftEnd();
         }
 
+        // Handle jump to right side of screen
         private void Right_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             MainContent.ScrollToRightEnd();
         }
-
         private void Right_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MainContent.ScrollToRightEnd();
-        }  
+        }
     }
 }
