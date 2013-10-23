@@ -55,7 +55,7 @@
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
@@ -67,7 +67,7 @@
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhoVolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhoVolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
@@ -78,7 +78,7 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        	    <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhatWouldIDoViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhatWouldIDoViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
                     </Border>
                 </s:SurfaceScrollViewer>
                 </Grid>
@@ -90,7 +90,7 @@
                     			<DropShadowEffect/>
                     		</Border.Effect>
                     		<DataGridRowsPresenter Height="700" Width="890">
-                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhatIsVolViewer" Foreground="Black" IsSelectionEnabled="False"/>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhatIsVolViewer" Foreground="Black" IsSelectionEnabled="False"  VerticalScrollBarVisibility="Hidden"/>
                                 <Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
                     		</DataGridRowsPresenter>
                     	</Border>

@@ -58,7 +58,7 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ParentResourcesViewer" Foreground="Black"/>
+                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ParentResourcesViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
                     </Border>
                 </Grid>
 
@@ -67,7 +67,7 @@
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="HolidayHomesViewer" Foreground="Black"/>
+                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="HolidayHomesViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
                     </Border>
                 </Grid>
 
@@ -86,7 +86,7 @@
                             <DropShadowEffect/>
                         </Border.Effect>
 
-                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ScholarshipsViewer" Foreground="Black"/>
+                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ScholarshipsViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
                     </Border>
 
                         
