@@ -106,7 +106,7 @@
                     			<DropShadowEffect/>
                     		</Border.Effect>
                     		<DataGridRowsPresenter Height="700" Width="890">
-                    			<TextBox Margin="0,20,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer" FontSize="30" HorizontalAlignment="Center" Width="870" RenderTransformOrigin="0.603,0.66"/>
+                    			<TextBox Margin="0,20,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer" FontSize="30" HorizontalAlignment="Center" Width="870" RenderTransformOrigin="0.603,0.66" BorderBrush="{x:Null}" Background="{x:Null}" SelectionBrush="{x:Null}"/>
                     			<Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
                     		</DataGridRowsPresenter>
                     	</Border>
