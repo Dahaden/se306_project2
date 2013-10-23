@@ -102,6 +102,12 @@
     <Compile Include="Resources\Ambassadors\SP_image.xaml.cs">
       <DependentUpon>SP_image.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Corporate_more.xaml.cs">
+      <DependentUpon>Corporate_more.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Corporate_more_info.xaml.cs">
+      <DependentUpon>Corporate_more_info.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TwitterFeed.cs" />
     <Page Include="Resources\Ambassadors\Amb_AB.xaml">
       <SubType>Designer</SubType>
@@ -187,7 +193,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Screens\Corporate_more.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Screens\CorporateScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\Corporate_more_info.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -336,6 +350,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\TweetyBird.jpg" />
+    <Resource Include="Screens\Gold-Buyers.jpg" />
+    <Resource Include="Screens\Gold-Star-Logo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
