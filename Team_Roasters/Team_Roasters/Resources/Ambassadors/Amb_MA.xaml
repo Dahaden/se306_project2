@@ -1,11 +1,9 @@
 ﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008" TextAlignment="Justify">
-    <Paragraph FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
-        <Italic>
-            <Bold>Megan Alatini signed up as a Child Cancer Foundation ambassador with style in March when she shaved her head to support children with cancer at the Steve Price Night of Courage.</Bold>
-        </Italic>
-        <LineBreak></LineBreak>
-        <LineBreak></LineBreak>
-        Megan has always been known for her trademark braided hair and is even involved in her family’s hair braiding business once again. It was a mark of her commitment to CCF when she shaved her hair off at the Steve Price Night of Courage in 2012.  The former True Bliss, NZ Idol judge and Dancing with the Stars runner up had just arrived back from living in Japan for three years, with her family and husband Pita Alatini who is a former All Black. Megan reformed TrueBliss in 2012 to write and launch a song especially for children with cancer, called “A Minute of One Day.”  She is always ready to step up and is frequently promoting CCF on television and radio.
+    <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        <Bold>Megan Alatini signed up as a Child Cancer Foundation ambassador with style in March when she shaved her head to support children with cancer at the Steve Price Night of Courage.</Bold>
+    </Paragraph>
+    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+Megan has always been known for her trademark braided hair and is even involved in her family’s hair braiding business once again. It was a mark of her commitment to CCF when she shaved her hair off at the Steve Price Night of Courage in 2012.  The former True Bliss, NZ Idol judge and Dancing with the Stars runner up had just arrived back from living in Japan for three years, with her family and husband Pita Alatini who is a former All Black. Megan reformed TrueBliss in 2012 to write and launch a song especially for children with cancer, called “A Minute of One Day.”  She is always ready to step up and is frequently promoting CCF on television and radio.
 Megan joined CCF in 2012
     </Paragraph>
 </FlowDocument>
