@@ -37,10 +37,10 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton x:Name="Ambassador_Button" Content="Our Ambassadors" Click="SurfaceButton_OurAmbassadors" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="162.322" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoSelectedColour}" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="Help_Button" Content="How We Help" Click="SurfaceButton_HowWeHelp" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="162.322" FontSize="40" Background="{DynamicResource WhatWeDoNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="History_Button" Content="Our History" Click="SurfaceButton_OurHistory" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="162.322" FontSize="40" Background="{DynamicResource WhatWeDoNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="People_Button" Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="162.322" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoNotSelectedColour}" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="Ambassador_Button" Content="Our Ambassadors" Click="SurfaceButton_OurAmbassadors" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoSelectedColour}" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="Help_Button" Content="How We Help" Click="SurfaceButton_HowWeHelp" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource WhatWeDoNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="History_Button" Content="Our History" Click="SurfaceButton_OurHistory" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource WhatWeDoNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                <s:SurfaceButton x:Name="People_Button" Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoNotSelectedColour}" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
             <Grid Grid.Row="1" Grid.Column="1" Margin="0,29.331,550.48,76">
