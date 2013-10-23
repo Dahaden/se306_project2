@@ -43,13 +43,13 @@
                 <s:SurfaceButton x:Name="People_Button" Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="162.322" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoNotSelectedColour}" FontFamily="Gill Sans MT"/>
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1" Margin="34.293,20,0,181.015" Width="895.414" Height="662.985" HorizontalAlignment="Left" d:LayoutOverrides="Width">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="20,20,600,88">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.597*"/>
                     <RowDefinition Height="0.403*"/>
                 </Grid.RowDefinitions>
 
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,-174,-0.21" Grid.RowSpan="2" TouchUp="Touch_up" >
+                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0" Grid.RowSpan="2" TouchUp="Touch_up" Height="756" >
                 	<Grid.Effect>
                 		<DropShadowEffect/>
                 	</Grid.Effect>
@@ -57,37 +57,38 @@
             		<RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="0,39,44.586,57.985" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="429" d:LayoutOverrides="HorizontalAlignment" SelectionBrush="{x:Null}" BorderThickness="0,1"/>
             	</Grid>
 
-                <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
+                    	<s:SurfaceScrollViewer.Effect>
+                    		<DropShadowEffect/>
+                    	</s:SurfaceScrollViewer.Effect>
+						<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                        
                         	<Image Height="684.001" Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Width="900"/>
                     </Border>
                         </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="Our_History" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                <Grid x:Name="Our_History" Background="#FFFFFCF0" Grid.RowSpan="2" Visibility="Hidden">
+                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,72">
+                    	<s:SurfaceScrollViewer.Effect>
+                    		<DropShadowEffect/>
+                    	</s:SurfaceScrollViewer.Effect>
 
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7"><Run FontWeight="Bold" Text="We have been operating for over 30 years, read about how Child Cancer Foundation began."/><LineBreak/><Run/><LineBreak/><Run Text="In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking "/><LineBreak/><Run Text="at the special needs of children with cancer and their families."/><LineBreak/><Run/><LineBreak/><Run Text="From the small beginning, dedicated people established what is now a national organization which is made up of 6 regions "/><LineBreak/><Run Text="Northern, Waikato, Mid-Northern, Central, Canterbury/West Coast and Otago Southland.  These regions support 22 branches "/><LineBreak/><Run Text="around the country."/></TextBlock>
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="916" Height="694">
+                            <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7" TextWrapping="Wrap"><Run FontWeight="Bold" Text="We have been operating for over 30 years, read about how Child Cancer Foundation began."/><LineBreak/><Run/><LineBreak/><Run Text="In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking "/><LineBreak/><Run Text="at the special needs of children with cancer and their families."/><LineBreak/><Run/><LineBreak/><Run Text="From the small beginning, dedicated people established what is now a national organization which is made up of 6 regions "/><LineBreak/><Run Text="Northern, Waikato, Mid-Northern, Central, Canterbury/West Coast and Otago Southland.  These regions support 22 branches "/><LineBreak/><Run Text="around the country."/></TextBlock>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
 
-                <Grid x:Name="Our_People" Background="#FFFFFCF0" Visibility="Collapsed"  Margin="0,0,0,-0.21" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <Grid x:Name="Our_People" Background="#FFFFFCF0" Grid.RowSpan="2" d:LayoutOverrides="GridBox" Margin="0">
                     <s:SurfaceScrollViewer Margin="0,0,0,62" Grid.RowSpan="2" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                         <s:SurfaceScrollViewer.Effect>
                             <DropShadowEffect/>
                         </s:SurfaceScrollViewer.Effect>
                         <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                                                   
-                            <FlowDocumentScrollViewer  BorderThickness="0" Width="880" Margin="0,0,0,7" x:Name="ourPeopleViewer" Foreground="Black"/>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Width="903" Margin="0,0,0,7" x:Name="ourPeopleViewer" Foreground="Black"/>
                     </Border>
                 </s:SurfaceScrollViewer>
                 </Grid>
@@ -98,44 +99,42 @@
                     <BlurEffect Radius="2"/>
                 </Image.Effect>
             </Image>
-            <StackPanel x:Name="Navigation_Panel" Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,8,178.655" Orientation="Vertical" Grid.Row="1" Width="407.48" d:LayoutOverrides="Height">
-            	<s:SurfaceButton 
-            		x:Name="what_we_do" 
-            		Content="What We Do" 
-            		Background="#FF8ECADC" FontSize="40"  Style="{DynamicResource HomeContentButton}" Margin="0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            	<s:SurfaceButton 
+            <s:SurfaceButton 
+            	x:Name="what_we_do" 
+            	Content="What We Do" 
+            	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Margin="0,29.331,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" Width="491.48" d:LayoutOverrides="VerticalAlignment" >
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
+            <s:SurfaceButton 
 
-            		x:Name="family_and_support" 
-					Click="Family_Click"
-            		Content="Family and Support"
-            		Background="#FFFDC37D" FontSize="40" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984">
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            	<s:SurfaceButton 
-            		x:Name="volunteers" 
-					Click="Volunteers_Click"
-            		Content="Volunteers" 
-            		Background="#FFFBA5D6" FontSize="40"   Style="{DynamicResource HomeContentButton}" Height="168.188" Margin="0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            	<s:SurfaceButton
-            		x:Name="corporate"
-					Click="Corperate_Click"
-            		Content="Corporate Sponsors"
-            		Background="#FFD7E583" FontSize="40" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="168.189" >
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            </StackPanel>
+            	x:Name="family_and_support" 
+            	Click="Family_Click"
+            	Content="Family and Support"
+            	Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Width="491.48">
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
+            <s:SurfaceButton 
+            	x:Name="volunteers" 
+            	Click="Volunteers_Click"
+            	Content="Volunteers" 
+            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" Height="171.984" Width="491.48" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" d:LayoutOverrides="Width" >
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
+            <s:SurfaceButton
+            	x:Name="corporate"
+            	Click="Corperate_Click"
+            	Content="Corporate Sponsors"
+            	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Bottom" Width="491.48" >
+            	<s:SurfaceButton.Effect>
+            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+            	</s:SurfaceButton.Effect>
+            </s:SurfaceButton>
 
         </Grid>
     </Viewbox>
