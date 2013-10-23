@@ -23,6 +23,11 @@ namespace Team_Roasters.Screens
             WhatWouldIDoViewer.Document = WhatWouldIDoDocument;
             FlowDocument WhoVolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/WhoCanVolunteer.xaml"));
             WhoVolViewer.Document = WhoVolDocument;
+
+            WhatIsVolunteering.Visibility = System.Windows.Visibility.Visible;
+            WhoCanVolunteer.Visibility = System.Windows.Visibility.Collapsed;
+            WhatWouldIDo.Visibility = System.Windows.Visibility.Collapsed;
+            Volunteering.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
