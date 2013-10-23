@@ -14,7 +14,6 @@ namespace Team_Roasters.Screens
         public FamilySupportScreen(SurfaceWindow1 parentWindow)
             : base(parentWindow)
         {
-            setButtonColours();
             InitializeComponent();
 
             FlowDocument HoldiayHomesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/HolidayHomes.xaml"));
@@ -107,7 +106,7 @@ namespace Team_Roasters.Screens
             Beads_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
-        private void setButtonColours()
+        public override void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FFCC33");
@@ -320,6 +319,11 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+        }
+
+        private void Storyboard_Completed_1(object sender, EventArgs e)
+        {
+            setButtonColours();
         }
 
     }
