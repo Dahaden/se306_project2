@@ -13,8 +13,6 @@
     d:DesignWidth="1920"
     ResizeMode="NoResize"
     Topmost="True"
-    WindowStyle="None"
-    TouchDown="resetTimeout"
-    MouseDown="resetTimeout">
+    WindowStyle="None">
     
 </s:SurfaceWindow>

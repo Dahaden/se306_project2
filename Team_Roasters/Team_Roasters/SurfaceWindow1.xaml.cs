@@ -37,7 +37,7 @@ namespace Team_Roasters
         private Stack<Screen> screenStack;
 
         private DispatcherTimer inactivityTimer = new DispatcherTimer();
-        private TimeSpan inactiveTime = new TimeSpan();
+        private int inactiveTime = 0;
         private bool screensaver = false;
 
         const int TIMEOUT_TIME = 5;
@@ -56,21 +56,22 @@ namespace Team_Roasters
             screenStack = new Stack<Screen>();
             pushScreen(new Screens.HomeScreen(this));
 
-            inactiveTime = TimeSpan.FromSeconds(0);
-            inactivityTimer.Interval = TimeSpan.FromSeconds(2);
+            inactivityTimer.Interval = TimeSpan.FromSeconds(1);
             inactivityTimer.Tick += new EventHandler(checkInactivity);
             inactivityTimer.Start();
+
+            EventManager.RegisterClassHandler(typeof(Window), Window.MouseDownEvent, new RoutedEventHandler(activityEvent));
         }
 
         public void checkInactivity(Object sender, EventArgs e)
         {
-            if (inactiveTime.CompareTo(TimeSpan.FromSeconds(TIMEOUT_TIME)) > 0)
+            if (inactiveTime > TIMEOUT_TIME)
             {
                 popAll();
                 ((Screens.HomeScreen)screenStack.Peek()).showScreenSaver();
-                screensaver = true;
+                this.screensaver = true;
             }
-            inactiveTime = inactiveTime.Add(TimeSpan.FromSeconds(2));
+            this.inactiveTime++;
         }
 
         /// <summary>
@@ -180,25 +181,14 @@ namespace Team_Roasters
             //TODO: disable audio, animations here
         }
 
-        private void resetTimeout(object sender, MouseEventArgs e)
+        public void activityEvent(object sender, RoutedEventArgs e)
         {
-           activityEvent();
-        }
-
-        private void resetTimeout(object sender, TouchEventArgs e)
-        {
-            activityEvent();
-        }
-
-        private void activityEvent()
-        {
+            inactiveTime = 0;
             if (screensaver)
             {
                 ((Screens.HomeScreen)screenStack.Peek()).hideScreenSaver();
                 screensaver = false;
             }
-            inactiveTime = TimeSpan.FromSeconds(0);
         }
-
     }
 }
