@@ -11,7 +11,6 @@ namespace Team_Roasters.Screens
         {
             setButtonColours();
             InitializeComponent();
-
         }
 
         private void SurfaceButton_ParentResources(object sender, System.Windows.RoutedEventArgs e)

@@ -54,23 +54,23 @@
             		</Border.Effect>
             		<Rectangle Height="132.21" Margin="464.5,0,512.5,17" VerticalAlignment="Bottom" TouchDown="Touch_Down_Bartercard">
             			<Rectangle.Fill>
-            				<ImageBrush Stretch="Uniform" ImageSource="Bartercard-charity-logo-2D4.jpg"/>
+            				<ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bartercard-charity-logo-2D4.jpg"/>
             			</Rectangle.Fill>
             		</Rectangle>
             	</Border>
             	<Rectangle HorizontalAlignment="Left" Margin="8,-38.705,0,16" Width="351.103" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart">
             		<Rectangle.Fill>
-            			<ImageBrush ImageSource="Savemart_1.jpg" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="../Resources/Corporate/Savemart_1.jpg" Stretch="Uniform"/>
             		</Rectangle.Fill>
             	</Rectangle>
             	<Rectangle Margin="0,0,-12.436,131.916" Grid.Column="1" HorizontalAlignment="Right" Height="138.333" VerticalAlignment="Bottom" Width="185.699" TouchDown="Touch_Down_RCP">
             		<Rectangle.Fill>
-            			<ImageBrush Stretch="Uniform" ImageSource="RCP-logo.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/RCP-logo.jpg"/>
             		</Rectangle.Fill>
             	</Rectangle>
             	<Rectangle Margin="240,0,217.564,135.916" Grid.Column="1" Height="146" VerticalAlignment="Bottom" TouchDown="Touch_Down_Farmers">
             		<Rectangle.Fill>
-            			<ImageBrush Stretch="Uniform" ImageSource="Farmers-Logo-Hm-Page.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Farmers-Logo-Hm-Page.jpg"/>
             		</Rectangle.Fill>
             	</Rectangle>
             	<Rectangle HorizontalAlignment="Left" Margin="38.603,0,0,131.916" Width="154.5" Grid.Column="1" Height="150" VerticalAlignment="Bottom" TouchDown="Touch_Down_Prof">
@@ -129,7 +129,7 @@
             	<TextBlock x:Name="The_Herald" Height="30.125" Margin="77.697,0,30.381,232.915" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="3" FontSize="24" Grid.ColumnSpan="2"><Run Language="en-nz" Text="The New Zealand Herald"/></TextBlock>
             	<Rectangle Height="156" Margin="143.103,97,95.564,0" VerticalAlignment="Top" Grid.Column="1" TouchDown="Touch_Down_Gold_Buyers">
             		<Rectangle.Fill>
-            			<ImageBrush Stretch="Uniform" ImageSource="Gold-Buyers.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Gold-Buyers.jpg"/>
             		</Rectangle.Fill>
             	</Rectangle>
             	<Path Data="M811.1767,58.02779 L811.1767,635.86774" Fill="Black" Margin="0,31,21.693,32.21" Stretch="Fill" Grid.Column="2" Grid.RowSpan="2" Stroke="Black" HorizontalAlignment="Right" Width="1"/>
