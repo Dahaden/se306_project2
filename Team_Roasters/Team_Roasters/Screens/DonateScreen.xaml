@@ -89,14 +89,14 @@
 
                     <!--Information about where money is spent-->
                     <Grid x:Name="WhatYourMoneyBuys" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                        
                             <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                                 <Border.Effect>
                                     <DropShadowEffect/>
                                 </Border.Effect>
-                                <FlowDocumentScrollViewer IsEnabled="False" BorderThickness="0" Width="1480" x:Name="moneyBuysViewer" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <FlowDocumentScrollViewer BorderThickness="0" Width="1480" x:Name="moneyBuysViewer" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
-                        </s:SurfaceScrollViewer>
+                        
                     </Grid>
                 </Grid>
 
