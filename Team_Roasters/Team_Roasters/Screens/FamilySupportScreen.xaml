@@ -72,12 +72,16 @@
                 </Grid>
 
                 <Grid x:Name="Support_Services" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    
                     <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                         <Border.Effect>
                             <DropShadowEffect/>
                         </Border.Effect>
-                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="SupportServicesViewer" Foreground="Black"/>
+                        <s:SurfaceScrollViewer Margin="-1,7,7,7" >
+                            <RichTextBox IsReadOnly="True" Padding="14,12,1,1" s:SurfaceScrollViewer.VerticalScrollBarVisibility="Visible" BorderThickness="0" x:Name="SupportServicesViewer" Foreground="Black" Height="662.161" Width="948.262"/>
+                    	</s:SurfaceScrollViewer>
                     </Border>
+                    
                 </Grid>
 
                 <Grid x:Name="Scholarships" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
