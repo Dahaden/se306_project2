@@ -182,7 +182,7 @@
                                 <s:SurfaceScrollViewer.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceScrollViewer.Effect>
-                                <RichTextBox Width="440" IsEnabled="False" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,57.0079999999999"/>
+                                <RichTextBox Width="440" Focusable="False" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,57.0079999999999"/>
                             </s:SurfaceScrollViewer>
 
                             <!-- Events Feed -->
@@ -190,7 +190,7 @@
                                 <s:SurfaceScrollViewer.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceScrollViewer.Effect>
-                                <RichTextBox IsEnabled="False" Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,56.0079999999999"/>
+                                <RichTextBox Focusable="False" Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,56.0079999999999"/>
                             </s:SurfaceScrollViewer>
 
                             <!-- Twitter Feed -->
