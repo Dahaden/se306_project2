@@ -20,6 +20,7 @@ namespace Team_Roasters.Screens
         {
             InitializeComponent();
 
+            // Loads the stored document files into the FlowDocumentScrollViewer
             FlowDocument HoldiayHomesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/HolidayHomes.xaml"));
             HolidayHomesViewer.Document = HoldiayHomesDocument;
             FlowDocument ParentResourcesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/ParentResources.xaml"));
@@ -83,7 +84,7 @@ namespace Team_Roasters.Screens
         }
 
         /// <summary>
-        /// Moves to the What We Do Page on click
+        /// Moves to the WhatWeDo Page on click
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
