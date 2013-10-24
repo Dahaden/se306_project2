@@ -5,12 +5,12 @@
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d"
 	x:Class="Team_Roasters.EMHB_image"
-	x:Name="UserControl" Width="513.5" Height="450.576">
+	x:Name="UserControl" Width="409.5" Height="406.576">
 
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Orientation="Vertical">
-			<Image Source="Eric-Murray--Hamish-Bond.jpg" HorizontalAlignment="Center" Height="376"/>
-			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="73.001" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="475.636"><Run Language="en-nz" Text="Hamish Bond and Eric Murray"/></TextBlock>
+			<Image Source="Eric-Murray--Hamish-Bond.jpg" HorizontalAlignment="Center" Height="307" Width="425.046"/>
+			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="88.001" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="260.636"><Run Language="en-nz" Text="Hamish Bond and Eric Murray"/></TextBlock>
 		</StackPanel>
 	</Grid>
 </UserControl>
