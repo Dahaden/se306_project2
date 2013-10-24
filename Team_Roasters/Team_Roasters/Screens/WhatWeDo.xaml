@@ -81,14 +81,14 @@
                                 x:Name="Amb_image" HorizontalAlignment="Left" Width="448.934" Margin="28,14.21,0,27.287" d:LayoutOverrides="HorizontalAlignment" VerticalAlignment="Center"/>
                     </Grid>
 
-                    <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70" Visibility="Collapsed">
+                    <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70">
                         <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" Width="972.092" Height="678.146" VerticalAlignment="Bottom" Margin="0,0,0,8.481">
                             <s:SurfaceScrollViewer.Effect>
                                 <DropShadowEffect/>
                             </s:SurfaceScrollViewer.Effect>
                             <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Height="678.132" Width="971.49">
 
-                                <Image Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Image Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Margin="0" Height="671.059" Width="888.098" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
