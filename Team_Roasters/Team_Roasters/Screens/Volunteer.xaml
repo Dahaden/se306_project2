@@ -55,7 +55,7 @@
                             <Border.Effect>
                                 <DropShadowEffect/>
                             </Border.Effect>
-                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Border>
                     </s:SurfaceScrollViewer>
                 </Grid>
