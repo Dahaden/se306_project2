@@ -6,7 +6,7 @@ using System.Windows.Controls;
 
 namespace Team_Roasters
 {
-    public class Screen : UserControl
+    public abstract class Screen : UserControl
     {
         public SurfaceWindow1 parentWindow;
 
@@ -18,5 +18,7 @@ namespace Team_Roasters
         {
             this.parentWindow = parentWindow;
         }
+
+        public abstract void setButtonColours();
     }
 }

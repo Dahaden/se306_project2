@@ -1,8 +1,10 @@
 ﻿using System.Windows.Media;
 using System.Windows;
+using System;
 using System.Windows.Documents;
 using System.Windows.Markup;
 using System.IO;
+
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -12,7 +14,6 @@ namespace Team_Roasters.Screens
     {
         public Volunteer(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
-            setButtonColours();
             InitializeComponent();
 
             FlowDocument VolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/Volunteering.xaml"));
@@ -101,11 +102,21 @@ namespace Team_Roasters.Screens
             CanI_Button.Style = (Style)FindResource("SelectedButton");
         }
 
-        private void setButtonColours()
+        public override void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF69B4");
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FFFBA5D6");
+        }
+
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            parentWindow.Storyboard_Completed();
+        }
+
+        private void Storyboard_Completed_1(object sender, EventArgs e)
+        {
+            setButtonColours();
         }
     }
 }

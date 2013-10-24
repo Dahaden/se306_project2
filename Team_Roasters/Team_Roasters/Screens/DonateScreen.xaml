@@ -11,79 +11,103 @@
              mc:Ignorable="d"
              d:DesignHeight="1080"
              d:DesignWidth="1920">
-  
-    <Viewbox>
+    <!--Animations for switching between pages-->
+    <view:Screen.Resources>
+        <Storyboard x:Key="Enter" Completed="Storyboard_Completed_1">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
+        </Storyboard>
 
-        <Grid x:Name="Donate_Page" Background="#FFFFFCF0" Width="1920" Height="1080">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.241*"/>
-                <RowDefinition Height="0.759*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.8*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Row="0" Grid.Column="0">
-                <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+        <Storyboard x:Key="Exit" Completed="Storyboard_Completed">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.5" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="-1920"/>
+        </Storyboard>
+    </view:Screen.Resources>
+
+    <Viewbox Margin="20,20,20,25">
+        <!--MainPage is the target of the animations-->
+        <Grid x:Name="MainPage">
+            <Grid.RenderTransform>
+                <TranslateTransform/>
+            </Grid.RenderTransform>
+            <!--Grid to hold page content-->
+            <Grid x:Name="Donate_Page" Background="#FFFFFCF0" Width="1920" Height="1080">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.241*"/>
+                    <RowDefinition Height="0.759*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!--Back Button-->
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                        <Image.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </Image.Effect>
+                    </Image>
+                    <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
+                </Grid>
+                
+                <!--Page Title-->
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+                    <Label Foreground="Black" Content="Please Donate" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
+                </StackPanel>
+
+                <!--Page Navigation Buttons-->
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
+                    <s:SurfaceButton x:Name="DonateNow_Button" Content="Donate Now" Click="DonateNow_Button_Click" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="WhatYourMoneyBuys_Button" Content="What Your Money Buys" Click="WhatYourMoneyBuys_Button_Click" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="30" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                </StackPanel>
+
+                <!--Page Content Container-->
+                <Grid Grid.Row="1" Grid.Column="1" Margin="20">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.597*"/>
+                        <RowDefinition Height="0.403*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--QR Code for donation-->
+                    <Grid x:Name="DonateNow" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                                <Border.Effect>
+                                    <DropShadowEffect/>
+                                </Border.Effect>
+                                <DataGridRowsPresenter HorizontalAlignment="Center" Height="700" VerticalAlignment="Center" Width="1400">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Width="896" d:LayoutOverrides="Height">
+                                        <Image Source="/Team_Roasters;component/Resources/Donate/donate_qrcode.png" Stretch="Uniform" Height="355"/>
+                                        <TextBlock Foreground="Black" Height="75" TextWrapping="Wrap" FontSize="48" Text="www.childcancer.org.nz " Width="570" HorizontalAlignment="Center" />
+                                        <TextBlock Foreground="Black" Height="256" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Center" Width="896"><Run Text="Please visit www.childcancer.org.nz or text"/><Run FontWeight="Bold" Language="en-nz" Text=" '"/><Run FontWeight="Bold" Text="bead' to 206"/><Run FontWeight="Bold" Language="en-nz" Text=" "/><Run Language="en-nz" Text="to make a $3 donation"/><Run Text=" "/></TextBlock>
+                                    </StackPanel>
+                                </DataGridRowsPresenter>
+                            </Border>
+                        </s:SurfaceScrollViewer>
+                    </Grid>
+
+                    <!--Information about where money is spent-->
+                    <Grid x:Name="WhatYourMoneyBuys" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                                <Border.Effect>
+                                    <DropShadowEffect/>
+                                </Border.Effect>
+                                <FlowDocumentScrollViewer IsEnabled="False" BorderThickness="0" Width="1480" x:Name="moneyBuysViewer" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </s:SurfaceScrollViewer>
+                    </Grid>
+                </Grid>
+
+                <!--CCF Logo-->
+                <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
                     <Image.Effect>
-                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        <BlurEffect Radius="2"/>
                     </Image.Effect>
                 </Image>
-                <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
+
             </Grid>
-
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-                <Label Foreground="Black" Content="Please Donate" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
-            </StackPanel>
-
-            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton x:Name="DonateNow_Button" Content="Donate Now" Click="DonateNow_Button_Click" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="WhatYourMoneyBuys_Button" Content="What Your Money Buys" Click="WhatYourMoneyBuys_Button_Click" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="30" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-            </StackPanel>
-
-            <Grid Grid.Row="1" Grid.Column="1" Margin="20">
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.597*"/>
-                    <RowDefinition Height="0.403*"/>
-                </Grid.RowDefinitions>
-
-                <Grid x:Name="DonateNow" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <DataGridRowsPresenter HorizontalAlignment="Center" Height="700" VerticalAlignment="Center" Width="1400">
-                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Width="896" d:LayoutOverrides="Height">
-                                    <Image Source="/Team_Roasters;component/Resources/Donate/donate_qrcode.png" Stretch="Uniform" Height="355"/>
-                                    <TextBlock Foreground="Black" Height="75" TextWrapping="Wrap" FontSize="48" Text="www.childcancer.org.nz " Width="570" HorizontalAlignment="Center" />
-                                    <TextBlock Foreground="Black" Height="256" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Center" Width="896"><Run Text="Please visit www.childcancer.org.nz or text"/><Run FontWeight="Bold" Language="en-nz" Text=" '"/><Run FontWeight="Bold" Text="bead' to 206"/><Run FontWeight="Bold" Language="en-nz" Text=" "/><Run Language="en-nz" Text="to make a $3 donation"/><Run Text=" "/></TextBlock>
-                                </StackPanel>
-                            </DataGridRowsPresenter>
-                        </Border>
-                    </s:SurfaceScrollViewer>
-                </Grid>
-
-                <Grid x:Name="WhatYourMoneyBuys" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <FlowDocumentScrollViewer BorderThickness="0" Width="1480" x:Name="moneyBuysViewer" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </s:SurfaceScrollViewer>
-                </Grid>
-            </Grid>
-            
-            <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
-                <Image.Effect>
-                    <BlurEffect Radius="2"/>
-                </Image.Effect>
-            </Image>
-            
         </Grid>
     </Viewbox>
 </view:Screen>

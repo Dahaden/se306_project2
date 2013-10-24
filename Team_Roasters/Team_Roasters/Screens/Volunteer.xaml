@@ -12,42 +12,27 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
-    <Viewbox>
-        <Grid x:Name="Volunteer_Page" Background="#FFFFFCF0" Width="1920" Height="1080">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.8*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.8*"/>
-            </Grid.ColumnDefinitions>
+<view:Screen.Resources>
+        <Storyboard x:Key="Enter" Completed="Storyboard_Completed_1">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
+        </Storyboard>
 
-            <Grid Grid.Row="0" Grid.Column="0">
-                <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
-                    <Image.Effect>
-                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                    </Image.Effect>
-                </Image>
-                <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
-            </Grid>
+        <Storyboard x:Key="Exit" Completed="Storyboard_Completed">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.5" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="-1920"/>
+        </Storyboard>
+    </view:Screen.Resources>
 
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-                <Label Foreground="Black" Content="Volunteering for CCF" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
-            </StackPanel>
-
-            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton x:Name="WhatsIs_Button" Content="What is it?" Click="SurfaceButton_WhatIsVolunteering" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="WhoCan_Button" Content="Who can do it?" Click="SurfaceButton_WhoCanVolunteer" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="WhatDoIDo_Button" Content="What would I do?" Click="SurfaceButton_WhatWouldIDo" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="CanI_Button" Content="Can I Volunteer?" Click="SurfaceButton_Volunteering" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
-            </StackPanel>
-
-            <Grid Grid.Row="1" Grid.Column="1" Margin="1,23.331,550.48,86">
+    <Viewbox Margin="20,20,20,25">
+        <Grid x:Name="MainPage">
+            <Grid.RenderTransform>
+                <TranslateTransform/>
+            </Grid.RenderTransform>
+            <Grid x:Name="Volunteer_Page" Background="#FFFFFCF0" Width="1920" Height="1080">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.597*"/>
-                    <RowDefinition Height="0.403*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.8*"/>
                 </Grid.RowDefinitions>
+<<<<<<< HEAD
                 <Grid x:Name="WhatIsVolunteering" Background="#FFFFFCF0" Visibility="Visible" Margin="0" Grid.RowSpan="2">
                     <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
 
@@ -58,61 +43,105 @@
                             <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Border>
                     </s:SurfaceScrollViewer>
+=======
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                        <Image.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </Image.Effect>
+                    </Image>
+                    <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
+>>>>>>> fabfb5b38ebd982aabbda21213e95c78ba6f5c28
                 </Grid>
 
-                <Grid x:Name="WhoCanVolunteer" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2" Visibility="Collapsed">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+                    <Label Foreground="Black" Content="Volunteering for CCF" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
+                </StackPanel>
 
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhoVolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </s:SurfaceScrollViewer>
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
+                    <s:SurfaceButton x:Name="WhatsIs_Button" Content="What is it?" Click="SurfaceButton_WhatIsVolunteering" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="WhoCan_Button" Content="Who can do it?" Click="SurfaceButton_WhoCanVolunteer" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="WhatDoIDo_Button" Content="What would I do?" Click="SurfaceButton_WhatWouldIDo" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="CanI_Button" Content="Can I Volunteer?" Click="SurfaceButton_Volunteering" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF8ECADC" FontFamily="Gill Sans MT"/>
+                </StackPanel>
+
+
+                <Grid Grid.Row="1" Grid.Column="1" Margin="0,22,0,146.824" Width="986.5" HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.597*"/>
+                        <RowDefinition Height="0.403*"/>
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="WhatIsVolunteering" Background="#FFFFFCF0" Visibility="Visible" Margin="0" Grid.RowSpan="2">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
+
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                                <Border.Effect>
+                                    <DropShadowEffect/>
+                                </Border.Effect>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                            </Border>
+                        </s:SurfaceScrollViewer>
+                    </Grid>
+
+                    <Grid x:Name="WhoCanVolunteer" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2" Visibility="Collapsed">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
+
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                                <Border.Effect>
+                                    <DropShadowEffect/>
+                                </Border.Effect>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhoVolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                            </Border>
+                        </s:SurfaceScrollViewer>
+                    </Grid>
+
+                    <Grid x:Name="WhatWouldIDo" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2" Visibility="Collapsed">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                                <Border.Effect>
+                                    <DropShadowEffect/>
+                                </Border.Effect>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhatWouldIDoViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                            </Border>
+                        </s:SurfaceScrollViewer>
+                    </Grid>
+
+                    <Grid x:Name="Volunteering" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,0" Grid.RowSpan="2" IsManipulationEnabled="False">
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White">
+                                <Border.Effect>
+                                    <DropShadowEffect/>
+                                </Border.Effect>
+                                <DataGridRowsPresenter Width="890" Margin="0">
+                                    <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhatIsVolViewer" Foreground="Black" IsSelectionEnabled="False"  VerticalScrollBarVisibility="Hidden"/>
+                                    <Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
+                                </DataGridRowsPresenter>
+                            </Border>
+                        </s:SurfaceScrollViewer>
+                    </Grid>
+
+
                 </Grid>
-
-                <Grid x:Name="WhatWouldIDo" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2" Visibility="Collapsed">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
-                        	    <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhatWouldIDoViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </s:SurfaceScrollViewer>
-                </Grid>
-
-                <Grid x:Name="Volunteering" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2" IsManipulationEnabled="False">
-                    	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White" Height="677.651">
-                    		<Border.Effect>
-                    			<DropShadowEffect/>
-                    		</Border.Effect>
-                    		<DataGridRowsPresenter Height="700" Width="890">
-                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="WhatIsVolViewer" Foreground="Black" IsSelectionEnabled="False"/>
-                                <Image Source="../Resources/VolunteerQR.png" Stretch="UniformToFill" Margin="250,50,250,0" HorizontalAlignment="Center"/>
-                    		</DataGridRowsPresenter>
-                    	</Border>
-                    </s:SurfaceScrollViewer>
-                </Grid>
-
-            </Grid>
-            <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
-                <Image.Effect>
-                    <BlurEffect Radius="2"/>
-                </Image.Effect>
-            </Image>
-            <s:SurfaceButton 
+                <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
+                    <Image.Effect>
+                        <BlurEffect Radius="2"/>
+                    </Image.Effect>
+                </Image>
+                <s:SurfaceButton 
             	x:Name="what_we_do" 
                 Click="What_Click"
             	Content="What We Do" 
             	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Margin="0,29.331,55,0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" Width="491.48" >
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+                <s:SurfaceButton 
             	Grid.RowSpan="1" 
             	Grid.ColumnSpan="1" 
 
@@ -120,31 +149,35 @@
                 Click="Family_Click"
             	Content="Family and Support"
             	Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Grid.Column="1" HorizontalAlignment="Right" Height="171.984" VerticalAlignment="Top" Width="491.48">
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+                <s:SurfaceButton 
             	Grid.RowSpan="1" 
             	Grid.ColumnSpan="1" 
             	x:Name="volunteers" 
             	Content="Volunteers" 
             	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Height="171.984" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" >
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+                <s:SurfaceButton 
+
             	Grid.RowSpan="1"
             	Grid.ColumnSpan="1"
             	x:Name="corporate"
                 Click="Corperate_Click"
             	Content="Corporate Sponsors"
+
             	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="171.984" VerticalAlignment="Bottom" >
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+
+            </Grid>
         </Grid>
     </Viewbox>
 </view:Screen>

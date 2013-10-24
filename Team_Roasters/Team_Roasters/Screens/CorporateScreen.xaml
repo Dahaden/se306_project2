@@ -12,192 +12,206 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
-    <Viewbox>
-        <Grid x:Name="Corporate" Background="#FFFFFCF0" Width="1920" Height="1080">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.8*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.8*"/>
-            </Grid.ColumnDefinitions>
+    <view:Screen.Resources>
+        <Storyboard x:Key="Enter" Completed="Storyboard_Completed_1">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
+        </Storyboard>
 
-            <Grid Grid.Row="0" Grid.Column="0">
-                <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+        <Storyboard x:Key="Exit" Completed="Storyboard_Completed">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.5" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="-1920"/>
+        </Storyboard>
+    </view:Screen.Resources>
+
+    <Viewbox>
+        <Grid x:Name="MainPage">
+            <Grid.RenderTransform>
+                <TranslateTransform/>
+            </Grid.RenderTransform>
+            <Grid x:Name="Corporate" Background="#FFFFFCF0" Width="1920" Height="1080">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.8*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                        <Image.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </Image.Effect>
+                    </Image>
+                    <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
+                </Grid>
+
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+                    <Label x:Name="Title" Foreground="Black" Content="Corporate Sponsors" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
+                </StackPanel>
+                <Grid x:Name="Our_Ambassadors" Background="White" Margin="57,31.5,549.5,155" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.027*"/>
+                        <ColumnDefinition Width="0.597*"/>
+                        <ColumnDefinition Width="0.039*"/>
+                        <ColumnDefinition Width="0.232*"/>
+                        <ColumnDefinition Width="0.081*"/>
+                        <ColumnDefinition Width="0.024*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.846*"/>
+                        <RowDefinition Height="0.154*"/>
+                    </Grid.RowDefinitions>
+                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="-8,0,8,0" Grid.RowSpan="2" Background="White" Grid.ColumnSpan="6">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="6"/>
+                        </Border.Effect>
+                        <Rectangle Height="132.21" Margin="433,0,544,17" VerticalAlignment="Bottom" TouchDown="Touch_Down_Bartercard" MouseDown="Bartercard_MouseDown">
+                            <Rectangle.Fill>
+                                <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bartercard-charity-logo-2D4.jpg"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Border>
+                    <Rectangle HorizontalAlignment="Left" Margin="8,-38.705,0,16" Width="351.103" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart" MouseDown="SaveMart_MouseDown">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="../Resources/Corporate/Savemart_1.jpg" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Margin="0,0,-12.436,131.916" Grid.Column="1" HorizontalAlignment="Right" Height="138.333" VerticalAlignment="Bottom" Width="185.699" TouchDown="Touch_Down_RCP" MouseDown="RCP_MouseDown">
+                        <Rectangle.Fill>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/RCP-logo.jpg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Margin="240,0,217.564,135.916" Grid.Column="1" Height="146" VerticalAlignment="Bottom" TouchDown="Touch_Down_Farmers" MouseDown="Farmers_MouseDown">
+                        <Rectangle.Fill>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Farmers-Logo-Hm-Page.jpg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Margin="38.603,0,0,131.916" Width="154.5" Grid.Column="1" Height="150" VerticalAlignment="Bottom" TouchDown="Touch_Down_Prof" MouseDown="Prof_MouseDown">
+                        <Rectangle.Fill>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Profesionals.jpg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock x:Name="BBnFreinds_text" HorizontalAlignment="Left" Height="76.29" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149.471" Grid.Column="3" FontSize="24" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="Buzzy Bee and Friends"/></TextBlock>
+                    <TextBlock Foreground="Black" Height="60" Margin="8,0,0,38.705" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Major Funding Partner"/></TextBlock>
+                    <TextBlock Foreground="Black"  Margin="0,0,40,38.705" TextWrapping="Wrap" FontSize="32" Grid.Column="1" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="334.69" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Foundation Partner"/></TextBlock>
+                    <Button Content="" Margin="0,28.56,31.5,0" Grid.Column="3" Height="88.502" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114.863" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/99-Logo.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="" Margin="16,22.562,0,0" Grid.Column="3" Height="94.5" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Left" Width="110.455">
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Corporate/Buzzy-Bee-Logo-Hm-Page.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="" Margin="0,22.562,8,0" Grid.Column="4" Height="94.5" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/alabar.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="" Margin="77.697,0,48.5,11.934" Grid.Column="3" Height="89.929" VerticalAlignment="Bottom" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Apparelmaster-New-Logo-07.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="" Margin="53.697,185.29,30.381,0" Grid.Column="3" Height="86.002" VerticalAlignment="Top" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bluebridge.jpeg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="" Margin="53.697,0,30.381,205.291" Grid.Column="3" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="79.958" VerticalAlignment="Bottom">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/NZ-Herald-Logo-Hm-Page.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="" Margin="98.708,0,-23.61,16" Grid.Column="3" Grid.Row="1" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/NZC-logo-new2.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="" Margin="98.708,0,-33.688,104.134" Grid.Column="3" Height="89.281" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Hansen-Logo-Hm-Page.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <TextBlock Foreground="Black" Height="33.625" Margin="8,252.792,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Gold Star Sponsors"/></TextBlock>
+                    <TextBlock Foreground="Black" Height="60" Margin="8,22.562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Plantinum Star Sponsor"/></TextBlock>
+                    <TextBlock x:Name="BBnFreinds_text_Copy" HorizontalAlignment="Right" Height="41.228" Margin="0,121.062,56.5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56.862" Grid.Column="3" FontSize="24" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text=".99"/></TextBlock>
+                    <TextBlock x:Name="Alabar_text" Height="74.228" Margin="8,121.062,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="4" FontSize="24" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="Alabar (NZ) Ltd"/></TextBlock>
+                    <TextBlock x:Name="Blubridge_text" Margin="65.697,271.292,42.381,271.748" TextWrapping="Wrap" Grid.Column="3" FontSize="24" Grid.ColumnSpan="2" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="Bluebridge Cook Strait Ferry"/></TextBlock>
+                    <TextBlock x:Name="The_Herald" Height="30.125" Margin="65.697,0,42.381,202.415" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="3" FontSize="24" Grid.ColumnSpan="2" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="The New Zealand Herald"/></TextBlock>
+                    <Rectangle Height="156" Margin="143.103,97,95.564,0" VerticalAlignment="Top" Grid.Column="1" TouchDown="Touch_Down_Gold_Buyers" MouseDown="GoldBuyers_MouseDown">
+                        <Rectangle.Fill>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Gold-Buyers.jpg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Path Data="M811.1767,58.02779 L811.1767,635.86774" Fill="Black" Margin="0,31,21.693,32.21" Stretch="Fill" Grid.Column="2" Grid.RowSpan="2" Stroke="Black" HorizontalAlignment="Right" Width="1"/>
+                </Grid>
+                <StackPanel x:Name="Navigation_Panel" Grid.Column="1" Margin="0,29.331,55,0" Orientation="Vertical" HorizontalAlignment="Right" Width="491.48" Grid.Row="1">
+                    <s:SurfaceButton 
+                            x:Name="what_we_do" 
+                            Content="What We Do" 
+                    Click="WhatWeDo_Click"
+                            Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Margin="0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
+                        <s:SurfaceButton.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </s:SurfaceButton.Effect>
+                    </s:SurfaceButton>
+                    <s:SurfaceButton 
+                            x:Name="family_and_support" 
+                            Click="Family_Click"
+                            Content="Family and Support"
+                            Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984">
+                        <s:SurfaceButton.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </s:SurfaceButton.Effect>
+                    </s:SurfaceButton>
+                    <s:SurfaceButton 
+                            x:Name="volunteers" 
+                            Click="Volunteers_Click"
+                            Content="Volunteers" 
+                            Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Height="171.984" Margin="0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
+                        <s:SurfaceButton.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </s:SurfaceButton.Effect>
+                    </s:SurfaceButton>
+                    <s:SurfaceButton
+                            x:Name="corporate"
+                            Content="Corporate Sponsors"
+                            Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" >
+                        <s:SurfaceButton.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </s:SurfaceButton.Effect>
+                    </s:SurfaceButton>
+                </StackPanel>
+                <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
                     <Image.Effect>
-                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        <BlurEffect Radius="2"/>
                     </Image.Effect>
                 </Image>
-                <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
+                <TextBlock Foreground="Black" x:Name="Farmers_popup" Margin="-42.5,156,0,176" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" TouchDown="Remove_popups" Visibility="Hidden" MouseDown="Remove_popups">
+                    <TextBlock.Effect>
+                            <DropShadowEffect/>
+                    </TextBlock.Effect><Run Text="Farmers is a leading New Zealand department store combining quality and value with an ever-increasing selection of the best local and international brands. Farmers operates over 55 department stores in rural and city locations around the country, their stores have been outfitting New Zealand women, their families and their homes for over 100 years."/><LineBreak/><Run/><LineBreak/><Run Text="As part of Farmer's commitment to New Zealand families and to the community it serves, the company supports the Child Cancer Foundation."/><LineBreak/><Run/><LineBreak/><Run Text=" Farmers is a key supporter of the Foundation helping to raise vital funds through being a sponsor of the Foundation's Annual Appeal campaigns. Farmers have helped the Foundation to gift Beads of Courage to children who are on the cancer journey through their successful in-store promotions - 2010 Wheels of Courage competition and 2011 Intrepid Travel competition."/><LineBreak/><Run/><LineBreak/><Run Text=" The Foundation is delighted to have Farmers as a Gold Star partner. Please visit their website www.farmers.co.nz"/></TextBlock>
+                <TextBlock Foreground="Black" x:Name="RCP_popup" Margin="-42.5,316,0,386" Grid.Row="1" TextWrapping="Wrap" MouseDown="Remove_popups" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Text="RCP are an award-winning provider of professional Project Management and Project Programming services to New Zealand's property industry. Since 1996 RCP has become a substantial specialist construction industry management consultant working on many of New Zealand and Australia's most prominent developments.  Please visit their website www.rcp.co.nz" Visibility="Hidden" TouchDown="Remove_popups">
+                    <TextBlock.Effect>
+                            <DropShadowEffect/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Foreground="Black" x:Name="SaveMart_popup" Margin="-42.5,276,0,330" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Visibility="Hidden" MouseDown="Remove_popups" TouchDown="Remove_popups"><TextBlock.Effect>
+                            <DropShadowEffect/>
+                    </TextBlock.Effect><Run Text="The clothing recycling business of The Textile Recycling Centre and SaveMart stores provides substantial on going support for services and overheads of the Foundation enabling more money to go directly to our Child and Family Support Services and programmes throughout New Zealand."/><LineBreak/><Run Text=" The SaveMart Community Volunteer Awards recognise volunteer excellence in support of the Child Cancer Foundation."/><LineBreak/><Run Text=" Bin locations phone (09) 622 1759 or visit www.savemart.co.nz"/></TextBlock>
+                <TextBlock Foreground="Black" x:Name="Bartercard_popup" Margin="-42.5,306,0,356" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" MouseDown="Remove_popups" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Text="The Child Cancer Foundation was recently announced as the recipient charity for support from the Bartercard Foundation for the coming two years. The support will allow us to use Trade Dollars to offset awareness and fundraising campaign costs. The Child Cancer Foundation will also benefit from the opportunity to take part in Bartercard trade events and tap into a vast new business network. " Visibility="Hidden" TouchDown="Remove_popups"><TextBlock.Effect>
+                            <DropShadowEffect/>
+                    </TextBlock.Effect></TextBlock>
+                <TextBlock Foreground="Black" x:Name="GoldBuyers_popup" Margin="-42.5,332,0,386" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Visibility="Hidden" MouseDown="Remove_popups" TouchDown="Remove_popups"><TextBlock.Effect>
+                            <DropShadowEffect/>
+                    </TextBlock.Effect><Run Language="en-nz" Text="When you recycle old gold jewellery with Gold Buyers New Zealand, the process can help support the Child Cancer Foundation. over the 4 years that Gold Buyers have been serving its customers, they have paid out millions of dollars"/></TextBlock>
+                <TextBlock Foreground="Black" x:Name="Prof_popup" Margin="-42.5,170,0,196" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" TouchDown="Remove_popups" MouseDown="Remove_popups" Visibility="Hidden"><TextBlock.Effect>
+                            <DropShadowEffect/>
+                    </TextBlock.Effect><Run Text="The Professionals has made a significant difference in the lives of many children with cancer and their families through the provision of the Sunshine Lodge holiday homes in Taupo and Queenstown. These fully-furnished and equipped homes come as welcome retreats to the families who are dealing with the challenges of caring for a child with cancer."/><LineBreak/><Run Text=" Both the Taupo Sunshine Lodge and the Queenstown Lodge receive high occupancy from patient families."/><LineBreak/><Run/><LineBreak/><Run Text=" Each year, the Professionals team gets out and about on the streets to collect money for the Annual Appeal. In many areas around New Zealand, the local offices initiate specific appeal week activities to get the staff and their community involved the campaign."/><LineBreak/><Run/><LineBreak/><Run Text="The Professionals have also assisted the Foundation with the purchase of properties in Auckland and Wellington for the Family Places. Please visit their website www.professionals.co.nz"/></TextBlock>
             </Grid>
-
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-                <Label x:Name="Title" Foreground="Black" Content="Corporate Sponsors" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
-            </StackPanel>
-            <Grid x:Name="Our_Ambassadors" Background="White" Margin="57,31.5,549.5,155" Grid.Row="1" Grid.ColumnSpan="2">
-            	<Grid.ColumnDefinitions>
-            		<ColumnDefinition Width="0.027*"/>
-            		<ColumnDefinition Width="0.597*"/>
-            		<ColumnDefinition Width="0.039*"/>
-            		<ColumnDefinition Width="0.232*"/>
-            		<ColumnDefinition Width="0.081*"/>
-            		<ColumnDefinition Width="0.024*"/>
-            	</Grid.ColumnDefinitions>
-            	<Grid.RowDefinitions>
-            		<RowDefinition Height="0.846*"/>
-            		<RowDefinition Height="0.154*"/>
-            	</Grid.RowDefinitions>
-            	<Border BorderBrush="#FF007294" BorderThickness="1" Margin="-8,0,8,0" Grid.RowSpan="2" Background="White" Grid.ColumnSpan="6">
-            		<Border.Effect>
-            			<DropShadowEffect BlurRadius="6"/>
-            		</Border.Effect>
-            		<Rectangle Height="132.21" Margin="433,0,544,17" VerticalAlignment="Bottom" TouchDown="Touch_Down_Bartercard" MouseDown="Bartercard_MouseDown">
-            			<Rectangle.Fill>
-            				<ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bartercard-charity-logo-2D4.jpg"/>
-            			</Rectangle.Fill>
-            		</Rectangle>
-            	</Border>
-            	<Rectangle HorizontalAlignment="Left" Margin="8,-38.705,0,16" Width="351.103" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart" MouseDown="SaveMart_MouseDown">
-            		<Rectangle.Fill>
-                        <ImageBrush ImageSource="../Resources/Corporate/Savemart_1.jpg" Stretch="Uniform"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<Rectangle Margin="0,0,-12.436,131.916" Grid.Column="1" HorizontalAlignment="Right" Height="138.333" VerticalAlignment="Bottom" Width="185.699" TouchDown="Touch_Down_RCP" MouseDown="RCP_MouseDown">
-            		<Rectangle.Fill>
-                        <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/RCP-logo.jpg"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<Rectangle Margin="240,0,217.564,135.916" Grid.Column="1" Height="146" VerticalAlignment="Bottom" TouchDown="Touch_Down_Farmers" MouseDown="Farmers_MouseDown">
-            		<Rectangle.Fill>
-                        <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Farmers-Logo-Hm-Page.jpg"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<Rectangle HorizontalAlignment="Left" Margin="38.603,0,0,131.916" Width="154.5" Grid.Column="1" Height="150" VerticalAlignment="Bottom" TouchDown="Touch_Down_Prof" MouseDown="Prof_MouseDown">
-            		<Rectangle.Fill>
-            			<ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Profesionals.jpg"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<TextBlock x:Name="BBnFreinds_text" HorizontalAlignment="Left" Height="76.29" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149.471" Grid.Column="3" FontSize="24" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="Buzzy Bee and Friends"/></TextBlock>
-            	<TextBlock Foreground="Black" Height="60" Margin="8,0,0,38.705" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Major Funding Partner"/></TextBlock>
-            	<TextBlock Foreground="Black"  Margin="0,0,40,38.705" TextWrapping="Wrap" FontSize="32" Grid.Column="1" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="334.69" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Foundation Partner"/></TextBlock>
-            	<Button Content="" Margin="0,28.56,31.5,0" Grid.Column="3" Height="88.502" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114.863" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/99-Logo.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="16,22.562,0,0" Grid.Column="3" Height="94.5" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Left" Width="110.455">
-            		<Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Corporate/Buzzy-Bee-Logo-Hm-Page.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="0,22.562,8,0" Grid.Column="4" Height="94.5" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/alabar.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="77.697,0,48.5,11.934" Grid.Column="3" Height="89.929" VerticalAlignment="Bottom" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Apparelmaster-New-Logo-07.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="53.697,185.29,30.381,0" Grid.Column="3" Height="86.002" VerticalAlignment="Top" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Bluebridge.jpeg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="53.697,0,30.381,205.291" Grid.Column="3" Grid.ColumnSpan="2" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="79.958" VerticalAlignment="Bottom">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/NZ-Herald-Logo-Hm-Page.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="98.708,0,-23.61,16" Grid.Column="3" Grid.Row="1" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/NZC-logo-new2.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<Button Content="" Margin="98.708,0,-33.688,104.134" Grid.Column="3" Height="89.281" VerticalAlignment="Bottom" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            		<Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/Hansen-Logo-Hm-Page.jpg"/>
-            		</Button.Background>
-            	</Button>
-            	<TextBlock Foreground="Black" Height="33.625" Margin="8,252.792,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Gold Star Sponsors"/></TextBlock>
-            	<TextBlock Foreground="Black" Height="60" Margin="8,22.562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Plantinum Star Sponsor"/></TextBlock>
-            	<TextBlock x:Name="BBnFreinds_text_Copy" HorizontalAlignment="Right" Height="41.228" Margin="0,121.062,56.5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56.862" Grid.Column="3" FontSize="24" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text=".99"/></TextBlock>
-            	<TextBlock x:Name="Alabar_text" Height="74.228" Margin="8,121.062,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="4" FontSize="24" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="Alabar (NZ) Ltd"/></TextBlock>
-            	<TextBlock x:Name="Blubridge_text" Margin="65.697,271.292,42.381,271.748" TextWrapping="Wrap" Grid.Column="3" FontSize="24" Grid.ColumnSpan="2" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="Bluebridge Cook Strait Ferry"/></TextBlock>
-            	<TextBlock x:Name="The_Herald" Height="30.125" Margin="65.697,0,42.381,202.415" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="3" FontSize="24" Grid.ColumnSpan="2" Foreground="Black" TextAlignment="Center"><Run Language="en-nz" Text="The New Zealand Herald"/></TextBlock>
-            	<Rectangle Height="156" Margin="143.103,97,95.564,0" VerticalAlignment="Top" Grid.Column="1" TouchDown="Touch_Down_Gold_Buyers" MouseDown="GoldBuyers_MouseDown">
-            		<Rectangle.Fill>
-                        <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Gold-Buyers.jpg"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<Path Data="M811.1767,58.02779 L811.1767,635.86774" Fill="Black" Margin="0,31,21.693,32.21" Stretch="Fill" Grid.Column="2" Grid.RowSpan="2" Stroke="Black" HorizontalAlignment="Right" Width="1"/>
-            </Grid>
-            <StackPanel x:Name="Navigation_Panel" Grid.Column="1" Margin="0,29.331,55,0" Orientation="Vertical" HorizontalAlignment="Right" Width="491.48" Grid.Row="1">
-            	<s:SurfaceButton 
-            		x:Name="what_we_do" 
-            		Content="What We Do" 
-                    Click="WhatWeDo_Click"
-            		Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Margin="0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            	<s:SurfaceButton 
-
-            		x:Name="family_and_support" 
-            		Click="Family_Click"
-            		Content="Family and Support"
-            		Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984">
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            	<s:SurfaceButton 
-            		x:Name="volunteers" 
-            		Click="Volunteers_Click"
-            		Content="Volunteers" 
-            		Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Height="171.984" Margin="0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            	<s:SurfaceButton
-            		x:Name="corporate"
-            		Content="Corporate Sponsors"
-            		Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" >
-            		<s:SurfaceButton.Effect>
-            			<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            		</s:SurfaceButton.Effect>
-            	</s:SurfaceButton>
-            </StackPanel>
-            <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
-                <Image.Effect>
-                    <BlurEffect Radius="2"/>
-                </Image.Effect>
-            </Image>
-            <TextBlock Foreground="Black" x:Name="Farmers_popup" Margin="-42.5,156,0,176" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" TouchDown="Remove_popups" Visibility="Hidden" MouseDown="Remove_popups">
-            	<TextBlock.Effect>
-            		<DropShadowEffect/>
-            	</TextBlock.Effect><Run Text="Farmers is a leading New Zealand department store combining quality and value with an ever-increasing selection of the best local and international brands. Farmers operates over 55 department stores in rural and city locations around the country, their stores have been outfitting New Zealand women, their families and their homes for over 100 years."/><LineBreak/><Run/><LineBreak/><Run Text="As part of Farmer's commitment to New Zealand families and to the community it serves, the company supports the Child Cancer Foundation."/><LineBreak/><Run/><LineBreak/><Run Text=" Farmers is a key supporter of the Foundation helping to raise vital funds through being a sponsor of the Foundation's Annual Appeal campaigns. Farmers have helped the Foundation to gift Beads of Courage to children who are on the cancer journey through their successful in-store promotions - 2010 Wheels of Courage competition and 2011 Intrepid Travel competition."/><LineBreak/><Run/><LineBreak/><Run Text=" The Foundation is delighted to have Farmers as a Gold Star partner. Please visit their website www.farmers.co.nz"/></TextBlock>
-            <TextBlock Foreground="Black" x:Name="RCP_popup" Margin="-42.5,316,0,386" Grid.Row="1" TextWrapping="Wrap" MouseDown="Remove_popups" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Text="RCP are an award-winning provider of professional Project Management and Project Programming services to New Zealand's property industry. Since 1996 RCP has become a substantial specialist construction industry management consultant working on many of New Zealand and Australia's most prominent developments.  Please visit their website www.rcp.co.nz" Visibility="Hidden" TouchDown="Remove_popups">
-            	<TextBlock.Effect>
-            		<DropShadowEffect/>
-            	</TextBlock.Effect>
-            </TextBlock>
-            <TextBlock Foreground="Black" x:Name="SaveMart_popup" Margin="-42.5,276,0,330" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Visibility="Hidden" MouseDown="Remove_popups" TouchDown="Remove_popups"><TextBlock.Effect>
-            		<DropShadowEffect/>
-            	</TextBlock.Effect><Run Text="The clothing recycling business of The Textile Recycling Centre and SaveMart stores provides substantial on going support for services and overheads of the Foundation enabling more money to go directly to our Child and Family Support Services and programmes throughout New Zealand."/><LineBreak/><Run Text=" The SaveMart Community Volunteer Awards recognise volunteer excellence in support of the Child Cancer Foundation."/><LineBreak/><Run Text=" Bin locations phone (09) 622 1759 or visit www.savemart.co.nz"/></TextBlock>
-            <TextBlock Foreground="Black" x:Name="Bartercard_popup" Margin="-42.5,306,0,356" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" MouseDown="Remove_popups" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Text="The Child Cancer Foundation was recently announced as the recipient charity for support from the Bartercard Foundation for the coming two years. The support will allow us to use Trade Dollars to offset awareness and fundraising campaign costs. The Child Cancer Foundation will also benefit from the opportunity to take part in Bartercard trade events and tap into a vast new business network. " Visibility="Hidden" TouchDown="Remove_popups"><TextBlock.Effect>
-            		<DropShadowEffect/>
-            	</TextBlock.Effect></TextBlock>
-            <TextBlock Foreground="Black" x:Name="GoldBuyers_popup" Margin="-42.5,332,0,386" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Visibility="Hidden" MouseDown="Remove_popups" TouchDown="Remove_popups"><TextBlock.Effect>
-            		<DropShadowEffect/>
-            	</TextBlock.Effect><Run Language="en-nz" Text="When you recycle old gold jewellery with Gold Buyers New Zealand, the process can help support the Child Cancer Foundation. over the 4 years that Gold Buyers have been serving its customers, they have paid out millions of dollars"/></TextBlock>
-            <TextBlock Foreground="Black" x:Name="Prof_popup" Margin="-42.5,170,0,196" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" TouchDown="Remove_popups" MouseDown="Remove_popups" Visibility="Hidden"><TextBlock.Effect>
-            		<DropShadowEffect/>
-            	</TextBlock.Effect><Run Text="The Professionals has made a significant difference in the lives of many children with cancer and their families through the provision of the Sunshine Lodge holiday homes in Taupo and Queenstown. These fully-furnished and equipped homes come as welcome retreats to the families who are dealing with the challenges of caring for a child with cancer."/><LineBreak/><Run Text=" Both the Taupo Sunshine Lodge and the Queenstown Lodge receive high occupancy from patient families."/><LineBreak/><Run/><LineBreak/><Run Text=" Each year, the Professionals team gets out and about on the streets to collect money for the Annual Appeal. In many areas around New Zealand, the local offices initiate specific appeal week activities to get the staff and their community involved the campaign."/><LineBreak/><Run/><LineBreak/><Run Text="The Professionals have also assisted the Foundation with the purchase of properties in Auckland and Wellington for the Family Places. Please visit their website www.professionals.co.nz"/></TextBlock>
         </Grid>
     </Viewbox>
 </view:Screen>
