@@ -12,7 +12,8 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
-<view:Screen.Resources>
+    <view:Screen.Resources>
+        <!-- Animation Resources -->
         <Storyboard x:Key="Enter" Completed="Storyboard_Completed_1">
             <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
         </Storyboard>
@@ -37,19 +38,20 @@
                     <ColumnDefinition Width="0.8*"/>
                 </Grid.ColumnDefinitions>
 
+                <!-- Back Arrow -->
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                    <Image x:Name="BackArrow" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
                         <Image.Effect>
                             <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Image.Effect>
                     </Image>
                     <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
                 </Grid>
-
+                <!-- Body for Volunteer -->
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
                     <Label Foreground="Black" Content="Volunteering for CCF" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
                 </StackPanel>
-
+                <!--Sub-heading navigation buttons-->
                 <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
                     <s:SurfaceButton x:Name="WhatsIs_Button" Content="What is it?" Click="SurfaceButton_WhatIsVolunteering" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="#FF68B9D2" FontFamily="Gill Sans MT"/>
                     <s:SurfaceButton x:Name="WhoCan_Button" Content="Who can do it?" Click="SurfaceButton_WhoCanVolunteer" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="#FF8ECADC" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
@@ -63,6 +65,7 @@
                         <RowDefinition Height="0.597*"/>
                         <RowDefinition Height="0.403*"/>
                     </Grid.RowDefinitions>
+                    <!--Sub-heading pages-->
                     <Grid x:Name="WhatIsVolunteering" Background="#FFFFFCF0" Visibility="Visible" Margin="0" Grid.RowSpan="2">
                         <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
 
@@ -111,14 +114,14 @@
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
-
-
                 </Grid>
+                <!--Banner-->
                 <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
                     <Image.Effect>
                         <BlurEffect Radius="2"/>
                     </Image.Effect>
                 </Image>
+                <!-- Navigation Buttons to other main pages-->
                 <s:SurfaceButton 
             	x:Name="what_we_do" 
                 Click="What_Click"
@@ -131,7 +134,6 @@
                 <s:SurfaceButton 
             	Grid.RowSpan="1" 
             	Grid.ColumnSpan="1" 
-
             	x:Name="family_and_support" 
                 Click="Family_Click"
             	Content="Family and Support"
@@ -151,13 +153,11 @@
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
                 <s:SurfaceButton 
-
             	Grid.RowSpan="1"
             	Grid.ColumnSpan="1"
             	x:Name="corporate"
                 Click="Corperate_Click"
             	Content="Corporate Sponsors"
-
             	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="171.984" VerticalAlignment="Bottom" >
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>

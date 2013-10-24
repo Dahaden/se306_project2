@@ -23,6 +23,10 @@ namespace Team_Roasters.Screens
         ArrayList images = new ArrayList();
         ArrayList text = new ArrayList();
 
+        /// <summary>
+        /// Creating the WhatWeDo screen
+        /// </summary>
+        /// <param name="parentWindow"></param>
         public WhatWeDo(SurfaceWindow1 parentWindow)
             : base(parentWindow)
         {

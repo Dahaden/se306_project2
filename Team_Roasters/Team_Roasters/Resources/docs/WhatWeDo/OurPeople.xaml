@@ -1,14 +1,14 @@
 ﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
     <FlowDocument.FontFamily>Gills Sans MT</FlowDocument.FontFamily>
     <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
-        <Bold>Meet the team and find out more about main shareholders and board members.</Bold>        
+        <Bold>Meet the team and find out more about main shareholders and board members.</Bold>
     </Paragraph>
     <Table>
         <Table.Columns>
-            <TableColumn Width="200"/>
+            <TableColumn Width="300"/>
             <TableColumn Width="500"/>
         </Table.Columns>
-        <TableRowGroup>
+        <TableRowGroup FontSize="28" FontFamily="Gill Sans MT">
             <TableRow>
                 <TableCell>
                     <Paragraph FontWeight="Bold">Simon Lala</Paragraph>
@@ -55,7 +55,7 @@
             </TableRow>
             <TableRow>
                 <TableCell ColumnSpan="2">
-                    <Paragraph FontWeight="Medium" FontSize="21">
+                    <Paragraph FontWeight="Medium">
                         MARKETING AND FUNDRAISING
                     </Paragraph>
                 </TableCell>
@@ -115,10 +115,10 @@
                 <TableCell>
                 </TableCell>
             </TableRow>
-            
+
             <TableRow>
                 <TableCell ColumnSpan="2">
-                    <Paragraph FontWeight="Medium" FontSize="21">
+                    <Paragraph FontWeight="Medium">
                         CHILD CANCER SERVICES
                     </Paragraph>
                 </TableCell>
@@ -159,8 +159,8 @@
             </TableRow>
             <TableRow>
                 <TableCell>
-                    <Paragraph FontWeight="Medium" FontSize="20">
-                        Family Support
+                    <Paragraph FontWeight="Medium">
+                        FAMILY SUPPORT
                     </Paragraph>
                 </TableCell>
                 <TableCell>
@@ -174,7 +174,7 @@
             </TableRow>
             <TableRow>
                 <TableCell>
-                    <Paragraph FontSize="17">
+                    <Paragraph>
                         <Underline>Auckland</Underline>
                     </Paragraph>
                 </TableCell>
@@ -239,7 +239,7 @@
 
             <TableRow>
                 <TableCell>
-                    <Paragraph FontSize="17" >
+                    <Paragraph>
                         <Underline>Northland</Underline>
                     </Paragraph>
                 </TableCell>
@@ -280,7 +280,7 @@
 
             <TableRow>
                 <TableCell>
-                    <Paragraph FontSize="17">
+                    <Paragraph>
                         <Underline>Waikato, Lakes &amp; Bays</Underline>
                     </Paragraph>
                 </TableCell>
@@ -320,7 +320,7 @@
 
             <TableRow>
                 <TableCell>
-                    <Paragraph FontSize="17" >
+                    <Paragraph>
                         <Underline>Central</Underline>
                     </Paragraph>
                 </TableCell>
@@ -360,7 +360,7 @@
 
             <TableRow>
                 <TableCell>
-                    <Paragraph FontSize="17" >
+                    <Paragraph>
                         <Underline>Nelson</Underline>
                     </Paragraph>
                 </TableCell>
@@ -391,7 +391,7 @@
 
             <TableRow>
                 <TableCell>
-                    <Paragraph FontSize="17">
+                    <Paragraph>
                         <Underline>South Island</Underline>
                     </Paragraph>
                 </TableCell>
@@ -431,7 +431,7 @@
 
             <TableRow>
                 <TableCell>
-                    <Paragraph FontSize="17">
+                    <Paragraph>
                         <Underline>Otago / Southland</Underline>
                     </Paragraph>
                 </TableCell>
