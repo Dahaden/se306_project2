@@ -319,7 +319,6 @@
     <Resource Include="Resources\ccfappeal.jpg" />
     <Resource Include="Resources\Fitout-S-child-cancer.jpg" />
     <Resource Include="Resources\CCF-Logo-Transparent.png" />
-    <Resource Include="Resources\heart.png" />
     <Resource Include="Controls\Resources\video_frame.png" />
     <Resource Include="Controls\Resources\video_overlay.png" />
     <Resource Include="Controls\Resources\video_pausebutton.png" />
@@ -369,10 +368,6 @@
     <Resource Include="Resources\Beads\redbead.jpg" />
     <Resource Include="Resources\Beads\starbead.jpg" />
     <Resource Include="Resources\Corporate\Exposure-Logo.jpg" />
-    <Content Include="Resources\icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Resources\photographing-babies-1e.jpg" />
     <Resource Include="Resources\tagline2.png" />
     <None Include="Resources\intro-video.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
