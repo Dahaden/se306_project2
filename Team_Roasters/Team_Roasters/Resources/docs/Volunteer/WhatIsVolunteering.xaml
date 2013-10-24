@@ -1,0 +1,6 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <FlowDocument.FontFamily>Gills Sans MT</FlowDocument.FontFamily>
+    <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        <Bold>To Volunteer for CCF scan this QR code on your smartphone, or visit http://is.gd/Volunteer</Bold>
+    </Paragraph>
+</FlowDocument>

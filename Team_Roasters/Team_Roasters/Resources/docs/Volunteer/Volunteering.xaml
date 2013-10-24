@@ -1,0 +1,12 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <FlowDocument.FontFamily>Gills Sans MT</FlowDocument.FontFamily>
+    <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        <Bold>Child Cancer Foundation could not carry out the work we do in the community without the help of our volunteers.</Bold>
+    </Paragraph>
+    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        Volunteering provides a wonderful opportunity for people to meet, contribute and support a common cause.
+        <LineBreak></LineBreak>
+        <LineBreak></LineBreak>
+        Volunteers are vital to us at Child Cancer Foundation. They help us to achieve our purpose by offering their time, skills and valuable advice.
+    </Paragraph>
+</FlowDocument>

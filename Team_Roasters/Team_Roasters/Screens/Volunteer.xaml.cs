@@ -1,7 +1,13 @@
 ﻿using System.Windows.Media;
 using System.Windows;
+<<<<<<< HEAD
 using System;
 
+=======
+using System.Windows.Documents;
+using System.Windows.Markup;
+using System.IO;
+>>>>>>> origin/develop
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -12,12 +18,44 @@ namespace Team_Roasters.Screens
         public Volunteer(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             setButtonColours();
-            InitializeComponent();           
+            InitializeComponent();
+
+            FlowDocument VolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/Volunteering.xaml"));
+            VolViewer.Document = VolDocument;
+            FlowDocument WhatIsVolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/WhatIsVolunteering.xaml"));
+            WhatIsVolViewer.Document = WhatIsVolDocument;
+            FlowDocument WhatWouldIDoDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/WhatWouldIDo.xaml"));
+            WhatWouldIDoViewer.Document = WhatWouldIDoDocument;
+            FlowDocument WhoVolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/WhoCanVolunteer.xaml"));
+            WhoVolViewer.Document = WhoVolDocument;
+
+            WhatIsVolunteering.Visibility = System.Windows.Visibility.Visible;
+            WhoCanVolunteer.Visibility = System.Windows.Visibility.Collapsed;
+            WhatWouldIDo.Visibility = System.Windows.Visibility.Collapsed;
+            Volunteering.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
+        }
+
+        private void Corperate_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.popScreen();
+            parentWindow.pushScreen(new CorporateScreen(parentWindow));
+        }
+
+        private void Family_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.popScreen();
+            parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
+        }
+
+        private void What_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            parentWindow.popScreen();
+            parentWindow.pushScreen(new WhatWeDo(parentWindow));
         }
 
         private void SurfaceButton_WhatIsVolunteering(object sender, System.Windows.RoutedEventArgs e)

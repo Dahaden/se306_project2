@@ -103,6 +103,11 @@
       <DependentUpon>SP_image.xaml</DependentUpon>
     </Compile>
     <Compile Include="TwitterFeed.cs" />
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
     <Page Include="Resources\Ambassadors\Amb_AB.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +177,46 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources\Ambassadors\EMHB_image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\FamilySupport\SupportServices.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\FamilySupport\Scholarships.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\FamilySupport\ParentResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\FamilySupport\HolidayHomes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\Volunteer\WhatIsVolunteering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\Volunteer\WhoCanVolunteer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\Volunteer\Volunteering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\Volunteer\WhatWouldIDo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\WhatWeDo\OurHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\docs\WhatWeDo\OurPeople.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -270,6 +315,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Beads\bluebead.jpg" />
     <Resource Include="Resources\ccfappeal.jpg" />
     <Resource Include="Resources\Fitout-S-child-cancer.jpg" />
     <Resource Include="Resources\CCF-Logo-Transparent.png" />
@@ -313,14 +359,15 @@
     <Resource Include="Resources\Ambassadors\megan-alatini.jpg" />
     <Resource Include="Resources\arrow_l.png" />
     <Resource Include="Resources\arrow_r.png" />
-    <Resource Include="Resources\Button Pics\2011-CCF-Childrens-Group.jpg" />
-    <Resource Include="Resources\Button Pics\28073-nzh.jpg" />
     <Resource Include="Resources\Button Pics\Claudia.jpg" />
     <Resource Include="Resources\Button Pics\emma-in-2011.jpg" />
-    <Resource Include="Resources\Button Pics\emma-now-%282%29.jpg" />
-    <Resource Include="Resources\Button Pics\Grace-and-Brenna_RT.jpg" />
     <Resource Include="Resources\Button Pics\Group-Appeal-News.jpg" />
     <Resource Include="Resources\Button Pics\Teaser-Dequarn.jpg" />
+    <Resource Include="Resources\Beads\orangebead.jpg" />
+    <Resource Include="Resources\Beads\whitebead.jpg" />
+    <Resource Include="Resources\Beads\brownbead.jpg" />
+    <Resource Include="Resources\Beads\redbead.jpg" />
+    <Resource Include="Resources\Beads\starbead.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

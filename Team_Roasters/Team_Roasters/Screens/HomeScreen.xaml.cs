@@ -30,6 +30,20 @@ namespace Team_Roasters.Screens
 
         }
 
+        // Show the screensaver overlay
+        public void showScreenSaver()
+        {
+            this.screensaver_overlay.Visibility = System.Windows.Visibility.Visible;
+            this.screensaver_text.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        // Hide the screensaver overlay
+        public void hideScreenSaver()
+        {
+            this.screensaver_overlay.Visibility = System.Windows.Visibility.Collapsed;
+            this.screensaver_text.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
         /// <summary>
         /// Opens new window containing the What We Do info
         /// </summary>
@@ -167,7 +181,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string when;
-                string imgsrc;
+                string imgsrc = "";
                 string desc;
                 string filename;
                 string filepath;
@@ -230,7 +244,7 @@ namespace Team_Roasters.Screens
                             writer.WriteAttributeString("Background", "#FFDACFCF");
                         }
                         writer.WriteStartElement("Paragraph");
-                        writer.WriteAttributeString("FontSize", "20");
+                        writer.WriteAttributeString("FontSize", "23");
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
 
@@ -253,6 +267,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // Ends Paragraph node
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         when = link.SelectSingleNode("small").InnerText;
@@ -267,7 +282,14 @@ namespace Team_Roasters.Screens
 
                         // Latter part of link to where the news item image is stored on the website
 
-                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        try
+                        {
+                            imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        }
+                        catch (Exception e)
+                        {
+                            // No image for this news item
+                        }
 
                         // Creates a filepath that the image will be downloaded to
                         filepath = "../../Resources/news/" + filename + ".jpeg";
@@ -290,6 +312,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // BlockUIContainer
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         writer.WriteStartElement("LineBreak");
@@ -359,7 +382,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string whenwhere;
-                string imgsrc;
+                string imgsrc="";
                 string desc;
                 string filename;
                 string filepath;
@@ -415,7 +438,7 @@ namespace Team_Roasters.Screens
                         }
                         
                         writer.WriteStartElement("Paragraph");
-                        writer.WriteAttributeString("FontSize", "20");
+                        writer.WriteAttributeString("FontSize", "23");
                         writer.WriteAttributeString("FontWeight", "Bold");
                         writer.WriteAttributeString("TextAlignment", "Center");
 
@@ -434,6 +457,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // Paragraph
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         // Returned string format: "When:.....  CRLF Where:......."
@@ -452,7 +476,15 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement();
 
                         writer.WriteStartElement("BlockUIContainer");
-                        imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+
+                        try
+                        {
+                            imgsrc = link.SelectSingleNode("img").Attributes["src"].Value;
+                        }
+                        catch (Exception e)
+                        {
+                            // No image for this news item
+                        }
 
                         filepath = "../../Resources/events/" + filename + ".jpeg";
 
@@ -474,6 +506,7 @@ namespace Team_Roasters.Screens
                         writer.WriteEndElement(); // BlockUIContainer
 
                         writer.WriteStartElement("Paragraph");
+                        writer.WriteAttributeString("FontSize", "17");
                         writer.WriteStartElement("LineBreak");
                         writer.WriteEndElement();
                         writer.WriteStartElement("LineBreak");
@@ -547,43 +580,81 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Checks whether the side arrows should be shown/hidden
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Scroll_changed(object sender, System.Windows.Controls.ScrollChangedEventArgs e)
         {
-            if (MainContent.IsScrolling)
-            {            
-                if (MainContent.HorizontalOffset < 100)
-                {
-                    Left_arrow.Visibility = Visibility.Collapsed;
-                    Left_arrow_block.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    Left_arrow.Visibility = Visibility.Visible;
-                    Left_arrow_block.Visibility = Visibility.Visible;
-                }
-                if (MainContent.HorizontalOffset > MainContent.ViewportWidth - Right_arrow.Width )
-                {
-                    Right_arrow.Visibility = Visibility.Collapsed;
-                    Right_arrow_block.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    Right_arrow.Visibility = Visibility.Visible;
-                    Right_arrow_block.Visibility = Visibility.Visible;
-                }
+            if (MainContent.HorizontalOffset < 100)
+            {
+                Left_arrow.Visibility = Visibility.Collapsed;
+                Left_arrow_block.Visibility = Visibility.Collapsed;
             }
             else
             {
                 Left_arrow.Visibility = Visibility.Visible;
                 Left_arrow_block.Visibility = Visibility.Visible;
+            }
+            if (MainContent.HorizontalOffset >= MainContent.ViewportWidth - 100)
+            {
+                Right_arrow.Visibility = Visibility.Collapsed;
+                Right_arrow_block.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
                 Right_arrow.Visibility = Visibility.Visible;
                 Right_arrow_block.Visibility = Visibility.Visible;
             }
         }
 
+<<<<<<< HEAD
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();
         }   
+=======
+        // Handle jump to left side of screen
+        private void Left_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            MainContent.ScrollToLeftEnd();          
+        }
+        private void Left_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MainContent.ScrollToLeftEnd();
+        }
+
+        // Handle jump to right side of screen
+        private void Right_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            MainContent.ScrollToRightEnd();
+        }
+        private void Right_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MainContent.ScrollToRightEnd();
+        }
+
+
+        private void FamilyButton_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
+        }
+
+        private void What_we_do_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new WhatWeDo(parentWindow));
+        }
+
+        private void Volunteers_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new Volunteer(parentWindow));
+        }
+
+        private void CorporateSponsers_Click(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            parentWindow.pushScreen(new CorporateScreen(parentWindow));
+        }
+>>>>>>> origin/develop
     }
 }

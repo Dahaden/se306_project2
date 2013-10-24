@@ -1,0 +1,9 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <FlowDocument.FontFamily>Gills Sans MT</FlowDocument.FontFamily>
+    <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        <Bold>What do CCF volunteers do?</Bold>        
+    </Paragraph>
+    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        Our volunteers provide a range of services and support including participating in CCF Branch activities, helping out at the Family Places, working alongside our staff and helping our fundraising team during events such as the national Annual Street Appeal and Funrazor events.
+    </Paragraph>
+</FlowDocument>

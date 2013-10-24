@@ -24,7 +24,13 @@ using System.Xml;
 using System.Windows.Markup;
 
 using System.Collections.ObjectModel;
+<<<<<<< HEAD
 using System.Threading;
+=======
+using System.Windows.Threading;
+using System.ComponentModel;
+using System.Diagnostics;
+>>>>>>> origin/develop
 
 namespace Team_Roasters
 {
@@ -36,6 +42,13 @@ namespace Team_Roasters
         private Stack<Screen> screenStack;
         private Screen previous;
         private Screen next;
+
+        private DispatcherTimer inactivityTimer = new DispatcherTimer();
+        private int inactiveTime = 0;
+        private bool screensaver = false;
+
+        // How long to wait before displaying the screensaver
+        const int TIMEOUT_TIME = 600;
 
         /// <summary>
         /// Default constructor.
@@ -57,6 +70,30 @@ namespace Team_Roasters
 
             //pushScreen(new Screens.HomeScreen(this));
 
+            // Create a timer to check whether to display the screensaver
+            // Will run every second
+            inactivityTimer.Interval = TimeSpan.FromSeconds(1);
+            inactivityTimer.Tick += new EventHandler(checkInactivity);
+            inactivityTimer.Start();
+
+            ((Screens.HomeScreen)screenStack.Peek()).showScreenSaver();
+            this.screensaver = true;
+        }
+
+        /// <summary>
+        /// Checks whether the inactivity timeout has been reached and activates the screensaver if so
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void checkInactivity(Object sender, EventArgs e)
+        {
+            if (inactiveTime > TIMEOUT_TIME)
+            {
+                popAll();
+                ((Screens.HomeScreen)screenStack.Peek()).showScreenSaver();
+                this.screensaver = true;
+            }
+            this.inactiveTime++;
         }
 
         /// <summary>
@@ -67,7 +104,11 @@ namespace Team_Roasters
         {
             if (screenStack.Count > 1)
             {
+<<<<<<< HEAD
                 previous = screenStack.Peek();
+=======
+                resetTimer();
+>>>>>>> origin/develop
                 screenStack.Pop();
                 next = screenStack.Peek();
 
@@ -82,7 +123,11 @@ namespace Team_Roasters
         /// </summary>
         public void pushScreen(Screen screen)
         {
+<<<<<<< HEAD
             previous = screenStack.Peek();
+=======
+            resetTimer();
+>>>>>>> origin/develop
             screenStack.Push(screen);
             next = screenStack.Peek();
 
@@ -108,6 +153,7 @@ namespace Team_Roasters
         /// </summary>
         public void popAll()
         {
+            resetTimer();
             while (screenStack.Count > 1)
             {
                 screenStack.Pop();
@@ -117,7 +163,6 @@ namespace Team_Roasters
             this.WindowStyle = WindowStyle.None;
         }
 
-        /// <summary>
         /// Occurs when the window is about to close. 
         /// </summary>
         /// <param name="e"></param>
@@ -158,7 +203,7 @@ namespace Team_Roasters
         /// <param name="e"></param>
         private void OnWindowInteractive(object sender, EventArgs e)
         {
-            //TODO: enable audio, animations here
+
         }
 
         /// <summary>
@@ -182,5 +227,31 @@ namespace Team_Roasters
         {
             //TODO: disable audio, animations here
         }
+<<<<<<< HEAD
+=======
+
+        /// <summary>
+        /// Called on touch of screensaver
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void activityEvent(object sender, MouseButtonEventArgs e)
+        {
+            resetTimer();
+        }
+
+        /// <summary>
+        /// Resets the inactivity timer and hides the screensaver
+        /// </summary>
+        private void resetTimer()
+        {
+            inactiveTime = 0;
+            if (screensaver)
+            {
+                ((Screens.HomeScreen)screenStack.Peek()).hideScreenSaver();
+                screensaver = false;
+            }
+        }
+>>>>>>> origin/develop
     }
 }
