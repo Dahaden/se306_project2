@@ -16,6 +16,7 @@ namespace Team_Roasters.Screens
         {
             InitializeComponent();
 
+            // Loads the stored document files into the FlowDocumentScrollViewer
             FlowDocument HoldiayHomesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/HolidayHomes.xaml"));
             HolidayHomesViewer.Document = HoldiayHomesDocument;
             FlowDocument ParentResourcesDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/FamilySupport/ParentResources.xaml"));
@@ -41,29 +42,54 @@ namespace Team_Roasters.Screens
 
         }
 
+        /// <summary>
+        /// Returns to main screen upon touch of back button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
         }
 
+        /// <summary>
+        /// Moves to the Coporate Page on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Corperate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
             parentWindow.pushScreen(new CorporateScreen(parentWindow));
         }
 
+        /// <summary>
+        /// Moves to the Volunteers Page on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Volunteers_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
             parentWindow.pushScreen(new Volunteer(parentWindow));
         }
 
+        /// <summary>
+        /// Moves to the WhatWeDo Page on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void What_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
             parentWindow.pushScreen(new WhatWeDo(parentWindow));
         }
 
+        /// <summary>
+        /// Shows information on Holdiay Homes, hides other information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_HolidayHomes(object sender, System.Windows.RoutedEventArgs e)
         {
             Holiday_Homes.Visibility = System.Windows.Visibility.Visible;
@@ -78,6 +104,11 @@ namespace Team_Roasters.Screens
             Beads_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
+        /// <summary>
+        /// Shows information on Support Services, hides other information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_SupportServices(object sender, System.Windows.RoutedEventArgs e)
         {
             Support_Services.Visibility = System.Windows.Visibility.Visible;
@@ -92,6 +123,11 @@ namespace Team_Roasters.Screens
             Beads_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
+        /// <summary>
+        /// Shows information on Scholarships, hides other information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_Scholarships(object sender, System.Windows.RoutedEventArgs e)
         {
             Scholarships.Visibility = System.Windows.Visibility.Visible;
@@ -118,6 +154,11 @@ namespace Team_Roasters.Screens
             parentWindow.Storyboard_Completed();
         }
 
+        /// <summary>
+        /// Shows information on the Beads of Courage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_Beads(object sender, System.Windows.RoutedEventArgs e)
         {
             Scholarships.Visibility = System.Windows.Visibility.Collapsed;

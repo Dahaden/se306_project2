@@ -190,6 +190,11 @@ namespace Team_Roasters.Screens
             Bartercard_popup.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Professionals on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_Prof(object sender, System.Windows.Input.TouchEventArgs e)
         {
             Remove_popups();
@@ -209,16 +214,31 @@ namespace Team_Roasters.Screens
             Prof_popup.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Collapses all 'popup' items on the screen on Touch events. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Remove_popups(object sender, System.Windows.Input.TouchEventArgs e)
         {
             Remove_popups();
         }
 
+        /// <summary>
+        /// Collapses all 'popup' items on the screen on Mouse events. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Remove_popups(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Remove_popups();	
         }
 
+        /// <summary>
+        /// Collapses all 'popup' items on the screen. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Remove_popups()
         {
             Our_Ambassadors.Opacity = 1.0;
@@ -233,14 +253,29 @@ namespace Team_Roasters.Screens
             Alabar_text.Visibility = Visibility.Collapsed;
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Buzzy Bees on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void Mouse_down_BB(object sender, System.Windows.Input.MouseButtonEventArgs e){
             BB_popup();
 		}
-		
+
+        /// <summary>
+        /// Displays information on Sponsor Buzzy Bees on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void Touch_Down_BB(object sender, System.Windows.Input.TouchEventArgs e){
             BB_popup();
 		}
 
+        /// <summary>
+        /// Reveals the Buzzy Bee label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BB_popup()
         {
             if (BBnFreinds_text.Visibility == Visibility.Collapsed)
@@ -254,16 +289,31 @@ namespace Team_Roasters.Screens
             }     
         }
 
+        /// <summary>
+        /// Displays information on Sponsor 99 on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_nn(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             nn_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor 99 on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_nn(object sender, System.Windows.Input.TouchEventArgs e)
         {
             nn_popup();
         }
 
+        /// <summary>
+        /// Reveals the 99 label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nn_popup()
         {
             if (_99_text.Visibility == Visibility.Collapsed)
@@ -277,17 +327,31 @@ namespace Team_Roasters.Screens
             }
         }
 
-      
+        /// <summary>
+        /// Displays information on Sponsor NZ Herald on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_NZHerald(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             NZHerald_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor NZ Herald on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_NZHerald(object sender, System.Windows.Input.TouchEventArgs e)
         {
             NZHerald_popup();
         }
 
+        /// <summary>
+        /// Reveals the NZ Herald label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NZHerald_popup()
         {
             if (The_Herald_text.Visibility == Visibility.Collapsed)
@@ -301,16 +365,31 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Displays information on Sponsor The Millineum Hotel and Spas on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_Mill(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Mill_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor The Millineum Hotel and Spas on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_Mill(object sender, System.Windows.Input.TouchEventArgs e)
         {
             Mill_popup();
         }
 
+        /// <summary>
+        /// Reveals the Millinium Hotel and Spas label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mill_popup()
         {
             if (Mill_text.Visibility == Visibility.Collapsed)
@@ -324,16 +403,31 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Displays information on Sponsor NZ Couriers on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_NZCouriers(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             NZCouriers_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor NZ Couriers on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_NZCouriers(object sender, System.Windows.Input.TouchEventArgs e)
         {
             NZCouriers_popup();
         }
 
+        /// <summary>
+        /// Reveals the NZ Couriers label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NZCouriers_popup()
         {
             if (NZCouriers_text.Visibility == Visibility.Collapsed)
@@ -347,16 +441,31 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Exposure on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_Exposure(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Exposure_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Exposure on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_Exposure(object sender, System.Windows.Input.TouchEventArgs e)
         {
             Exposure_popup();
         }
 
+        /// <summary>
+        /// Reveals the Exposure label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Exposure_popup()
         {
             if (Exposure_text.Visibility == Visibility.Collapsed)
@@ -370,16 +479,31 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Hansen on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_Hansen(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Hansen_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Hansen on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_Hansen(object sender, System.Windows.Input.TouchEventArgs e)
         {
             Hansen_popup();
         }
 
+        /// <summary>
+        /// Reveals the Hansen label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Hansen_popup()
         {
             if (Hansen_text.Visibility == Visibility.Collapsed)
@@ -393,16 +517,31 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Apparel Master on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_ApparelMaster(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             ApparelMaster_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor ApparelMaster on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_ApparelMaster(object sender, System.Windows.Input.TouchEventArgs e)
         {
             ApparelMaster_popup();
         }
 
+        /// <summary>
+        /// Reveals the ApparelMaster label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ApparelMaster_popup()
         {
             if (Apparelmaster_text.Visibility == Visibility.Collapsed)
@@ -416,16 +555,31 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Alabar on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_Alabar(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Alabar_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Alabar on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_Alabar(object sender, System.Windows.Input.TouchEventArgs e)
         {
             Alabar_popup();
         }
 
+        /// <summary>
+        /// Reveals the Alabar label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Alabar_popup()
         {
             if (Alabar_text.Visibility == Visibility.Collapsed)
@@ -439,16 +593,31 @@ namespace Team_Roasters.Screens
             }
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Bluebridge on Mouse Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mouse_Down_Bluebridge(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Bluebridge_popup();
         }
 
+        /// <summary>
+        /// Displays information on Sponsor Bluebridge on Touch Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_Down_Bluebridge(object sender, System.Windows.Input.TouchEventArgs e)
         {
             Bluebridge_popup();
         }
 
+        /// <summary>
+        /// Reveals the Bluebridge label popup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Bluebridge_popup()
         {
             if (Bluebridge_text.Visibility == Visibility.Collapsed)
