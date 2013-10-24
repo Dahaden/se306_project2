@@ -85,7 +85,7 @@
                                 <Border.Effect>
                                     <DropShadowEffect/>
                                 </Border.Effect>
-                                <FlowDocumentScrollViewer BorderThickness="0" Width="1480" x:Name="moneyBuysViewer" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <FlowDocumentScrollViewer IsEnabled="False" BorderThickness="0" Width="1480" x:Name="moneyBuysViewer" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
