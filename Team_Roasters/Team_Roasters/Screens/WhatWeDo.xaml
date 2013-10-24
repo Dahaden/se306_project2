@@ -70,8 +70,8 @@
                             </s:SurfaceScrollViewer.Effect>
                             <Border BorderBrush="#FF007294" BorderThickness="1" Background="White" Height="678.231" Width="971.52"/>
                         </s:SurfaceScrollViewer>
-                        <RichTextBox IsEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,32,32.586,32.287" x:Name="Amb_text" Visibility="Visible"  Foreground="Black" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" BorderThickness="0,1" Width="476" >
-                            <FlowDocument IsEnabled="False">
+                        <RichTextBox ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,32,32.586,32.287" x:Name="Amb_text" Visibility="Visible" Foreground="Black" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" BorderThickness="0,1" Width="476" >
+                            <FlowDocument>
                                 <Paragraph/>
                             </FlowDocument>
                         </RichTextBox>
@@ -110,12 +110,10 @@
                                 <DropShadowEffect/>
                             </s:SurfaceScrollViewer.Effect>
                             <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.52" Height="678.209">
-
-                                <FlowDocumentScrollViewer IsEnabled="False"   BorderThickness="0" Margin="-1,7,7,7" x:Name="ourPeopleViewer" Foreground="Black"/>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ourPeopleViewer" Foreground="Black"/>
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
-
                 </Grid>
                 <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
                     <Image.Effect>

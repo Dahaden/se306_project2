@@ -651,11 +651,31 @@ namespace Team_Roasters.Screens
         }
 
         /// <summary>
+        /// Scrolls to the Start of the screen when Left button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Left_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            MainContent.ScrollToLeftEnd();
+        }
+
+        /// <summary>
         /// Scrolls to the end of the screen when right button is pressed
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Right_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MainContent.ScrollToRightEnd();
+        }
+
+        /// <summary>
+        /// Scrolls to the end of the screen when right button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Right_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             MainContent.ScrollToRightEnd();
         }

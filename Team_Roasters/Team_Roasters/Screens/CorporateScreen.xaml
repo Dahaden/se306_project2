@@ -13,6 +13,7 @@
              d:DesignWidth="1920">
 
     <view:Screen.Resources>
+        <!-- Animation Resources -->
         <Storyboard x:Key="Enter" Completed="Storyboard_Completed_1">
             <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
         </Storyboard>
@@ -36,7 +37,8 @@
                     <ColumnDefinition Width="0.2*"/>
                     <ColumnDefinition Width="0.8*"/>
                 </Grid.ColumnDefinitions>
-
+                
+                <!-- Back Arrow -->
                 <Grid Grid.Row="0" Grid.Column="0">
                     <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
                         <Image.Effect>
@@ -49,6 +51,8 @@
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
                     <Label x:Name="Title" Foreground="Black" Content="Corporate Sponsors" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
                 </StackPanel>
+
+                <!-- Body for Corporate Sponsors -->
                 <Grid x:Name="Our_Ambassadors" Background="White" Margin="57,31.5,549.5,155" Grid.Row="1" Grid.ColumnSpan="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.027*"/>
@@ -72,6 +76,8 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </Border>
+
+                    <!-- Corporate Image Logos -->
                     <Rectangle HorizontalAlignment="Left" Margin="8,-38.705,0,16" Width="351.103" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart" MouseDown="SaveMart_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush ImageSource="../Resources/Corporate/Savemart_1.jpg" Stretch="Uniform"/>
@@ -100,6 +106,8 @@
                             <ImageBrush Stretch="Uniform" ImageSource="../Resources/Corporate/99-Logo.jpg"/>
                         </Button.Background>
                     </Button>
+
+                    <!-- Corporate Sponsor Logos (Right of Partition) -->
                     <Button Content="" Margin="16,22.562,0,0" Grid.Column="3" Height="94.5" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Left" Width="110.455">
                         <Button.Background>
                             <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Corporate/Buzzy-Bee-Logo-Hm-Page.jpg"/>
@@ -148,6 +156,7 @@
                     </Rectangle>
                     <Path Data="M811.1767,58.02779 L811.1767,635.86774" Fill="Black" Margin="0,31,21.693,32.21" Stretch="Fill" Grid.Column="2" Grid.RowSpan="2" Stroke="Black" HorizontalAlignment="Right" Width="1"/>
                 </Grid>
+                <!-- Navigation Buttons -->
                 <StackPanel x:Name="Navigation_Panel" Grid.Column="1" Margin="0,29.331,55,0" Orientation="Vertical" HorizontalAlignment="Right" Width="491.48" Grid.Row="1">
                     <s:SurfaceButton 
                             x:Name="what_we_do" 
@@ -185,11 +194,15 @@
                         </s:SurfaceButton.Effect>
                     </s:SurfaceButton>
                 </StackPanel>
+                
+                <!-- CCF Logo -->
                 <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
                     <Image.Effect>
                         <BlurEffect Radius="2"/>
                     </Image.Effect>
                 </Image>
+                
+                <!-- Corporate Sponsors Information -->
                 <TextBlock Foreground="Black" x:Name="Farmers_popup" Margin="-42.5,156,0,176" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" TouchDown="Remove_popups" Visibility="Hidden" MouseDown="Remove_popups">
                     <TextBlock.Effect>
                             <DropShadowEffect/>
