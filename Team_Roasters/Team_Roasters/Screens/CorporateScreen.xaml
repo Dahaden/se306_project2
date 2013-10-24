@@ -159,7 +159,6 @@
                         </s:SurfaceButton.Effect>
                     </s:SurfaceButton>
                     <s:SurfaceButton 
-
                             x:Name="family_and_support" 
                             Click="Family_Click"
                             Content="Family and Support"
