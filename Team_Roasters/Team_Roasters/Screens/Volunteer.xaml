@@ -32,18 +32,6 @@
                     <RowDefinition Height="0.2*"/>
                     <RowDefinition Height="0.8*"/>
                 </Grid.RowDefinitions>
-<<<<<<< HEAD
-                <Grid x:Name="WhatIsVolunteering" Background="#FFFFFCF0" Visibility="Visible" Margin="0" Grid.RowSpan="2">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
-
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                            <Border.Effect>
-                                <DropShadowEffect/>
-                            </Border.Effect>
-                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        </Border>
-                    </s:SurfaceScrollViewer>
-=======
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.2*"/>
                     <ColumnDefinition Width="0.8*"/>
@@ -56,7 +44,6 @@
                         </Image.Effect>
                     </Image>
                     <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
->>>>>>> fabfb5b38ebd982aabbda21213e95c78ba6f5c28
                 </Grid>
 
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
