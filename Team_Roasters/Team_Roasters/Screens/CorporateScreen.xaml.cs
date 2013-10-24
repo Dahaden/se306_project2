@@ -1,6 +1,5 @@
 ﻿﻿using System;
 ﻿using System.Windows;
-
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -78,6 +77,7 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
         private void Touch_Down_Gold_Buyers(object sender, System.Windows.Input.TouchEventArgs e)
         {
+            Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
             GoldBuyers_popup.Visibility = Visibility.Visible;
         }
@@ -89,7 +89,8 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
 		private void GoldBuyers_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	 Our_Ambassadors.Opacity = 0.5;
+            Remove_popups();
+            Our_Ambassadors.Opacity = 0.5;
             GoldBuyers_popup.Visibility = Visibility.Visible;
         }
 
@@ -100,6 +101,7 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
         private void Touch_Down_Farmers(object sender, System.Windows.Input.TouchEventArgs e)
         {
+            Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
             Farmers_popup.Visibility = Visibility.Visible;
         }
@@ -111,7 +113,8 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
 		private void Farmers_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	 Our_Ambassadors.Opacity = 0.5;
+            Remove_popups();
+            Our_Ambassadors.Opacity = 0.5;
             Farmers_popup.Visibility = Visibility.Visible;
         }
 
@@ -122,8 +125,9 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
         private void Touch_Down_RCP(object sender, System.Windows.Input.TouchEventArgs e)
         {
+            Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
-            RCP_popup.Visibility = Visibility.Visible;        	
+            RCP_popup.Visibility = Visibility.Visible;
         }
 
         /// <summary>
@@ -133,7 +137,8 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
 		private void RCP_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	Our_Ambassadors.Opacity = 0.5;
+            Remove_popups();
+            Our_Ambassadors.Opacity = 0.5;
             RCP_popup.Visibility = Visibility.Visible;
         }
 
@@ -144,6 +149,7 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
         private void Touch_Down_SaveMart(object sender, System.Windows.Input.TouchEventArgs e)
         {
+            Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
             SaveMart_popup.Visibility = Visibility.Visible;
         }
@@ -155,7 +161,8 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
 		private void SaveMart_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	Our_Ambassadors.Opacity = 0.5;
+            Remove_popups();
+            Our_Ambassadors.Opacity = 0.5;
             SaveMart_popup.Visibility = Visibility.Visible;
         }
 
@@ -166,6 +173,7 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
         private void Touch_Down_Bartercard(object sender, System.Windows.Input.TouchEventArgs e)
         {
+            Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
             Bartercard_popup.Visibility = Visibility.Visible;
         }
@@ -177,27 +185,14 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
 		private void Bartercard_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	Our_Ambassadors.Opacity = 0.5;
+            Remove_popups();
+            Our_Ambassadors.Opacity = 0.5;
             Bartercard_popup.Visibility = Visibility.Visible;
         }
 
-        /// <summary>
-        /// Creates an Overlay over Buzzy Bee
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ToolTipOpen(object sender, System.Windows.Controls.ToolTipEventArgs e)
-        {
-        	this.ToolTip = "Buzzy Bee and Friends";
-        }
-
-        /// <summary>
-        /// Displays information on Sponsor Prof on Touch Event
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Touch_Down_Prof(object sender, System.Windows.Input.TouchEventArgs e)
         {
+            Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
             Prof_popup.Visibility = Visibility.Visible;
         }
@@ -209,47 +204,78 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
 		private void Prof_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	Our_Ambassadors.Opacity = 0.5;
+            Remove_popups();
+            Our_Ambassadors.Opacity = 0.5;
             Prof_popup.Visibility = Visibility.Visible;
         }
 
-        /// <summary>
-        /// Restores page to original State on mouse event
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Remove_popups(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Remove_popups(object sender, System.Windows.Input.TouchEventArgs e)
         {
-        	Our_Ambassadors.Opacity = 1.0;
-            GoldBuyers_popup.Visibility = Visibility.Collapsed;
-            RCP_popup.Visibility = Visibility.Collapsed;
-            Farmers_popup.Visibility = Visibility.Collapsed;
-            Prof_popup.Visibility = Visibility.Collapsed;
-            SaveMart_popup.Visibility = Visibility.Collapsed;
-            Bartercard_popup.Visibility = Visibility.Collapsed;
+            Remove_popups();
         }
 
-        /// <summary>
-        /// Restores page to original State on touch event
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Remove_popups(object sender, System.Windows.Input.TouchEventArgs e)
+        private void Remove_popups(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Remove_popups();	
+        }
+
+        private void Remove_popups()
         {
             Our_Ambassadors.Opacity = 1.0;
             GoldBuyers_popup.Visibility = Visibility.Collapsed;
-            RCP_popup.Visibility = Visibility.Collapsed;
-            Farmers_popup.Visibility = Visibility.Collapsed;
-            Prof_popup.Visibility = Visibility.Collapsed;
-            SaveMart_popup.Visibility = Visibility.Collapsed;
             Bartercard_popup.Visibility = Visibility.Collapsed;
+            Farmers_popup.Visibility = Visibility.Collapsed;
+            SaveMart_popup.Visibility = Visibility.Collapsed;
+            RCP_popup.Visibility = Visibility.Collapsed;
+            Prof_popup.Visibility = Visibility.Collapsed;
+            BBnFreinds_text.Visibility = Visibility.Collapsed;
+            _99_text.Visibility = Visibility.Collapsed;
         }
 
-        /// <summary>
-        /// Informs the parent window that it has left the screen
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+		private void Mouse_down_BB(object sender, System.Windows.Input.MouseButtonEventArgs e){
+            BB_popup();
+		}
+		
+		private void Touch_Down_BB(object sender, System.Windows.Input.TouchEventArgs e){
+            BB_popup();
+		}
+
+        private void BB_popup()
+        {
+            if (BBnFreinds_text.Visibility == Visibility.Collapsed)
+            {
+                Remove_popups();
+                BBnFreinds_text.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BBnFreinds_text.Visibility = Visibility.Collapsed;
+            }     
+        }
+
+        private void Mouse_Down_nn(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            nn_popup();
+        }
+
+        private void Touch_Down_nn(object sender, System.Windows.Input.TouchEventArgs e)
+        {
+            nn_popup();
+        }
+
+        private void nn_popup()
+        {
+            if (_99_text.Visibility == Visibility.Collapsed)
+            {
+                Remove_popups();
+                _99_text.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                _99_text.Visibility = Visibility.Collapsed;
+            }
+        }
+		
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();

@@ -368,6 +368,7 @@
     <Resource Include="Resources\Beads\brownbead.jpg" />
     <Resource Include="Resources\Beads\redbead.jpg" />
     <Resource Include="Resources\Beads\starbead.jpg" />
+    <Resource Include="Resources\Corporate\Exposure-Logo.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
