@@ -12,7 +12,6 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
-
     <view:Screen.Resources>
         <Storyboard x:Key="Enter">
             <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
