@@ -8,7 +8,7 @@
             <TableColumn Width="300"/>
             <TableColumn Width="500"/>
         </Table.Columns>
-        <TableRowGroup FontSize="28" FontFamily="Gill Sans MT">
+        <TableRowGroup FontSize="24" FontFamily="Gill Sans MT">
             <TableRow>
                 <TableCell>
                     <Paragraph FontWeight="Bold">Simon Lala</Paragraph>
