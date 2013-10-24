@@ -3,5 +3,36 @@
     <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
         <Bold>Child Cancer Foundation aims to provide up-to-date information for families. Below is a list of websites and brochures providing additional information, research documents and details about child cancer from around the world.</Bold>        
     </Paragraph>
-    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT"></Paragraph>
+    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+        Our website (www.childcancer.org.nz) has many great resources at your disposal. If any of the brochures or websites below interest you, please see our website for more info.
+        <LineBreak></LineBreak>
+        <LineBreak></LineBreak>
+        <Bold>Brochures</Bold>
+        <LineBreak></LineBreak>
+        Introduction to Child Cancer Foundation - A guide for families
+        <LineBreak></LineBreak>
+        Getting Through It - Parents talk about life after their child
+        <LineBreak></LineBreak>
+        When Your Brother or Sister has Cancer - A special guide for siblings
+        <LineBreak></LineBreak>
+        Back to School - For students with cancer
+        <LineBreak></LineBreak>
+        Teacher Resource - A guide for teachers of childer with cancer
+        <LineBreak></LineBreak> 
+        <LineBreak></LineBreak>
+        <Bold>Websites</Bold>
+        <LineBreak></LineBreak>
+        Kidscope - Help Families understand the impact of cancer and chemotherapy
+        <LineBreak></LineBreak>
+        CancerCare Inc - Emotional Support and practical help
+        <LineBreak></LineBreak>
+        Chemo Kids - A simple guide to chemotherapy
+        <LineBreak></LineBreak>
+        Candlelighters - Raising awareness and knowledge of cancer
+        <LineBreak></LineBreak>
+        ACT - Association for children with life-threatening conditions
+        <LineBreak></LineBreak>
+
+
+    </Paragraph>
 </FlowDocument>
