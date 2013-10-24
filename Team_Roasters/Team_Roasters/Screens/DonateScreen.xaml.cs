@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Markup;
 using System.IO;
+using System;
 
 namespace Team_Roasters.Screens
 {
@@ -48,6 +49,10 @@ namespace Team_Roasters.Screens
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF68B9D2");
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF8ECADC");
         }
-       
+
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            parentWindow.Storyboard_Completed();
+        }
     }
 }

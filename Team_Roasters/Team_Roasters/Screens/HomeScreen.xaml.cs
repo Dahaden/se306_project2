@@ -337,9 +337,9 @@ namespace Team_Roasters.Screens
             else // No internet connection
             {
                 // Reading from stored file
-                FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/news/news.xaml"));
+                //FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/news/news.xaml"));
 
-                newsViewer.Document = flowDocument;
+                //newsViewer.Document = flowDocument;
             }
 
         }
@@ -581,6 +581,9 @@ namespace Team_Roasters.Screens
             }
         }
 
-     
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            parentWindow.Storyboard_Completed();
+        }   
     }
 }

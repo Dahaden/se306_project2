@@ -1,5 +1,6 @@
 ﻿using System.Windows.Media;
 using System.Windows;
+using System;
 
 namespace Team_Roasters.Screens
 {
@@ -72,6 +73,11 @@ namespace Team_Roasters.Screens
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF69B4");
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FFFBA5D6");
+        }
+
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            parentWindow.Storyboard_Completed();
         }
     }
 }

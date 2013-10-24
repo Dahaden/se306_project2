@@ -1,4 +1,5 @@
-﻿namespace Team_Roasters.Screens
+﻿using System;
+namespace Team_Roasters.Screens
 {
     /// <summary>
     /// Interaction logic for FamilySupportScreen.xaml
@@ -15,7 +16,10 @@
         {
             parentWindow.popScreen();
         }
-             
 
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            parentWindow.Storyboard_Completed();
+        }
     }
 }

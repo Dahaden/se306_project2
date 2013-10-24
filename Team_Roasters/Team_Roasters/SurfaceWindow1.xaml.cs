@@ -34,6 +34,8 @@ namespace Team_Roasters
     public partial class SurfaceWindow1 : SurfaceWindow
     {
         private Stack<Screen> screenStack;
+        private Screen previous;
+        private Screen next;
 
         /// <summary>
         /// Default constructor.
@@ -47,7 +49,7 @@ namespace Team_Roasters
 
             // Create the stack of screens, and push the home screen on to start with.
             screenStack = new Stack<Screen>();
-            
+
             screenStack.Push(new Screens.HomeScreen(this));
             this.Content = screenStack.Peek();
             this.WindowState = WindowState.Maximized;
@@ -65,19 +67,13 @@ namespace Team_Roasters
         {
             if (screenStack.Count > 1)
             {
-                Screen prev = screenStack.Peek();
+                previous = screenStack.Peek();
                 screenStack.Pop();
-                Screen next = screenStack.Peek();
+                next = screenStack.Peek();
 
-                Storyboard exit = prev.FindResource("Exit") as Storyboard;
-                Storyboard enter = next.FindResource("Enter") as Storyboard;
+                Storyboard exit = previous.FindResource("Exit") as Storyboard;
 
-                exit.Begin(prev);
-                enter.Begin(next);
-
-                this.Content = screenStack.Peek();
-                this.WindowState = WindowState.Maximized;
-                this.WindowStyle = WindowStyle.None;
+                exit.Begin(previous);
             }
         }
 
@@ -86,19 +82,24 @@ namespace Team_Roasters
         /// </summary>
         public void pushScreen(Screen screen)
         {
-            Screen prev = screenStack.Peek();
+            previous = screenStack.Peek();
             screenStack.Push(screen);
-            Screen next = screenStack.Peek();
+            next = screenStack.Peek();
 
-            Storyboard exit = prev.FindResource("Exit") as Storyboard;
+            Storyboard exit = previous.FindResource("Exit") as Storyboard;
+
+            exit.Begin(previous);
+        }
+
+        /// <summary>
+        /// Method gets called after a storyboard animaiton
+        /// has completed
+        /// </summary>
+        public void Storyboard_Completed()
+        {
             Storyboard enter = next.FindResource("Enter") as Storyboard;
-
-            exit.Begin(prev);
-            enter.Begin(next);
-
             this.Content = next;
-            this.WindowState = WindowState.Maximized;
-            this.WindowStyle = WindowStyle.None;
+            enter.Begin(next);
         }
 
         /// <summary>
@@ -181,6 +182,5 @@ namespace Team_Roasters
         {
             //TODO: disable audio, animations here
         }
-
     }
 }

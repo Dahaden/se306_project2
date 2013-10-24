@@ -511,12 +511,10 @@
 
         <Storyboard x:Key="Enter">
             <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.X" From="1920" To="0"/>
-            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.Y" From="0" To="0"/>
         </Storyboard>
 
-        <Storyboard x:Key="Exit">
-            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="1920"/>
-            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.Y" From="0" To="0"/>
+        <Storyboard x:Key="Exit" Completed="Storyboard_Completed">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.5" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="1920"/>
         </Storyboard>
     </view:Screen.Resources>
 
