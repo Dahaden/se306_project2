@@ -20,7 +20,7 @@ namespace Team_Roasters.Screens
             : base(parentWindow)
         {
             InitializeComponent();
-            
+
             // Loads all the formatted douments into the program and assigns them to the appropriate FlowDocumentScrollViewers
             FlowDocument VolDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/Volunteer/Volunteering.xaml"));
             VolViewer.Document = VolDocument;
@@ -94,7 +94,7 @@ namespace Team_Roasters.Screens
             WhatsIs_Button.Style = (Style)FindResource("SelectedButton");
             WhoCan_Button.Style = (Style)FindResource("NotSelectedButton");
             WhatDoIDo_Button.Style = (Style)FindResource("NotSelectedButton");
-            CanI_Button.Style = (Style)FindResource("NotSelectedButton"); 
+            CanI_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
         /// <summary>

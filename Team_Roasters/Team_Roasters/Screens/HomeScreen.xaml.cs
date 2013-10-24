@@ -22,13 +22,14 @@ namespace Team_Roasters.Screens
         /// Main screen upon entering the application
         /// </summary>
         /// <param name="SurfaceWindow1"></param>
-        public HomeScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
+        public HomeScreen(SurfaceWindow1 parentWindow)
+            : base(parentWindow)
         {
             InitializeComponent();
             getNews();
             GetEvents();
             GetTweets();
-           
+
             // Position the scroller in the middle
             MainContent.ScrollToHorizontalOffset(950);
 
@@ -139,10 +140,10 @@ namespace Team_Roasters.Screens
                     //Placing Image on Grid
                     Grid.SetColumn(img, 0);
                     Grid.SetRow(img, i);
-                     
+
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
-                    
+
                     // Creating username
                     TextBlock userName = new TextBlock();
                     userName.FontWeight = FontWeights.Bold;
@@ -248,7 +249,7 @@ namespace Team_Roasters.Screens
                     // of the nodes contain news items. The wanted node is input as a XPath expression.
                     HtmlNodeCollection collection = doc.DocumentNode.SelectNodes("//div[@class='item']");
 
-                    int count = 0; 
+                    int count = 0;
 
                     // Loops through each node in the list
                     foreach (HtmlNode link in collection)
@@ -304,6 +305,7 @@ namespace Team_Roasters.Screens
                         catch (Exception e)
                         {
                             // No image for this news item
+                            e.ToString();
                         }
 
                         // Creates a filepath that the image will be downloaded to
@@ -400,7 +402,7 @@ namespace Team_Roasters.Screens
                 string target;
                 string titlename;
                 string whenwhere;
-                string imgsrc="";
+                string imgsrc = "";
                 string desc;
                 string filename;
                 string filepath;
@@ -448,13 +450,13 @@ namespace Team_Roasters.Screens
                     int count = 0;
                     foreach (HtmlNode link in collection)
                     {
-                        
+
                         writer.WriteStartElement("Section");
                         if (count % 2 == 0)
                         {
                             writer.WriteAttributeString("Background", "#FFDACFCF");
                         }
-                        
+
                         writer.WriteStartElement("Paragraph");
                         writer.WriteAttributeString("FontSize", "23");
                         writer.WriteAttributeString("FontWeight", "Bold");
@@ -502,6 +504,7 @@ namespace Team_Roasters.Screens
                         catch (Exception e)
                         {
                             // No image for this news item
+                            e.ToString();
                         }
 
                         filepath = "../../Resources/events/" + filename + ".jpeg";
@@ -543,7 +546,7 @@ namespace Team_Roasters.Screens
                         writer.WriteAttributeString("Stroke", "Black");
                         writer.WriteAttributeString("X2", "1");
                         writer.WriteAttributeString("StrokeThickness", "5");
-                        
+
                         writer.WriteEndElement(); // Line
 
                         writer.WriteEndElement(); // Paragraph
@@ -720,6 +723,6 @@ namespace Team_Roasters.Screens
             parentWindow.pushScreen(new CorporateScreen(parentWindow));
         }
 
-        public override void setButtonColours(){   }
+        public override void setButtonColours() { }
     }
 }

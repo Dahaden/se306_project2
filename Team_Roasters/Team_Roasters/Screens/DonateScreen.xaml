@@ -38,17 +38,17 @@
                     <ColumnDefinition Width="0.2*"/>
                     <ColumnDefinition Width="0.8*"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <!--Back Button-->
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                    <Image x:Name="BackArrow" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
                         <Image.Effect>
                             <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Image.Effect>
                     </Image>
                     <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
                 </Grid>
-                
+
                 <!--Page Title-->
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
                     <Label Foreground="Black" Content="Please Donate" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
