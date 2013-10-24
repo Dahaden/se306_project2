@@ -13,6 +13,7 @@
              d:DesignWidth="1920">
 
     <view:Screen.Resources>
+        <!-- Animation Resources -->
         <Storyboard x:Key="Enter" Completed="Storyboard_Completed_1">
             <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
         </Storyboard>
@@ -22,7 +23,7 @@
         </Storyboard>
     </view:Screen.Resources>
 
-    <Viewbox Margin="20,20,20,27">
+    <Viewbox Margin="20,20,20,25">
         <Grid x:Name="MainPage">
             <Grid.RenderTransform>
                 <TranslateTransform/>
@@ -37,19 +38,20 @@
                     <ColumnDefinition Width="0.8*"/>
                 </Grid.ColumnDefinitions>
 
+                <!-- Back Arrow -->
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                    <Image x:Name="BackArrow" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
                         <Image.Effect>
                             <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Image.Effect>
                     </Image>
                     <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
                 </Grid>
-
+                <!-- Body for What We Do -->
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
                     <Label Foreground="Black" Content="What We Do" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
                 </StackPanel>
-
+                <!--Sub-heading navigation buttons-->
                 <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
                     <s:SurfaceButton x:Name="Ambassador_Button" Content="Our Ambassadors" Click="SurfaceButton_OurAmbassadors" Style="{DynamicResource SelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoSelectedColour}" FontFamily="Gill Sans MT"/>
                     <s:SurfaceButton x:Name="Help_Button" Content="How We Help" Click="SurfaceButton_HowWeHelp" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource WhatWeDoNotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
@@ -62,8 +64,8 @@
                         <RowDefinition Height="0.597*"/>
                         <RowDefinition Height="0.403*"/>
                     </Grid.RowDefinitions>
-
-                    <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Grid.RowSpan="2" TouchUp="Touch_up" Height="683.877" VerticalAlignment="Bottom" Margin="0,0,0,72.625" >
+                    <!--Sub-heading pages-->
+                    <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Grid.RowSpan="2" TouchUp="Touch_up" Height="683.877" VerticalAlignment="Bottom" Margin="0,0,0,72.625" MouseUp="Our_Ambassadors_MouseUp" >
                         <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" Height="678.325" VerticalAlignment="Top" Margin="0,-0.281,0,0">
                             <s:SurfaceScrollViewer.Effect>
                                 <DropShadowEffect/>
@@ -115,11 +117,13 @@
                         </s:SurfaceScrollViewer>
                     </Grid>
                 </Grid>
+                <!--Banner-->
                 <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
                     <Image.Effect>
                         <BlurEffect Radius="2"/>
                     </Image.Effect>
                 </Image>
+                <!-- Navigation Buttons to other main pages-->
                 <s:SurfaceButton 
                     x:Name="what_we_do" 
                     Content="What We Do" 

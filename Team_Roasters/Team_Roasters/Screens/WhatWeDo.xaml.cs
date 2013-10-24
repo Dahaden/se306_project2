@@ -18,15 +18,16 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class WhatWeDo : Screen
     {
-       
+
         int Amb_counter = 0;
         ArrayList images = new ArrayList();
         ArrayList text = new ArrayList();
-       
-        public WhatWeDo(SurfaceWindow1 parentWindow) : base(parentWindow)
+
+        public WhatWeDo(SurfaceWindow1 parentWindow)
+            : base(parentWindow)
         {
             InitializeComponent();
-            
+
             AB_image ABimage = new AB_image();
             BOK_image BOKimage = new BOK_image();
             CJ_image CJimage = new CJ_image();
@@ -71,6 +72,7 @@ namespace Team_Roasters.Screens
             Amb_image.Children.Add(ABimage);
             Amb_text.Document = Amb_AB;
 
+            // Loads the stored document files into the FlowDocumentScrollViewer
             FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/docs/WhatWeDo/OurPeople.xaml"));
             ourPeopleViewer.Document = flowDocument;
 
@@ -78,29 +80,54 @@ namespace Team_Roasters.Screens
             ourHistoryViewer.Document = ourhistoryDoc;
         }
 
+        /// <summary>
+        /// Returns to main screen upon touch of back button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
         }
 
+        /// <summary>
+        /// Moves to the Coporate Page on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Corperate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
             parentWindow.pushScreen(new CorporateScreen(parentWindow));
         }
 
+        /// <summary>
+        /// Moves to the Volunteers Page on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Volunteers_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
             parentWindow.pushScreen(new Volunteer(parentWindow));
         }
 
+        /// <summary>
+        /// Moves to the Family & Support Page on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Family_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             parentWindow.popScreen();
             parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
         }
 
+        /// <summary>
+        /// Shows the information about the amabassadors of CCF
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_OurAmbassadors(object sender, System.Windows.RoutedEventArgs e)
         {
             Our_Ambassadors.Visibility = System.Windows.Visibility.Visible;
@@ -113,6 +140,11 @@ namespace Team_Roasters.Screens
             Help_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
+        /// <summary>
+        /// Shows the information about people that work at CCF
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_OurPeople(object sender, System.Windows.RoutedEventArgs e)
         {
             Our_Ambassadors.Visibility = System.Windows.Visibility.Collapsed;
@@ -125,6 +157,11 @@ namespace Team_Roasters.Screens
             Help_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
+        /// <summary>
+        /// Shows the history of the CCF
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_OurHistory(object sender, System.Windows.RoutedEventArgs e)
         {
             Our_Ambassadors.Visibility = System.Windows.Visibility.Collapsed;
@@ -137,6 +174,11 @@ namespace Team_Roasters.Screens
             Help_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
+        /// <summary>
+        /// Shows the information about how CCF helps
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_HowWeHelp(object sender, RoutedEventArgs e)
         {
             Our_Ambassadors.Visibility = System.Windows.Visibility.Collapsed;
@@ -149,7 +191,11 @@ namespace Team_Roasters.Screens
             Help_Button.Style = (Style)FindResource("SelectedButton");
         }
 
-
+        /// <summary>
+        /// Switches to the next ambassador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SwitchNext()
         {
             Amb_counter++;
@@ -164,6 +210,11 @@ namespace Team_Roasters.Screens
             Amb_text.Document = (FlowDocument)text[Amb_counter];
         }
 
+        /// <summary>
+        /// Switches to the previous ambassador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SwitchPrevious()
         {
             Amb_counter--;
@@ -178,6 +229,9 @@ namespace Team_Roasters.Screens
             Amb_text.Document = (FlowDocument)text[Amb_counter];
         }
 
+        /// <summary>
+        /// Sets the colours of on screen buttons
+        /// </summary>
         public override void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
@@ -185,20 +239,45 @@ namespace Team_Roasters.Screens
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF8ECADC");
         }
 
+        /// <summary>
+        /// This is called when the screen finishes its exiting animation.
+        /// This ends up calling the same method in the parent class.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();
         }
-
+        /// <summary>
+        /// Touch up event for switching between ambassadors
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Touch_up(object sender, System.Windows.Input.TouchEventArgs e)
         {
             SwitchNext();
             System.Threading.Thread.Sleep(500);
         }
 
+        /// <summary>
+        /// On entry, sets the colour of buttons to fit the colour scheme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Storyboard_Completed_1(object sender, EventArgs e)
         {
             setButtonColours();
+        }
+        /// <summary>
+        /// Mouse up event for switching between ambassadors
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Our_Ambassadors_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            SwitchNext();
+            System.Threading.Thread.Sleep(500);
         }
     }
 }

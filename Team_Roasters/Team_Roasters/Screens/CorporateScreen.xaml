@@ -23,12 +23,12 @@
         </Storyboard>
     </view:Screen.Resources>
 
-    <Viewbox>
+    <Viewbox Margin="20,20,20,25">
         <Grid x:Name="MainPage">
             <Grid.RenderTransform>
                 <TranslateTransform/>
             </Grid.RenderTransform>
-            <Grid x:Name="Corporate" Background="#FFFFFCF0" Width="1920" Height="1080" Margin="-32,8,32,-8">
+            <Grid x:Name="Corporate" Background="#FFFFFCF0" Width="1920" Height="1080" Margin="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.2*"/>
                     <RowDefinition Height="0.8*"/>
