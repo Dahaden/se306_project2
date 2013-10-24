@@ -11,200 +11,212 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
-    <Viewbox Margin="20,20,20,25">
-        <Grid x:Name="Family_Support" Background="#FFFFFCF0" Width="1920" Height="1080">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.8*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.8*"/>
-            </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="0" Grid.Column="0">
-                <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+    <view:Screen.Resources>
+        <Storyboard x:Key="Enter" Completed="Storyboard_Completed_1">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="-1920" To="0"/>
+        </Storyboard>
+        <Storyboard x:Key="Exit" Completed="Storyboard_Completed">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.5" Storyboard.TargetName="MainPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="-1920"/>
+        </Storyboard>
+    </view:Screen.Resources>
+
+    <Viewbox Margin="20,20,20,25">
+        <Grid x:Name="MainPage">
+            <Grid.RenderTransform>
+                <TranslateTransform/>
+            </Grid.RenderTransform>
+            <Grid x:Name="Family_Support" Background="#FFFFFCF0" Width="1920" Height="1080">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.8*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                        <Image.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        </Image.Effect>
+                    </Image>
+                    <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
+                </Grid>
+
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+                    <Label Foreground="Black" Content="Family Support" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
+                    <s:SurfaceButton x:Name="SS_Button" Content="Support Services" Click="SurfaceButton_SupportServices" Style="{DynamicResource SelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource NotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="PR_Button" Content="Parent Resources" Click="SurfaceButton_ParentResources" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource SelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="HH_Button" Content="Holiday Homes" Click="SurfaceButton_HolidayHomes" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource NotSelectedColour}" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="Scholarships_Button" Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource NotSelectedColour}" FontFamily="Gill Sans MT"/>
+                    <s:SurfaceButton x:Name="Beads_Button" Content="Beads" Click="SurfaceButton_Beads" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource NotSelectedColour}" FontFamily="Gill Sans MT"/>
+                </StackPanel>
+
+                <Grid Grid.Row="1" Grid.Column="1" Margin="0,22,0,146.824" Width="986.5" HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.597*"/>
+                        <RowDefinition Height="0.403*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid x:Name="Parent_Resources" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.721*"/>
+                            <RowDefinition Height="0.279*"/>
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ParentResourcesViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </Grid>
+
+                    <Grid x:Name="Holiday_Homes" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="HolidayHomesViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </Grid>
+
+
+                    <Grid x:Name="Support_Services" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="SupportServicesViewer" Foreground="Black"/>
+                        </Border>
+                    </Grid>
+
+                    <Grid x:Name="Scholarships" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+
+                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ScholarshipsViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+
+
+                    </Grid>
+                    <Grid x:Name="Beads" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
+                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+                            <Canvas Margin="6.536,-2.605,1.04,-8.268" RenderTransformOrigin="0.5,0.5">
+                                <Canvas.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="0.647"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Canvas.RenderTransform>
+                                <s:ScatterView Margin="0,0,0,0" Height="676.161" Canvas.Left="1" Canvas.Top="1" Width="969.914">
+                                    <s:ScatterViewItem x:Name="blueBead" Center="75,75" Panel.ZIndex="-2"
+                                                    Background="White" MouseDown="blueBead_MouseDown" TouchDown="blueBead_TouchDown" TouchLeave="blueBead_TouchDown" Height="134.384" ContainerActivated="blueBead_ContainerActivated" RenderTransformOrigin="-0.914,-2.313" Margin="0,196.154,-532.283,-330.539" SnapsToDevicePixels="False" HorizontalAlignment="Right" Width="134.384">
+                                        <s:ScatterViewItem.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="0.143"/>
+                                                <TranslateTransform X="705.789" Y="188.083"/>
+                                            </TransformGroup>
+                                        </s:ScatterViewItem.RenderTransform>
+                                        <Image Source="/Team_Roasters;component/Resources/Beads/bluebead.jpg"/>
+                                    </s:ScatterViewItem>
+                                    <s:ScatterViewItem x:Name="brownBead" Center="75,75" Panel.ZIndex="-2"
+                                                    Background="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="brownBead_MouseDown" TouchDown="brownBead_TouchDown" TouchLeave="brownBead_TouchDown" Height="134.384" Width="134.384" ContainerActivated="brownBead_ContainerActivated" Margin="0,0,-198.166,-609.168" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+                                        <Image Source="/Team_Roasters;component/Resources/Beads/brownbead.jpg"/>
+                                    </s:ScatterViewItem>
+                                    <s:ScatterViewItem x:Name="orangeBead" Center="75,75" Panel.ZIndex="-2"
+                                                    Background="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="orangeBead_MouseDown" TouchDown="orangeBead_TouchDown" TouchLeave="orangeBead_TouchDown" Height="134.384" Width="134.384" ContainerActivated="orangeBead_ContainerActivated" Margin="0,0,-498.231,-547.335" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+                                        <Image Source="/Team_Roasters;component/Resources/Beads/orangebead.jpg"/>
+                                    </s:ScatterViewItem>
+                                    <s:ScatterViewItem x:Name="redBead" Center="75,75" Panel.ZIndex="-2"
+                                                    Background="White" VerticalAlignment="Bottom" MouseDown="redBead_MouseDown" TouchDown="redBead_TouchDown" TouchLeave="redBead_TouchDown" Height="134.384" HorizontalAlignment="Right" Width="134.384" ContainerActivated="redBead_ContainerActivated" Margin="0,0,-733.807,-634.237" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+                                        <Image Source="/Team_Roasters;component/Resources/Beads/redbead.jpg"/>
+                                    </s:ScatterViewItem>
+                                    <s:ScatterViewItem x:Name="starBead" Center="75,75" Panel.ZIndex="-2"
+                                                    Background="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="starBead_MouseDown" TouchDown="starBead_TouchDown" TouchLeave="starBead_TouchDown" Height="134.384" Width="134.384" ContainerActivated="starBead_ContainerActivated" Margin="0,0,-249.06,-276.974" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+                                        <Image Source="/Team_Roasters;component/Resources/Beads/starbead.jpg"/>
+                                    </s:ScatterViewItem>
+                                    <s:ScatterViewItem x:Name="whiteBead" Center="75,75" Panel.ZIndex="-2"
+                                                    Background="White" VerticalAlignment="Bottom" MouseDown="whiteBead_MouseDown" TouchDown="whiteBead_TouchDown" TouchLeave="whiteBead_TouchDown" Height="134.384" MouseLeftButtonDown="whiteBead_MouseDown" ContainerActivated="whiteBead_MouseDown" HorizontalAlignment="Right" Width="134.384" Margin="0,0,-859.573,-358.94" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+                                        <Image Source="/Team_Roasters;component/Resources/Beads/whitebead.jpg"/>
+                                    </s:ScatterViewItem>
+                                </s:ScatterView>
+                            </Canvas>
+                        </Border>
+                        <TextBlock x:Name="bluedesc"  Height="68" Margin="167,0,146.5,-99.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Blue Beads are given for every clinic visit"/></TextBlock>
+                        <TextBlock x:Name="browndesc"  Height="99" Margin="167,0,146.5,-130.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Brown Beads are when hair thins or falls out for the first time"/></TextBlock>
+                        <TextBlock x:Name="orangedesc"  Height="99" Margin="167,0,146.5,-129.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Orange Bead for each time a line is put in or replaced or removed"/></TextBlock>
+                        <TextBlock x:Name="reddesc"  Height="68" Margin="167,0,146.5,-98.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="A Red Bead is given for each Transfusion"/></TextBlock>
+                        <TextBlock x:Name="stardesc"  Height="68" Margin="275,0,257.5,-98.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Star Beads for each surgery"/></TextBlock>
+                        <TextBlock x:Name="whitedesc"  Height="98" Margin="167,0,146.5,-129.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="White Bead for every day that has Chemotherapy"/></TextBlock>
+                        <Rectangle Height="218.824" Margin="-267,0,-356,-218.614" VerticalAlignment="Bottom" Panel.ZIndex="99"/>
+                        <Rectangle HorizontalAlignment="Right" Margin="0,-59,-452.5,-99.614" Width="456.5" Panel.ZIndex="99"/>
+                        <Rectangle HorizontalAlignment="Left" Margin="-355.914,-59,0,-129.614" Width="358.5" Panel.ZIndex="99"/>
+                        <TextBlock x:Name="beadsDesc"  Height="149" Margin="23,23.5,12.5,0" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF15A6D2" TextAlignment="Center" FontFamily="Gill Sans MT" Background="White"  Text="Beads of Courage® is a therapeutic programme that recognises the strength and courage of each child during cancer treatment and procedures. "/>
+                        <Rectangle Height="218.824" Margin="-315,-216.824,-308,0" VerticalAlignment="Top" Panel.ZIndex="99"/>
+                    </Grid>
+                </Grid>
+                <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
                     <Image.Effect>
-                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                        <BlurEffect Radius="2"/>
                     </Image.Effect>
                 </Image>
-                <s:SurfaceButton Click="SurfaceButton_Back" Background="Transparent" Margin="0,1,1,1"/>
-            </Grid>
-
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
-                <Label Foreground="Black" Content="Family Support" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
-            </StackPanel>
-
-            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
-                <s:SurfaceButton x:Name="SS_Button" Content="Support Services" Click="SurfaceButton_SupportServices" Style="{DynamicResource SelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource NotSelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="PR_Button" Content="Parent Resources" Click="SurfaceButton_ParentResources" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Background="{DynamicResource SelectedColour}" Margin="19,1,18,10" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="HH_Button" Content="Holiday Homes" Click="SurfaceButton_HolidayHomes" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource NotSelectedColour}" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="Scholarships_Button" Content="Scholarships" Click="SurfaceButton_Scholarships" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource NotSelectedColour}" FontFamily="Gill Sans MT"/>
-                <s:SurfaceButton x:Name="Beads_Button" Content="Beads" Click="SurfaceButton_Beads" Style="{DynamicResource NotSelectedButton}" OverridesDefaultStyle="True" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource NotSelectedColour}" FontFamily="Gill Sans MT"/>
-            </StackPanel>
-
-            <Grid Grid.Row="1" Grid.Column="1" Margin="0,22,0,146.824" Width="986.5" HorizontalAlignment="Left">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.597*"/>
-                    <RowDefinition Height="0.403*"/>
-                </Grid.RowDefinitions>
-
-                <Grid x:Name="Parent_Resources" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.721*"/>
-                        <RowDefinition Height="0.279*"/>
-                    </Grid.RowDefinitions>
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
-                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ParentResourcesViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
-                    </Border>
-                </Grid>
-
-                <Grid x:Name="Holiday_Homes" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
-                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="HolidayHomesViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
-                    </Border>
-                </Grid>
-
-                <Grid x:Name="Support_Services" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                    
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
-                        <s:SurfaceScrollViewer Margin="-1,7,7,7" >
-                            <RichTextBox IsReadOnly="True" Padding="14,12,1,1" s:SurfaceScrollViewer.VerticalScrollBarVisibility="Visible" BorderThickness="0" x:Name="SupportServicesViewer" Foreground="Black" Height="662.161" Width="948.262"/>
-                    	</s:SurfaceScrollViewer>
-                    </Border>
-                    
-                </Grid>
-
-                <Grid x:Name="Scholarships" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
-
-                        <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ScholarshipsViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
-                    </Border>
-
-                        
-                </Grid>
-                <Grid x:Name="Beads" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
-                    <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                        <Border.Effect>
-                            <DropShadowEffect/>
-                        </Border.Effect>
-                        <Canvas Margin="6.536,-2.605,1.04,-8.268" RenderTransformOrigin="0.5,0.5">
-                            <Canvas.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform Angle="0.647"/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Canvas.RenderTransform>
-                            <s:ScatterView Margin="0,0,0,0" Height="676.161" Canvas.Left="1" Canvas.Top="1" Width="969.914">
-                                <s:ScatterViewItem x:Name="blueBead" Center="75,75" Panel.ZIndex="-2"
-                    				Background="White" MouseDown="blueBead_MouseDown" TouchDown="blueBead_TouchDown" TouchLeave="blueBead_TouchDown" Height="134.384" ContainerActivated="blueBead_ContainerActivated" RenderTransformOrigin="-0.914,-2.313" Margin="0,196.154,-532.283,-330.539" SnapsToDevicePixels="False" HorizontalAlignment="Right" Width="134.384">
-                                    <s:ScatterViewItem.RenderTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform/>
-                                            <SkewTransform/>
-                                            <RotateTransform Angle="0.143"/>
-                                            <TranslateTransform X="705.789" Y="188.083"/>
-                                        </TransformGroup>
-                                    </s:ScatterViewItem.RenderTransform>
-                                    <Image Source="/Team_Roasters;component/Resources/Beads/bluebead.jpg"/>
-                                </s:ScatterViewItem>
-                                <s:ScatterViewItem x:Name="brownBead" Center="75,75" Panel.ZIndex="-2"
-                    				Background="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="brownBead_MouseDown" TouchDown="brownBead_TouchDown" TouchLeave="brownBead_TouchDown" Height="134.384" Width="134.384" ContainerActivated="brownBead_ContainerActivated" Margin="0,0,-198.166,-609.168" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
-                                    <Image Source="/Team_Roasters;component/Resources/Beads/brownbead.jpg"/>
-                                </s:ScatterViewItem>
-                                <s:ScatterViewItem x:Name="orangeBead" Center="75,75" Panel.ZIndex="-2"
-                    				Background="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="orangeBead_MouseDown" TouchDown="orangeBead_TouchDown" TouchLeave="orangeBead_TouchDown" Height="134.384" Width="134.384" ContainerActivated="orangeBead_ContainerActivated" Margin="0,0,-498.231,-547.335" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
-                                    <Image Source="/Team_Roasters;component/Resources/Beads/orangebead.jpg"/>
-                                </s:ScatterViewItem>
-                                <s:ScatterViewItem x:Name="redBead" Center="75,75" Panel.ZIndex="-2"
-                    				Background="White" VerticalAlignment="Bottom" MouseDown="redBead_MouseDown" TouchDown="redBead_TouchDown" TouchLeave="redBead_TouchDown" Height="134.384" HorizontalAlignment="Right" Width="134.384" ContainerActivated="redBead_ContainerActivated" Margin="0,0,-733.807,-634.237" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
-                                    <Image Source="/Team_Roasters;component/Resources/Beads/redbead.jpg"/>
-                                </s:ScatterViewItem>
-                                <s:ScatterViewItem x:Name="starBead" Center="75,75" Panel.ZIndex="-2"
-                    				Background="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="starBead_MouseDown" TouchDown="starBead_TouchDown" TouchLeave="starBead_TouchDown" Height="134.384" Width="134.384" ContainerActivated="starBead_ContainerActivated" Margin="0,0,-249.06,-276.974" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
-                                    <Image Source="/Team_Roasters;component/Resources/Beads/starbead.jpg"/>
-                                </s:ScatterViewItem>
-                                <s:ScatterViewItem x:Name="whiteBead" Center="75,75" Panel.ZIndex="-2"
-                    				Background="White" VerticalAlignment="Bottom" MouseDown="whiteBead_MouseDown" TouchDown="whiteBead_TouchDown" TouchLeave="whiteBead_TouchDown" Height="134.384" MouseLeftButtonDown="whiteBead_MouseDown" ContainerActivated="whiteBead_MouseDown" HorizontalAlignment="Right" Width="134.384" Margin="0,0,-859.573,-358.94" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
-                                    <Image Source="/Team_Roasters;component/Resources/Beads/whitebead.jpg"/>
-                                </s:ScatterViewItem>
-                            </s:ScatterView>
-                        </Canvas>
-                    </Border>
-                    <TextBlock x:Name="bluedesc"  Height="68" Margin="167,0,146.5,-99.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Blue Beads are given for every clinic visit"/></TextBlock>
-                    <TextBlock x:Name="browndesc"  Height="99" Margin="167,0,146.5,-130.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Brown Beads are when hair thins or falls out for the first time"/></TextBlock>
-                    <TextBlock x:Name="orangedesc"  Height="99" Margin="167,0,146.5,-129.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Orange Bead for each time a line is put in or replaced or removed"/></TextBlock>
-                    <TextBlock x:Name="reddesc"  Height="68" Margin="167,0,146.5,-98.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="A Red Bead is given for each Transfusion"/></TextBlock>
-                    <TextBlock x:Name="stardesc"  Height="68" Margin="275,0,257.5,-98.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="Star Beads for each surgery"/></TextBlock>
-                    <TextBlock x:Name="whitedesc"  Height="98" Margin="167,0,146.5,-129.614" FontSize="32" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="Black" FontFamily="Gill Sans MT" TextAlignment="Center"><Run Language="en-nz" Text="White Bead for every day that has Chemotherapy"/></TextBlock>
-                    <Rectangle Height="218.824" Margin="-267,0,-356,-218.614" VerticalAlignment="Bottom" Panel.ZIndex="99"/>
-                    <Rectangle HorizontalAlignment="Right" Margin="0,-59,-452.5,-99.614" Width="456.5" Panel.ZIndex="99"/>
-                    <Rectangle HorizontalAlignment="Left" Margin="-355.914,-59,0,-129.614" Width="358.5" Panel.ZIndex="99"/>
-                    <TextBlock x:Name="beadsDesc"  Height="149" Margin="23,23.5,12.5,0" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF15A6D2" TextAlignment="Center" FontFamily="Gill Sans MT" Background="White"  Text="Beads of Courage® is a therapeutic programme that recognises the strength and courage of each child during cancer treatment and procedures. "/>
-                    <Rectangle Height="218.824" Margin="-315,-216.824,-308,0" VerticalAlignment="Top" Panel.ZIndex="99"/>
-                </Grid>
-            </Grid>
-            <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
-                <Image.Effect>
-                    <BlurEffect Radius="2"/>
-                </Image.Effect>
-            </Image>
-            <s:SurfaceButton 
-            	x:Name="what_we_do" 
+                <s:SurfaceButton 
+                    x:Name="what_we_do" 
                 Click="What_Click"
-            	Content="What We Do" 
-            	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Margin="0,29.331,55,0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" d:LayoutOverrides="VerticalAlignment" >
-                <s:SurfaceButton.Effect>
-                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                </s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
-            	Grid.RowSpan="1" 
-            	Grid.ColumnSpan="1" 
+                    Content="What We Do" 
+                    Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Margin="0,29.331,55,0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" d:LayoutOverrides="VerticalAlignment" >
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+                <s:SurfaceButton 
+                    Grid.RowSpan="1" 
+                    Grid.ColumnSpan="1" 
 
-            	x:Name="family_and_support" 
-            	Content="Family and Support"
-            	Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Grid.Column="1" HorizontalAlignment="Right" Height="171.984" VerticalAlignment="Top" Width="491.48">
-                <s:SurfaceButton.Effect>
-                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                </s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
-            	Grid.RowSpan="1" 
-            	Grid.ColumnSpan="1" 
-            	x:Name="volunteers"
+                    x:Name="family_and_support" 
+                    Content="Family and Support"
+                    Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Grid.Column="1" HorizontalAlignment="Right" Height="171.984" VerticalAlignment="Top" Width="491.48">
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+                <s:SurfaceButton 
+                    Grid.RowSpan="1" 
+                    Grid.ColumnSpan="1" 
+                    x:Name="volunteers"
                 Click="Volunteers_Click"
-            	Content="Volunteers" 
-            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Height="171.984" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" >
-                <s:SurfaceButton.Effect>
-                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                </s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
-            	Grid.RowSpan="1"
-            	Grid.ColumnSpan="1"
-            	x:Name="corporate"
+                    Content="Volunteers" 
+                    Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Height="171.984" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" >
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+                <s:SurfaceButton 
+                    Grid.RowSpan="1"
+                    Grid.ColumnSpan="1"
+                    x:Name="corporate"
                 Click="Corperate_Click"
-            	Content="Corporate Sponsors"
-            	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="171.984" VerticalAlignment="Bottom" >
-                <s:SurfaceButton.Effect>
-                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                </s:SurfaceButton.Effect>
-            </s:SurfaceButton>
+                    Content="Corporate Sponsors"
+                    Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="171.984" VerticalAlignment="Bottom" >
+                    <s:SurfaceButton.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
+                    </s:SurfaceButton.Effect>
+                </s:SurfaceButton>
+            </Grid>
         </Grid>
     </Viewbox>
 </view:Screen>

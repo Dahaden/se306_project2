@@ -11,14 +11,33 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
+<view:Screen.Resources>
+    
+        <!-- Animation Resources -->
+        <Storyboard x:Key="Enter">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.X" From="1920" To="0"/>
+        </Storyboard>
+
+        <Storyboard x:Key="Exit" Completed="Storyboard_Completed">
+            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.5" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.X" From="0" To="1920"/>
+        </Storyboard>
+    </view:Screen.Resources>
+
+
+
     <Viewbox Margin="20,20,20,25">
+
         <Grid Name="MultiPage">
+            <Grid.RenderTransform>
+                <TranslateTransform/>
+            </Grid.RenderTransform>
             <Grid Name="Home" Background="#FFFFFCF0" Width="1920" Height="1080" Visibility="Visible">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="217*" />
                     <RowDefinition Height="863"/>
                 </Grid.RowDefinitions>
-                <!-- Top Menu / Title bar goes here -->
+                
+                <!-- Top Menu / Title bar -->
                 <Grid Height="220" Margin="0,0,0,0">
                     <Grid Name="ccf_grid" Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -42,7 +61,7 @@
                     </Grid>
                 </Grid>
 
-                <!-- Main Content goes here -->
+                <!-- Main Content -->
                 <s:SurfaceScrollViewer x:Name="MainContent" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Style="{DynamicResource ScrollViewer}" d:LayoutOverrides="GridBox" ScrollChanged="Scroll_changed">
                     <Grid Width="4200">
                         <Grid.ColumnDefinitions>
@@ -51,9 +70,7 @@
                             <ColumnDefinition Width="1500" />
                         </Grid.ColumnDefinitions>
 
-                        <!-- Buttons go here - what we do etc-->
-
-                        <!-- Buttons go here - what we do etc-->
+                        <!-- Main Screen Buttons -->
                         <Grid Grid.Column="1" Margin="105,0,-30,0">
                             <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="567.667" />
@@ -63,7 +80,8 @@
                                     <RowDefinition Height="415" />
                                     <RowDefinition Height="385" />
                             </Grid.RowDefinitions>
-
+                            
+                            <!-- What We Do -->
                             <Grid x:Name="What_We_Do_Grid" Margin="33.5,59.414,-72,2">
 
                                         <Border BorderThickness="0" Background="#FF8ECADC" d:IsEffectDisabled="True" TouchDown="What_we_do_Click">
@@ -79,6 +97,8 @@
                                         <TextBlock Foreground="Black" Margin="148.5,0,167,0" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="283.697" TouchDown="What_we_do_Click"><Run Language="en-nz" Text="What We "/><Run Language="en-nz" Text="Do"/></TextBlock>
 
                                 </Grid>
+                            
+                            <!-- Family And Support -->
                             <Grid x:Name="Family_Support_Grid" Margin="33.333,-2,-71.833,25" Grid.Row="1">
 
                                     <Border BorderThickness="0" Background="#FFFDC37D" d:IsEffectDisabled="True" TouchDown="FamilyButton_Click">
@@ -95,6 +115,8 @@
                                 <TextBlock Foreground="Black" Margin="66.673,0,0,6" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="469.196" TouchDown="FamilyButton_Click"><Run Language="en-nz" Text="Family and Support"/></TextBlock>
 
                             </Grid>
+                            
+                            <!-- Volunteers -->
                             <Grid x:Name="Volunteers_Grid" Margin="71.833,59,-445.667,2" Grid.Column="1">
 
                                     <Border BorderThickness="0" Background="#FFFBA5D6" d:IsEffectDisabled="True" TouchDown="Volunteers_Click">
@@ -111,6 +133,8 @@
                                 <TextBlock Foreground="Black" Margin="189.948,0,195.275,0.683" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" Text="Volunteers" HorizontalAlignment="Center" TouchDown="Volunteers_Click"/>
 
                             </Grid>
+
+                            <!-- Corporate -->
                             <Grid x:Name="Corporate_Grid" Margin="71.833,-2,-445.667,25" Grid.Row="1" Grid.Column="1">
 
                                     <Border BorderThickness="0" Background="#FFD7E583" d:IsEffectDisabled="True" TouchDown="CorporateSponsers_Click">
@@ -127,7 +151,7 @@
 
                             </Grid>
                         </Grid>
-                        <!-- Video and information go here -->
+                        <!-- Video and information -->
                         <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="400" />
@@ -136,11 +160,12 @@
                             <my:VideoPlayer Margin="0,61,-52,34.25" Source="Resources/intro-video.mp4" Grid.RowSpan="2" HorizontalAlignment="Right" Width="1189" />
 
                         </Grid>
+                        <!-- Twitter Title -->
                         <TextBlock x:Name="Tiwtitle" Grid.Column="2" HorizontalAlignment="Left" Margin="25,58.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF00ABF0" FontFamily="Arial" FontWeight="Bold" FontSize="37.333" Width="450" Height="54.626"><TextBlock.Effect>
                                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </TextBlock.Effect><Run Language="en-nz" Text=" @ChildCancerNZ "/></TextBlock>
 
-                        <!-- News, Upcoming events, twitter etc go here -->
+                        <!-- News, Upcoming events, twitter -->
                         <Grid Grid.Column="2">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="400" />
@@ -151,18 +176,24 @@
                                 <ColumnDefinition Width="0.333*" />
                                 <ColumnDefinition Width="0.333*" />
                             </Grid.ColumnDefinitions>
+
+                            <!-- News Feed -->
                             <s:SurfaceScrollViewer x:Name="News_SurfaceScrollViewer_" HorizontalAlignment="Right" Grid.Column="2" Grid.RowSpan="2" Margin="0,112.984,25,23.422" Width="450" Style="{DynamicResource SurfaceScrollViewerStyle1}">
                                 <s:SurfaceScrollViewer.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceScrollViewer.Effect>
                                 <RichTextBox Width="440" IsEnabled="False" x:Name="newsViewer" ScrollViewer.PanningMode="VerticalOnly" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,57.0079999999999"/>
                             </s:SurfaceScrollViewer>
+
+                            <!-- Events Feed -->
                             <s:SurfaceScrollViewer  x:Name="Events_SurfaceScrollViewer_" Grid.Column="1" Grid.RowSpan="2" Margin="25,112.984,25,23.422" ScrollViewer.VerticalScrollBarVisibility="Visible" Style="{DynamicResource SurfaceScrollViewerStyle1}">
                                 <s:SurfaceScrollViewer.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                                 </s:SurfaceScrollViewer.Effect>
                                 <RichTextBox IsEnabled="False" Width="440" x:Name="eventViewer" IsReadOnly="True" IsDocumentEnabled="False" Margin="0,0,0,56.0079999999999"/>
                             </s:SurfaceScrollViewer>
+
+                            <!-- Twitter Feed -->
                             <s:SurfaceScrollViewer x:Name="Twitter_SurfaceScrollViewer_" HorizontalAlignment="Left" Grid.Column="0" Margin="25,112.984,0,23.422" Width="450" Grid.RowSpan="2" HorizontalScrollBarVisibility="Disabled" Background="#FF00ABF0">
                                 <s:SurfaceScrollViewer.Effect>
                                     <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
@@ -177,11 +208,15 @@
                             </s:SurfaceScrollViewer>
 
                         </Grid>
+                        <!-- Twitter Image -->
                         <Image HorizontalAlignment="Left" Height="46" Source="../Resources/TweetyBird.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45.5" Margin="396.498,58.333,0,0" Grid.Column="2"/>
+                        <!-- News and Events Titles -->
                         <TextBlock x:Name="EventsTitle" Grid.Column="2" Margin="526,58.333,537,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gill Sans MT" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontSize="37.333" Height="54.626" Width="437" Foreground="Black"><Run Language="en-nz" Text=" Events "/></TextBlock>
                         <TextBlock x:Name="NewsTitle" Grid.Column="2" Margin="0,58.333,37.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gill Sans MT" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontSize="37.333" Height="54.626" Width="437" Foreground="Black" HorizontalAlignment="Right" d:LayoutOverrides="Width"><Run Language="en-nz" Text=" News "/></TextBlock>
                     </Grid>
                 </s:SurfaceScrollViewer>
+
+                <!-- Side User Prompt arrows -->
                 <Rectangle x:Name="Left_arrow" Margin="-1,11.556,0,0" Opacity="0.5" HorizontalAlignment="Left" Width="70" Grid.Row="1">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="../Resources/arrow_l.png" Stretch="None"/>
@@ -197,12 +232,13 @@
                         <ImageBrush Stretch="None" ImageSource="../Resources/arrow_r.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle x:Name="Left_arrow_block" Margin="-1,11.556,0,0" Opacity="0.3" HorizontalAlignment="Left" Width="70" Grid.Row="1" Fill="Black" TouchDown="Left_arrow_block_TouchDown" MouseDown="Left_arrow_block_MouseDown"/>
-                <Rectangle x:Name="Right_arrow_block" Margin="0,11.5,0,0.056" Opacity="0.3" Grid.Row="1" HorizontalAlignment="Right" Width="70" Fill="Black" TouchDown="Right_arrow_block_TouchDown" MouseDown="Right_arrow_block_MouseDown"/>
+                <Rectangle x:Name="Left_arrow_block" Margin="-1,11.556,0,0" Opacity="0.3" HorizontalAlignment="Left" Width="70" Grid.Row="1" Fill="Black" MouseDown="Left_arrow_block_MouseDown"/>
+                <Rectangle x:Name="Right_arrow_block" Margin="0,11.5,0,0.056" Opacity="0.3" Grid.Row="1" HorizontalAlignment="Right" Width="70" Fill="Black" MouseDown="Right_arrow_block_MouseDown"/>
 
             </Grid>
 			
 			<Grid>
+                <!-- ScreenSaver -->
                 <Rectangle x:Name="screensaver_overlay" Opacity="0.75" Height="1080" Width="1920" Fill="Gray" />
                 <TextBlock x:Name="screensaver_text" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Background="#000000FF" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="White">
                 <Run Language="en-nz" Text="Touch anywhere to begin" /></TextBlock>

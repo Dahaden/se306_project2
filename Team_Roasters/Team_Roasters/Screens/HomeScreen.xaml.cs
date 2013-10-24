@@ -18,6 +18,10 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class HomeScreen : Screen
     {
+        /// <summary>
+        /// Main screen upon entering the application
+        /// </summary>
+        /// <param name="SurfaceWindow1"></param>
         public HomeScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
         {
             InitializeComponent();
@@ -29,15 +33,17 @@ namespace Team_Roasters.Screens
             MainContent.ScrollToHorizontalOffset(950);
 
         }
-
-        // Show the screensaver overlay
+        /// <summary>
+        /// Show the screensaver overlay
+        /// </summary>
         public void showScreenSaver()
         {
             this.screensaver_overlay.Visibility = System.Windows.Visibility.Visible;
             this.screensaver_text.Visibility = System.Windows.Visibility.Visible;
         }
-
-        // Hide the screensaver overlay
+        /// <summary>
+        /// Hide the screensaver overlay
+        /// </summary>
         public void hideScreenSaver()
         {
             this.screensaver_overlay.Visibility = System.Windows.Visibility.Collapsed;
@@ -117,37 +123,44 @@ namespace Team_Roasters.Screens
                     filename = "../../Resources/twitter/" + avatar_url.Substring(avatar_url.LastIndexOf('/'));
                     if (!File.Exists(filename))  // Check if File is already there
                     {
-                        client.DownloadFile(new Uri(avatar_url), filename);
+                        client.DownloadFile(new Uri(avatar_url), filename); // Downloads Images
                     }
+
+                    // Building Path of Image
                     string basePath = AppDomain.CurrentDomain.BaseDirectory;
                     string commonPath = basePath.Remove(basePath.Length - @"bin\debug\".Length);
                     string fullfilepath = (commonPath + @"Resources\twitter\") + filename.Substring(filename.LastIndexOf('/'));
 
+                    // Creating image in memory
                     var uri = new Uri(fullfilepath);
                     var bitmap = new BitmapImage(uri);
-
                     Image img = new Image();
                     img.Source = bitmap;
+                    //Placing Image on Grid
                     Grid.SetColumn(img, 0);
                     Grid.SetRow(img, i);
-                    
+                     
                     RowDefinition rowDef = new RowDefinition();
                     twitterViewer.RowDefinitions.Add(rowDef);
                     
+                    // Creating username
                     TextBlock userName = new TextBlock();
                     userName.FontWeight = FontWeights.Bold;
                     userName.FontSize = 23;
                     userName.Text = tweets[i][1];
                     Grid.SetRow(userName, 0);
 
+                    // Creating Tweet text
                     TextBlock tweet = new TextBlock();
                     tweet.FontSize = 17;
                     tweet.Text = tweets[i][3];
                     tweet.TextWrapping = TextWrapping.Wrap;
                     Grid.SetRow(tweet, 1);
 
+                    // Creating a new inner Grid
                     Grid inner = new Grid();
 
+                    // Setting the Grid
                     RowDefinition colDef1 = new RowDefinition();
                     RowDefinition colDef2 = new RowDefinition();
                     colDef1.Height = new GridLength(30);
@@ -156,9 +169,11 @@ namespace Team_Roasters.Screens
                     Grid.SetColumn(inner, 1);
                     Grid.SetRow(inner, i);
 
+                    // Adding Text to inner Grid
                     inner.Children.Add(userName);
                     inner.Children.Add(tweet);
 
+                    // Adding Body to Main Grid
                     twitterViewer.Children.Add(img);
                     twitterViewer.Children.Add(inner);
                 }
@@ -360,9 +375,12 @@ namespace Team_Roasters.Screens
             else // No internet connection
             {
                 // Reading from stored file
-                FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/news/news.xaml"));
+                if (File.Exists("../../Resources/news/news.xaml"))
+                {
+                    FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/news/news.xaml"));
 
-                newsViewer.Document = flowDocument;
+                    newsViewer.Document = flowDocument;
+                }
             }
 
         }
@@ -551,9 +569,12 @@ namespace Team_Roasters.Screens
             else
             {
                 // Reading from stored file
-                FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/events/events.xaml"));
+                if (File.Exists("../../Resources/events/events.xaml"))
+                {
+                    FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/events/events.xaml"));
 
-                eventViewer.Document = flowDocument;
+                    eventViewer.Document = flowDocument;
+                }
             }
 
         }
@@ -561,7 +582,7 @@ namespace Team_Roasters.Screens
         /// <summary>
         /// Checks the computer that the application is running from if there is internet connectivity. 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>bool</returns>
         private bool CheckInternetConnection()
         {
             // Tries to establish a connection with Google (which doesn't go down), throws exception if it cannot connect
@@ -609,45 +630,76 @@ namespace Team_Roasters.Screens
             }
         }
 
-        // Handle jump to left side of screen
-        private void Left_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
+        /// <summary>
+        /// Signals to its parent window that its storey board animation is complete so that next next one may begin
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Storyboard_Completed(object sender, EventArgs e)
         {
-            MainContent.ScrollToLeftEnd();          
+            parentWindow.Storyboard_Completed();
         }
+
+        /// <summary>
+        /// Scrolls to the Start of the screen when Left button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Left_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MainContent.ScrollToLeftEnd();
         }
 
-        // Handle jump to right side of screen
-        private void Right_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
-        {
-            MainContent.ScrollToRightEnd();
-        }
+        /// <summary>
+        /// Scrolls to the end of the screen when right button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Right_arrow_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MainContent.ScrollToRightEnd();
         }
 
-
+        /// <summary>
+        /// Changes to Family&Support page from Home Screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FamilyButton_Click(object sender, System.Windows.Input.TouchEventArgs e)
         {
             parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
         }
 
+        /// <summary>
+        /// Changes to CorporateSponsors page from Home Screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void What_we_do_Click(object sender, System.Windows.Input.TouchEventArgs e)
         {
             parentWindow.pushScreen(new WhatWeDo(parentWindow));
         }
 
+        /// <summary>
+        /// Changes to Volunteers page from Home Screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Volunteers_Click(object sender, System.Windows.Input.TouchEventArgs e)
         {
             parentWindow.pushScreen(new Volunteer(parentWindow));
         }
 
+        /// <summary>
+        /// Changes to CorporateSponsors page from Home Screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CorporateSponsers_Click(object sender, System.Windows.Input.TouchEventArgs e)
         {
             parentWindow.pushScreen(new CorporateScreen(parentWindow));
         }
+
+        public override void setButtonColours(){   }
     }
 }

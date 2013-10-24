@@ -1,4 +1,6 @@
+﻿﻿using System;
 ﻿using System.Windows;
+
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -10,7 +12,6 @@ namespace Team_Roasters.Screens
             : base(parentWindow)
         {
             InitializeComponent();
-            setButtonColours();
         }
 
         private void SurfaceButton_Back(object sender, System.Windows.RoutedEventArgs e)
@@ -36,10 +37,11 @@ namespace Team_Roasters.Screens
             parentWindow.pushScreen(new FamilySupportScreen(parentWindow));
         }
 
-        private void setButtonColours()
+        public override void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
             App.Current.Resources["SelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF68B9D2");
+            App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF68B9D2");
         }
 
         private void Touch_Down_Gold_Buyers(object sender, System.Windows.Input.TouchEventArgs e)
@@ -140,9 +142,14 @@ namespace Team_Roasters.Screens
             Bartercard_popup.Visibility = Visibility.Collapsed;
         }
 
-        
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            parentWindow.Storyboard_Completed();
+        }
 
-                    
-
+        private void Storyboard_Completed_1(object sender, EventArgs e)
+        {
+            setButtonColours();
+        }
     }
 }

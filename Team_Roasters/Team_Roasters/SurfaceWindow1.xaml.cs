@@ -8,6 +8,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -27,6 +28,7 @@ using System.Windows.Threading;
 using System.ComponentModel;
 using System.Diagnostics;
 
+
 namespace Team_Roasters
 {
     /// <summary>
@@ -35,6 +37,8 @@ namespace Team_Roasters
     public partial class SurfaceWindow1 : SurfaceWindow
     {
         private Stack<Screen> screenStack;
+        private Screen previous;
+        private Screen next;
 
         private DispatcherTimer inactivityTimer = new DispatcherTimer();
         private int inactiveTime = 0;
@@ -55,7 +59,13 @@ namespace Team_Roasters
 
             // Create the stack of screens, and push the home screen on to start with.
             screenStack = new Stack<Screen>();
-            pushScreen(new Screens.HomeScreen(this));
+
+            screenStack.Push(new Screens.HomeScreen(this));
+            this.Content = screenStack.Peek();
+            this.WindowState = WindowState.Maximized;
+            this.WindowStyle = WindowStyle.None;
+
+            //pushScreen(new Screens.HomeScreen(this));
 
             // Create a timer to check whether to display the screensaver
             // Will run every second
@@ -91,25 +101,49 @@ namespace Team_Roasters
         {
             if (screenStack.Count > 1)
             {
+
+                previous = screenStack.Peek();
+
                 resetTimer();
+
                 screenStack.Pop();
-                this.Content = screenStack.Peek();
-                this.WindowState = WindowState.Maximized;
-                this.WindowStyle = WindowStyle.None;
+                next = screenStack.Peek();
+
+                Storyboard exit = previous.FindResource("Exit") as Storyboard;
+
+                exit.Begin(previous);
             }
         }
 
         /// <summary>
         /// Add a screen to the stack and display it
         /// </summary>
+        /// <param name="screen"></param>
         public void pushScreen(Screen screen)
         {
-            resetTimer();
-            screenStack.Push(screen);
-            this.Content = screenStack.Peek();
-            this.WindowState = WindowState.Maximized;
-            this.WindowStyle = WindowStyle.None;
 
+            previous = screenStack.Peek();
+
+            resetTimer();
+
+            screenStack.Push(screen);
+            next = screenStack.Peek();
+
+            Storyboard exit = previous.FindResource("Exit") as Storyboard;
+
+            exit.Begin(previous);
+        }
+
+        /// <summary>
+        /// Method gets called after a storyboard animaiton
+        /// has completed
+        /// </summary>
+        public void Storyboard_Completed()
+        {
+            Storyboard enter = next.FindResource("Enter") as Storyboard;
+            this.Content = next;
+            next.setButtonColours();
+            enter.Begin(next);
         }
 
         /// <summary>
