@@ -195,7 +195,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
-
+            userPrompt.Visibility = Visibility.Visible;
         }
 
         /// <summary>
@@ -211,6 +211,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -226,6 +227,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -241,6 +243,7 @@ namespace Team_Roasters.Screens
             bluedesc.Visibility = Visibility.Hidden;
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Visible;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -256,6 +259,7 @@ namespace Team_Roasters.Screens
             bluedesc.Visibility = Visibility.Hidden;
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -271,7 +275,7 @@ namespace Team_Roasters.Screens
             bluedesc.Visibility = Visibility.Hidden;
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
-
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -287,6 +291,7 @@ namespace Team_Roasters.Screens
             stardesc.Visibility = Visibility.Hidden;
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Visible;
+            userPrompt.Visibility = Visibility.Hidden;
 
         }
 
@@ -303,6 +308,7 @@ namespace Team_Roasters.Screens
             bluedesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -318,6 +324,7 @@ namespace Team_Roasters.Screens
             stardesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -333,6 +340,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -348,6 +356,8 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
+
         }
 
         /// <summary>
@@ -363,6 +373,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -378,6 +389,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -393,6 +405,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -408,6 +421,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -423,6 +437,7 @@ namespace Team_Roasters.Screens
             bluedesc.Visibility = Visibility.Hidden;
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -438,6 +453,7 @@ namespace Team_Roasters.Screens
             bluedesc.Visibility = Visibility.Hidden;
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Visible;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -453,6 +469,7 @@ namespace Team_Roasters.Screens
             stardesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
@@ -468,6 +485,7 @@ namespace Team_Roasters.Screens
             reddesc.Visibility = Visibility.Hidden;
             orangedesc.Visibility = Visibility.Hidden;
             browndesc.Visibility = Visibility.Hidden;
+            userPrompt.Visibility = Visibility.Hidden;
         }
 
         /// <summary>
