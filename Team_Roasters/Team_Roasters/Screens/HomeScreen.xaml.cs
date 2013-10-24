@@ -609,12 +609,11 @@ namespace Team_Roasters.Screens
             }
         }
 
-<<<<<<< HEAD
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();
         }   
-=======
+
         // Handle jump to left side of screen
         private void Left_arrow_block_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
@@ -655,6 +654,5 @@ namespace Team_Roasters.Screens
         {
             parentWindow.pushScreen(new CorporateScreen(parentWindow));
         }
->>>>>>> origin/develop
     }
 }

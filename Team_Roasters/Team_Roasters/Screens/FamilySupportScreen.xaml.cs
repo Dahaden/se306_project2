@@ -1,12 +1,9 @@
 ﻿using System.Windows.Media;
 using System.Windows;
-<<<<<<< HEAD
 using System;
-=======
 using System.Windows.Documents;
 using System.Windows.Markup;
 using System.IO;
->>>>>>> origin/develop
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -117,12 +114,11 @@ namespace Team_Roasters.Screens
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FFFDC37D");
         }
 
-<<<<<<< HEAD
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();
         }
-=======
+
         private void SurfaceButton_Beads(object sender, System.Windows.RoutedEventArgs e)
         {
             Scholarships.Visibility = System.Windows.Visibility.Collapsed;
@@ -326,7 +322,5 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
-
->>>>>>> origin/develop
     }
 }

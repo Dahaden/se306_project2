@@ -24,13 +24,10 @@ using System.Xml;
 using System.Windows.Markup;
 
 using System.Collections.ObjectModel;
-<<<<<<< HEAD
-using System.Threading;
-=======
 using System.Windows.Threading;
 using System.ComponentModel;
 using System.Diagnostics;
->>>>>>> origin/develop
+
 
 namespace Team_Roasters
 {
@@ -104,11 +101,11 @@ namespace Team_Roasters
         {
             if (screenStack.Count > 1)
             {
-<<<<<<< HEAD
+
                 previous = screenStack.Peek();
-=======
+
                 resetTimer();
->>>>>>> origin/develop
+
                 screenStack.Pop();
                 next = screenStack.Peek();
 
@@ -123,11 +120,11 @@ namespace Team_Roasters
         /// </summary>
         public void pushScreen(Screen screen)
         {
-<<<<<<< HEAD
+
             previous = screenStack.Peek();
-=======
+
             resetTimer();
->>>>>>> origin/develop
+
             screenStack.Push(screen);
             next = screenStack.Peek();
 
@@ -227,8 +224,6 @@ namespace Team_Roasters
         {
             //TODO: disable audio, animations here
         }
-<<<<<<< HEAD
-=======
 
         /// <summary>
         /// Called on touch of screensaver
@@ -252,6 +247,5 @@ namespace Team_Roasters
                 screensaver = false;
             }
         }
->>>>>>> origin/develop
     }
 }

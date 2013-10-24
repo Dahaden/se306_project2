@@ -1,13 +1,10 @@
 ﻿using System.Windows.Media;
 using System.Windows;
-<<<<<<< HEAD
 using System;
-
-=======
 using System.Windows.Documents;
 using System.Windows.Markup;
 using System.IO;
->>>>>>> origin/develop
+
 namespace Team_Roasters.Screens
 {
     /// <summary>

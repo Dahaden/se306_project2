@@ -57,121 +57,66 @@
                     <s:SurfaceButton x:Name="People_Button" Content="Our People" Click="SurfaceButton_OurPeople" Style="{DynamicResource NotSelectedButton}" Foreground="Black" Height="150" FontSize="40" Margin="19,1,18,10" Background="{DynamicResource WhatWeDoNotSelectedColour}" FontFamily="Gill Sans MT"/>
                 </StackPanel>
 
-<<<<<<< HEAD
-                <Grid Grid.Row="1" Grid.Column="1" Margin="34.293,20,606.293,181.015" Width="895.414" Height="662.985">
+
+                <Grid Grid.Row="1" Grid.Column="1" Margin="0,29.331,550.48,76">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.597*"/>
                         <RowDefinition Height="0.403*"/>
                     </Grid.RowDefinitions>
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                        <Grid x:Name="Our_Ambassadors" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="724.21" Width="1488" d:LayoutOverrides="Height" >
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.821*"/>
-                                <RowDefinition Height="0.179*"/>
-                            </Grid.RowDefinitions>
-                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0,0,14.586,8" Grid.RowSpan="2" Background="White" d:LayoutOverrides="GridBox" TouchEnter="Touch_enter" TouchLeave="Touch_leave">
-                                <Border.Effect>
-                                    <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-                                </Border.Effect>
-                                <StackPanel x:Name="Amb_image" HorizontalAlignment="Left" Margin="26,38,0,58.21" Width="708"/>
-                            </Border>
-                            <RichTextBox x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" Margin="732.414,37.775,59.586,63.634" FontSize="24" IsDocumentEnabled="False" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
-                        </Grid>
-                    </s:SurfaceScrollViewer>
 
-                    <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                                <Border.Effect>
-                                    <DropShadowEffect/>
-                                </Border.Effect>
-                                <Image Height="684.001" Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Width="900"/>
-                            </Border>
-=======
-            <Grid Grid.Row="1" Grid.Column="1" Margin="0,29.331,550.48,76">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.597*"/>
-                    <RowDefinition Height="0.403*"/>
-                </Grid.RowDefinitions>
-
-                <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Grid.RowSpan="2" TouchUp="Touch_up" Height="683.877" VerticalAlignment="Bottom" Margin="0,0,0,72.625" >
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" Height="678.325" VerticalAlignment="Top" Margin="0,-0.281,0,0">
-                		<s:SurfaceScrollViewer.Effect>
-                			<DropShadowEffect/>
-                		</s:SurfaceScrollViewer.Effect>
-                		<Border BorderBrush="#FF007294" BorderThickness="1" Background="White" Height="678.231" Width="971.52"/>
-                	</s:SurfaceScrollViewer>
-                    <RichTextBox ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,32,32.586,32.287" x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" BorderThickness="0,1" Width="476" >
-                		<FlowDocument>
-                			<Paragraph/>
-                		</FlowDocument>
-                	</RichTextBox>
-                	<StackPanel
+                    <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Grid.RowSpan="2" TouchUp="Touch_up" Height="683.877" VerticalAlignment="Bottom" Margin="0,0,0,72.625" >
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" Height="678.325" VerticalAlignment="Top" Margin="0,-0.281,0,0">
+                            <s:SurfaceScrollViewer.Effect>
+                                <DropShadowEffect/>
+                            </s:SurfaceScrollViewer.Effect>
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Background="White" Height="678.231" Width="971.52"/>
+                        </s:SurfaceScrollViewer>
+                        <RichTextBox ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,32,32.586,32.287" x:Name="Amb_text" IsReadOnly="True" Visibility="Visible"  Foreground="Black" FontSize="24" IsDocumentEnabled="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" BorderThickness="0,1" Width="476" >
+                            <FlowDocument>
+                                <Paragraph/>
+                            </FlowDocument>
+                        </RichTextBox>
+                        <StackPanel
                 		x:Name="Amb_image" HorizontalAlignment="Left" Width="448.934" Margin="28,14.21,0,27.287" d:LayoutOverrides="HorizontalAlignment" VerticalAlignment="Center"/>
-            	</Grid>
+                    </Grid>
 
-                <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70" Visibility="Collapsed">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" Width="972.092" Height="678.146" VerticalAlignment="Bottom" Margin="0,0,0,8.481">
-                    	<s:SurfaceScrollViewer.Effect>
-                    		<DropShadowEffect/>
-                    	</s:SurfaceScrollViewer.Effect>
-						<Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Height="678.132" Width="971.49">
-                        
-                        	<Image Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
->>>>>>> origin/develop
+                    <Grid x:Name="How_We_Help" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70" Visibility="Collapsed">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" Width="972.092" Height="678.146" VerticalAlignment="Bottom" Margin="0,0,0,8.481">
+                            <s:SurfaceScrollViewer.Effect>
+                                <DropShadowEffect/>
+                            </s:SurfaceScrollViewer.Effect>
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Height="678.132" Width="971.49">
+
+                                <Image Source="/Team_Roasters;component/Resources/How_We_Make_A_Difference.png" Stretch="UniformToFill" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+
                         </s:SurfaceScrollViewer>
                     </Grid>
 
-<<<<<<< HEAD
-                    <Grid x:Name="Our_History" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
+                    <Grid x:Name="Our_History" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" RenderTransformOrigin="0.438,0.123" Margin="0,0,0,70" Visibility="Collapsed">
+                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" Margin="8,2.042,0,0" Width="969.52" Height="678.19" VerticalAlignment="Top">
+                            <s:SurfaceScrollViewer.Effect>
+                                <DropShadowEffect/>
+                            </s:SurfaceScrollViewer.Effect>
 
-                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                                <Border.Effect>
-                                    <DropShadowEffect/>
-                                </Border.Effect>
-                                <TextBlock Foreground="Black" Padding="10" FontSize="24" TextAlignment="Justify" Margin="-1,7,7,7"><Run FontWeight="Bold" Text="We have been operating for over 30 years, read about how Child Cancer Foundation began."/><LineBreak/><Run/><LineBreak/><Run Text="In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking "/><LineBreak/><Run Text="at the special needs of children with cancer and their families."/><LineBreak/><Run/><LineBreak/><Run Text="From the small beginning, dedicated people established what is now a national organization which is made up of 6 regions "/><LineBreak/><Run Text="Northern, Waikato, Mid-Northern, Central, Canterbury/West Coast and Otago Southland.  These regions support 22 branches "/><LineBreak/><Run Text="around the country."/></TextBlock>
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.494" Height="678.252" HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ourHistoryViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
+                            </Border>
+
+                        </s:SurfaceScrollViewer>
+                    </Grid>
+
+                    <Grid x:Name="Our_People" Background="#FFFFFCF0" Grid.RowSpan="2" d:LayoutOverrides="GridBox" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70" HorizontalAlignment="Right" Width="985.52" Visibility="Collapsed">
+                        <s:SurfaceScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="682.21" VerticalAlignment="Bottom" Margin="0,0,0,6.459">
+                            <s:SurfaceScrollViewer.Effect>
+                                <DropShadowEffect/>
+                            </s:SurfaceScrollViewer.Effect>
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.52" Height="678.209">
+
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ourPeopleViewer" Foreground="Black"/>
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
-
-                    <Grid x:Name="Our_People" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
-                        <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
-                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
-                                <Border.Effect>
-                                    <DropShadowEffect/>
-                                </Border.Effect>
-                                <TextBlock Foreground="Black" HorizontalAlignment="Center" Padding="10" FontSize="24" TextAlignment="Justify" Margin="0,0,0,7" Width="1480.055"><Run FontWeight="Bold" Text="Meet the team and find out more about main shareholders and board members."/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Sarah Thomson &#x9;Chief Executive"/><LineBreak/><Run Text="PHN 09 303 9974 &#x9;EML sthomson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Paula Elder &#x9;Manager - Chief Executive's Office"/><LineBreak/><Run Text="PHN 09 303 9970 &#x9;EML pelder@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="MARKETING &amp; FUNDRAISING"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Darragh O'Riordan &#x9;National Manager Sponsorship"/><LineBreak/><Run Text="PHN 09 303 9882 &#x9;EML doriordan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sue Jury &#x9;National Manager Fundraising"/><LineBreak/><Run Text="PHN 09 366 2354 &#x9;EML sjury@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Megan Horsburgh &#x9;PR &amp; Communications Manager"/><LineBreak/><Run Text="PHN 09 303 9884 &#x9;EML mhorsburgh@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Jade Le Geyt &#x9;Marketing &amp; Relationship Manager"/><LineBreak/><Run Text="PHN 09 303 9979 &#x9;EML jlegeyt@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sophie Armitage &#x9;Information &amp; Data Manager"/><LineBreak/><Run Text="PHN 09 303 9972 &#x9;EML sarmitage@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Amber West &#x9;National Funding Manager          "/><LineBreak/><Run Text="PHN 09 303 9978 &#x9;EML awest@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Hema Prashar &#x9;Events &amp; Fundraising Manager - Auckland / Northland"/><LineBreak/><Run Text="PHN 09 303 9976 &#x9;EML hprashar@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Kylie Green &#x9;Fundraising &amp; Marketing Coordinator"/><LineBreak/><Run Text="PHN 09 303 9973 &#x9;EML kgreen@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Linda Walsh &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Hawkes Bay"/><LineBreak/><Run Text="PHN 06 870 3189 &#x9;EML lwalsh@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Clare Wilkinson &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Canterbury / West Coast"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML cwilkinson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Delwynne Hahunga &#x9; Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text=" Bay of Plenty / Lakes"/><LineBreak/><Run Text="PHN 07 579 4141 &#x9;EML dhahunga@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Keri McLachlan &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Otago / Southland"/><LineBreak/><Run Text="PHN 03 471 7258 &#x9;EML kmclachlan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Scott Lancaster &#x9;Fundraising &amp; Business Development Manager"/><LineBreak/><Run Text="Central"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML slancaster@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sharon Robertson &#x9;Fundraising &amp; Business Development Manager Waikato"/><LineBreak/><Run Text="PHN 021 858 903 &#x9;EML srobertson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="CHILD CANCER SERVICES"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Maryanne Thomson &#x9; National Manager - Child Cancer Services"/><LineBreak/><Run Text="PHN 09 303 9888 &#x9;EML mthomson@childcancer.org.nz"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Family Support"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Auckland &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Janet Masina &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 09 303 9885 &#x9;EML jmasina@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Mary Mangan &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 09 303 9971 &#x9;EML mmangan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Supriya Maharaj &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 09 303 9886 &#x9;EML smaharaj@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Northland &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Abigail Alger &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 021856451 &#x9;EML aalger@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Waikato, Lakes &amp; Bays"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Robyn Cresswell  &#x9;Family Support Manager"/><LineBreak/><Run Text="PHN 021 714 088 &#x9;EML rcresswell@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Raewyn Sayers &#x9;Family Support Coordinator – Waikato"/><LineBreak/><Run Text="PHN 021 229 9792 &#x9;EML rsayers@childcancer.org.nz"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Barbara Richardson &#x9;Family Support Coordinator – The Lakes"/><LineBreak/><Run Text="PHN 027 533 3793 &#x9;EML brichardson@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Shannyn Hansen &#x9;Family Support Coordinator – Hawkes Bay"/><LineBreak/><Run Text="PHN 027 432 0307 &#x9;EML shansen@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Cheryl Scott &#x9;Family Support Coordinator – Tairawhiti"/><LineBreak/><Run Text="PHN 027 361 7000 &#x9;EML cscott@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Debbie Hockly &#x9;Family Support Coordinator – Tauranga"/><LineBreak/><Run Text="PHN 07 579 4107 &#x9;EML dhockly@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Central &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Sally Black &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML sblack@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Tracy Ward &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML tward@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Bev Randall &#x9;Family Support Coordinator - Manuwatu &amp; Districts"/><LineBreak/><Run Text="PHN 021 891 791 &#x9;EML brandall@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Kathryn Hensley &#x9;Family Support Coordinator - Taranaki"/><LineBreak/><Run Text="PHN 021 525 938 &#x9;EML khensley@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Nelson &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Family Support &#x9;EML nelsonbranch@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="South Island &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Robin Furley &#x9;Family Support Manager - Central / South Island"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML rfurley@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Christine Graham &#x9;Family Support Coordinator - Christchurch"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML cgraham@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Diane Kerr &#x9;Family Support Coordinator - Christchurch"/><LineBreak/><Run Text="PHN 021 838 142 &#x9;EML dkerr@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Otago / Southland &#x9; "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Christine Donovan &#x9;Family Support Coordinator"/><LineBreak/><Run Text="PHN 03 471 7258 &#x9;EML cdonovan@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Family Place Administration"/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text="Corrie Cook "/><LineBreak/><Run Text="&amp; Aliisa Prebble"/><LineBreak/><Run Text="&#x9;Family Place Administrator - Auckland"/><LineBreak/><Run Text="PHN 09 366 1270 &#x9;EML akl.familyplace@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Alison O'Connor &#x9;Family Place Administrator - Wellington"/><LineBreak/><Run Text="PHN 04 389 2620 &#x9;EML aoconnor@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Melissa Walker  &#x9;Family Place Administrator – South Island"/><LineBreak/><Run Text="PHN 03 365 1485 &#x9;EML mwalker@chilodcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="FINANCE "/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Simon Lala &#x9;National Finance Manager"/><LineBreak/><Run Text="PHN 021 905 575 &#x9;EML slala@childcancer.org.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Susan Hays &#x9;Assistant Accountant"/><LineBreak/><Run Text="PHN 09 262 2128 &#x9;EML susan@slightlala.co.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Geeta Unka &#x9;Assistant Accountant"/><LineBreak/><Run Text="PHN 04 471 2600 &#x9;EML geeta@slightlala.co.nz"/><LineBreak/><Run Text="  &#x9; "/><LineBreak/><Run Text="Michelle Nuttall &#x9;Accounts Administrator"/><LineBreak/><Run Text="PHN 09 303 9883 &#x9;EML mnuttall@childcancer.org.nz"/><LineBreak/><Run/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Board members"/><LineBreak/><Run/><LineBreak/><Run Text="John Robson &#x9;Chair"/><LineBreak/><Run Text="Dr Jane Skeen &#x9;Health Professional Representative"/><LineBreak/><Run Text="Shane Dowling &#x9;Canterbury Regional Representative"/><LineBreak/><Run Text="Pat Wilkes &#x9;Deputy Chair and Northern Regional Representative"/><LineBreak/><Run Text="Leanne Fescer &#x9;Central Region Representative"/><LineBreak/><Run Text="Yvonne Osborne &#x9;Mid Northern Region Representative"/><LineBreak/><Run Text="Guy Alexander &#x9;CanTeen Representative"/><LineBreak/><Run Text="Stuart Hutchinson &#x9;Legal Advisor"/><LineBreak/><Run Text="Jim Boult &#x9;Co-opted Board Member"/><LineBreak/><Run Text="Karen Heslip &#x9;Otago / Southland Regional Representative"/><LineBreak/><Run Text="Nick Beale &#x9;Co-opted Board Member"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Life members"/><LineBreak/><Run/><LineBreak/><Run Text="1991 &#x9;Paul Cressey"/><LineBreak/><Run Text="1994 &#x9;Janette Falconer"/><LineBreak/><Run Text="1997 &#x9;Robyn Gordon"/><LineBreak/><Run Text="1998 &#x9;the late Dr David Holdaway"/><LineBreak/><Run Text="1998 &#x9;the late Kerry Goldstone"/><LineBreak/><Run Text="1999 &#x9;the late Dawn Hamilton-Irvine"/><LineBreak/><Run Text="2000 &#x9;Professor Sir David Mauger"/><LineBreak/><Run Text="2001 &#x9;Dr Jane Skeen"/><LineBreak/><Run Text="2001 &#x9;the late Andrew &amp; Diana Robinson"/><LineBreak/><Run Text="2002 &#x9;Lynda Read"/><LineBreak/><Run Text="2003 &#x9;the late Warren Shirley"/><LineBreak/><Run Text="2004 &#x9;Mark Conelly"/><LineBreak/><Run Text="2006 &#x9;Simon Lala"/><LineBreak/><Run Text="2007 &#x9;Kay Morris"/><LineBreak/><Run Text="2008 &#x9;Pauline Hapi"/><LineBreak/><Run Text="2008 &#x9;Denis Kirkcaldie"/><LineBreak/><Run/></TextBlock>
-                            </Border>
-                        </s:SurfaceScrollViewer>
-                    </Grid>
-=======
-                <Grid x:Name="Our_History" Background="#FFFFFCF0" Grid.RowSpan="2" Height="688.669" VerticalAlignment="Bottom" RenderTransformOrigin="0.438,0.123" Margin="0,0,0,70" Visibility="Collapsed">
-                    <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" Margin="8,2.042,0,0" Width="969.52" Height="678.19" VerticalAlignment="Top">
-                    	<s:SurfaceScrollViewer.Effect>
-                    		<DropShadowEffect/>
-                    	</s:SurfaceScrollViewer.Effect>
-
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.494" Height="678.252" HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
-                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ourHistoryViewer" Foreground="Black" VerticalScrollBarVisibility="Hidden"/>
-                        </Border>
-
-                    </s:SurfaceScrollViewer>
-                </Grid>
-
-                <Grid x:Name="Our_People" Background="#FFFFFCF0" Grid.RowSpan="2" d:LayoutOverrides="GridBox" Height="688.669" VerticalAlignment="Bottom" Margin="0,0,0,70" HorizontalAlignment="Right" Width="985.52" Visibility="Collapsed">
-                    <s:SurfaceScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="682.21" VerticalAlignment="Bottom" Margin="0,0,0,6.459">
-                        <s:SurfaceScrollViewer.Effect>
-                            <DropShadowEffect/>
-                        </s:SurfaceScrollViewer.Effect>
-                        <Border BorderBrush="#FF007294" BorderThickness="1" Margin="0" Grid.RowSpan="2" Background="White" Width="971.52" Height="678.209">
-                                                  
-                            <FlowDocumentScrollViewer  BorderThickness="0" Margin="-1,7,7,7" x:Name="ourPeopleViewer" Foreground="Black"/>
-                    </Border>
-                </s:SurfaceScrollViewer>
-                </Grid>
->>>>>>> origin/develop
 
                 </Grid>
                 <Image Stretch="Uniform" Source="/Team_Roasters;component/Resources/CCF-Logo-Transparent.png" Margin="0,45.19,55,0" Grid.Column="1" HorizontalAlignment="Right" Width="282.69">
@@ -182,81 +127,43 @@
                 <s:SurfaceButton 
             	x:Name="what_we_do" 
             	Content="What We Do" 
-<<<<<<< HEAD
-            	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Margin="0,29.331,55,0" Height="171.984" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" d:LayoutOverrides="VerticalAlignment" >
+
+            	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Margin="0,29.331,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" Width="491.48" d:LayoutOverrides="VerticalAlignment" >
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
                 <s:SurfaceButton 
-            	Grid.RowSpan="1" 
-            	Grid.ColumnSpan="1" 
-=======
-            	Background="#FF8ECADC" FontSize="48"  Style="{DynamicResource HomeContentButton}" Margin="0,29.331,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" Width="491.48" d:LayoutOverrides="VerticalAlignment" >
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
->>>>>>> origin/develop
-
             	x:Name="family_and_support" 
             	Click="Family_Click"
             	Content="Family and Support"
-<<<<<<< HEAD
-            	Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Grid.Row="1" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Grid.Column="1" HorizontalAlignment="Right" Height="171.984" VerticalAlignment="Top" Width="491.48">
+
+            	Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Width="491.48">
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
                 <s:SurfaceButton 
-            	Grid.RowSpan="1" 
-            	Grid.ColumnSpan="1" 
-=======
-            	Background="#FFFDC37D" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,201.315,55,0" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Width="491.48">
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton 
->>>>>>> origin/develop
             	x:Name="volunteers" 
             	Click="Volunteers_Click"
             	Content="Volunteers" 
-<<<<<<< HEAD
-            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Grid.Row="1" Grid.Column="1" Height="168.188" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" >
+
+            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" Height="171.984" Width="491.48" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" d:LayoutOverrides="Width" >
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
-                <s:SurfaceButton 
-            	Grid.RowSpan="1"
-            	Grid.ColumnSpan="1"
-=======
-            	Background="#FFFBA5D6" FontSize="48"   Style="{DynamicResource HomeContentButton}" Margin="0,373.299,55,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" Height="171.984" Width="491.48" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" d:LayoutOverrides="Width" >
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
-            <s:SurfaceButton
->>>>>>> origin/develop
+                <s:SurfaceButton
             	x:Name="corporate"
             	Click="Corperate_Click"
             	Content="Corporate Sponsors"
-<<<<<<< HEAD
-            	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}"  Grid.Row="1" Grid.Column="1" Margin="0,0,55,154.324" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Right" Width="491.48" Height="168.189" VerticalAlignment="Bottom" >
+
+            	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Bottom" Width="491.48" >
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
             </Grid>
-=======
-            	Background="#FFD7E583" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="0,0,55,146.824" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" Height="171.984" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Bottom" Width="491.48" >
-            	<s:SurfaceButton.Effect>
-            		<DropShadowEffect BlurRadius="10" Opacity="0.6"/>
-            	</s:SurfaceButton.Effect>
-            </s:SurfaceButton>
->>>>>>> origin/develop
         </Grid>
     </Viewbox>
 </view:Screen>

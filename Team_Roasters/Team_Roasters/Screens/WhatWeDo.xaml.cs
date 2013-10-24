@@ -187,19 +187,15 @@ namespace Team_Roasters.Screens
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FF8ECADC");
         }
 
-<<<<<<< HEAD
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();
         }
-=======
+
         private void Touch_up(object sender, System.Windows.Input.TouchEventArgs e)
         {
             SwitchNext();
             System.Threading.Thread.Sleep(500);
         }
-
-        
->>>>>>> origin/develop
     }
 }

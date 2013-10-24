@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-﻿using System;
-=======
+﻿﻿using System;
 ﻿using System.Windows;
->>>>>>> origin/develop
+
 namespace Team_Roasters.Screens
 {
     /// <summary>
@@ -21,8 +19,6 @@ namespace Team_Roasters.Screens
         {
             parentWindow.popScreen();
         }
-<<<<<<< HEAD
-=======
 
         private void WhatWeDo_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -145,11 +141,6 @@ namespace Team_Roasters.Screens
             SaveMart_popup.Visibility = Visibility.Collapsed;
             Bartercard_popup.Visibility = Visibility.Collapsed;
         }
-
-        
-
-                    
->>>>>>> origin/develop
 
         private void Storyboard_Completed(object sender, EventArgs e)
         {

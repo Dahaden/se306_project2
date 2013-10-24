@@ -23,20 +23,19 @@
     </view:Screen.Resources>
 
     <Viewbox>
-<<<<<<< HEAD
         <Grid x:Name="MainPage">
             <Grid.RenderTransform>
                 <TranslateTransform/>
             </Grid.RenderTransform>
-            <Grid x:Name="What_We_Do" Background="#FFFFFCF0" Width="1920" Height="1080">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.2*"/>
-                    <RowDefinition Height="0.8*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition Width="0.8*"/>
-                </Grid.ColumnDefinitions>
+            <Grid x:Name="Corporate" Background="#FFFFFCF0" Width="1920" Height="1080">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.8*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
@@ -50,21 +49,10 @@
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
                     <Label Foreground="Black" Content="Corporate Sponsors" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
                 </StackPanel>
-=======
-        <Grid x:Name="Corporate" Background="#FFFFFCF0" Width="1920" Height="1080">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.8*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.8*"/>
-            </Grid.ColumnDefinitions>
->>>>>>> origin/develop
 
                 <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Style="{DynamicResource StackPanelStyle1}" Background="{x:Null}" Margin="20,20,0,20">
                 </StackPanel>
-                <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="-321,-85,-77,-29" Grid.ColumnSpan="2" Grid.Row="1">
+                <!--<s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="-321,-85,-77,-29" Grid.ColumnSpan="2" Grid.Row="1">
                     <Grid x:Name="Our_Ambassadors" Background="White" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2" Height="703.21" Width="1266" d:LayoutOverrides="Height">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.75*"/>
@@ -114,10 +102,8 @@
                     <Image.Effect>
                         <BlurEffect Radius="2"/>
                     </Image.Effect>
-                </Image>
+                </Image>-->
             </Grid>
-<<<<<<< HEAD
-=======
 
             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
                 <Label x:Name="Title" Foreground="Black" Content="Corporate Sponsors" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="64" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic"/>
@@ -285,7 +271,6 @@
             <TextBlock Foreground="Black" x:Name="Prof_popup" Margin="-42.5,170,0,196" Grid.Row="1" TextWrapping="Wrap" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" TouchDown="Remove_popups" MouseDown="Remove_popups" Visibility="Hidden"><TextBlock.Effect>
             		<DropShadowEffect/>
             	</TextBlock.Effect><Run Text="The Professionals has made a significant difference in the lives of many children with cancer and their families through the provision of the Sunshine Lodge holiday homes in Taupo and Queenstown. These fully-furnished and equipped homes come as welcome retreats to the families who are dealing with the challenges of caring for a child with cancer."/><LineBreak/><Run Text=" Both the Taupo Sunshine Lodge and the Queenstown Lodge receive high occupancy from patient families."/><LineBreak/><Run/><LineBreak/><Run Text=" Each year, the Professionals team gets out and about on the streets to collect money for the Annual Appeal. In many areas around New Zealand, the local offices initiate specific appeal week activities to get the staff and their community involved the campaign."/><LineBreak/><Run/><LineBreak/><Run Text="The Professionals have also assisted the Foundation with the purchase of properties in Auckland and Wellington for the Family Places. Please visit their website www.professionals.co.nz"/></TextBlock>
->>>>>>> origin/develop
         </Grid>
     </Viewbox>
 </view:Screen>
