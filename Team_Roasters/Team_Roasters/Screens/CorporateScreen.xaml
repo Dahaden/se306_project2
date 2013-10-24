@@ -76,37 +76,37 @@
                             <ImageBrush Stretch="UniformToFill" ImageSource="/Team_Roasters;component/Resources/Corporate/Buzzy-Bee-Logo-Hm-Page.jpg"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Rectangle Margin="0,-45.875,51.124,18" TouchDown="Touch_Down_Bartercard" MouseDown="Bartercard_MouseDown" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" Width="334.5">
+                    <Rectangle Margin="0,-21.415,95.564,18" TouchDown="Touch_Down_Bartercard" MouseDown="Bartercard_MouseDown" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" Width="290.06">
                         <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Bartercard-charity-logo-2D4.jpg"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Rectangle HorizontalAlignment="Left" Margin="8,-38.705,0,16" Width="351.103" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart" MouseDown="SaveMart_MouseDown">
+                    <Rectangle HorizontalAlignment="Left" Margin="8,-21.415,0,16" Width="317.712" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart" MouseDown="SaveMart_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush ImageSource="../Resources/Corporate/Savemart_1.jpg" Stretch="Uniform"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Rectangle Margin="0,0,-12.436,131.916" Grid.Column="1" HorizontalAlignment="Right" Height="138.333" VerticalAlignment="Bottom" Width="185.699" TouchDown="Touch_Down_RCP" MouseDown="RCP_MouseDown">
+                    <Rectangle Margin="0,0,-12.436,93.916" Grid.Column="1" HorizontalAlignment="Right" Height="138.333" VerticalAlignment="Bottom" Width="185.699" TouchDown="Touch_Down_RCP" MouseDown="RCP_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/RCP-logo.jpg"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Rectangle Margin="240,0,217.564,135.916" Grid.Column="1" Height="146" VerticalAlignment="Bottom" TouchDown="Touch_Down_Farmers" MouseDown="Farmers_MouseDown">
+                    <Rectangle Margin="238,0,219.564,87.916" Grid.Column="1" Height="146" VerticalAlignment="Bottom" TouchDown="Touch_Down_Farmers" MouseDown="Farmers_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Farmers-Logo-Hm-Page.jpg"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Rectangle HorizontalAlignment="Left" Margin="38.603,0,0,131.916" Width="154.5" Grid.Column="1" Height="150" VerticalAlignment="Bottom" TouchDown="Touch_Down_Prof" MouseDown="Prof_MouseDown">
+                    <Rectangle HorizontalAlignment="Left" Margin="38.603,0,0,93.916" Width="154.5" Grid.Column="1" Height="150" VerticalAlignment="Bottom" TouchDown="Touch_Down_Prof" MouseDown="Prof_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Profesionals.jpg"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <TextBlock Foreground="Black" Height="60" Margin="8,0,0,38.705" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Major Funding Partner"/></TextBlock>
-                    <TextBlock Foreground="Black"  Margin="0,0,40,38.705" TextWrapping="Wrap" FontSize="32" Grid.Column="1" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="334.69" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Foundation Partner"/></TextBlock>
-                    <TextBlock Foreground="Black" Height="33.625" Margin="8,252.792,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Gold Star Sponsors"/></TextBlock>
-                    <TextBlock Foreground="Black" Height="60" Margin="8,22.562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Plantinum Star Sponsor"/></TextBlock>
+                    <TextBlock Foreground="Black" Height="60" Margin="8,0,0,0.705" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Major Funding Partner"/></TextBlock>
+                    <TextBlock Foreground="Black"  Margin="0,0,40,0.705" TextWrapping="Wrap" FontSize="32" Grid.Column="1" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="334.69" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Foundation Partner"/></TextBlock>
+                    <TextBlock Foreground="Black" Margin="8,0,0,248.748" TextWrapping="Wrap" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="33.625" VerticalAlignment="Bottom"><Run Language="en-nz" Text="Gold Star Sponsors"/></TextBlock>
+                    <TextBlock Foreground="Black" Height="60" Margin="8,138.823,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.Column="1" HorizontalAlignment="Left" Width="366.645" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold"><Run Language="en-nz" Text="Plantinum Star Sponsor"/></TextBlock>
                     <TextBlock x:Name="_99_text" HorizontalAlignment="Right" Height="41.228" Margin="0,121.062,56.5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56.862" Grid.Column="3" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text=".99"/></TextBlock>
-                    <Rectangle Height="156" Margin="143.103,97,95.564,0" VerticalAlignment="Top" Grid.Column="1" TouchDown="Touch_Down_Gold_Buyers" MouseDown="GoldBuyers_MouseDown">
+                    <Rectangle Margin="143.104,168.417,95.564,248.748" Grid.Column="1" TouchDown="Touch_Down_Gold_Buyers" MouseDown="GoldBuyers_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Gold-Buyers.jpg"/>
                         </Rectangle.Fill>
@@ -166,6 +166,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <TextBlock x:Name="Exposure_text" Height="43.795" Margin="-62.255,0,8,17.91" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="4" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="Exposure"/></TextBlock>
+                    <TextBlock Foreground="#FF15A6D2" Height="89" Margin="0,31,-12.436,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" FontFamily="Gill Sans MT" Text="For more information about how your business or organisation can work with and provide support to Child Cancer Foundation please contact Jade on 09 303 9979 or email jlegeyt@childcancer.org.nz." Grid.Column="1" TextAlignment="Justify"/>
                 </Grid>
                 <!-- Navigation Buttons -->
                 <StackPanel x:Name="Navigation_Panel" Grid.Column="1" Margin="0,29.331,55,0" Orientation="Vertical" HorizontalAlignment="Right" Width="491.48" Grid.Row="1">
