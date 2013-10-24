@@ -11,6 +11,10 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class FamilySupportScreen : Screen
     {
+        /// <summary>
+        /// Creating the Family Support screen
+        /// </summary>
+        /// <param name="parentWindow"></param>
         public FamilySupportScreen(SurfaceWindow1 parentWindow)
             : base(parentWindow)
         {
@@ -27,6 +31,11 @@ namespace Team_Roasters.Screens
             SupportServicesViewer.Document = SupportServicesDocument;
         }
 
+        /// <summary>
+        /// Displays information about additional information available to families
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SurfaceButton_ParentResources(object sender, System.Windows.RoutedEventArgs e)
         {
             Parent_Resources.Visibility = System.Windows.Visibility.Visible;
@@ -86,7 +95,7 @@ namespace Team_Roasters.Screens
         }
 
         /// <summary>
-        /// Shows information on Holdiay Homes, hides other information
+        /// Displays information about holiday homes available to families
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -105,7 +114,7 @@ namespace Team_Roasters.Screens
         }
 
         /// <summary>
-        /// Shows information on Support Services, hides other information
+        /// Shows general information about the type of support CCF provides
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -124,7 +133,7 @@ namespace Team_Roasters.Screens
         }
 
         /// <summary>
-        /// Shows information on Scholarships, hides other information
+        /// Shows information about what the scholarships are for and who they are for
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -142,6 +151,9 @@ namespace Team_Roasters.Screens
             Beads_Button.Style = (Style)FindResource("NotSelectedButton");
         }
 
+        /// <summary>
+        /// Sets the colours of on screen buttons
+        /// </summary>
         public override void setButtonColours()
         {
             System.Windows.Media.BrushConverter bc = new System.Windows.Media.BrushConverter();
@@ -149,13 +161,19 @@ namespace Team_Roasters.Screens
             App.Current.Resources["NotSelectedColour"] = (System.Windows.Media.Brush)bc.ConvertFrom("#FFFDC37D");
         }
 
+        /// <summary>
+        /// This is called when the screen finishes its exiting animation.
+        /// This ends up calling the same method in the parent class.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             parentWindow.Storyboard_Completed();
         }
 
         /// <summary>
-        /// Shows information on the Beads of Courage
+        /// Displays page of the draggable Beads and the information along with them
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -180,6 +198,11 @@ namespace Team_Roasters.Screens
 
         }
 
+        /// <summary>
+        /// Mouse Down event for when user clicks on a blue bead. Displays description of blue bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void blueBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             bluedesc.Visibility = Visibility.Visible;
@@ -190,6 +213,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Touch Down event for when user touches on a blue bead. Displays description of blue bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void blueBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             bluedesc.Visibility = Visibility.Visible;
@@ -200,6 +228,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Mouse Down event for when user clicks on a orange bead. Displays description of orange bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void orangeBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             browndesc.Visibility = Visibility.Hidden;
@@ -210,6 +243,11 @@ namespace Team_Roasters.Screens
             orangedesc.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Touch Down event for when user touches on a brown bead. Displays description of brown bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void brownBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             browndesc.Visibility = Visibility.Visible;
@@ -220,6 +258,11 @@ namespace Team_Roasters.Screens
             orangedesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Mouse Down event for when user clicks on a brown bead. Displays description of brown bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void brownBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             browndesc.Visibility = Visibility.Visible;
@@ -231,6 +274,11 @@ namespace Team_Roasters.Screens
 
         }
 
+        /// <summary>
+        /// Touch Down event for when user touches on a orange bead. Displays description of orange bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void orangeBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             browndesc.Visibility = Visibility.Hidden;
@@ -242,6 +290,11 @@ namespace Team_Roasters.Screens
 
         }
 
+        /// <summary>
+        /// Touch Down event for when user touches on a red bead. Displays description of red bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void redBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             reddesc.Visibility = Visibility.Visible;
@@ -252,6 +305,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Mouse Down event for when user clicks on a red bead. Displays description of red bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void redBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             reddesc.Visibility = Visibility.Visible;
@@ -262,6 +320,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Touch Down event for when user touches on a star bead. Displays description of star bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void starBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             stardesc.Visibility = Visibility.Visible;
@@ -272,6 +335,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Mouse Down event for when user clicks on a star bead. Displays description of star bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void starBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             stardesc.Visibility = Visibility.Visible;
@@ -282,6 +350,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Mouse Down event for when user clicks on a white bead. Displays description of white bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void whiteBead_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             whitedesc.Visibility = Visibility.Visible;
@@ -292,6 +365,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Touch Down event for when user touches on a white bead. Displays description of white bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void whiteBead_TouchDown(object sender, System.Windows.Input.TouchEventArgs e)
         {
             whitedesc.Visibility = Visibility.Visible;
@@ -302,6 +380,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Displays blue bead description when any type of input interacts with the white bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void whiteBead_MouseDown(object sender, System.Windows.RoutedEventArgs e)
         {
             whitedesc.Visibility = Visibility.Visible;
@@ -312,6 +395,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Displays blue bead description when any type of input interacts with the blue bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void blueBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
         {
             bluedesc.Visibility = Visibility.Visible;
@@ -322,6 +410,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Displays blue bead description when any type of input interacts with the brown bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void brownBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
         {
             browndesc.Visibility = Visibility.Visible;
@@ -332,6 +425,11 @@ namespace Team_Roasters.Screens
             orangedesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Displays blue bead description when any type of input interacts with the orange bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void orangeBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
         {
             browndesc.Visibility = Visibility.Hidden;
@@ -342,6 +440,11 @@ namespace Team_Roasters.Screens
             orangedesc.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Displays blue bead description when any type of input interacts with the red bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void redBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
         {
             reddesc.Visibility = Visibility.Visible;
@@ -352,6 +455,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Displays blue bead description when any type of input interacts with the star bead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void starBead_ContainerActivated(object sender, System.Windows.RoutedEventArgs e)
         {
             stardesc.Visibility = Visibility.Visible;
@@ -362,6 +470,11 @@ namespace Team_Roasters.Screens
             browndesc.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// On entry, sets the colour of buttons to fit the colour scheme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Storyboard_Completed_1(object sender, EventArgs e)
         {
             setButtonColours();

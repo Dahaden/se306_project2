@@ -11,8 +11,8 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920">
 
-<view:Screen.Resources>
-    
+    <view:Screen.Resources>
+
         <!-- Animation Resources -->
         <Storyboard x:Key="Enter">
             <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1" Storyboard.TargetName="MultiPage" Storyboard.TargetProperty="RenderTransform.X" From="1920" To="0"/>
@@ -36,7 +36,7 @@
                     <RowDefinition Height="217*" />
                     <RowDefinition Height="863"/>
                 </Grid.RowDefinitions>
-                
+
                 <!-- Top Menu / Title bar -->
                 <Grid Height="220" Margin="0,0,0,0">
                     <Grid Name="ccf_grid" Margin="0,0,0,0">
@@ -73,62 +73,62 @@
                         <!-- Main Screen Buttons -->
                         <Grid Grid.Column="1" Margin="105,0,-30,0">
                             <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="567.667" />
-                                    <ColumnDefinition Width="232.333" />
+                                <ColumnDefinition Width="567.667" />
+                                <ColumnDefinition Width="232.333" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                    <RowDefinition Height="415" />
-                                    <RowDefinition Height="385" />
+                                <RowDefinition Height="415" />
+                                <RowDefinition Height="385" />
                             </Grid.RowDefinitions>
-                            
+
                             <!-- What We Do -->
                             <Grid x:Name="What_We_Do_Grid" Margin="33.5,59.414,-72,2">
 
-                                        <Border BorderThickness="0" Background="#FF8ECADC" d:IsEffectDisabled="True" TouchDown="What_we_do_Click">
-                                                <s:SurfaceButton
+                                <Border BorderThickness="0" Background="#FF8ECADC" d:IsEffectDisabled="True" TouchDown="What_we_do_Click">
+                                    <s:SurfaceButton
                                                         x:Name="what_we_do"
                                                         Content="" FontSize="48" Style="{DynamicResource HomeContentButton}" Click="What_we_do_Click" Margin="7,7,7,0" Height="281.586" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" BorderThickness="10" d:IsEffectDisabled="True" >
-                                                        <s:SurfaceButton.Background>
+                                        <s:SurfaceButton.Background>
                                             <ImageBrush ImageSource="../Resources/Button Pics/Group-Appeal-News.jpg" Stretch="UniformToFill"/>
-                                                        </s:SurfaceButton.Background>
-                                                </s:SurfaceButton>
-                                        </Border>
+                                        </s:SurfaceButton.Background>
+                                    </s:SurfaceButton>
+                                </Border>
 
-                                        <TextBlock Foreground="Black" Margin="148.5,0,167,0" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="283.697" TouchDown="What_we_do_Click"><Run Language="en-nz" Text="What We "/><Run Language="en-nz" Text="Do"/></TextBlock>
+                                <TextBlock Foreground="Black" Margin="148.5,0,167,0" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="283.697" TouchDown="What_we_do_Click"><Run Language="en-nz" Text="What We "/><Run Language="en-nz" Text="Do"/></TextBlock>
 
-                                </Grid>
-                            
+                            </Grid>
+
                             <!-- Family And Support -->
                             <Grid x:Name="Family_Support_Grid" Margin="33.333,-2,-71.833,25" Grid.Row="1">
 
-                                    <Border BorderThickness="0" Background="#FFFDC37D" d:IsEffectDisabled="True" TouchDown="FamilyButton_Click">
-                                            <s:SurfaceButton
+                                <Border BorderThickness="0" Background="#FFFDC37D" d:IsEffectDisabled="True" TouchDown="FamilyButton_Click">
+                                    <s:SurfaceButton
 
                                                     x:Name="family_and_support"
                                                     Content="" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="7,7,7,73.579" Click="FamilyButton_Click" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic">
-                                                    <s:SurfaceButton.Background>
-                                                            <ImageBrush ImageSource="../Resources/Button Pics/emma-in-2011.jpg" Stretch="UniformToFill"/>
-                                                    </s:SurfaceButton.Background>
-                                            </s:SurfaceButton>
-                                    </Border>
+                                        <s:SurfaceButton.Background>
+                                            <ImageBrush ImageSource="../Resources/Button Pics/emma-in-2011.jpg" Stretch="UniformToFill"/>
+                                        </s:SurfaceButton.Background>
+                                    </s:SurfaceButton>
+                                </Border>
 
                                 <TextBlock Foreground="Black" Margin="66.673,0,0,6" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" HorizontalAlignment="Center" Width="469.196" TouchDown="FamilyButton_Click"><Run Language="en-nz" Text="Family and Support"/></TextBlock>
 
                             </Grid>
-                            
+
                             <!-- Volunteers -->
                             <Grid x:Name="Volunteers_Grid" Margin="71.833,59,-445.667,2" Grid.Column="1">
 
-                                    <Border BorderThickness="0" Background="#FFFBA5D6" d:IsEffectDisabled="True" TouchDown="Volunteers_Click">
-                                            <s:SurfaceButton
+                                <Border BorderThickness="0" Background="#FFFBA5D6" d:IsEffectDisabled="True" TouchDown="Volunteers_Click">
+                                    <s:SurfaceButton
                                                     x:Name="volunteers"
                                                     Content=""
                                                     Click="Volunteers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}" Height="281.586" Margin="8,8,8,0" VerticalAlignment="Top" FontFamily="Gill Sans MT" Foreground="Black" FontWeight="Bold" FontStyle="Italic" >
-                                                    <s:SurfaceButton.Background>
+                                        <s:SurfaceButton.Background>
                                             <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Button Pics/Claudia.jpg"/>
-                                                    </s:SurfaceButton.Background>
-                                            </s:SurfaceButton>
-                                    </Border>
+                                        </s:SurfaceButton.Background>
+                                    </s:SurfaceButton>
+                                </Border>
 
                                 <TextBlock Foreground="Black" Margin="189.948,0,195.275,0.683" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" Text="Volunteers" HorizontalAlignment="Center" TouchDown="Volunteers_Click"/>
 
@@ -137,15 +137,15 @@
                             <!-- Corporate -->
                             <Grid x:Name="Corporate_Grid" Margin="71.833,-2,-445.667,25" Grid.Row="1" Grid.Column="1">
 
-                                    <Border BorderThickness="0" Background="#FFD7E583" d:IsEffectDisabled="True" TouchDown="CorporateSponsers_Click">
-                                            <s:SurfaceButton
+                                <Border BorderThickness="0" Background="#FFD7E583" d:IsEffectDisabled="True" TouchDown="CorporateSponsers_Click">
+                                    <s:SurfaceButton
                                                     x:Name="corporate"
                                                     Content="" Click="CorporateSponsers_Click" FontSize="48" Style="{DynamicResource HomeContentButton}" Margin="8,8,8,74" Foreground="Black" FontFamily="Gill Sans MT" FontWeight="Bold" FontStyle="Italic" BorderThickness="0" >
-                                                    <s:SurfaceButton.Background>
+                                        <s:SurfaceButton.Background>
                                             <ImageBrush Stretch="UniformToFill" ImageSource="../Resources/Button Pics/Teaser-Dequarn.jpg"/>
-                                                    </s:SurfaceButton.Background>
-                                            </s:SurfaceButton>
-                                    </Border>
+                                        </s:SurfaceButton.Background>
+                                    </s:SurfaceButton>
+                                </Border>
 
                                 <TextBlock Foreground="Black" Margin="73.822,0,63.149,8" TextWrapping="Wrap" FontSize="48" FontFamily="Gill Sans MT" FontStyle="Italic" FontWeight="Bold" Height="60.5" VerticalAlignment="Bottom" RenderTransformOrigin="0.721,-0.983" Text="Corporate Sponsors" TouchDown="CorporateSponsers_Click"/>
 
@@ -236,8 +236,8 @@
                 <Rectangle x:Name="Right_arrow_block" Margin="0,11.5,0,0.056" Opacity="0.3" Grid.Row="1" HorizontalAlignment="Right" Width="70" Fill="Black" TouchDown="Right_arrow_block_TouchDown" MouseDown="Right_arrow_block_MouseDown"/>
 
             </Grid>
-			
-			<Grid>
+
+            <Grid>
                 <!-- ScreenSaver -->
                 <Rectangle x:Name="screensaver_overlay" Opacity="0.75" Height="1080" Width="1920" Fill="Gray" />
                 <TextBlock x:Name="screensaver_text" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Background="#000000FF" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="White">

@@ -87,7 +87,7 @@ namespace Team_Roasters.Screens
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-		private void GoldBuyers_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void GoldBuyers_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
@@ -111,7 +111,7 @@ namespace Team_Roasters.Screens
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-		private void Farmers_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Farmers_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
@@ -135,7 +135,7 @@ namespace Team_Roasters.Screens
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-		private void RCP_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void RCP_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
@@ -159,7 +159,7 @@ namespace Team_Roasters.Screens
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-		private void SaveMart_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void SaveMart_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
@@ -183,7 +183,7 @@ namespace Team_Roasters.Screens
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-		private void Bartercard_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Bartercard_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
@@ -207,7 +207,7 @@ namespace Team_Roasters.Screens
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-		private void Prof_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Prof_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Remove_popups();
             Our_Ambassadors.Opacity = 0.5;
@@ -231,7 +231,7 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
         private void Remove_popups(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Remove_popups();	
+            Remove_popups();
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace Team_Roasters.Screens
         /// <param name="e"></param>
 		private void Touch_Down_BB(object sender, System.Windows.Input.TouchEventArgs e){
             BB_popup();
-		}
+        }
 
         /// <summary>
         /// Reveals the Buzzy Bee label popup.
@@ -286,7 +286,7 @@ namespace Team_Roasters.Screens
             else
             {
                 BBnFreinds_text.Visibility = Visibility.Collapsed;
-            }     
+            }
         }
 
         /// <summary>
@@ -326,6 +326,7 @@ namespace Team_Roasters.Screens
                 _99_text.Visibility = Visibility.Collapsed;
             }
         }
+
 
         /// <summary>
         /// Displays information on Sponsor NZ Herald on Mouse Event

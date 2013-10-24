@@ -14,7 +14,8 @@ namespace Team_Roasters.Screens
     /// </summary>
     public partial class DonateScreen : Screen
     {
-        public DonateScreen(SurfaceWindow1 parentWindow) : base(parentWindow)
+        public DonateScreen(SurfaceWindow1 parentWindow)
+            : base(parentWindow)
         {
             InitializeComponent();
             FlowDocument flowDocument = (FlowDocument)XamlReader.Load(File.OpenRead("../../Resources/Donate/WhatYourMoneyBuys.xaml"));

@@ -163,7 +163,6 @@
                         <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
-
             </Grid>
         </Grid>
     </Viewbox>

@@ -37,10 +37,10 @@
                     <ColumnDefinition Width="0.2*"/>
                     <ColumnDefinition Width="0.8*"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <!-- Back Arrow -->
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Image x:Name="ButtonBody2" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
+                    <Image x:Name="BackArrow" Source="../Resources/wm_back.png" Height="Auto" Margin="47,30,55.832,30" Width="Auto">
                         <Image.Effect>
                             <DropShadowEffect BlurRadius="10" Opacity="0.6"/>
                         </Image.Effect>
@@ -72,14 +72,14 @@
                         </Border.Effect>
                     </Border>
                     <Rectangle HorizontalAlignment="Left" Height="97.438" Margin="16,22.562,0,0" VerticalAlignment="Top" Width="127.65" Grid.Column="3" MouseDown="Mouse_down_BB" TouchDown="Touch_Down_BB">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="UniformToFill" ImageSource="/Team_Roasters;component/Resources/Corporate/Buzzy-Bee-Logo-Hm-Page.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle Margin="0,-45.875,51.124,18" TouchDown="Touch_Down_Bartercard" MouseDown="Bartercard_MouseDown" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" Width="334.5">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Bartercard-charity-logo-2D4.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle HorizontalAlignment="Left" Margin="8,-38.705,0,16" Width="351.103" Grid.Column="1" Grid.Row="1" TouchDown="Touch_Down_SaveMart" MouseDown="SaveMart_MouseDown">
                         <Rectangle.Fill>
@@ -113,57 +113,57 @@
                     </Rectangle>
                     <Path Data="M811.1767,58.02779 L811.1767,635.86774" Fill="Black" Margin="0,31,21.693,32.21" Stretch="Fill" Grid.Column="2" Grid.RowSpan="2" Stroke="Black" HorizontalAlignment="Right" Width="1"/>
                     <Rectangle HorizontalAlignment="Right" Height="97.438" Margin="0,22.562,23.61,0" VerticalAlignment="Top" Width="127.65" Grid.Column="3" MouseDown="Mouse_Down_nn" TouchDown="Touch_Down_nn">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/99-Logo.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle x:Name="Alabar_image" Height="97.438" Margin="-7.5,22.562,-13.756,0" VerticalAlignment="Top" Grid.Column="4" MouseDown="Mouse_Down_Alabar" TouchDown="Touch_Down_Alabar">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/alabar.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle Margin="94.198,241.417,-20.499,250.81" Grid.Column="3" TouchDown="Touch_Down_NZHerald" MouseDown="Mouse_Down_NZHerald">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="UniformToFill" ImageSource="/Team_Roasters;component/Resources/Corporate/NZ-Herald-Logo-Hm-Page.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle Height="70.438" Margin="65.698,156.854,-41.514,0" VerticalAlignment="Top" Grid.Column="3" TouchDown="Touch_Down_Bluebridge" MouseDown="Mouse_Down_Bluebridge">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Bluebridge.jpeg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <TextBlock x:Name="Bluebridge_text" Margin="65.697,225.292,42.381,0" TextWrapping="Wrap" Grid.Column="3" FontSize="26.667" Grid.ColumnSpan="2" Foreground="Black" TextAlignment="Center" Height="30.125" VerticalAlignment="Top" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="Bluebridge Cook Strait Ferry"/></TextBlock>
                     <TextBlock x:Name="The_Herald_text" Height="30.125" Margin="53.698,0,-52.013,239.415" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="3" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="The New Zealand Herald"/></TextBlock>
                     <TextBlock x:Name="BBnFreinds_text" HorizontalAlignment="Left" Height="76.29" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149.471" Grid.Column="3" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="Buzzy Bee and Friends"/></TextBlock>
                     <TextBlock x:Name="Alabar_text" Height="74.228" Margin="8,121.062,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="4" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="Alabar (NZ) Ltd"/></TextBlock>
                     <Rectangle Margin="26.5,0,109.198,108.81" Grid.Column="3" Height="105.105" VerticalAlignment="Bottom" TouchDown="Touch_Down_Mill" MouseDown="Mouse_Down_Mill">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Millennium-Logo-Sponsors-Page.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle Margin="-62.256,-21.415,8,20.645" Grid.Column="4" Grid.Row="1" TouchDown="Touch_Down_Hansen" MouseDown="Mouse_Down_Hansen">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Hansen-Logo-Hm-Page.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle Margin="12.5,0,94.256,-33.025" Grid.Column="3" Height="89.94" VerticalAlignment="Bottom" MouseDown="Mouse_Down_ApparelMaster" TouchDown="Touch_Down_ApparelMaster">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Apparelmaster-New-Logo-07.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <Rectangle Margin="-62.256,0,8,146" Grid.Column="4" Height="98.705" VerticalAlignment="Bottom" MouseDown="Mouse_Down_NZCouriers" TouchDown="Touch_Down_NZCouriers">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/NZC-logo-new2.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <TextBlock x:Name="Mill_text" Height="60.31" Margin="2,0,80.256,58" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="3" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="Millennium Hotel and Resorts"/></TextBlock>
                     <TextBlock x:Name="Hansen_text" Margin="-62.256,0,8,-0.46" TextWrapping="Wrap" Grid.Column="4" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Grid.Row="1" Height="37.105" VerticalAlignment="Bottom" Visibility="Collapsed"><Run Language="en-nz" Text="Hansen"/></TextBlock>
                     <TextBlock x:Name="Apparelmaster_text" Margin="13,37.69,96.198,26" TextWrapping="Wrap" Grid.Column="3" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Grid.Row="1" HorizontalAlignment="Center" Visibility="Collapsed"><Run Language="en-nz" Text="Apparelmaster"/></TextBlock>
                     <TextBlock x:Name="NZCouriers_text" Height="43.795" Margin="-60.755,0,6.5,112.705" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="4" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="NZ Couriers"/></TextBlock>
                     <Rectangle Margin="-68.255,0,-4,52.705" Grid.Column="4" Height="68" VerticalAlignment="Bottom" TouchDown="Touch_Down_Exposure" MouseDown="Mouse_Down_Exposure">
-                    	<Rectangle.Fill>
+                        <Rectangle.Fill>
                             <ImageBrush Stretch="Uniform" ImageSource="/Team_Roasters;component/Resources/Corporate/Exposure-Logo.jpg"/>
-                    	</Rectangle.Fill>
+                        </Rectangle.Fill>
                     </Rectangle>
                     <TextBlock x:Name="Exposure_text" Height="43.795" Margin="-62.255,0,8,17.91" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="4" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="Exposure"/></TextBlock>
                 </Grid>
@@ -210,7 +210,7 @@
                         <BlurEffect Radius="2"/>
                     </Image.Effect>
                 </Image>
-                
+
                 <!-- Corporate Sponsors Information -->
                 <TextBlock Foreground="Black" x:Name="RCP_popup" Margin="-42.5,280,0,422" Grid.Row="1" TextWrapping="Wrap" MouseDown="Remove_popups" FontSize="26.667" FontFamily="Gill Sans MT" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="800" Text="RCP are an award-winning provider of professional Project Management and Project Programming services to New Zealand's property industry. Since 1996 RCP has become a substantial specialist construction industry management consultant working on many of New Zealand and Australia's most prominent developments.  Please visit their website www.rcp.co.nz" TouchDown="Remove_popups" VerticalAlignment="Center" Visibility="Collapsed">
                     <TextBlock.Effect>
