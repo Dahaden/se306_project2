@@ -5,11 +5,11 @@
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d"
 	x:Class="Team_Roasters.MA_image"
-	x:Name="UserControl" d:DesignHeight="589.576" Width="569">
+	x:Name="UserControl" Width="399" Height="428.576">
 
 	<Grid x:Name="LayoutRoot">
 		<StackPanel Margin="-39.619,8,-38,28" Orientation="Vertical" d:LayoutOverrides="Height">
-			<Image Margin="0" Source="megan-alatini.jpg" HorizontalAlignment="Center" Height="341" Width="502.228"/>
+			<Image Margin="0" Source="megan-alatini.jpg" HorizontalAlignment="Center" Height="310" Width="375.228"/>
 			<TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="32" Height="84.001" RenderTransformOrigin="0.488,1.065" Margin="0" HorizontalAlignment="Center" Width="210.591"><Run Language="en-nz" Text="Megan Alatini"/></TextBlock>
 		</StackPanel>
 	</Grid>

@@ -2,7 +2,7 @@
     <Paragraph Foreground="#FF15A6D2" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
         <Bold>Kieran is a well-regarded All Black forward, tipped by many to be the next captain.</Bold>
     </Paragraph>
-    <Paragraph Foreground="Black" FontSize="28" TextAlignment="Center" FontFamily="Gill Sans MT">
+    <Paragraph Foreground="Black" FontSize="24" TextAlignment="Center" FontFamily="Gill Sans MT">
 Kieran is a well-regarded All Black forward, tipped by many to be the next captain.  Since coming on this year, Kieran has impressed with his can-do attitude, taking part in a promotion with More FM in Christchurch, during One Day for Child Cancer, where he could not talk about rugby in any form for a day, donating rugby memorabilia and making a popular visit to the Christchurch Farmers store which raised the most during the 2012 Annual Appeal.
     </Paragraph>
 </FlowDocument>
