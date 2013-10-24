@@ -66,14 +66,14 @@
                         <RowDefinition Height="0.403*"/>
                     </Grid.RowDefinitions>
                     <!--Sub-heading pages-->
-                    <Grid x:Name="WhatIsVolunteering" Background="#FFFFFCF0" Visibility="Visible" Margin="0" Grid.RowSpan="2">
+                    <Grid x:Name="WhatIsVolunteering" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2">
                         <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0" Grid.RowSpan="2" IsManipulationEnabled="False">
 
                             <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
                                 <Border.Effect>
                                     <DropShadowEffect/>
                                 </Border.Effect>
-                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="VolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden" Height="674.297" RenderTransformOrigin="0.5,0.5" Width="965.739"/>
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
@@ -85,7 +85,7 @@
                                 <Border.Effect>
                                     <DropShadowEffect/>
                                 </Border.Effect>
-                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhoVolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhoVolViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden" Height="674.297" RenderTransformOrigin="0.5,0.5" Width="965.739"/>
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
@@ -96,12 +96,12 @@
                                 <Border.Effect>
                                     <DropShadowEffect/>
                                 </Border.Effect>
-                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhatWouldIDoViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                                <FlowDocumentScrollViewer  BorderThickness="0" Margin="0" x:Name="WhatWouldIDoViewer" Foreground="Black" IsSelectionEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden" Height="674.297" RenderTransformOrigin="0.5,0.5" Width="965.739"/>
                             </Border>
                         </s:SurfaceScrollViewer>
                     </Grid>
 
-                    <Grid x:Name="Volunteering" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2">
+                    <Grid x:Name="Volunteering" Background="#FFFFFCF0" Margin="0" Grid.RowSpan="2" Visibility="Collapsed">
                         <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,0" Grid.RowSpan="2" IsManipulationEnabled="False">
                             <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Background="White">
                                 <Border.Effect>
