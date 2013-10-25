@@ -251,6 +251,13 @@ namespace Team_Roasters.Screens
             BBnFreinds_text.Visibility = Visibility.Collapsed;
             _99_text.Visibility = Visibility.Collapsed;
             Alabar_text.Visibility = Visibility.Collapsed;
+            The_Herald_text.Visibility = Visibility.Collapsed;
+            Mill_text.Visibility = Visibility.Collapsed;
+            Exposure_text.Visibility = Visibility.Collapsed;
+            NZCouriers_text.Visibility = Visibility.Collapsed;
+            Hansen_text.Visibility = Visibility.Collapsed;
+            Bluebridge_text.Visibility = Visibility.Collapsed;
+            Apparelmaster_text.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
