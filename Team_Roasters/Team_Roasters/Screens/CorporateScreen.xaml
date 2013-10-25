@@ -166,7 +166,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <TextBlock x:Name="Exposure_text" Height="43.795" Margin="-62.255,0,8,17.91" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="4" FontSize="26.667" Foreground="Black" TextAlignment="Center" FontFamily="Gill Sans MT" Visibility="Collapsed"><Run Language="en-nz" Text="Exposure"/></TextBlock>
-                    <TextBlock Foreground="#FF15A6D2" Height="89" Margin="0,31,-12.436,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" FontFamily="Gill Sans MT" Text="For more information about how your business or organisation can work with and provide support to Child Cancer Foundation please contact Jade on 09 303 9979 or email jlegeyt@childcancer.org.nz." Grid.Column="1" TextAlignment="Justify"/>
+                    <TextBlock Foreground="#FF15A6D2" Height="99.957" Margin="0,26.5,-12.436,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" FontFamily="Gill Sans MT" Text="For more information about how your business or organisation can work with and provide support to Child Cancer Foundation please contact Jade on 09 303 9979 or email jlegeyt@childcancer.org.nz." Grid.Column="1" TextAlignment="Justify"/>
                 </Grid>
                 <!-- Navigation Buttons -->
                 <StackPanel x:Name="Navigation_Panel" Grid.Column="1" Margin="0,29.331,55,0" Orientation="Vertical" HorizontalAlignment="Right" Width="491.48" Grid.Row="1">
