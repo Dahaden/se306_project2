@@ -69,7 +69,7 @@
                     </Grid.RowDefinitions>
 
                     <!--QR Code for donation-->
-                    <Grid x:Name="DonateNow" Background="#FFFFFCF0" Visibility="Visible" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <Grid x:Name="DonateNow" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2">
                         <s:SurfaceScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,0,0,62" Grid.RowSpan="2">
 
                             <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
@@ -88,9 +88,9 @@
                     </Grid>
 
                     <!--Information about where money is spent-->
-                    <Grid x:Name="WhatYourMoneyBuys" Background="#FFFFFCF0" Visibility="Collapsed" Margin="0,0,0,-0.21" Grid.RowSpan="2">
+                    <Grid x:Name="WhatYourMoneyBuys" Background="#FFFFFCF0" Margin="0,0,0,-0.21" Grid.RowSpan="2" Visibility="Collapsed">
                         
-                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="6.586,9.225,8,8" Grid.RowSpan="2" Background="White">
+                            <Border BorderBrush="#FF007294" BorderThickness="1" Margin="5.559,8.198,6.99,69.006" Background="White">
                                 <Border.Effect>
                                     <DropShadowEffect/>
                                 </Border.Effect>
