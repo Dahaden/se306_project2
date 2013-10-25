@@ -32,7 +32,7 @@
 				Value="2"/>
     </Style>
 
-    <!-- ButtonBase -->
+    <!-- ButtonBase used in HomeScreen's buttons -->
     <Style x:Key="HomeContentButton"
 			TargetType="{x:Type s:SurfaceButton}" 
 			BasedOn="{StaticResource ControlBaseStyle}">
@@ -310,7 +310,7 @@
         </Setter>
     </Style>
     
-    <!--  -->
+    <!-- Set up slight gradient type Background -->
     <Style x:Key="StackPanelStyle1" TargetType="{x:Type StackPanel}">
         <Setter Property="Background">
             <Setter.Value>
@@ -444,6 +444,7 @@
         </Setter>
     </Style>
 
+    
     <Style x:Key="SurfaceScrollBarHorizThumbStyle" TargetType="{x:Type s:SurfaceThumb}" BasedOn="{StaticResource SurfaceHitAreaBaseStyle}">
         <Setter Property="Template">
             <Setter.Value>
@@ -493,8 +494,7 @@
     </Style>
 
     <!-- ScrollBar -->
-    <Style x:Key="SurfaceScrollBarStyle" TargetType="{x:Type s:SurfaceScrollBar}"
-         >
+    <Style x:Key="SurfaceScrollBarStyle" TargetType="{x:Type s:SurfaceScrollBar}">
         <Style.Resources>
             <System:Double x:Key="{x:Static SystemParameters.VerticalScrollBarButtonHeightKey}">38</System:Double>
             <System:Double x:Key="{x:Static SystemParameters.HorizontalScrollBarButtonWidthKey}">38</System:Double>
@@ -509,7 +509,6 @@
                 <ControlTemplate TargetType="{x:Type s:SurfaceScrollBar}">
                     <Grid x:Name="GridRoot" Background="{TemplateBinding Background}">
                         <Border x:Name="Track" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#F0F0F0">
-
                             <Track x:Name="PART_Track" IsDirectionReversed="True">
                                 <Track.IncreaseRepeatButton>
                                     <s:SurfaceRepeatButton x:Name="IncreaseRepeat" 
@@ -628,7 +627,6 @@
                                                     CanVerticallyScroll="False"
                                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
                         </Border>
-
                         <s:SurfaceScrollBar Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
                                             x:Name="PART_HorizontalScrollBar"
                                             Grid.Column="0"
@@ -720,6 +718,7 @@
         </Grid>
     </ControlTemplate>
 
+    <!-- VerticalScrollBar Template using the previously created Templates -->
     <ControlTemplate x:Key="VerticalScrollBar"
             TargetType="{x:Type ScrollBar}">
         <Grid >
